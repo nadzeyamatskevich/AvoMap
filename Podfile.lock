@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.1)
   - Device (3.1.2)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
@@ -7,19 +8,40 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.7.0):
     - GoogleMaps/Base (= 2.7.0)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
   - RAMAnimatedTabBarController (4.0.1)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - Result (4.1.0)
+  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Device
   - GoogleMaps
   - GooglePlaces
+  - Moya (~> 12.0)
   - RAMAnimatedTabBarController (from `https://github.com/denbay/animated-tab-bar.git`)
+  - RealmSwift
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Device
     - GoogleMaps
     - GooglePlaces
+    - Moya
+    - Realm
+    - RealmSwift
+    - Result
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   RAMAnimatedTabBarController:
@@ -31,11 +53,17 @@ CHECKOUT OPTIONS:
     :git: https://github.com/denbay/animated-tab-bar.git
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Device: 62242076214c30fb5760174b3601cefafa70a481
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   RAMAnimatedTabBarController: 677d6f7ec7e88b1089486f4db49b0a5067e8ad1c
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 0d5e7ff3d58044bbc25e3a3e3b2078c9060f14ca
+PODFILE CHECKSUM: 1741cba3e51c60bc9d03aad8b404f2d7f72a4974
 
 COCOAPODS: 1.5.3

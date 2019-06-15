@@ -16,7 +16,9 @@ class MapViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     // - Manager
-    private let locationManager = CLLocationManager()
+    private var layoutManager: MapLayoutManager!
+    private var coordinatorManager: MapCoordinatorManager!
+    private var serverManager = MapServerManager()
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -42,56 +44,24 @@ class MapViewController: UIViewController {
 extension MapViewController {
     
     @IBAction func listOfPlacesButtonAction(_ sender: Any) {
-        pushLitsOfPlacesViewController()
+        coordinatorManager.pushLitsOfPlacesViewController()
     }
     
     @IBAction func addNewPlaceButtonAction(_ sender: Any) {
-        pushAddNewPlaceViewController()
-    }
-    
-    func pushLitsOfPlacesViewController() {
-        let listOfPlacesViewController = UIStoryboard(storyboard: .listOfPlaces).instantiateInitialViewController() as! ListOfPlacesViewController
-        self.navigationController?.pushViewController(listOfPlacesViewController, animated: true)
-    }
-    
-    func pushAddNewPlaceViewController() {
-        let addNewPlaceViewController = UIStoryboard(storyboard: .addNewPlace).instantiateInitialViewController() as! AddNewPlaceViewController
-        self.navigationController?.pushViewController(addNewPlaceViewController, animated: true)
+        coordinatorManager.pushAddNewPlaceViewController()
     }
     
 }
 
+// MARK: -
+// MARK: - Server
 
-// MARK: - CLLocationManagerDelegate
-//
-
-extension MapViewController: CLLocationManagerDelegate {
+extension MapViewController {
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
-        guard status == .authorizedWhenInUse else {
-            return
-        }
-        
-        locationManager.startUpdatingLocation()
-        
-        
-        avoMapView.isMyLocationEnabled = true
-        avoMapView.settings.myLocationButton = true
+    func getShopsRequest(completion: @escaping ((_ successModel: [ShopModel]?, _ error: ErrorModel?) -> ())) {
+        serverManager.getShops(completion: completion)
     }
     
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-        
-        
-        avoMapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-        
-        
-        locationManager.stopUpdatingLocation()
-    }
 }
 
 // MARK: - Configure
@@ -100,18 +70,16 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController {
     
     func configure() {
-        configureMapDelegate()
-        configureSaveButton()
+        configureLayoutManager()
+        configureCoordinatorManager()
     }
     
-    func configureMapDelegate() {
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+    func configureLayoutManager() {
+        layoutManager = MapLayoutManager(viewController: self)
     }
     
-    func configureSaveButton() {
-        saveButton.layer.cornerRadius = 40
-        saveButton.setupShadow(color: AppColor.black(alpha: 0.1))
+    func configureCoordinatorManager() {
+        coordinatorManager = MapCoordinatorManager(viewController: self)
     }
     
 }

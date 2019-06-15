@@ -16,5 +16,12 @@ target 'avocadoFinder' do
     
     #device
     pod 'Device'
+    
+    #API
+    pod 'Moya', '~> 12.0'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'RealmSwift'
+    #pod 'Kingfisher', '~> 4.0'
+    #pod 'AlamofireNetworkActivityLogger', '~> 2.0'
 
 end
