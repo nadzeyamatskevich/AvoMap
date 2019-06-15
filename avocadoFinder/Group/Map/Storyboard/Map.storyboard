@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qhP-vP-cFk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="sEx-gQ-XIT">
+            <objects>
+                <viewController id="qhP-vP-cFk" customClass="MapViewController" customModule="avocadoFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jfo-Rr-EP2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-aZ-UK5" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGb-cq-dAh">
+                                <rect key="frame" x="271" y="563" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.90426713199999997" blue="0.68068788589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="JjZ-Lq-cUk"/>
+                                    <constraint firstAttribute="height" constant="80" id="mHi-qM-82n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="72"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewPlaceButtonAction:" destination="qhP-vP-cFk" eventType="touchUpInside" id="0P7-ct-RlE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="XDt-Sl-vxB">
+                                <rect key="frame" x="-10" y="-10" width="395" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="oDv-F0-Yi7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо карта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tna-oB-b4T">
+                                <rect key="frame" x="16" y="36" width="159.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-Tw-7c3">
+                                <rect key="frame" x="16" y="85" width="118.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqL-R0-woh">
+                                <rect key="frame" x="268" y="39.5" width="83" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="KoJ-lZ-hsc"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="74" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Список" image="nextButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="listOfPlacesButtonAction:" destination="qhP-vP-cFk" eventType="touchUpInside" id="fOE-Hd-5Ek"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qmg-aZ-UK5" firstAttribute="bottom" secondItem="JQL-eK-snu" secondAttribute="bottom" id="1SA-Nd-ZVb"/>
+                            <constraint firstItem="tna-oB-b4T" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="16" id="Ayb-Za-Dbi"/>
+                            <constraint firstItem="Qmg-aZ-UK5" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" id="C8p-lL-aag"/>
+                            <constraint firstItem="gqL-R0-woh" firstAttribute="centerY" secondItem="tna-oB-b4T" secondAttribute="centerY" id="HCx-R1-TTv"/>
+                            <constraint firstItem="Qmg-aZ-UK5" firstAttribute="top" secondItem="jfo-Rr-EP2" secondAttribute="top" id="JrT-GA-fFA"/>
+                            <constraint firstItem="XDt-Sl-vxB" firstAttribute="top" secondItem="jfo-Rr-EP2" secondAttribute="top" constant="-10" id="Up6-Q9-arn"/>
+                            <constraint firstItem="Hb7-Tw-7c3" firstAttribute="leading" secondItem="tna-oB-b4T" secondAttribute="leading" id="YnL-C4-oxc"/>
+                            <constraint firstItem="Qmg-aZ-UK5" firstAttribute="trailing" secondItem="JQL-eK-snu" secondAttribute="trailing" id="d4x-3z-Uqb"/>
+                            <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="gqL-R0-woh" secondAttribute="trailing" constant="24" id="dp4-TV-W0P"/>
+                            <constraint firstItem="JQL-eK-snu" firstAttribute="bottom" secondItem="OGb-cq-dAh" secondAttribute="bottom" constant="24" id="lzB-bL-sTc"/>
+                            <constraint firstItem="XDt-Sl-vxB" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="-10" id="sXS-LC-3uT"/>
+                            <constraint firstAttribute="trailing" secondItem="XDt-Sl-vxB" secondAttribute="trailing" constant="-10" id="t52-wn-Zkv"/>
+                            <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="OGb-cq-dAh" secondAttribute="trailing" constant="24" id="tiy-41-bv5"/>
+                            <constraint firstItem="Hb7-Tw-7c3" firstAttribute="top" secondItem="tna-oB-b4T" secondAttribute="bottom" constant="20" id="vGg-XM-GJE"/>
+                            <constraint firstItem="tna-oB-b4T" firstAttribute="top" secondItem="JQL-eK-snu" secondAttribute="top" constant="16" id="xAE-Xm-efc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JQL-eK-snu"/>
+                    </view>
+                    <connections>
+                        <outlet property="avoMapView" destination="Qmg-aZ-UK5" id="qCc-4P-P1v"/>
+                        <outlet property="saveButton" destination="OGb-cq-dAh" id="nh8-Bw-bM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2O-Uo-0PY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-466.39999999999998" y="-518.59070464767615"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="navBarBg" width="392" height="166"/>
+        <image name="nextButton" width="6" height="11"/>
+    </resources>
+</document>

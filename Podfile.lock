@@ -1,0 +1,41 @@
+PODS:
+  - Device (3.1.2)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - RAMAnimatedTabBarController (4.0.1)
+
+DEPENDENCIES:
+  - Device
+  - GoogleMaps
+  - GooglePlaces
+  - RAMAnimatedTabBarController (from `https://github.com/denbay/animated-tab-bar.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Device
+    - GoogleMaps
+    - GooglePlaces
+
+EXTERNAL SOURCES:
+  RAMAnimatedTabBarController:
+    :git: https://github.com/denbay/animated-tab-bar.git
+
+CHECKOUT OPTIONS:
+  RAMAnimatedTabBarController:
+    :commit: 9a272bd67be240b117e3f5b7523f460868bbbcda
+    :git: https://github.com/denbay/animated-tab-bar.git
+
+SPEC CHECKSUMS:
+  Device: 62242076214c30fb5760174b3601cefafa70a481
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  RAMAnimatedTabBarController: 677d6f7ec7e88b1089486f4db49b0a5067e8ad1c
+
+PODFILE CHECKSUM: 0d5e7ff3d58044bbc25e3a3e3b2078c9060f14ca
+
+COCOAPODS: 1.5.3
