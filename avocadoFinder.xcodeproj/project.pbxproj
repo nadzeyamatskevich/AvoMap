@@ -20,6 +20,9 @@
 		932A65B122B4F32C00065119 /* MapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B022B4F32C00065119 /* MapLayoutManager.swift */; };
 		932A65B322B4F45900065119 /* MapCoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B222B4F45900065119 /* MapCoordinatorManager.swift */; };
 		932A65B522B4F49000065119 /* MapServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B422B4F49000065119 /* MapServerManager.swift */; };
+		932A65BB22B5283B00065119 /* NewsAndBlogLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65BA22B5283B00065119 /* NewsAndBlogLayoutManager.swift */; };
+		932A65BD22B528D900065119 /* NewsAndBlogCoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65BC22B528D900065119 /* NewsAndBlogCoordinatorManager.swift */; };
+		932A65BF22B529A700065119 /* NewsAndBlogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65BE22B529A700065119 /* NewsAndBlogServerManager.swift */; };
 		93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93330D2A224F53C6000A1BE3 /* AddNewPlaceViewController.swift */; };
 		93330D2D224F5472000A1BE3 /* ListOfPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93330D2C224F5472000A1BE3 /* ListOfPlacesViewController.swift */; };
 		93330D33224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93330D32224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift */; };
@@ -78,6 +81,9 @@
 		932A65B022B4F32C00065119 /* MapLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayoutManager.swift; sourceTree = "<group>"; };
 		932A65B222B4F45900065119 /* MapCoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinatorManager.swift; sourceTree = "<group>"; };
 		932A65B422B4F49000065119 /* MapServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapServerManager.swift; sourceTree = "<group>"; };
+		932A65BA22B5283B00065119 /* NewsAndBlogLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogLayoutManager.swift; sourceTree = "<group>"; };
+		932A65BC22B528D900065119 /* NewsAndBlogCoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogCoordinatorManager.swift; sourceTree = "<group>"; };
+		932A65BE22B529A700065119 /* NewsAndBlogServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogServerManager.swift; sourceTree = "<group>"; };
 		93330D2A224F53C6000A1BE3 /* AddNewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceViewController.swift; sourceTree = "<group>"; };
 		93330D2C224F5472000A1BE3 /* ListOfPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPlacesViewController.swift; sourceTree = "<group>"; };
 		93330D32224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPlacesTableViewCell.swift; sourceTree = "<group>"; };
@@ -207,6 +213,37 @@
 				932A65B222B4F45900065119 /* MapCoordinatorManager.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		932A65B622B5275500065119 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				932A65BA22B5283B00065119 /* NewsAndBlogLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		932A65B722B5276000065119 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				932A65BE22B529A700065119 /* NewsAndBlogServerManager.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		932A65B822B5276D00065119 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				932A65BC22B528D900065119 /* NewsAndBlogCoordinatorManager.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		932A65B922B527D500065119 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		93330D2E224F54F0000A1BE3 /* AddNewPlace */ = {
@@ -595,6 +632,7 @@
 		93A445DD226AFF2700386766 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				932A65B922B527D500065119 /* Layout */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -632,6 +670,9 @@
 		93A445E2226AFF6F00386766 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				932A65B822B5276D00065119 /* Coordinator */,
+				932A65B722B5276000065119 /* Server */,
+				932A65B622B5275500065119 /* Layout */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -960,8 +1001,10 @@
 				932A65AC22B4EE9600065119 /* Constants.swift in Sources */,
 				93D1A62A22881C1E008DD01D /* ListOfPlacesDataSourceDelegate.swift in Sources */,
 				932A65A722B4ED5500065119 /* NewsServerProvider.swift in Sources */,
+				932A65BD22B528D900065119 /* NewsAndBlogCoordinatorManager.swift in Sources */,
 				93B34D9A227E20DD00DE48BD /* NewsAndBlogTableViewCell.swift in Sources */,
 				937BB88322416C9A00215E58 /* MapViewController.swift in Sources */,
+				932A65BB22B5283B00065119 /* NewsAndBlogLayoutManager.swift in Sources */,
 				93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */,
 				9361F2B42288449400071339 /* PlaceInfoCommentTableViewCell.swift in Sources */,
 				932A65A122B4E6A800065119 /* NewsModel.swift in Sources */,
@@ -969,6 +1012,7 @@
 				93D1A6322288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift in Sources */,
 				93DB41CE227DE54600CC8113 /* AlwaysPoppableNavigationController.swift in Sources */,
 				937129EC227B736D0062AC78 /* AppColor.swift in Sources */,
+				932A65BF22B529A700065119 /* NewsAndBlogServerManager.swift in Sources */,
 				932A659822B4E45300065119 /* HandleResponceMethod.swift in Sources */,
 				932A659A22B4E4C600065119 /* ServerAuthorizedHeaders.swift in Sources */,
 				9361F2B02288433C00071339 /* PlaceInfoViewController.swift in Sources */,

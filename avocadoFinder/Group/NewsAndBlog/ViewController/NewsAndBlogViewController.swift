@@ -14,8 +14,10 @@ class NewsAndBlogViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // - Manager
-    //fileprivate var layoutManager: ShoppingListMenuLayoutManager!
+    fileprivate var layoutManager: NewsAndBlogLayoutManager!
     fileprivate var dataSource: NewsAndBlogDataSourceManager!
+    fileprivate var coordinatorManager: NewsAndBlogCoordinatorManager!
+    fileprivate var serverManager = NewsAndBlogServerManager()
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -40,8 +42,18 @@ class NewsAndBlogViewController: UIViewController {
 
 extension NewsAndBlogViewController: NewsAndBlogDataSourceDelegate {
     func didTapOnCell(post: Int) {
-        let postViewController = UIStoryboard(storyboard: .oneNews).instantiateInitialViewController() as! OneNewsInfoViewController
-        self.navigationController?.pushViewController(postViewController, animated: true)
+       coordinatorManager.pushOneNewsInfoViewController()
+    }
+    
+}
+
+// MARK: -
+// MARK: - Server
+
+extension NewsAndBlogViewController {
+    
+    func getNewsRequest(completion: @escaping ((_ successModel: [NewsModel]?, _ error: ErrorModel?) -> ())) {
+        serverManager.getNews(completion: completion)
     }
     
 }
@@ -54,10 +66,15 @@ extension NewsAndBlogViewController {
     func configure() {
         configureLayoutManager()
         configureDataSource()
+        configureCoordinatorManager()
     }
     
     func configureLayoutManager() {
-        //layoutManager = ShoppingListMenuLayoutManager(viewController: self)
+        layoutManager = NewsAndBlogLayoutManager(viewController: self)
+    }
+    
+    func configureCoordinatorManager() {
+        coordinatorManager = NewsAndBlogCoordinatorManager(viewController: self)
     }
     
     func configureDataSource() {

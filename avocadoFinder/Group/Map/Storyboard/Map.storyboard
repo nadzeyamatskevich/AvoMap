@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="width" constant="60" id="JjZ-Lq-cUk"/>
                                     <constraint firstAttribute="height" constant="60" id="mHi-qM-82n"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="57"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
