@@ -41,8 +41,8 @@ class NewsAndBlogViewController: UIViewController {
 // MARK: - Data source delegate
 
 extension NewsAndBlogViewController: NewsAndBlogDataSourceDelegate {
-    func didTapOnCell(post: Int) {
-       coordinatorManager.pushOneNewsInfoViewController()
+    func didTapOnCell(news: NewsModel) {
+       coordinatorManager.pushOneNewsInfoViewController(news: news)
     }
     
 }
@@ -54,6 +54,11 @@ extension NewsAndBlogViewController {
     
     func getNewsRequest(completion: @escaping ((_ successModel: [NewsModel]?, _ error: ErrorModel?) -> ())) {
         serverManager.getNews(completion: completion)
+    }
+    
+    func updateData(news: [NewsModel]) {
+        dataSource.news = news
+        dataSource.update()
     }
     
 }

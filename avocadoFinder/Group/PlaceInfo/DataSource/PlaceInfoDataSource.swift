@@ -14,7 +14,10 @@ class PlaceInfoDataSource: NSObject {
     fileprivate unowned let tableView: UITableView
     
     // - Delegate
-    weak var delegate: ListOfPlacesDataSourceDelegate?
+    weak var addCommentDelegate: PlaceInfoDataSourceDelegate?
+    
+    // - Data
+    var shop = ShopModel()
     
     // - Lifecycle
     init(tableView: UITableView) {
@@ -35,7 +38,7 @@ class PlaceInfoDataSource: NSObject {
 extension PlaceInfoDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2 + shop.recent_comments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,10 +63,6 @@ extension PlaceInfoDataSource: UITableViewDelegate {
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //delegate?.didTapOnCell(shop: indexPath.row)
-    }
-    
 }
 
 // MARK: -
@@ -73,16 +72,19 @@ extension PlaceInfoDataSource {
     
     func maimInfoCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.mainInfoCell, for: indexPath) as! PlaceInfoMainInfoTableViewCell
+        cell.set(shop: shop)
         return cell
     }
     
     func addCommentCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.addCommentCell, for: indexPath) as! PlaceInfoAddCommentTableViewCell
+        cell.delegate = addCommentDelegate
         return cell
     }
     
     func commentCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.commetnCell, for: indexPath) as! PlaceInfoCommentTableViewCell
+        cell.set(comment: shop.recent_comments[indexPath.row - 2])
         return cell
     }
     

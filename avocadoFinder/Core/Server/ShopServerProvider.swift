@@ -12,9 +12,9 @@ enum ShopServerProvider {
     
     case getShops
     case addShop(shop: ShopModel)
-    case getShopInfo(shopID: Int)
-    case addComment(shopID: Int, comment: CommentModel)
-    case getComments(shopID: Int)
+    case getShopInfo(shopID: String)
+    case addComment(shopID: String, comment: CommentModel)
+    case getComments(shopID: String)
     
 }
 
@@ -60,11 +60,13 @@ extension ShopServerProvider: TargetType {
         case .getShops:
             return .requestPlain
         case .addShop(let shop):
-            return .requestJSONEncodable(shop)
+            let params = ["shop": ["name": shop.name, "author": shop.author, "address": shop.address, "latitude": shop.latitude, "longitude": shop.longitude]]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .getShopInfo:
             return .requestPlain
         case .addComment(_ ,let comment):
-            return .requestJSONEncodable(comment)
+            let params = ["comment": ["author": comment.author, "body": comment.body]]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .getComments:
             return .requestPlain
         }

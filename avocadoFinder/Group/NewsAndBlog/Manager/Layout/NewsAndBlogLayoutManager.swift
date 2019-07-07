@@ -7,15 +7,11 @@
 //
 
 import UIKit
-import GoogleMaps
 
 class NewsAndBlogLayoutManager: NSObject {
     
     // - UI
     fileprivate unowned let viewController: NewsAndBlogViewController
-    
-    // - Manager
-    private let locationManager = CLLocationManager()
     
     init(viewController: NewsAndBlogViewController) {
         self.viewController = viewController
@@ -37,9 +33,10 @@ extension NewsAndBlogLayoutManager {
         viewController.getNewsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if let error = error {
-                print("Error")
+                print(error)
+                strongSelf.viewController.showAlert(title: "Упс, ошибка", message: "Попорбуйте позже")
             } else if let response = response {
-                print("RESPONSE", response)
+                strongSelf.viewController.updateData(news: response)
             }
         }
     }

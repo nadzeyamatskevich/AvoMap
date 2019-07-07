@@ -18,4 +18,10 @@ class MapServerManager {
         }
     }
     
+    func postShop(shop: ShopModel, completion: @escaping ((_ successModel: ShopModel?, _ error: ErrorModel?) -> ())) {
+        serverProvider.request(.addShop(shop: shop)) { (result) in
+            handleResponseJSONModel(result: result, completion: completion)
+        }
+    }
+    
 }

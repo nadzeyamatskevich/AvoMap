@@ -16,9 +16,17 @@ class OneNewsInfoViewController: UIViewController {
     @IBOutlet weak var mainText: UITextView!
     @IBOutlet weak var mainImage: UIImageView!
     
+    // - Manager
+    fileprivate var layoutManager: OneNewsInfoLayoutManager!
+    
+    // - Data
+    var news = NewsModel()
+    
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(news)
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,4 +45,15 @@ class OneNewsInfoViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension OneNewsInfoViewController {
+    
+    func configure() {
+        configureLayoutManager()
+    }
+    
+    func configureLayoutManager() {
+        layoutManager = OneNewsInfoLayoutManager(viewController: self)
+    }
 }

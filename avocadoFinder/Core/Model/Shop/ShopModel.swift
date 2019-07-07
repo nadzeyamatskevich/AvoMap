@@ -10,21 +10,13 @@ import RealmSwift
 
 class ShopModel: Object, Codable {
     
-  /*  "address": "Nezav. st, 12",
-    "author": "Author 2",
-    "id": "dcd8e8f8-1f59-43de-8ab1-29544e92ac95",
-    "latitude": "54.863078000",
-    "longitude": "28.336200000",
-    "name": "Shop 2",
-    "recent_comments": []
-    */
-    
     @objc dynamic var id = ""
     @objc dynamic var address = ""
     @objc dynamic var author = ""
     @objc dynamic var latitude = ""
     @objc dynamic var longitude = ""
     @objc dynamic var name = ""
+    var recent_comments = List<CommentModel>()
     
     override public static func primaryKey() -> String? {
         return "id"
@@ -37,6 +29,7 @@ class ShopModel: Object, Codable {
         case latitude
         case longitude
         case name
+        case recent_comments
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -48,6 +41,10 @@ class ShopModel: Object, Codable {
         latitude = try values.decodeIfPresent(String.self, forKey: .latitude) ?? ""
         longitude = try values.decodeIfPresent(String.self, forKey: .longitude) ?? ""
         name = try values.decodeIfPresent(String.self, forKey: .name) ?? ""
+        
+        if let recent_comments = try values.decodeIfPresent([CommentModel].self, forKey: .recent_comments) {
+            self.recent_comments.append(objectsIn: recent_comments)
+        }
     }
     
     func encode(to encoder: Encoder) throws {
@@ -58,6 +55,7 @@ class ShopModel: Object, Codable {
         try container.encode(latitude, forKey: .latitude)
         try container.encode(longitude, forKey: .longitude)
         try container.encode(name, forKey: .name)
+        try container.encode(Array(recent_comments), forKey: .recent_comments)
     }
     
 }

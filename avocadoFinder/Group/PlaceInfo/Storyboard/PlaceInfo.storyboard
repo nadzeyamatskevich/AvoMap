@@ -177,30 +177,12 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpe-of-IAm">
-                                                            <rect key="frame" x="24" y="57.5" width="295" height="19.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="19.5" id="N61-bd-DC8"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dividerWhite" translatesAutoresizingMaskIntoConstraints="NO" id="T5k-Tv-q2i">
                                                             <rect key="frame" x="8" y="85" width="327" height="1"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="OYr-Bq-eOB"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsk-DZ-z8Z">
-                                                            <rect key="frame" x="24" y="110" width="295" height="19.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="19.5" id="dKT-Iw-V88"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dividerWhite" translatesAutoresizingMaskIntoConstraints="NO" id="pQN-QW-4oN">
                                                             <rect key="frame" x="8" y="137.5" width="327" height="1"/>
                                                             <constraints>
@@ -220,26 +202,44 @@
                                                                 <action selector="addCommentButtonAction:" destination="GZj-uD-K2X" eventType="touchUpInside" id="bNo-2b-RpZ"/>
                                                             </connections>
                                                         </button>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="@instagram" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-df-eQR">
+                                                            <rect key="frame" x="24" y="52" width="295" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="vTw-Vf-sN4"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Комментарий" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUw-Cd-a87">
+                                                            <rect key="frame" x="24" y="106" width="295" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="vW6-UL-1mj"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.90426713197969544" blue="0.6806878859289619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="EUw-Cd-a87" firstAttribute="top" secondItem="T5k-Tv-q2i" secondAttribute="bottom" constant="20" id="2I7-9a-UYy"/>
                                                         <constraint firstAttribute="trailing" secondItem="pQN-QW-4oN" secondAttribute="trailing" constant="8" id="63V-pP-tSP"/>
                                                         <constraint firstAttribute="trailing" secondItem="VmH-nw-Lfq" secondAttribute="trailing" constant="24" id="Fxl-4t-4AO"/>
+                                                        <constraint firstItem="pQN-QW-4oN" firstAttribute="top" secondItem="EUw-Cd-a87" secondAttribute="bottom" constant="1.5" id="KQM-oW-cks"/>
                                                         <constraint firstItem="KVc-jN-HTN" firstAttribute="top" secondItem="uqd-ml-3d2" secondAttribute="top" constant="35" id="OE4-0H-ofe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="EUw-Cd-a87" secondAttribute="trailing" constant="24" id="OuI-e1-9an"/>
+                                                        <constraint firstItem="dmb-df-eQR" firstAttribute="top" secondItem="KVc-jN-HTN" secondAttribute="bottom" constant="2.5" id="PGa-Xv-5p2"/>
                                                         <constraint firstItem="VmH-nw-Lfq" firstAttribute="top" secondItem="pQN-QW-4oN" secondAttribute="bottom" constant="16" id="Qif-Yn-FEQ"/>
                                                         <constraint firstItem="pQN-QW-4oN" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="8" id="S4I-fh-7Nw"/>
                                                         <constraint firstAttribute="trailing" secondItem="T5k-Tv-q2i" secondAttribute="trailing" constant="8" id="YRa-CN-MkK"/>
-                                                        <constraint firstItem="T5k-Tv-q2i" firstAttribute="top" secondItem="Rpe-of-IAm" secondAttribute="bottom" constant="8" id="ZAN-EK-jWD"/>
-                                                        <constraint firstItem="Qsk-DZ-z8Z" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="24" id="a95-Xy-qk7"/>
+                                                        <constraint firstItem="EUw-Cd-a87" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="24" id="czL-o9-Z0G"/>
                                                         <constraint firstItem="KVc-jN-HTN" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="24" id="dMT-JV-IHK"/>
-                                                        <constraint firstItem="Rpe-of-IAm" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="24" id="eQr-p1-afT"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Rpe-of-IAm" secondAttribute="trailing" constant="24" id="gTe-hc-hrV"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Qsk-DZ-z8Z" secondAttribute="trailing" constant="24" id="hIg-CL-jiR"/>
-                                                        <constraint firstItem="Qsk-DZ-z8Z" firstAttribute="top" secondItem="T5k-Tv-q2i" secondAttribute="bottom" constant="24" id="hik-12-XI2"/>
-                                                        <constraint firstItem="pQN-QW-4oN" firstAttribute="top" secondItem="Qsk-DZ-z8Z" secondAttribute="bottom" constant="8" id="hng-sv-PuU"/>
+                                                        <constraint firstItem="dmb-df-eQR" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="24" id="ftd-SO-Gtv"/>
+                                                        <constraint firstItem="T5k-Tv-q2i" firstAttribute="top" secondItem="dmb-df-eQR" secondAttribute="bottom" constant="3" id="l8B-SZ-5UQ"/>
                                                         <constraint firstItem="T5k-Tv-q2i" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="8" id="pb1-Hj-Hzh"/>
-                                                        <constraint firstItem="Rpe-of-IAm" firstAttribute="top" secondItem="KVc-jN-HTN" secondAttribute="bottom" constant="8" id="rgn-c8-Spv"/>
                                                         <constraint firstAttribute="bottom" secondItem="VmH-nw-Lfq" secondAttribute="bottom" constant="16.5" id="yMq-Ky-66B"/>
+                                                        <constraint firstAttribute="trailing" secondItem="dmb-df-eQR" secondAttribute="trailing" constant="24" id="zP6-Rv-uyP"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -253,6 +253,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="authorTextField" destination="dmb-df-eQR" id="oQ5-ol-CIs"/>
+                                            <outlet property="commentTextField" destination="EUw-Cd-a87" id="9eA-NF-Q70"/>
                                             <outlet property="mainView" destination="uqd-ml-3d2" id="vwT-LD-LKl"/>
                                         </connections>
                                     </tableViewCell>
@@ -315,6 +317,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="IuI-uW-MIm" id="tNe-tI-zib"/>
+                                            <outlet property="userLabel" destination="zHT-JZ-tZt" id="YHC-Ze-i4o"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

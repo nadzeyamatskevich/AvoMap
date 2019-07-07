@@ -10,9 +10,18 @@ import UIKit
 
 class PlaceInfoCommentTableViewCell: UITableViewCell {
 
+    // - UI
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    
     // - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func set(comment: CommentModel) {
+        userLabel.text = comment.author
+        commentLabel.text = comment.body
     }
 
 }

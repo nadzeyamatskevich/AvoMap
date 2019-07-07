@@ -29,6 +29,7 @@ class MapViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        layoutManager.getShops()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -44,11 +45,19 @@ class MapViewController: UIViewController {
 extension MapViewController {
     
     @IBAction func listOfPlacesButtonAction(_ sender: Any) {
-        coordinatorManager.pushLitsOfPlacesViewController()
+        coordinatorManager.pushLitsOfPlacesViewController(shops: [])
     }
     
     @IBAction func addNewPlaceButtonAction(_ sender: Any) {
         coordinatorManager.pushAddNewPlaceViewController()
+    }
+    
+    func openPlaceInfo(shop: ShopModel) {
+        coordinatorManager.pushPlaceViewController(shop: shop)
+    }
+    
+    func openPlaceList(shops: [ShopModel]) {
+        coordinatorManager.pushLitsOfPlacesViewController(shops: shops)
     }
     
 }

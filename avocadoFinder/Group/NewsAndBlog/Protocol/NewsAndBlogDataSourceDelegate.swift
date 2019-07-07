@@ -9,5 +9,5 @@
 import UIKit
 
 protocol NewsAndBlogDataSourceDelegate: class {
-    func didTapOnCell(post: Int)
+    func didTapOnCell(news: NewsModel)
 }

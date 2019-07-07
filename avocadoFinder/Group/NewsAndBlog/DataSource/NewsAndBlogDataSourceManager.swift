@@ -16,6 +16,9 @@ class NewsAndBlogDataSourceManager: NSObject {
     // - Delegate
     weak var delegate: NewsAndBlogDataSourceDelegate?
     
+    // - Data
+    var news: [NewsModel] = []
+    
     // - Lifecycle
     init(tableView: UITableView) {
         self.tableView = tableView
@@ -35,7 +38,7 @@ class NewsAndBlogDataSourceManager: NSObject {
 extension NewsAndBlogDataSourceManager: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +57,7 @@ extension NewsAndBlogDataSourceManager: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didTapOnCell(post: indexPath.row)
+        delegate?.didTapOnCell(news: news[indexPath.row])
     }
     
 }
@@ -66,6 +69,7 @@ extension NewsAndBlogDataSourceManager {
     
     func newsCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.newsCell, for: indexPath) as! NewsAndBlogTableViewCell
+        cell.set(news: news[indexPath.row])
         return cell
     }
     

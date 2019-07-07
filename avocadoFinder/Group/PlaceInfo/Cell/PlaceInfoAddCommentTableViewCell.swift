@@ -12,6 +12,11 @@ class PlaceInfoAddCommentTableViewCell: UITableViewCell {
 
     // - UI
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var authorTextField: UITextField!
+    @IBOutlet weak var commentTextField: UITextField!
+    
+    // - Delegate
+    var delegate: PlaceInfoDataSourceDelegate?
     
     // - Lifecycle
     override func awakeFromNib() {
@@ -20,7 +25,35 @@ class PlaceInfoAddCommentTableViewCell: UITableViewCell {
     }
 
     // - Action
-    @IBAction func addCommentButtonAction(_ sender: Any){
+    @IBAction func addCommentButtonAction(_ sender: Any) {
+        if checkComment() {
+            delegate?.addCommentAction(comment: createComment())
+        }
+    }
+    
+}
+
+// MARK: -
+// MARK: - Delegate
+
+extension PlaceInfoAddCommentTableViewCell {
+    
+    func checkComment() -> Bool {
+        if authorTextField.text == "" {
+            delegate?.showErrorAlert(message: "Напишите свое имя :)")
+        } else if commentTextField.text == "" {
+            delegate?.showErrorAlert(message: "Напишите комментарий :)")
+        } else {
+            return true
+        }
+        return false
+    }
+    
+    func createComment() -> CommentModel {
+        var newComment = CommentModel()
+        newComment.author = authorTextField.text!
+        newComment.body = commentTextField.text!
+        return newComment
     }
     
 }

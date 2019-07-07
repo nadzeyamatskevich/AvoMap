@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ListOfPlacesDataSourceDelegate: class {
-    func didTapOnCell(shop: Int)
+    func didTapOnCell(shop: ShopModel)
 }

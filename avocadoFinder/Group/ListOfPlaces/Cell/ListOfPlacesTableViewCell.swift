@@ -21,8 +21,11 @@ class ListOfPlacesTableViewCell: UITableViewCell {
         configure()
     }
 
-    func set() {}
-
+    func set(shop: ShopModel) {
+        shopNameLabel.text = shop.name
+        shopAddressLabel.text = shop.address
+    }
+    
 }
 
 // MARK: -

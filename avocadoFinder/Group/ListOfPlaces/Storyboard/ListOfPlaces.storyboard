@@ -111,11 +111,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGb-ef-RIE">
-                                <rect key="frame" x="271" y="563" width="80" height="80"/>
+                                <rect key="frame" x="291" y="583" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.90426713199999997" blue="0.68068788589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="sBb-c6-6cM"/>
-                                    <constraint firstAttribute="height" constant="80" id="vZX-Gk-uFs"/>
+                                    <constraint firstAttribute="width" constant="60" id="sBb-c6-6cM"/>
+                                    <constraint firstAttribute="height" constant="60" id="vZX-Gk-uFs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="72"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>

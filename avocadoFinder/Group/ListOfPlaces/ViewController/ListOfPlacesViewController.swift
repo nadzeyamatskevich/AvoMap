@@ -15,8 +15,11 @@ class ListOfPlacesViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     // - Manager
-    //fileprivate var layoutManager: ShoppingListMenuLayoutManager!
     fileprivate var dataSource: ListOfPlacesDataSource!
+    fileprivate var serverManager = MapServerManager()
+    
+    // - Data
+    var shops: [ShopModel] = []
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -27,6 +30,7 @@ class ListOfPlacesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        getServerData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -34,7 +38,10 @@ class ListOfPlacesViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    
+    func update() {
+        dataSource.shops = shops
+        tableView.reloadData()
+    }
     
 }
 
@@ -62,9 +69,34 @@ extension ListOfPlacesViewController {
 // MARK: - Data source delegate
 
 extension ListOfPlacesViewController: ListOfPlacesDataSourceDelegate {
-    func didTapOnCell(shop: Int) {
+    func didTapOnCell(shop: ShopModel) {
         let placeInfoViewController = UIStoryboard(storyboard: .placeInfo).instantiateInitialViewController() as! PlaceInfoViewController
+        placeInfoViewController.shop = shop
         self.navigationController?.pushViewController(placeInfoViewController, animated: true)
+    }
+    
+}
+
+// MARK: -
+// MARK: - Server
+
+extension ListOfPlacesViewController {
+    
+    func getShopsRequest(completion: @escaping ((_ successModel: [ShopModel]?, _ error: ErrorModel?) -> ())) {
+        serverManager.getShops(completion: completion)
+    }
+    
+    func getShops() {
+        getShopsRequest() { [weak self] (response, error) in
+            guard let strongSelf = self else { return }
+            if let error = error {
+                print(error.message)
+                self?.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
+            } else if let response = response {
+                strongSelf.shops = response
+                strongSelf.update()
+            }
+        }
     }
     
 }
@@ -75,13 +107,13 @@ extension ListOfPlacesViewController: ListOfPlacesDataSourceDelegate {
 extension ListOfPlacesViewController {
     
     func configure() {
-        configureLayoutManager()
         configureDataSource()
         configureSaveButton()
+        getServerData()
     }
     
-    func configureLayoutManager() {
-        //layoutManager = ShoppingListMenuLayoutManager(viewController: self)
+    func getServerData() {
+        shops.count == 0 ? getShops() : update()
     }
     
     func configureDataSource() {
@@ -90,7 +122,7 @@ extension ListOfPlacesViewController {
     }
     
     func configureSaveButton() {
-        saveButton.layer.cornerRadius = 40
+        saveButton.layer.cornerRadius = 30
         saveButton.setupShadow(color: AppColor.black(alpha: 0.1))
     }
     

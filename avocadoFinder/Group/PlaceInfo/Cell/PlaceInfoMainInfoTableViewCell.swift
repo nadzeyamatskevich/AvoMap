@@ -22,6 +22,11 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
         configure()
     }
 
+    func set(shop: ShopModel) {
+        shopTitle.text = shop.name
+        shopAdress.text = shop.address
+        instagramLabel.text = shop.author
+    }
 }
 
 // MARK: -

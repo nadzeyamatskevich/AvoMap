@@ -95,6 +95,8 @@
                                         <connections>
                                             <outlet property="avoImage" destination="CdT-uG-Arm" id="9Ip-GK-e8c"/>
                                             <outlet property="mainView" destination="r6r-7r-qfF" id="gJG-yC-X3T"/>
+                                            <outlet property="subtitleLabel" destination="DGi-ih-vrY" id="zcc-Ie-eul"/>
+                                            <outlet property="titleLabel" destination="Qea-ax-ioE" id="NSx-k3-6SD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

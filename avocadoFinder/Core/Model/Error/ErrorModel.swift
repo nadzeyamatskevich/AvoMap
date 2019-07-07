@@ -8,8 +8,6 @@
 
 import SwiftyJSON
 
-
-
 class ErrorModel {
     
     private var codes = [String]()
