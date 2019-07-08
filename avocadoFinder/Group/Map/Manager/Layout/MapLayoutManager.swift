@@ -50,17 +50,6 @@ extension MapLayoutManager: GMUClusterManagerDelegate {
         clusterManager.setDelegate(self, mapDelegate: self)
     }
     
-    /*func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
-        let newCamera = GMSCameraPosition.camera(withTarget: cluster.position,
-                                                 zoom: viewController.avoMapView.camera.zoom + 5)
-        let update = GMSCameraUpdate.setCamera(newCamera)
-        
-        viewController.avoMapView.moveCamera(update)
-        
-        
-        return false
-    }*/
-    
     private func generateClusterItems() {
         clusterManager.clearItems()
         for shop in shops {
@@ -104,8 +93,7 @@ extension MapLayoutManager {
     func getShops() {
         viewController.getShopsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
-            if let error = error {
-                print(error.message)
+            if error != nil {
                 self?.viewController.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
                 strongSelf.shops = response

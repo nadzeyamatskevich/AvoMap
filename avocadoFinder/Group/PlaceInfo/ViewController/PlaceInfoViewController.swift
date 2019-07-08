@@ -30,11 +30,16 @@ class PlaceInfoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        getServerData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    func update() {
+        tableVIew.reloadData()
     }
     
 }
@@ -87,6 +92,22 @@ extension PlaceInfoViewController {
         }
     }
     
+    func getShopInfoRequest(shopID: String, completion: @escaping ((_ successModel: ShopModel?, _ error: ErrorModel?) -> ())) {
+        serverManager.getShopInfo(shopID: shopID, completion: completion)
+    }
+    
+    func getShopInfo(shopID: String) {
+        getShopInfoRequest(shopID: shopID) { [weak self] (response, error) in
+            guard let strongSelf = self else { return }
+            if error != nil {
+                strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
+            } else if let response = response {
+                strongSelf.dataSource.shop = response
+                strongSelf.update()
+            }
+        }
+    }
+    
 }
 
 // MARK: -
@@ -107,6 +128,10 @@ extension PlaceInfoViewController {
         dataSource = PlaceInfoDataSource(tableView: tableVIew)
         dataSource.addCommentDelegate = self
         dataSource.shop = shop
+    }
+    
+    func getServerData() {
+        getShopInfo(shopID: shop.id)
     }
     
 }

@@ -18,4 +18,10 @@ class PlaceInfoServerManager {
         }
     }
     
+    func getShopInfo(shopID: String, completion: @escaping ((_ successModel: ShopModel?, _ error: ErrorModel?) -> ())) {
+        serverProvider.request(.getShopInfo(shopID: shopID)) { (result) in
+            handleResponseJSONModel(result: result, completion: completion)
+        }
+    }
+    
 }

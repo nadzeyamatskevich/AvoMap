@@ -80,7 +80,7 @@ func handleResponseJSONModel<ModelType: Decodable>(result: Result<Response, Moya
         let data = moyaResponse.data
         let statusCode = moyaResponse.statusCode
         
-        if statusCode == 200 {
+        if statusCode == 200 || statusCode == 201 {
             var model: ModelType? = nil
             let json = try? moyaResponse.mapJSON() as? [String : Any]
             if let json = json {

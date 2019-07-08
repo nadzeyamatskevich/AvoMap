@@ -99,7 +99,6 @@ extension AddNewPlaceViewController {
         newShop.name = shopNameTextField.text!
         newShop.address = shopAddressTextField.text!
         newShop.author = shopAuthorTextField.text!
-        print("COORD", newShop.longitude, newShop.latitude)
         newShop.longitude = "\(27.5274070)"
         newShop.latitude = "\(53.9080890)"
         //COORD 27.5274065 53.9080877
@@ -120,11 +119,9 @@ extension AddNewPlaceViewController {
     func addShop(shop: ShopModel) {
         postShopRequest(shop: shop) { [weak self] (response, error) in
             guard let strongSelf = self else { return }
-            if let error = error {
-                print("Error", error.message)
+            if error != nil {
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
-            } else if let response = response {
-                print(response)
+            } else if response != nil {
                 strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: {
                     strongSelf.navigationController?.popViewController(animated: true)
                 })

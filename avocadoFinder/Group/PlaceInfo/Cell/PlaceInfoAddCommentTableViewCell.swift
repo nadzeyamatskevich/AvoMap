@@ -50,7 +50,7 @@ extension PlaceInfoAddCommentTableViewCell {
     }
     
     func createComment() -> CommentModel {
-        var newComment = CommentModel()
+        let newComment = CommentModel()
         newComment.author = authorTextField.text!
         newComment.body = commentTextField.text!
         return newComment

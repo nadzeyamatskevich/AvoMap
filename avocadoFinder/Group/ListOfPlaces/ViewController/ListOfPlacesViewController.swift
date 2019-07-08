@@ -89,8 +89,7 @@ extension ListOfPlacesViewController {
     func getShops() {
         getShopsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
-            if let error = error {
-                print(error.message)
+            if error != nil {
                 self?.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
                 strongSelf.shops = response

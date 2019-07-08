@@ -25,7 +25,6 @@ class OneNewsInfoViewController: UIViewController {
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(news)
         configure()
     }
     

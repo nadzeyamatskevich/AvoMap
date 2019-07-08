@@ -16,10 +16,10 @@ class NewsAndBlogLayoutManager: NSObject {
     init(viewController: NewsAndBlogViewController) {
         self.viewController = viewController
         super.init()
-        configure()
     }
     
     func viewWillAppear(_ animated: Bool) {
+        getServerData()
     }
     
 }
@@ -33,7 +33,6 @@ extension NewsAndBlogLayoutManager {
         viewController.getNewsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if let error = error {
-                print(error)
                 strongSelf.viewController.showAlert(title: "Упс, ошибка", message: "Попорбуйте позже")
             } else if let response = response {
                 strongSelf.viewController.updateData(news: response)
@@ -47,12 +46,8 @@ extension NewsAndBlogLayoutManager {
 // MARK: - Configure
 
 fileprivate extension NewsAndBlogLayoutManager {
-    
-    func configure() {
-        getServerData()
-    }
-    
     func getServerData() {
         getNews()
     }
+    
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 enum Constants {
-    static let baseURL = "https://avo-map.herokuapp.com/api/v1/"
+    static let baseURL = "https://avo-map.herokuapp.com/api/v1"
 }
