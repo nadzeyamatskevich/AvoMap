@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-eM-acn">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="503"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceInfoMainInfoTableViewCell" rowHeight="270" id="xxT-wO-pQY" customClass="PlaceInfoMainInfoTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
@@ -319,6 +319,7 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="commentLabel" destination="IuI-uW-MIm" id="tNe-tI-zib"/>
+                                            <outlet property="timeLabel" destination="4RG-s3-Of1" id="gJY-5T-ySq"/>
                                             <outlet property="userLabel" destination="zHT-JZ-tZt" id="YHC-Ze-i4o"/>
                                         </connections>
                                     </tableViewCell>
@@ -332,7 +333,7 @@
                             <constraint firstItem="NDb-eM-acn" firstAttribute="leading" secondItem="Ldc-e1-X27" secondAttribute="leading" id="TPs-eY-l2g"/>
                             <constraint firstItem="fSd-Lb-cxZ" firstAttribute="leading" secondItem="Ldc-e1-X27" secondAttribute="leading" constant="16" id="bEV-9c-CI9"/>
                             <constraint firstItem="XlX-n8-DT2" firstAttribute="top" secondItem="aah-nJ-ubq" secondAttribute="top" constant="-10" id="esK-2N-gjP"/>
-                            <constraint firstItem="NDb-eM-acn" firstAttribute="top" secondItem="XlX-n8-DT2" secondAttribute="bottom" constant="-60" id="glX-Ud-qCO"/>
+                            <constraint firstItem="NDb-eM-acn" firstAttribute="top" secondItem="XlX-n8-DT2" secondAttribute="bottom" constant="-12" id="glX-Ud-qCO"/>
                             <constraint firstItem="XlX-n8-DT2" firstAttribute="leading" secondItem="aah-nJ-ubq" secondAttribute="leading" constant="-10" id="pWx-PU-ywa"/>
                             <constraint firstAttribute="trailing" secondItem="XlX-n8-DT2" secondAttribute="trailing" constant="-10" id="toZ-ao-4BF"/>
                             <constraint firstItem="fSd-Lb-cxZ" firstAttribute="top" secondItem="Ldc-e1-X27" secondAttribute="top" constant="16" id="wHJ-4T-LEq"/>

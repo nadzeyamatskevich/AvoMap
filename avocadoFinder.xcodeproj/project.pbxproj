@@ -64,6 +64,7 @@
 		937BB88322416C9A00215E58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BB88222416C9A00215E58 /* MapViewController.swift */; };
 		937BB88822416C9C00215E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937BB88722416C9C00215E58 /* Assets.xcassets */; };
 		937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937BB88922416C9C00215E58 /* LaunchScreen.storyboard */; };
+		9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399376022D7BEC000E00AC2 /* DateExtention.swift */; };
 		939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */; };
 		939F051D22D237D700180648 /* PlaceInfoServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051C22D237D700180648 /* PlaceInfoServerManager.swift */; };
 		939F052022D2388800180648 /* PlaceInfoDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051F22D2388800180648 /* PlaceInfoDataSourceDelegate.swift */; };
@@ -200,6 +201,7 @@
 		937BB88722416C9C00215E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937BB88A22416C9C00215E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937BB88C22416C9C00215E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9399376022D7BEC000E00AC2 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoLayoutManager.swift; sourceTree = "<group>"; };
 		939F051C22D237D700180648 /* PlaceInfoServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoServerManager.swift; sourceTree = "<group>"; };
 		939F051F22D2388800180648 /* PlaceInfoDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoDataSourceDelegate.swift; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 				93DB41DA227DEA6400CC8113 /* UIViewExtention.swift */,
 				93DB41DE227DEDB600CC8113 /* StoryboardExtention.swift */,
 				933B493422C29BD60011FE5F /* UIViewControllerExtention.swift */,
+				9399376022D7BEC000E00AC2 /* DateExtention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -1308,6 +1311,7 @@
 				93D1A63022883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift in Sources */,
 				93330D2D224F5472000A1BE3 /* ListOfPlacesViewController.swift in Sources */,
 				93DB41DF227DEDB600CC8113 /* StoryboardExtention.swift in Sources */,
+				9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */,
 				93330D33224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift in Sources */,
 				93DB41E2227DF29500CC8113 /* SafeAreaTabBar.swift in Sources */,
 				93DB41DB227DEA6400CC8113 /* UIViewExtention.swift in Sources */,

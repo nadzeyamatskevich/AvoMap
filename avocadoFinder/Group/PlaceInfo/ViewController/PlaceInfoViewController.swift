@@ -86,7 +86,7 @@ extension PlaceInfoViewController {
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
                 strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: {
-                    strongSelf.navigationController?.popViewController(animated: true)
+                    strongSelf.getShopInfo(shopID: strongSelf.shop.id)
                 })
             }
         }

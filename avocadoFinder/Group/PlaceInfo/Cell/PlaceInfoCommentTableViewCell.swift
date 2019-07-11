@@ -13,6 +13,7 @@ class PlaceInfoCommentTableViewCell: UITableViewCell {
     // - UI
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     // - Lifecycle
     override func awakeFromNib() {
@@ -20,8 +21,16 @@ class PlaceInfoCommentTableViewCell: UITableViewCell {
     }
     
     func set(comment: CommentModel) {
+        timeLabel.text = formatDate(date: comment.inserted_at)
         userLabel.text = comment.author
         commentLabel.text = comment.body
+    }
+    
+    func formatDate(date: String) -> String {
+        if let currentDate = Date.stringToDate(dateString: date) {
+            return currentDate.dateToStringTime()
+        }
+        return Date().dateToStringTime()
     }
 
 }

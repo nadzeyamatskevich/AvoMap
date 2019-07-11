@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jyV-bO-540">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,39 +15,39 @@
             <objects>
                 <viewController id="jyV-bO-540" customClass="SettingsViewController" customModule="avocadoFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Egb-0J-hfL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="ZOJ-az-4JG">
-                                <rect key="frame" x="-10" y="-10" width="340" height="166"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="RAA-b4-BuS"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="peX-iP-Xrd">
-                                <rect key="frame" x="195" y="0.0" width="125" height="177"/>
+                                <rect key="frame" x="250" y="0.0" width="125" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="5RP-Ec-pS7"/>
                                     <constraint firstAttribute="height" constant="177" id="hqJ-1h-0E9"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSP-5u-DXS">
-                                <rect key="frame" x="16" y="126" width="288" height="340"/>
+                                <rect key="frame" x="16" y="126" width="343" height="340"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="jog-uf-jOd">
-                                        <rect key="frame" x="8" y="194" width="272" height="1"/>
+                                        <rect key="frame" x="8" y="194" width="327" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="XJC-mE-So9"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="YfR-bQ-sMz">
-                                        <rect key="frame" x="8" y="64" width="272" height="1"/>
+                                        <rect key="frame" x="8" y="64" width="327" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="t17-IW-ZM0"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="cRw-ak-Gt0">
-                                        <rect key="frame" x="8" y="129" width="272" height="1"/>
+                                        <rect key="frame" x="8" y="129" width="327" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="yTm-0E-Dq7"/>
                                         </constraints>
@@ -74,13 +74,13 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="idj-tU-uPf">
-                                        <rect key="frame" x="8" y="259" width="272" height="1"/>
+                                        <rect key="frame" x="8" y="259" width="327" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="yu5-RT-2zu"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyt-Ms-sdR">
-                                        <rect key="frame" x="72" y="17" width="200" height="30"/>
+                                        <rect key="frame" x="72" y="17" width="255" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="7NH-wZ-NTj"/>
                                         </constraints>
@@ -92,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jc-7b-koJ">
-                                        <rect key="frame" x="72" y="82" width="200" height="30"/>
+                                        <rect key="frame" x="72" y="82" width="255" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="MI0-m3-0ij"/>
                                         </constraints>
@@ -104,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHv-Sm-SaY">
-                                        <rect key="frame" x="72" y="147" width="200" height="30"/>
+                                        <rect key="frame" x="72" y="147" width="255" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Pgf-ez-E3X"/>
                                         </constraints>
@@ -116,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2I-vt-UaQ">
-                                        <rect key="frame" x="24" y="212" width="248" height="30"/>
+                                        <rect key="frame" x="24" y="212" width="303" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5XS-4D-qCx"/>
                                         </constraints>
@@ -128,13 +128,13 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="4Xe-6e-v8b">
-                                        <rect key="frame" x="8" y="324" width="272" height="1"/>
+                                        <rect key="frame" x="8" y="324" width="327" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="YZQ-2u-4LT"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AF7-Vb-Ndr">
-                                        <rect key="frame" x="24" y="277" width="248" height="30"/>
+                                        <rect key="frame" x="24" y="277" width="303" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="y5X-fK-XGe"/>
                                         </constraints>
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZC-LM-ELU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-92" y="162.3688155922039"/>
+            <point key="canvasLocation" x="-93.75" y="161.25"/>
         </scene>
     </scenes>
     <resources>
