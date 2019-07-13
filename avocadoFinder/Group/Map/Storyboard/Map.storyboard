@@ -45,24 +45,24 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо карта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tna-oB-b4T">
-                                <rect key="frame" x="16" y="36" width="159.5" height="29"/>
+                                <rect key="frame" x="16" y="38" width="159.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-Tw-7c3">
-                                <rect key="frame" x="16" y="85" width="118.5" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-Tw-7c3">
+                                <rect key="frame" x="16" y="77" width="159.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqL-R0-woh">
-                                <rect key="frame" x="268" y="39.5" width="83" height="22"/>
+                                <rect key="frame" x="268" y="41.5" width="83" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="KoJ-lZ-hsc"/>
                                 </constraints>
                                 <inset key="titleEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="74" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="74" minY="0.0" maxX="0.0" maxY="-2"/>
                                 <state key="normal" title="Список" image="nextButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -86,8 +86,8 @@
                             <constraint firstItem="XDt-Sl-vxB" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="-10" id="sXS-LC-3uT"/>
                             <constraint firstAttribute="trailing" secondItem="XDt-Sl-vxB" secondAttribute="trailing" constant="-10" id="t52-wn-Zkv"/>
                             <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="OGb-cq-dAh" secondAttribute="trailing" constant="10" id="tiy-41-bv5"/>
-                            <constraint firstItem="Hb7-Tw-7c3" firstAttribute="top" secondItem="tna-oB-b4T" secondAttribute="bottom" constant="20" id="vGg-XM-GJE"/>
-                            <constraint firstItem="tna-oB-b4T" firstAttribute="top" secondItem="JQL-eK-snu" secondAttribute="top" constant="16" id="xAE-Xm-efc"/>
+                            <constraint firstItem="Hb7-Tw-7c3" firstAttribute="top" secondItem="tna-oB-b4T" secondAttribute="bottom" constant="10" id="vGg-XM-GJE"/>
+                            <constraint firstItem="tna-oB-b4T" firstAttribute="top" secondItem="JQL-eK-snu" secondAttribute="top" constant="18" id="xAE-Xm-efc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JQL-eK-snu"/>
                     </view>

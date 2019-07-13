@@ -11,10 +11,12 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     // - UI
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var mininaAvatarImageView: UIImageView!
-    @IBOutlet weak var nadzeyaAvatarImageView: UIImageView!
-    @IBOutlet weak var yanaAvatarImageView: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+
+    // - Manager
+    fileprivate var dataSource: SettingsDataSource!
+    private var cellConfigurator: SettingsCellConfigurator!
+
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -37,37 +39,10 @@ class SettingsViewController: UIViewController {
 // MARK: -
 // MARK: - Navigation
 
-extension SettingsViewController {
+extension SettingsViewController: SettingsDataSourceDelegate {
     
-    @IBAction func mininaIGOpenButtonAction(_ sender: Any) {
-        openIGProfile(user: "minina_a")
-    }
-    
-    @IBAction func nadzeyaIGOpenButtonAction(_ sender: Any) {
-        openIGProfile(user: "nadzeyasavitskaya")
-    }
-    
-    @IBAction func yanaIGOpenButtonAction(_ sender: Any) {
-        openIGProfile(user: "yana.poddubskaya")
-    }
-    
-    @IBAction func rulesOfUseButtonAction(_ sender: Any) {
+    func didTapOnCell(value: String) {
         openStaticPage()
-    }
-    
-    @IBAction func termsOfCondButtonAction(_ sender: Any) {
-        openStaticPage()
-    }
-    
-    func openIGProfile(user: String) {
-        let instagramHooks = "instagram://user?username=\(user)"
-        let instagramUrl = NSURL(string: instagramHooks)
-        if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
-            UIApplication.shared.openURL(instagramUrl! as URL)
-        } else {
-            //redirect to safari because the user doesn't have Instagram
-            UIApplication.shared.openURL(NSURL(string: "http://instagram.com/\(user)")! as URL)
-        }
     }
     
     func openStaticPage() {
@@ -77,30 +52,29 @@ extension SettingsViewController {
     
 }
 
-
-
 // MARK: -
 // MARK: - Configure
 
 extension SettingsViewController {
     
     func configure() {
-        configureMainView()
-        configureAvatars()
+        setupCellConfigurator()
+        configureDataSource()
+        configureTableView()
     }
     
-    func configureMainView() {
-        mainView.layer.cornerRadius = 16
-        mainView.setupShadow(color: AppColor.black(alpha: 0.1))
+    func configureDataSource() {
+        dataSource = SettingsDataSource(tableView: tableView, cellItems: cellConfigurator.configure())
+        dataSource.delegate = self
     }
     
-    func configureAvatars() {
-        mininaAvatarImageView.layer.cornerRadius = 20
-        nadzeyaAvatarImageView.layer.cornerRadius = 20
-        yanaAvatarImageView.layer.cornerRadius = 20
-        mininaAvatarImageView.layer.masksToBounds = true
-        nadzeyaAvatarImageView.layer.masksToBounds = true
-        yanaAvatarImageView.layer.masksToBounds = true
+    func setupCellConfigurator() {
+        cellConfigurator = SettingsCellConfigurator()
+    }
+    
+    func configureTableView() {
+        tableView.layer.masksToBounds = true
+        tableView.layer.cornerRadius = 16
     }
     
 }

@@ -97,6 +97,13 @@
 		93DB41DD227DEC2000CC8113 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41DC227DEC2000CC8113 /* StoryboardEnum.swift */; };
 		93DB41DF227DEDB600CC8113 /* StoryboardExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41DE227DEDB600CC8113 /* StoryboardExtention.swift */; };
 		93DB41E2227DF29500CC8113 /* SafeAreaTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41E1227DF29500CC8113 /* SafeAreaTabBar.swift */; };
+		93FD666122D9E4CF0094A5A5 /* SettingsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666022D9E4CF0094A5A5 /* SettingsDataSource.swift */; };
+		93FD666322D9E61A0094A5A5 /* AuthorSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666222D9E61A0094A5A5 /* AuthorSettingsCell.swift */; };
+		93FD666522D9E6300094A5A5 /* TermsInfoSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666422D9E6300094A5A5 /* TermsInfoSettingsCell.swift */; };
+		93FD666822D9E82E0094A5A5 /* SettingsDataSourcedelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666722D9E82E0094A5A5 /* SettingsDataSourcedelegate.swift */; };
+		93FD666A22D9F1CF0094A5A5 /* SettingsCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666922D9F1CF0094A5A5 /* SettingsCellConfigurator.swift */; };
+		93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */; };
+		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -234,6 +241,13 @@
 		93DB41DC227DEC2000CC8113 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
 		93DB41DE227DEDB600CC8113 /* StoryboardExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtention.swift; sourceTree = "<group>"; };
 		93DB41E1227DF29500CC8113 /* SafeAreaTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaTabBar.swift; sourceTree = "<group>"; };
+		93FD666022D9E4CF0094A5A5 /* SettingsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataSource.swift; sourceTree = "<group>"; };
+		93FD666222D9E61A0094A5A5 /* AuthorSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorSettingsCell.swift; sourceTree = "<group>"; };
+		93FD666422D9E6300094A5A5 /* TermsInfoSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsInfoSettingsCell.swift; sourceTree = "<group>"; };
+		93FD666722D9E82E0094A5A5 /* SettingsDataSourcedelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataSourcedelegate.swift; sourceTree = "<group>"; };
+		93FD666922D9F1CF0094A5A5 /* SettingsCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellConfigurator.swift; sourceTree = "<group>"; };
+		93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
+		93FD667022D9F7650094A5A5 /* AppAuthors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuthors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -805,6 +819,9 @@
 		93A445CF226AFE8000386766 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				93FD666F22D9F7530094A5A5 /* Enum */,
+				93FD666B22D9F2500094A5A5 /* Model */,
+				93FD666622D9E6940094A5A5 /* Protocol */,
 				93A445D4226AFEC400386766 /* Cell */,
 				93A445D3226AFEB200386766 /* DataSource */,
 				93A445D2226AFEA900386766 /* Manager */,
@@ -833,6 +850,7 @@
 		93A445D2226AFEA900386766 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				93FD666922D9F1CF0094A5A5 /* SettingsCellConfigurator.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -840,6 +858,7 @@
 		93A445D3226AFEB200386766 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				93FD666022D9E4CF0094A5A5 /* SettingsDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -847,6 +866,8 @@
 		93A445D4226AFEC400386766 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				93FD666222D9E61A0094A5A5 /* AuthorSettingsCell.swift */,
+				93FD666422D9E6300094A5A5 /* TermsInfoSettingsCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1083,6 +1104,30 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		93FD666622D9E6940094A5A5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				93FD666722D9E82E0094A5A5 /* SettingsDataSourcedelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		93FD666B22D9F2500094A5A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93FD666F22D9F7530094A5A5 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				93FD667022D9F7650094A5A5 /* AppAuthors.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		E854A7C58D5265F6F01886D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1272,6 +1317,8 @@
 				931DF55022C5417400D43AB0 /* GMUFeature.m in Sources */,
 				93D1A62722881BB5008DD01D /* ListOfPlacesDataSource.swift in Sources */,
 				932A65AC22B4EE9600065119 /* Constants.swift in Sources */,
+				93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */,
+				93FD666122D9E4CF0094A5A5 /* SettingsDataSource.swift in Sources */,
 				93D1A62A22881C1E008DD01D /* ListOfPlacesDataSourceDelegate.swift in Sources */,
 				931DF54922C5417400D43AB0 /* GMUGradient.m in Sources */,
 				931DF55422C5417400D43AB0 /* GMULineString.m in Sources */,
@@ -1303,6 +1350,8 @@
 				932A659A22B4E4C600065119 /* ServerAuthorizedHeaders.swift in Sources */,
 				931DF54522C5417400D43AB0 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				9361F2B02288433C00071339 /* PlaceInfoViewController.swift in Sources */,
+				93FD666322D9E61A0094A5A5 /* AuthorSettingsCell.swift in Sources */,
+				93FD666822D9E82E0094A5A5 /* SettingsDataSourcedelegate.swift in Sources */,
 				931DF54622C5417400D43AB0 /* GMUStaticCluster.m in Sources */,
 				931DF54222C5417400D43AB0 /* GMUWrappingDictionaryKey.m in Sources */,
 				931DF55122C5417400D43AB0 /* GMUGroundOverlay.m in Sources */,
@@ -1314,6 +1363,7 @@
 				9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */,
 				93330D33224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift in Sources */,
 				93DB41E2227DF29500CC8113 /* SafeAreaTabBar.swift in Sources */,
+				93FD666A22D9F1CF0094A5A5 /* SettingsCellConfigurator.swift in Sources */,
 				93DB41DB227DEA6400CC8113 /* UIViewExtention.swift in Sources */,
 				931DF53F22C5417400D43AB0 /* GMUClusterManager.m in Sources */,
 				93DB41D9227DE9FA00CC8113 /* TabBarAnimation.swift in Sources */,
@@ -1321,6 +1371,7 @@
 				9361F2B2228843D300071339 /* PlaceInfoDataSource.swift in Sources */,
 				93A445F1226B01D300386766 /* OneNewsInfoViewController.swift in Sources */,
 				931DF55722C5417400D43AB0 /* GQTPointQuadTreeChild.m in Sources */,
+				93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */,
 				931DF54B22C5417400D43AB0 /* GMUKMLParser.m in Sources */,
 				931DF55622C5417400D43AB0 /* GQTPointQuadTree.m in Sources */,
 				93A445ED226B017C00386766 /* StaticPageViewController.swift in Sources */,
@@ -1344,6 +1395,7 @@
 				933B493722C2A4150011FE5F /* OneNewsInfoLayoutManager.swift in Sources */,
 				932A65B522B4F49000065119 /* MapServerManager.swift in Sources */,
 				931DF54122C5417400D43AB0 /* GMUDefaultClusterRenderer.m in Sources */,
+				93FD666522D9E6300094A5A5 /* TermsInfoSettingsCell.swift in Sources */,
 				93A445E9226AFFDB00386766 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

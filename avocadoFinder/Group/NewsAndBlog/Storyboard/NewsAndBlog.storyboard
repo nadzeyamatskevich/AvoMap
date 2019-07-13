@@ -113,11 +113,27 @@
                                     <constraint firstAttribute="bottom" secondItem="MWu-uM-HEf" secondAttribute="bottom" constant="-10" id="xDw-go-Qzc"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-hh-77E">
+                                <rect key="frame" x="16" y="38" width="188" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KP-oe-KUs">
+                                <rect key="frame" x="16" y="77" width="159.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Svc-An-WRc" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" id="CMv-qe-jRR"/>
+                            <constraint firstItem="3KP-oe-KUs" firstAttribute="top" secondItem="mIY-hh-77E" secondAttribute="bottom" constant="10" id="EoS-Z4-G1y"/>
                             <constraint firstItem="dSV-BI-dUF" firstAttribute="top" secondItem="Svc-An-WRc" secondAttribute="bottom" id="I3q-3s-yfi"/>
+                            <constraint firstItem="mIY-hh-77E" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" constant="16" id="K72-Tf-K5v"/>
+                            <constraint firstItem="3KP-oe-KUs" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" constant="16" id="P3e-US-fJu"/>
+                            <constraint firstItem="mIY-hh-77E" firstAttribute="top" secondItem="p9b-wB-lXq" secondAttribute="top" constant="18" id="Wps-Rs-TI0"/>
                             <constraint firstItem="Svc-An-WRc" firstAttribute="trailing" secondItem="p9b-wB-lXq" secondAttribute="trailing" id="bbV-4m-dYU"/>
                             <constraint firstItem="p9b-wB-lXq" firstAttribute="bottom" secondItem="dSV-BI-dUF" secondAttribute="bottom" id="fS0-yO-VNj"/>
                             <constraint firstItem="Svc-An-WRc" firstAttribute="top" secondItem="DcS-TN-t3D" secondAttribute="top" id="iRU-Dn-A0c"/>
