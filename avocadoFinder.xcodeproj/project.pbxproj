@@ -796,8 +796,6 @@
 		93A445CD226AFE3C00386766 /* OneNewsInfo */ = {
 			isa = PBXGroup;
 			children = (
-				93A445DF226AFF4400386766 /* Cell */,
-				93A445DE226AFF3900386766 /* DataSource */,
 				93A445DD226AFF2700386766 /* Manager */,
 				93A445DC226AFF1900386766 /* Storyboard */,
 				93A445DB226AFF0A00386766 /* ViewController */,
@@ -924,20 +922,6 @@
 				932A65B922B527D500065119 /* Layout */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		93A445DE226AFF3900386766 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		93A445DF226AFF4400386766 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		93A445E0226AFF5C00386766 /* ViewController */ = {
@@ -1282,6 +1266,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -1295,6 +1280,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",

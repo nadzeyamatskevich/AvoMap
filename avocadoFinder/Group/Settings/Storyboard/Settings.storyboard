@@ -24,6 +24,12 @@
                                     <constraint firstAttribute="height" constant="146" id="r21-7e-OLY"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sF-T1-MPJ">
+                                <rect key="frame" x="16" y="42" width="120" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-kL-1EC">
                                 <rect key="frame" x="250" y="0.0" width="125" height="177"/>
                                 <constraints>
@@ -116,6 +122,8 @@
                             <constraint firstItem="dK8-kL-1EC" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" id="07o-ie-0il"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="top" secondItem="pMv-d5-Sdb" secondAttribute="bottom" constant="-25" id="NEl-53-sq1"/>
                             <constraint firstItem="pMv-d5-Sdb" firstAttribute="leading" secondItem="Yef-8c-o3K" secondAttribute="leading" constant="-10" id="Ppg-5j-Z9k"/>
+                            <constraint firstItem="0sF-T1-MPJ" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="aVK-3n-nBS"/>
+                            <constraint firstItem="0sF-T1-MPJ" firstAttribute="top" secondItem="4vL-bd-8BO" secondAttribute="top" constant="22" id="bgK-Cj-dgq"/>
                             <constraint firstItem="dK8-kL-1EC" firstAttribute="trailing" secondItem="4vL-bd-8BO" secondAttribute="trailing" id="bjq-pa-wqf"/>
                             <constraint firstItem="4vL-bd-8BO" firstAttribute="trailing" secondItem="FPt-H3-VMD" secondAttribute="trailing" constant="16" id="ivD-mV-Wj9"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="oBF-tX-ETk"/>

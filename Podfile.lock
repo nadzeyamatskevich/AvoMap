@@ -8,6 +8,7 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
+  - Kingfisher (5.6.0)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - Device
   - GoogleMaps
   - GooglePlaces
+  - Kingfisher (~> 5.0)
   - Moya (~> 12.0)
   - RAMAnimatedTabBarController (from `https://github.com/denbay/animated-tab-bar.git`)
   - RealmSwift
@@ -37,6 +39,7 @@ SPEC REPOS:
     - Device
     - GoogleMaps
     - GooglePlaces
+    - Kingfisher
     - Moya
     - Realm
     - RealmSwift
@@ -57,6 +60,7 @@ SPEC CHECKSUMS:
   Device: 62242076214c30fb5760174b3601cefafa70a481
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   RAMAnimatedTabBarController: 677d6f7ec7e88b1089486f4db49b0a5067e8ad1c
   Realm: 0e73b4edeb5b6a90da3d83206883b2e34e00eb38
@@ -64,6 +68,6 @@ SPEC CHECKSUMS:
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 1ad30d0c7acdb45dca20990f00b01b0fc5699d1d
+PODFILE CHECKSUM: faffe0e15c3a4a67f0e5e38bf634dacef2649e9b
 
 COCOAPODS: 1.5.3

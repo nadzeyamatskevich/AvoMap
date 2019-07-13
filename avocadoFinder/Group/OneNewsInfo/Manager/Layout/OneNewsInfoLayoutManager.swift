@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class OneNewsInfoLayoutManager: NSObject {
     
@@ -31,6 +32,8 @@ fileprivate extension OneNewsInfoLayoutManager {
     }
     
     func configureData() {
+        viewController.secondTitle.text = viewController.news.subtitle
+        viewController.mainImage.kf.setImage(with: URL(string: viewController.news.image_url))
         viewController.firstTitle.text = viewController.news.title
         viewController.mainText.text = viewController.news.body
     }

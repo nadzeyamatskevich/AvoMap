@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSd-Lb-cxZ">
-                                <rect key="frame" x="16" y="38" width="180" height="29"/>
+                                <rect key="frame" x="16" y="42" width="180" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="xyb-7D-KnD"/>
                                 </constraints>
@@ -337,7 +337,7 @@
                             <constraint firstItem="NDb-eM-acn" firstAttribute="top" secondItem="XlX-n8-DT2" secondAttribute="bottom" constant="-7" id="glX-Ud-qCO"/>
                             <constraint firstItem="XlX-n8-DT2" firstAttribute="leading" secondItem="aah-nJ-ubq" secondAttribute="leading" constant="-10" id="pWx-PU-ywa"/>
                             <constraint firstAttribute="trailing" secondItem="XlX-n8-DT2" secondAttribute="trailing" constant="-10" id="toZ-ao-4BF"/>
-                            <constraint firstItem="fSd-Lb-cxZ" firstAttribute="top" secondItem="Ldc-e1-X27" secondAttribute="top" constant="18" id="wHJ-4T-LEq"/>
+                            <constraint firstItem="fSd-Lb-cxZ" firstAttribute="top" secondItem="Ldc-e1-X27" secondAttribute="top" constant="22" id="wHJ-4T-LEq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ldc-e1-X27"/>
                     </view>

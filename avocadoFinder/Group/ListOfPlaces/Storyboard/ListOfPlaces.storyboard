@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YY-bA-Pl4">
-                                <rect key="frame" x="16" y="77" width="159.5" height="17"/>
+                                <rect key="frame" x="31" y="81" width="159.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-54-lar">
-                                <rect key="frame" x="16" y="38" width="180" height="29"/>
+                                <rect key="frame" x="16" y="42" width="180" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="xt6-fH-qR0"/>
                                 </constraints>
@@ -138,9 +138,9 @@
                             <constraint firstItem="4vv-I6-v2x" firstAttribute="trailing" secondItem="zGb-ef-RIE" secondAttribute="trailing" constant="24" id="gUX-ZX-KY3"/>
                             <constraint firstItem="4vv-I6-v2x" firstAttribute="trailing" secondItem="ST8-Kg-SRo" secondAttribute="trailing" constant="-10" id="iEd-2F-oJL"/>
                             <constraint firstItem="4vv-I6-v2x" firstAttribute="bottom" secondItem="zGb-ef-RIE" secondAttribute="bottom" constant="24" id="ieq-tq-HIU"/>
-                            <constraint firstItem="u7p-54-lar" firstAttribute="top" secondItem="4vv-I6-v2x" secondAttribute="top" constant="18" id="ilb-iB-hLB"/>
+                            <constraint firstItem="u7p-54-lar" firstAttribute="top" secondItem="4vv-I6-v2x" secondAttribute="top" constant="22" id="ilb-iB-hLB"/>
                             <constraint firstItem="u7p-54-lar" firstAttribute="leading" secondItem="4vv-I6-v2x" secondAttribute="leading" constant="16" id="ipT-Ba-1sM"/>
-                            <constraint firstItem="3YY-bA-Pl4" firstAttribute="leading" secondItem="u7p-54-lar" secondAttribute="leading" id="liH-06-ZHE"/>
+                            <constraint firstItem="3YY-bA-Pl4" firstAttribute="leading" secondItem="u7p-54-lar" secondAttribute="leading" constant="15" id="liH-06-ZHE"/>
                             <constraint firstItem="3YY-bA-Pl4" firstAttribute="top" secondItem="u7p-54-lar" secondAttribute="bottom" constant="10" id="qum-dO-dw3"/>
                             <constraint firstItem="6kS-KV-Aqu" firstAttribute="trailing" secondItem="4vv-I6-v2x" secondAttribute="trailing" id="y4I-h1-4Le"/>
                         </constraints>

@@ -9,18 +9,12 @@
 import RealmSwift
 
 class NewsModel: Object, Codable {
-    
-    /*
-     "body": "lorem ipsum? 1",
-     "id": "e5de7b95-72e0-451c-89df-5d6c625d3eef",
-     "subtitle": "Subtitle 1",
-     "title": "Title 1"
-     */
-    
+
     @objc dynamic var id = ""
     @objc dynamic var title = ""
     @objc dynamic var subtitle = ""
     @objc dynamic var body = ""
+    @objc dynamic var image_url = ""
     
     override public static func primaryKey() -> String? {
         return "id"
@@ -31,6 +25,7 @@ class NewsModel: Object, Codable {
         case title
         case subtitle
         case body
+        case image_url
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -40,6 +35,7 @@ class NewsModel: Object, Codable {
         title = try values.decodeIfPresent(String.self, forKey: .title) ?? ""
         subtitle = try values.decodeIfPresent(String.self, forKey: .subtitle) ?? ""
         body = try values.decodeIfPresent(String.self, forKey: .body) ?? ""
+        image_url = try values.decodeIfPresent(String.self, forKey: .image_url) ?? ""
     }
     
     func encode(to encoder: Encoder) throws {
@@ -48,6 +44,7 @@ class NewsModel: Object, Codable {
         try container.encode(title, forKey: .title)
         try container.encode(subtitle, forKey: .subtitle)
         try container.encode(body, forKey: .body)
+        try container.encode(image_url, forKey: .image_url)
     }
     
 }

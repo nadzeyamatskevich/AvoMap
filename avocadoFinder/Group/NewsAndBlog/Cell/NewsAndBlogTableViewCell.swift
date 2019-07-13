@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NewsAndBlogTableViewCell: UITableViewCell {
 
@@ -23,6 +24,7 @@ class NewsAndBlogTableViewCell: UITableViewCell {
     }
     
     func set(news: NewsModel) {
+        avoImage.kf.setImage(with: URL(string: news.image_url))
         titleLabel.text = news.title
         subtitleLabel.text = news.subtitle
     }
