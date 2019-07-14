@@ -11,28 +11,19 @@ import Moya
 enum NewsServerProvider {
     
     case getNews
-    case dowmloadImage(url: String)
     
 }
 
 extension NewsServerProvider: TargetType {
     
     var baseURL: URL {
-        switch self {
-        case .dowmloadImage(let url):
-            return URL(string: url)!
-        default:
-            return URL(string: Constants.baseURL)!
-        }
-        
+        return URL(string: Constants.baseURL)!
     }
     
     var path: String {
         switch self {
         case .getNews:
             return "/news"
-        case .dowmloadImage:
-            return ""
         }
     }
     
@@ -50,8 +41,6 @@ extension NewsServerProvider: TargetType {
     var task: Task {
         switch self {
         case .getNews:
-            return .requestPlain
-        case .dowmloadImage:
             return .requestPlain
         }
     }
