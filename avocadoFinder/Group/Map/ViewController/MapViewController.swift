@@ -39,8 +39,8 @@ class MapViewController: UIViewController {
     
 }
 
+// MARK: -
 // MARK: - Navigation
-//
 
 extension MapViewController {
     
@@ -73,8 +73,8 @@ extension MapViewController {
     
 }
 
+// MARK: -
 // MARK: - Configure
-//
 
 extension MapViewController {
     

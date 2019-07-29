@@ -21,7 +21,7 @@ class PlaceInfoLayoutManager: NSObject {
     
 }
 
-// -
+// MARK: -
 // MARK: - Configure
 
 extension PlaceInfoLayoutManager {

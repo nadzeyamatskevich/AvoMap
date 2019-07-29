@@ -19,6 +19,13 @@ class PlaceInfoCommentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+
+}
+
+// MARK: -
+// MARK: - Set
+
+extension PlaceInfoCommentTableViewCell {
     
     func set(comment: CommentModel) {
         timeLabel.text = formatDate(date: comment.inserted_at)
@@ -32,5 +39,6 @@ class PlaceInfoCommentTableViewCell: UITableViewCell {
         }
         return Date().dateToStringTime()
     }
-
+    
 }
+

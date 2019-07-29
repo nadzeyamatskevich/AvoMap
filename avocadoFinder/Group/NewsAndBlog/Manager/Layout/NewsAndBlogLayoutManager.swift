@@ -32,7 +32,7 @@ extension NewsAndBlogLayoutManager {
     func getNews() {
         viewController.getNewsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
-            if let error = error {
+            if error != nil {
                 strongSelf.viewController.showAlert(title: "Упс, ошибка", message: "Попорбуйте позже")
             } else if let response = response {
                 strongSelf.viewController.updateData(news: response)

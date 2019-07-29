@@ -20,6 +20,7 @@ class AddNewPlaceViewController: UIViewController {
     
     // - Manager
     fileprivate var serverManager = MapServerManager()
+    fileprivate var layoutManager: AddNewPlaceLayoutManager!
     fileprivate var geocoder = CLGeocoder()
     
     // - Data
@@ -42,10 +43,10 @@ class AddNewPlaceViewController: UIViewController {
     }
     
     @IBAction func addressTextFieldAction(_ sender: Any) {
-        //shopAddressTextField.resignFirstResponder()
-        //let acController = GMSAutocompleteViewController()
-        //acController.delegate = self
-        //present(acController, animated: true, completion: nil)
+        shopAddressTextField.resignFirstResponder()
+        let acController = GMSAutocompleteViewController()
+        acController.delegate = self
+        present(acController, animated: true, completion: nil)
     }
     
 }
@@ -99,8 +100,8 @@ extension AddNewPlaceViewController {
         newShop.name = shopNameTextField.text!
         newShop.address = shopAddressTextField.text!
         newShop.author = shopAuthorTextField.text!
-        newShop.longitude = "\(27.5274070)"
-        newShop.latitude = "\(53.9080890)"
+        //newShop.longitude = "\(27.5274070)"
+        //newShop.latitude = "\(53.9080890)"
         //COORD 27.5274065 53.9080877
         return newShop
     }
@@ -137,23 +138,11 @@ extension AddNewPlaceViewController {
 extension AddNewPlaceViewController {
     
     func configure() {
-        configureMainView()
-        configureSaveButton()
-        configureViewController()
+        configureLayoutManager()
     }
     
-    func configureViewController() {
-        self.hideKeyboardWhenTappedAround()
-    }
-    
-    func configureMainView() {
-        mainView.layer.cornerRadius = 16
-        mainView.setupShadow(color: AppColor.black(alpha: 0.1))
-    }
-    
-    func configureSaveButton() {
-        saveButton.layer.cornerRadius = 16
-        saveButton.setupShadow(color: AppColor.black(alpha: 0.1))
+    func configureLayoutManager() {
+        layoutManager = AddNewPlaceLayoutManager(viewController: self)
     }
     
 }

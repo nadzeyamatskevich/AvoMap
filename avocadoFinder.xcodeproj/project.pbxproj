@@ -64,6 +64,8 @@
 		937BB88322416C9A00215E58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BB88222416C9A00215E58 /* MapViewController.swift */; };
 		937BB88822416C9C00215E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937BB88722416C9C00215E58 /* Assets.xcassets */; };
 		937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937BB88922416C9C00215E58 /* LaunchScreen.storyboard */; };
+		938E5F1F22DB258500127849 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F1E22DB258500127849 /* SettingsCellType.swift */; };
+		938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */; };
 		9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399376022D7BEC000E00AC2 /* DateExtention.swift */; };
 		939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */; };
 		939F051D22D237D700180648 /* PlaceInfoServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051C22D237D700180648 /* PlaceInfoServerManager.swift */; };
@@ -208,6 +210,8 @@
 		937BB88722416C9C00215E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937BB88A22416C9C00215E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937BB88C22416C9C00215E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		938E5F1E22DB258500127849 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
+		938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceLayoutManager.swift; sourceTree = "<group>"; };
 		9399376022D7BEC000E00AC2 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoLayoutManager.swift; sourceTree = "<group>"; };
 		939F051C22D237D700180648 /* PlaceInfoServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoServerManager.swift; sourceTree = "<group>"; };
@@ -500,7 +504,7 @@
 		93330D2E224F54F0000A1BE3 /* AddNewPlace */ = {
 			isa = PBXGroup;
 			children = (
-				93A445B9226AFC7500386766 /* Manager */,
+				938E5F2022DB2D6300127849 /* Manager */,
 				93A445B8226AFC6900386766 /* Storyboard */,
 				93A445B7226AFC6000386766 /* ViewController */,
 			);
@@ -534,7 +538,6 @@
 			children = (
 				93D1A62822881C07008DD01D /* Protocol */,
 				93A445C7226AFDD300386766 /* DataSource */,
-				93A445C6226AFDCD00386766 /* Manager */,
 				93A445C5226AFDC200386766 /* Storyboard */,
 				93330D35224F57F1000A1BE3 /* Cell */,
 				93330D34224F57E3000A1BE3 /* ViewController */,
@@ -597,6 +600,14 @@
 			path = avocadoFinder;
 			sourceTree = "<group>";
 		};
+		938E5F2022DB2D6300127849 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		939F051A22D237A500180648 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -652,13 +663,6 @@
 				93A445BE226AFCCB00386766 /* AddNewPlace.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		93A445B9226AFC7500386766 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		93A445BA226AFC8500386766 /* Core */ = {
@@ -737,13 +741,6 @@
 				93A445C8226AFDF000386766 /* ListOfPlaces.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		93A445C6226AFDCD00386766 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		93A445C7226AFDD300386766 /* DataSource */ = {
@@ -1108,6 +1105,7 @@
 			isa = PBXGroup;
 			children = (
 				93FD667022D9F7650094A5A5 /* AppAuthors.swift */,
+				938E5F1E22DB258500127849 /* SettingsCellType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -1320,6 +1318,7 @@
 				932A65BB22B5283B00065119 /* NewsAndBlogLayoutManager.swift in Sources */,
 				93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */,
 				931DF54822C5417400D43AB0 /* GMUWeightedLatLng.m in Sources */,
+				938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */,
 				9361F2B42288449400071339 /* PlaceInfoCommentTableViewCell.swift in Sources */,
 				931DF53E22C5417400D43AB0 /* GMUGridBasedClusterAlgorithm.m in Sources */,
 				931DF49122C52BB700D43AB0 /* POIItem.swift in Sources */,
@@ -1340,6 +1339,7 @@
 				93FD666822D9E82E0094A5A5 /* SettingsDataSourcedelegate.swift in Sources */,
 				931DF54622C5417400D43AB0 /* GMUStaticCluster.m in Sources */,
 				931DF54222C5417400D43AB0 /* GMUWrappingDictionaryKey.m in Sources */,
+				938E5F1F22DB258500127849 /* SettingsCellType.swift in Sources */,
 				931DF55122C5417400D43AB0 /* GMUGroundOverlay.m in Sources */,
 				931DF49422C52D0200D43AB0 /* LocationManager.swift in Sources */,
 				939F052022D2388800180648 /* PlaceInfoDataSourceDelegate.swift in Sources */,
@@ -1532,7 +1532,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1552,7 +1552,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

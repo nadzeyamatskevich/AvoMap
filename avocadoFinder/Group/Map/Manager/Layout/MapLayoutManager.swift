@@ -36,6 +36,9 @@ class MapLayoutManager: NSObject {
     
 }
 
+// MARK: -
+// MARK: - GMUClusterManagerDelegate
+
 extension MapLayoutManager: GMUClusterManagerDelegate {
     
     func initializeClusterItems() {
@@ -65,8 +68,9 @@ extension MapLayoutManager: GMUClusterManagerDelegate {
     
 }
 
+// MARK: -
 // MARK: - CLLocationManagerDelegate
-//
+
 extension MapLayoutManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -159,6 +163,8 @@ extension MapLayoutManager: GMSMapViewDelegate {
     }
 }
 
+// MARK: -
+// MARK: - GMUClusterRendererDelegate
 
 extension MapLayoutManager: GMUClusterRendererDelegate {
     
@@ -180,7 +186,6 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.textColor = .white
-        //label.font = AppFont.medium(size: 20.0)
         label.text = text
         
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0);

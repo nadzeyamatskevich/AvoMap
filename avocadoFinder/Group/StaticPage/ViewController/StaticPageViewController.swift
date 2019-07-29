@@ -29,7 +29,12 @@ class StaticPageViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    // - Actions
+}
+
+// MARK: -
+// MARK: - Actions
+
+extension StaticPageViewController {
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

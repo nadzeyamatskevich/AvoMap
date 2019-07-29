@@ -84,14 +84,12 @@ extension AuthorSettingsCell {
 extension AuthorSettingsCell {
 
     func openIGProfile(user: String) {
-        var userName = user
-        let instagramHooks = "instagram://user?username=\(userName.dropFirst())"
+        let instagramHooks = "instagram://user?username=\(user.dropFirst())"
         let instagramUrl = NSURL(string: instagramHooks)
         if UIApplication.shared.canOpenURL(instagramUrl! as URL) {
-            UIApplication.shared.openURL(instagramUrl! as URL)
+            UIApplication.shared.open(instagramUrl! as URL, options: [:], completionHandler: nil)
         } else {
-            //redirect to safari because the user doesn't have Instagram
-            UIApplication.shared.openURL(NSURL(string: "http://instagram.com/\(user)")! as URL)
+            UIApplication.shared.open(NSURL(string: "http://instagram.com/\(user)")! as URL, options: [:], completionHandler: nil)
         }
     }
     

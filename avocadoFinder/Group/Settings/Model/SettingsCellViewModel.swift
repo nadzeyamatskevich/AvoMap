@@ -20,8 +20,3 @@ class SettingsCellViewModel {
     }
     
 }
-
-enum SettingsCellType: String {
-    case author = "AuthorSettingsCell"
-    case info = "TermsInfoSettingsCell"
-}

@@ -23,8 +23,14 @@ class PlaceInfoAddCommentTableViewCell: UITableViewCell {
         super.awakeFromNib()
         configure()
     }
+    
+}
 
-    // - Action
+// MARK: -
+// MARK: - Action
+
+extension PlaceInfoAddCommentTableViewCell {
+    
     @IBAction func addCommentButtonAction(_ sender: Any) {
         if checkComment() {
             delegate?.addCommentAction(comment: createComment())
@@ -32,6 +38,7 @@ class PlaceInfoAddCommentTableViewCell: UITableViewCell {
     }
     
 }
+
 
 // MARK: -
 // MARK: - Delegate

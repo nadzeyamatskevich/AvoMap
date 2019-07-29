@@ -38,13 +38,22 @@ class OneNewsInfoViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    // - Actions
+}
+
+// MARK: -
+// MARK: - Actions
+
+extension OneNewsInfoViewController {
     
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
 }
+
+
+// MARK: -
+// MARK: - Configure
 
 extension OneNewsInfoViewController {
     
