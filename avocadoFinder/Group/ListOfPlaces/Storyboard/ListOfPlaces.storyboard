@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PwE-ku-htY">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PwE-ku-htY">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YY-bA-Pl4">
-                                <rect key="frame" x="31" y="81" width="159.5" height="17"/>
+                                <rect key="frame" x="31" y="61" width="159.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +43,7 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="104"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кальварийская, 29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkA-tw-lwa">
-                                                            <rect key="frame" x="98" y="66" width="119" height="16"/>
+                                                            <rect key="frame" x="98" y="66" width="225" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -58,7 +56,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magazin 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY4-md-ycv">
-                                                            <rect key="frame" x="98" y="16" width="92" height="42"/>
+                                                            <rect key="frame" x="98" y="16" width="225" height="42"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="42" id="G2m-G9-Urj"/>
                                                             </constraints>
@@ -72,9 +70,11 @@
                                                         <constraint firstItem="yY4-md-ycv" firstAttribute="leading" secondItem="pal-Qe-5yl" secondAttribute="trailing" constant="24" id="0rG-Oq-i58"/>
                                                         <constraint firstItem="gkA-tw-lwa" firstAttribute="top" secondItem="yY4-md-ycv" secondAttribute="bottom" constant="8" id="9R1-TJ-PBS"/>
                                                         <constraint firstItem="gkA-tw-lwa" firstAttribute="leading" secondItem="yY4-md-ycv" secondAttribute="leading" id="Cdd-si-6HJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gkA-tw-lwa" secondAttribute="trailing" constant="20" id="Fz8-QV-61m"/>
                                                         <constraint firstItem="yY4-md-ycv" firstAttribute="top" secondItem="Nv4-UK-uq5" secondAttribute="top" constant="16" id="PJg-eR-MWH"/>
                                                         <constraint firstAttribute="height" constant="104" id="TID-5K-yot"/>
                                                         <constraint firstItem="pal-Qe-5yl" firstAttribute="leading" secondItem="Nv4-UK-uq5" secondAttribute="leading" constant="24" id="aAd-k2-M6Q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yY4-md-ycv" secondAttribute="trailing" constant="20" id="etX-r0-2oe"/>
                                                         <constraint firstItem="pal-Qe-5yl" firstAttribute="centerY" secondItem="Nv4-UK-uq5" secondAttribute="centerY" id="ewt-bt-lQF"/>
                                                     </constraints>
                                                 </view>
@@ -98,7 +98,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7p-54-lar">
-                                <rect key="frame" x="16" y="42" width="180" height="29"/>
+                                <rect key="frame" x="16" y="22" width="180" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="xt6-fH-qR0"/>
                                 </constraints>
@@ -118,7 +118,7 @@
                                     <constraint firstAttribute="width" constant="60" id="sBb-c6-6cM"/>
                                     <constraint firstAttribute="height" constant="60" id="vZX-Gk-uFs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="57"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,8 +157,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avoFruit" width="43" height="64"/>
+        <image name="avoFruit" width="43.5" height="64.5"/>
         <image name="backButton" width="6" height="11"/>
-        <image name="listOfPlacesNavBarBg" width="392" height="166"/>
+        <image name="listOfPlacesNavBarBg" width="392" height="166.5"/>
     </resources>
 </document>

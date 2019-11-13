@@ -30,6 +30,11 @@ extension AddNewPlaceLayoutManager {
         configureKeyboard()
         configureMainView()
         configureSaveButton()
+        configureAuthorName()
+    }
+    
+    func configureAuthorName() {
+        viewController.shopAuthorTextField.text = UserDefaults.standard.string(forKey: UserDefaultsEnum.authorNameKey.rawValue) ?? ""
     }
     
     func configureKeyboard() {

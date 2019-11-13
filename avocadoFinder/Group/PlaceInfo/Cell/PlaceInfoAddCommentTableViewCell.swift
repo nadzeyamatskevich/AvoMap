@@ -34,6 +34,8 @@ extension PlaceInfoAddCommentTableViewCell {
     @IBAction func addCommentButtonAction(_ sender: Any) {
         if checkComment() {
             delegate?.addCommentAction(comment: createComment())
+            self.authorTextField.text = ""
+            self.commentTextField.text = ""
         }
     }
     

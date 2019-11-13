@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        GMSServices.provideAPIKey("AIzaSyCPUsnbGEHyVdj3RyKYIy1OPEA6uulnyn0")
-        GMSPlacesClient.provideAPIKey("AIzaSyCPUsnbGEHyVdj3RyKYIy1OPEA6uulnyn0")
+        GMSPlacesClient.provideAPIKey("AIzaSyA4eeMxsmUH9GUG_H_4gEuO2qJyRvANi7s")
+        GMSServices.provideAPIKey("AIzaSyA4eeMxsmUH9GUG_H_4gEuO2qJyRvANi7s")
         
         setupRootViewController()
         self.application = application

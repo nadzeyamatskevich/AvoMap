@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
-class OneNewsInfoViewController: UIViewController {
+class OneNewsInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // - UI
     @IBOutlet weak var firstTitle: UILabel!
     @IBOutlet weak var secondTitle: UILabel!
-    @IBOutlet weak var mainText: UITextView!
-    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
     
     // - Manager
     fileprivate var layoutManager: OneNewsInfoLayoutManager!
@@ -25,6 +25,10 @@ class OneNewsInfoViewController: UIViewController {
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
         configure()
     }
     
@@ -62,6 +66,61 @@ extension OneNewsInfoViewController {
     }
     
     func configureLayoutManager() {
-        layoutManager = OneNewsInfoLayoutManager(viewController: self)
+        self.secondTitle.text = self.news.subtitle
+        self.firstTitle.text = self.news.title
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "OneNewsImageCell") as! OneNewsImageCell
+            cell.set(image: self.news.image_url)
+            return cell
+        default:
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "OneNewsTextCell") as! OneNewsTextCell
+            cell.set(text: self.news.body)
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+}
+
+class OneNewsImageCell: UITableViewCell {
+    
+    // - UI
+       @IBOutlet weak var newsImageView: UIImageView!
+       
+       // - Lifecycle
+       override func awakeFromNib() {
+           super.awakeFromNib()
+       }
+    
+    func set(image: String) {
+        newsImageView.kf.setImage(with: URL(string: image))
+    }
+
+
+}
+
+class OneNewsTextCell: UITableViewCell {
+    
+    // - UI
+    @IBOutlet weak var newsTextLabel: UILabel!
+       
+    // - Lifecycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func set(text: String) {
+        self.newsTextLabel.text = text
+    }
+
 }

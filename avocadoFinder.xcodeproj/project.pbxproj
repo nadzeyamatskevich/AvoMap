@@ -56,6 +56,9 @@
 		93330D33224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93330D32224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift */; };
 		933B493522C29BD60011FE5F /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933B493422C29BD60011FE5F /* UIViewControllerExtention.swift */; };
 		933B493722C2A4150011FE5F /* OneNewsInfoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933B493622C2A4150011FE5F /* OneNewsInfoLayoutManager.swift */; };
+		9341868B23677A2500A9429B /* AddShopMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9341868A23677A2500A9429B /* AddShopMap.storyboard */; };
+		9341868D23677B2E00A9429B /* AddShopMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341868C23677B2E00A9429B /* AddShopMapViewController.swift */; };
+		934767B323316D550078A5A4 /* PlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934767B223316D550078A5A4 /* PlaceType.swift */; };
 		9361F2B02288433C00071339 /* PlaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361F2AF2288433C00071339 /* PlaceInfoViewController.swift */; };
 		9361F2B2228843D300071339 /* PlaceInfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361F2B1228843D300071339 /* PlaceInfoDataSource.swift */; };
 		9361F2B42288449400071339 /* PlaceInfoCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361F2B32288449400071339 /* PlaceInfoCommentTableViewCell.swift */; };
@@ -88,6 +91,7 @@
 		93D1A62C22882BDA008DD01D /* PlaceInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D1A62B22882BDA008DD01D /* PlaceInfo.storyboard */; };
 		93D1A63022883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D1A62F22883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift */; };
 		93D1A6322288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D1A6312288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift */; };
+		93D1BDEA2336962800E26354 /* UserDefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D1BDE92336962800E26354 /* UserDefaultsEnum.swift */; };
 		93DB41C7227DD47E00CC8113 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41C6227DD47E00CC8113 /* TabBarViewController.swift */; };
 		93DB41C9227DD48E00CC8113 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DB41C8227DD48E00CC8113 /* TabBar.storyboard */; };
 		93DB41CB227DE4EC00CC8113 /* NewsAndBlog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DB41CA227DE4EC00CC8113 /* NewsAndBlog.storyboard */; };
@@ -106,7 +110,18 @@
 		93FD666A22D9F1CF0094A5A5 /* SettingsCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666922D9F1CF0094A5A5 /* SettingsCellConfigurator.swift */; };
 		93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */; };
 		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
+		93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93FF9EDB22F9FC4500C4D2F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 937BB87522416C9900215E58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 937BB87C22416C9900215E58;
+			remoteInfo = avocadoFinder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0A692ADB42CBF376A96C7361 /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +215,9 @@
 		93330D32224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPlacesTableViewCell.swift; sourceTree = "<group>"; };
 		933B493422C29BD60011FE5F /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		933B493622C2A4150011FE5F /* OneNewsInfoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsInfoLayoutManager.swift; sourceTree = "<group>"; };
+		9341868A23677A2500A9429B /* AddShopMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddShopMap.storyboard; sourceTree = "<group>"; };
+		9341868C23677B2E00A9429B /* AddShopMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShopMapViewController.swift; sourceTree = "<group>"; };
+		934767B223316D550078A5A4 /* PlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceType.swift; sourceTree = "<group>"; };
 		9361F2AF2288433C00071339 /* PlaceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoViewController.swift; sourceTree = "<group>"; };
 		9361F2B1228843D300071339 /* PlaceInfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoDataSource.swift; sourceTree = "<group>"; };
 		9361F2B32288449400071339 /* PlaceInfoCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentTableViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +252,7 @@
 		93D1A62B22882BDA008DD01D /* PlaceInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaceInfo.storyboard; sourceTree = "<group>"; };
 		93D1A62F22883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoMainInfoTableViewCell.swift; sourceTree = "<group>"; };
 		93D1A6312288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoAddCommentTableViewCell.swift; sourceTree = "<group>"; };
+		93D1BDE92336962800E26354 /* UserDefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEnum.swift; sourceTree = "<group>"; };
 		93DB41C6227DD47E00CC8113 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		93DB41C8227DD48E00CC8113 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		93DB41CA227DE4EC00CC8113 /* NewsAndBlog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsAndBlog.storyboard; sourceTree = "<group>"; };
@@ -252,6 +271,9 @@
 		93FD666922D9F1CF0094A5A5 /* SettingsCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellConfigurator.swift; sourceTree = "<group>"; };
 		93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
 		93FD667022D9F7650094A5A5 /* AppAuthors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuthors.swift; sourceTree = "<group>"; };
+		93FF9ED622F9FC4400C4D2F0 /* avocadoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avocadoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
+		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F652E6369686EE39895275 /* Pods_avocadoFinder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FF9ED322F9FC4400C4D2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +554,7 @@
 		93330D30224F5550000A1BE3 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				934767B123316D410078A5A4 /* Enum */,
 				931DF48F22C52B9B00D43AB0 /* Item */,
 				93A445C2226AFD8100386766 /* Storyboard */,
 				93A445C1226AFD7600386766 /* Manager */,
@@ -561,6 +591,47 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		93418686236779E100A9429B /* AddShopMap */ = {
+			isa = PBXGroup;
+			children = (
+				9341868923677A1200A9429B /* Manager */,
+				9341868823677A0000A9429B /* Storyboard */,
+				93418687236779F600A9429B /* ViewController */,
+			);
+			path = AddShopMap;
+			sourceTree = "<group>";
+		};
+		93418687236779F600A9429B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9341868C23677B2E00A9429B /* AddShopMapViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9341868823677A0000A9429B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9341868A23677A2500A9429B /* AddShopMap.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9341868923677A1200A9429B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		934767B123316D410078A5A4 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				934767B223316D550078A5A4 /* PlaceType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		937129EA227B73580062AC78 /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +644,7 @@
 			isa = PBXGroup;
 			children = (
 				937BB87F22416C9900215E58 /* avocadoFinder */,
+				93FF9ED722F9FC4500C4D2F0 /* avocadoFinderTests */,
 				937BB87E22416C9900215E58 /* Products */,
 				F0268D5CAFDA5CEB5A513D02 /* Pods */,
 				E854A7C58D5265F6F01886D8 /* Frameworks */,
@@ -583,6 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				937BB87D22416C9900215E58 /* avocadoFinder.app */,
+				93FF9ED622F9FC4400C4D2F0 /* avocadoFinderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -643,6 +716,7 @@
 				93A445CB226AFE2300386766 /* TabBar */,
 				93A445CA226AFE1500386766 /* PlaceInfo */,
 				93330D2E224F54F0000A1BE3 /* AddNewPlace */,
+				93418686236779E100A9429B /* AddShopMap */,
 				93330D30224F5550000A1BE3 /* Map */,
 				93330D31224F5558000A1BE3 /* ListOfPlaces */,
 			);
@@ -684,6 +758,7 @@
 			isa = PBXGroup;
 			children = (
 				93DB41DC227DEC2000CC8113 /* StoryboardEnum.swift */,
+				93D1BDE92336962800E26354 /* UserDefaultsEnum.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -1110,6 +1185,15 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		93FF9ED722F9FC4500C4D2F0 /* avocadoFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */,
+				93FF9EDA22F9FC4500C4D2F0 /* Info.plist */,
+			);
+			path = avocadoFinderTests;
+			sourceTree = "<group>";
+		};
 		E854A7C58D5265F6F01886D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1150,6 +1234,24 @@
 			productReference = 937BB87D22416C9900215E58 /* avocadoFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		93FF9ED522F9FC4400C4D2F0 /* avocadoFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93FF9EDD22F9FC4500C4D2F0 /* Build configuration list for PBXNativeTarget "avocadoFinderTests" */;
+			buildPhases = (
+				93FF9ED222F9FC4400C4D2F0 /* Sources */,
+				93FF9ED322F9FC4400C4D2F0 /* Frameworks */,
+				93FF9ED422F9FC4400C4D2F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93FF9EDC22F9FC4500C4D2F0 /* PBXTargetDependency */,
+			);
+			name = avocadoFinderTests;
+			productName = avocadoFinderTests;
+			productReference = 93FF9ED622F9FC4400C4D2F0 /* avocadoFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1162,6 +1264,10 @@
 				TargetAttributes = {
 					937BB87C22416C9900215E58 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					93FF9ED522F9FC4400C4D2F0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 937BB87C22416C9900215E58;
 					};
 				};
 			};
@@ -1179,6 +1285,7 @@
 			projectRoot = "";
 			targets = (
 				937BB87C22416C9900215E58 /* avocadoFinder */,
+				93FF9ED522F9FC4400C4D2F0 /* avocadoFinderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1189,6 +1296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DB41C9227DD48E00CC8113 /* TabBar.storyboard in Resources */,
+				9341868B23677A2500A9429B /* AddShopMap.storyboard in Resources */,
 				937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */,
 				93A445EF226B019F00386766 /* StaticPage.storyboard in Resources */,
 				93DB41CB227DE4EC00CC8113 /* NewsAndBlog.storyboard in Resources */,
@@ -1201,6 +1309,13 @@
 				93A445EB226B012200386766 /* Settings.storyboard in Resources */,
 				93A445F3226B01FB00386766 /* OneNewsInfo.storyboard in Resources */,
 				93A445C9226AFDF000386766 /* ListOfPlaces.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FF9ED422F9FC4400C4D2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1264,13 +1379,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/HPGradientLoading/HPGradientLoading.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/VisualEffectView/VisualEffectView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1278,13 +1396,16 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGradientLoading.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualEffectView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1317,6 +1438,7 @@
 				931DF54322C5417400D43AB0 /* GMUSimpleClusterAlgorithm.m in Sources */,
 				932A65BB22B5283B00065119 /* NewsAndBlogLayoutManager.swift in Sources */,
 				93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */,
+				934767B323316D550078A5A4 /* PlaceType.swift in Sources */,
 				931DF54822C5417400D43AB0 /* GMUWeightedLatLng.m in Sources */,
 				938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */,
 				9361F2B42288449400071339 /* PlaceInfoCommentTableViewCell.swift in Sources */,
@@ -1370,9 +1492,11 @@
 				937BB88122416C9900215E58 /* AppDelegate.swift in Sources */,
 				932A65A322B4E6B500065119 /* ShopModel.swift in Sources */,
 				931DF54A22C5417400D43AB0 /* GMUHeatmapTileLayer.m in Sources */,
+				9341868D23677B2E00A9429B /* AddShopMapViewController.swift in Sources */,
 				93DB41DD227DEC2000CC8113 /* StoryboardEnum.swift in Sources */,
 				931DF54722C5417400D43AB0 /* GMUDefaultClusterIconGenerator.m in Sources */,
 				931DF49522C53DB800D43AB0 /* MapLayoutManager.swift in Sources */,
+				93D1BDEA2336962800E26354 /* UserDefaultsEnum.swift in Sources */,
 				932A65A922B4ED6600065119 /* ShopServerProvider.swift in Sources */,
 				931DF54F22C5417400D43AB0 /* GMUPolygon.m in Sources */,
 				93DB41C7227DD47E00CC8113 /* TabBarViewController.swift in Sources */,
@@ -1386,7 +1510,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93FF9ED222F9FC4400C4D2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93FF9EDC22F9FC4500C4D2F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 937BB87C22416C9900215E58 /* avocadoFinder */;
+			targetProxy = 93FF9EDB22F9FC4500C4D2F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		937BB88922416C9C00215E58 /* LaunchScreen.storyboard */ = {
@@ -1524,6 +1664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1544,6 +1685,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1553,6 +1695,46 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		93FF9EDE22F9FC4500C4D2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66SNAL3L8F;
+				INFOPLIST_FILE = avocadoFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/avocadoFinder.app/avocadoFinder";
+			};
+			name = Debug;
+		};
+		93FF9EDF22F9FC4500C4D2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 66SNAL3L8F;
+				INFOPLIST_FILE = avocadoFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/avocadoFinder.app/avocadoFinder";
 			};
 			name = Release;
 		};
@@ -1573,6 +1755,15 @@
 			buildConfigurations = (
 				937BB89022416C9C00215E58 /* Debug */,
 				937BB89122416C9C00215E58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93FF9EDD22F9FC4500C4D2F0 /* Build configuration list for PBXNativeTarget "avocadoFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FF9EDE22F9FC4500C4D2F0 /* Debug */,
+				93FF9EDF22F9FC4500C4D2F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

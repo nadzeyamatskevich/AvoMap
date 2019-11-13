@@ -16,13 +16,13 @@ class SettingsCellConfigurator {
     // - Configure
     func configure() -> [SettingsCellViewModel] {
         
-        //addAuthorCell(value: AppAuthors.minina.rawValue)
+        addAuthorCell(value: AppAuthors.minina.rawValue)
         addAuthorCell(value: AppAuthors.nadzeyasavitskaya.rawValue)
         addAuthorCell(value: AppAuthors.yanaPoddubskaya.rawValue)
         addAuthorCell(value: AppAuthors.katyarunkevich.rawValue)
         addAuthorCell(value: AppAuthors.antonsavicky.rawValue)
-        addInfoCell(value: "Политика пользования")
-        addInfoCell(value: "Политика конфиденциальности")
+        addInfoCell(value: AppDocuments.privacyPolicy.rawValue)
+        addInfoCell(value: AppDocuments.termsAndCondition.rawValue)
         
         return cells
     }

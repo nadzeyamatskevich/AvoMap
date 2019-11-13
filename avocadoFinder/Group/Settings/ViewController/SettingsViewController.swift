@@ -42,12 +42,18 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: SettingsDataSourceDelegate {
     
     func didTapOnCell(value: String) {
-        openStaticPage()
+        openStaticPage(value: value)
     }
     
-    func openStaticPage() {
-        let staticPageViewController = UIStoryboard(storyboard: .staticPage).instantiateInitialViewController() as! StaticPageViewController
-        self.navigationController?.pushViewController(staticPageViewController, animated: true)
+    func openStaticPage(value: String) {
+        switch value {
+        case AppDocuments.privacyPolicy.rawValue:
+            UIApplication.shared.open(NSURL(string: AppDocuments.privacyPolicy.urlForDocument)! as URL, options: [:], completionHandler: nil)
+        case AppDocuments.termsAndCondition.rawValue:
+            UIApplication.shared.open(NSURL(string: AppDocuments.termsAndCondition.urlForDocument)! as URL, options: [:], completionHandler: nil)
+        default:
+            break
+        }
     }
     
 }

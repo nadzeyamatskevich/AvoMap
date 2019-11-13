@@ -20,6 +20,7 @@ enum Storyboard: String {
     case listOfPlaces = "ListOfPlaces"
     case placeInfo = "PlaceInfo"
     case addNewPlace = "AddNewPlace"
+    case addShopMap = "AddShopMap"
     
     // - Settings
     case staticPage = "StaticPage"

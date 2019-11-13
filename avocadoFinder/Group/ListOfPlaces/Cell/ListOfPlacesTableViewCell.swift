@@ -24,6 +24,7 @@ class ListOfPlacesTableViewCell: UITableViewCell {
     func set(shop: ShopModel) {
         shopNameLabel.text = shop.name
         shopAddressLabel.text = shop.address
+        shop.type == PlaceType.store.rawValue ? (fruilImageView.image = #imageLiteral(resourceName: "avoFruit")) : (fruilImageView.image = #imageLiteral(resourceName: "foodPin"))
     }
     
 }

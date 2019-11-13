@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
-
+import HPGradientLoading
 
 class MapLayoutManager: NSObject {
     
@@ -60,8 +60,11 @@ extension MapLayoutManager: GMUClusterManagerDelegate {
             let lng = shop.longitude
             let shopId = "\(shop.id)"
             let iconImageView = UIImageView(image: UIImage(named: "shopPin"))
-            let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView)
-            clusterManager.add(item)
+            
+            if Double(lat)! > -85.0 && Double(lat)! < 85.0 && Double(lng)! > -180.0 && Double(lng)! < 180.0 {
+                let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView)
+                clusterManager.add(item)
+            }            
         }
         clusterManager.cluster()
     }
@@ -95,13 +98,16 @@ extension MapLayoutManager: CLLocationManagerDelegate {
 extension MapLayoutManager {
     
     func getShops() {
+        HPGradientLoading.shared.showLoading()
         viewController.getShopsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
+                HPGradientLoading.shared.dismiss()
                 self?.viewController.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
                 strongSelf.shops = response
                 strongSelf.update()
+                HPGradientLoading.shared.dismiss()
             }
         }
     }
@@ -209,11 +215,12 @@ fileprivate extension MapLayoutManager {
         configureSaveButton()
         configureMapDelegate()
         getShops()
+        viewController.configureLoader()
     }
     
     func configureSaveButton() {
         viewController.saveButton.layer.cornerRadius = 30
-        viewController.saveButton.setupShadow(color: AppColor.black(alpha: 0.3))
+        viewController.saveButton.setupShadow(color: AppColor.black(alpha: 0.2))
     }
     
     func configureMapDelegate() {
@@ -234,7 +241,7 @@ fileprivate extension MapLayoutManager {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 42, height: 51))
             imageView.contentMode = .scaleAspectFit
             imageView.backgroundColor = .clear
-            imageView.image = #imageLiteral(resourceName: "shopPin")
+            shop.type == PlaceType.store.rawValue ? (imageView.image = #imageLiteral(resourceName: "shopPin")) : (imageView.image = #imageLiteral(resourceName: "foodPin"))
             
             let marker = GMSMarker()
             marker.iconView = imageView

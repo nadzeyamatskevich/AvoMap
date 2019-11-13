@@ -12,11 +12,12 @@ class StaticPageViewController: UIViewController {
 
     // - UI
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var mainTextTextView: UITextView!
+    @IBOutlet weak var mainTextTextView: UIWebView!
     
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,8 +36,28 @@ class StaticPageViewController: UIViewController {
 // MARK: - Actions
 
 extension StaticPageViewController {
+    
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+// MARK: -
+// MARK: - Configure
+
+extension StaticPageViewController {
+    
+    func configure() {
+        configureMainText()
+    }
+    
+    func configureMainText() {
+        mainTextTextView.loadRequest(URLRequest(url: URL(string: "https://avo-map.gitlab.io/privacy-policy")!))
+    }
+    
+    func configureHTML(html: String) {
+        mainTextTextView.loadHTMLString("<span style= color: #000000\">\(html)</span>", baseURL: nil)
     }
     
 }

@@ -13,7 +13,7 @@ enum AppAuthors: String {
     case nadzeyasavitskaya = "@nadzeyasavitskaya"
     case yanaPoddubskaya = "@yana.poddubskaya"
     case katyarunkevich = "@katyarunkevich"
-    case antonsavicky = "@antonsavicky"
+    case antonsavicky = "@anton.savitski"
     
     var avatarImage: String {
         switch self {
@@ -30,4 +30,18 @@ enum AppAuthors: String {
         }
     }
     
+}
+
+enum AppDocuments: String {
+    case privacyPolicy = "Privacy Policy"
+    case termsAndCondition = "Terms & Conditions"
+    
+    var urlForDocument: String {
+        switch self {
+        case .privacyPolicy:
+            return "https://avo-map.gitlab.io/privacy-policy"
+        case .termsAndCondition:
+            return "https://avo-map.gitlab.io/terms-and-conditions"
+        }
+    }
 }

@@ -24,4 +24,10 @@ class MapServerManager {
         }
     }
     
+    func postComment(shopID: String, comment: CommentModel, completion: @escaping ((_ successModel: CommentModel?, _ error: ErrorModel?) -> ())) {
+        serverProvider.request(.addComment(shopID: shopID, comment: comment)) { (result) in
+            handleResponseJSONModel(result: result, completion: completion)
+        }
+    }
+    
 }

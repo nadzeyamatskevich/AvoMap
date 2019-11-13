@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HPGradientLoading
 
 extension UIViewController {
     
@@ -58,4 +59,15 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func configureLoader() {
+        HPGradientLoading.shared.configation.isEnableDismissWhenTap = false
+        HPGradientLoading.shared.configation.isBlurBackground = true
+        HPGradientLoading.shared.configation.durationAnimation = 1.0
+        HPGradientLoading.shared.configation.fontTitleLoading = UIFont.systemFont(ofSize: 20)
+        HPGradientLoading.shared.configation.fromColor = AppColor.darkCyan
+        HPGradientLoading.shared.configation.toColor = AppColor.green
+        HPGradientLoading.shared.configation.blurColorTintActivity = .clear
+    }
+    
 }
