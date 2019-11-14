@@ -42,8 +42,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nv4-UK-uq5">
                                                     <rect key="frame" x="16" y="8" width="343" height="104"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кальварийская, 29" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkA-tw-lwa">
-                                                            <rect key="frame" x="98" y="66" width="225" height="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кальварийская, 29" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkA-tw-lwa">
+                                                            <rect key="frame" x="98" y="48" width="225" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -55,11 +55,8 @@
                                                                 <constraint firstAttribute="height" constant="80" id="Lhh-bT-Qg3"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magazin 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY4-md-ycv">
-                                                            <rect key="frame" x="98" y="16" width="225" height="42"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="42" id="G2m-G9-Urj"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magazin 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY4-md-ycv">
+                                                            <rect key="frame" x="98" y="16" width="225" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <color key="textColor" red="0.18823529410000001" green="0.71764705880000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -73,6 +70,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="gkA-tw-lwa" secondAttribute="trailing" constant="20" id="Fz8-QV-61m"/>
                                                         <constraint firstItem="yY4-md-ycv" firstAttribute="top" secondItem="Nv4-UK-uq5" secondAttribute="top" constant="16" id="PJg-eR-MWH"/>
                                                         <constraint firstAttribute="height" constant="104" id="TID-5K-yot"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gkA-tw-lwa" secondAttribute="bottom" constant="16" id="VSR-Fd-C1V"/>
                                                         <constraint firstItem="pal-Qe-5yl" firstAttribute="leading" secondItem="Nv4-UK-uq5" secondAttribute="leading" constant="24" id="aAd-k2-M6Q"/>
                                                         <constraint firstAttribute="trailing" secondItem="yY4-md-ycv" secondAttribute="trailing" constant="20" id="etX-r0-2oe"/>
                                                         <constraint firstItem="pal-Qe-5yl" firstAttribute="centerY" secondItem="Nv4-UK-uq5" secondAttribute="centerY" id="ewt-bt-lQF"/>

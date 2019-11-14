@@ -79,6 +79,7 @@ extension PlaceInfoAddCommentTableViewCell {
     func configureMainView() {
         mainView.layer.cornerRadius = 16
         mainView.setupShadow(color: AppColor.black(alpha: 0.1))
+        self.authorTextField.text = UserDefaults.standard.string(forKey: UserDefaultsEnum.authorNameKey.rawValue) ?? ""
     }
     
 }

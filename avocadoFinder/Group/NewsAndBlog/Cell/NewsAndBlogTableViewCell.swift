@@ -27,6 +27,7 @@ class NewsAndBlogTableViewCell: UITableViewCell {
         avoImage.kf.setImage(with: URL(string: news.image_url))
         titleLabel.text = news.title
         subtitleLabel.text = news.subtitle
+        self.layoutSubviews()
     }
 
 }

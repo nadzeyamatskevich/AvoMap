@@ -91,6 +91,7 @@ extension PlaceInfoViewController {
                 HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: {
                     strongSelf.getShopInfo(shopID: strongSelf.shop.id)
+                    UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
                 })
             }
         }
