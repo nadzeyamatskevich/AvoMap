@@ -7,6 +7,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Circe-Light.ttf">
+            <string>Circe-Light</string>
+        </array>
+        <array key="Circe-Regular.ttf">
+            <string>Circe-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--One News Info View Controller-->
         <scene sceneID="ZgK-2D-1nX">
@@ -53,10 +61,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGT-f1-h3X">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGT-f1-h3X">
                                                     <rect key="frame" x="15" y="11" width="345" height="128"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="18"/>
                                                     <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -77,19 +85,19 @@
                                 </prototypes>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="fvZ-7A-PGl">
-                                <rect key="frame" x="-10" y="-10" width="395" height="176"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="333"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="176" id="uPa-2t-yte"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="186" id="uPa-2t-yte"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новость" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-4H-jsu">
-                                <rect key="frame" x="35" y="22" width="324" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="32" y="15" width="327" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrp-2W-D4k">
-                                <rect key="frame" x="16" y="27" width="111" height="22"/>
+                                <rect key="frame" x="16" y="24" width="111" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="6Kw-it-S5Z"/>
                                     <constraint firstAttribute="width" constant="111" id="njp-QF-wjR"/>
@@ -101,8 +109,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="подзаголовок подзаголовок" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-Rj-ee6">
-                                <rect key="frame" x="35" y="54" width="324" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="32" y="46.5" width="327" height="20"/>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -111,15 +119,16 @@
                         <constraints>
                             <constraint firstItem="UQf-lU-WCH" firstAttribute="top" secondItem="AR9-4A-gKI" secondAttribute="top" id="1Kx-wg-A27"/>
                             <constraint firstItem="Rrp-2W-D4k" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" constant="16" id="5Tb-lq-5ML"/>
-                            <constraint firstItem="XjE-Rj-ee6" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" constant="35" id="GcH-x4-Vb3"/>
-                            <constraint firstItem="fdd-4H-jsu" firstAttribute="top" secondItem="AR9-4A-gKI" secondAttribute="top" constant="22" id="HqQ-jD-0PW"/>
+                            <constraint firstItem="XjE-Rj-ee6" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" constant="32" id="GcH-x4-Vb3"/>
+                            <constraint firstItem="fvZ-7A-PGl" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XjE-Rj-ee6" secondAttribute="bottom" constant="25" id="Gy5-Tt-BmQ"/>
+                            <constraint firstItem="fdd-4H-jsu" firstAttribute="top" secondItem="AR9-4A-gKI" secondAttribute="top" constant="15" id="HqQ-jD-0PW"/>
                             <constraint firstAttribute="trailing" secondItem="fvZ-7A-PGl" secondAttribute="trailing" constant="-10" id="JHp-2c-Vw1"/>
                             <constraint firstItem="fvZ-7A-PGl" firstAttribute="leading" secondItem="lIH-JV-dkj" secondAttribute="leading" constant="-10" id="JbG-v1-OaI"/>
-                            <constraint firstItem="XjE-Rj-ee6" firstAttribute="top" secondItem="fdd-4H-jsu" secondAttribute="bottom" constant="3" id="KC2-wb-RnQ"/>
-                            <constraint firstItem="fdd-4H-jsu" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" constant="35" id="Oub-vf-LCI"/>
+                            <constraint firstItem="XjE-Rj-ee6" firstAttribute="top" secondItem="fdd-4H-jsu" secondAttribute="bottom" id="KC2-wb-RnQ"/>
+                            <constraint firstItem="fdd-4H-jsu" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" constant="32" id="Oub-vf-LCI"/>
                             <constraint firstItem="AR9-4A-gKI" firstAttribute="trailing" secondItem="XjE-Rj-ee6" secondAttribute="trailing" constant="16" id="SHG-K3-Krt"/>
                             <constraint firstItem="fvZ-7A-PGl" firstAttribute="top" secondItem="lIH-JV-dkj" secondAttribute="top" constant="-10" id="ZwN-wR-R0m"/>
-                            <constraint firstItem="Rrp-2W-D4k" firstAttribute="top" secondItem="AR9-4A-gKI" secondAttribute="top" constant="27" id="kDH-1g-0Ng"/>
+                            <constraint firstItem="Rrp-2W-D4k" firstAttribute="top" secondItem="AR9-4A-gKI" secondAttribute="top" constant="24" id="kDH-1g-0Ng"/>
                             <constraint firstItem="AR9-4A-gKI" firstAttribute="bottom" secondItem="UQf-lU-WCH" secondAttribute="bottom" id="qyz-JO-69v"/>
                             <constraint firstItem="AR9-4A-gKI" firstAttribute="trailing" secondItem="fdd-4H-jsu" secondAttribute="trailing" constant="16" id="rYR-Qt-qzh"/>
                             <constraint firstItem="UQf-lU-WCH" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" id="rzx-Xu-hS2"/>

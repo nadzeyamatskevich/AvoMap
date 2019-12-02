@@ -17,9 +17,10 @@ class MapCoordinatorManager {
         self.viewController = viewController
     }
     
-    func pushLitsOfPlacesViewController(shops: [ShopModel]) {
+    func pushLitsOfPlacesViewController(shops: [ShopModel], switchState: Int) {
         let listOfPlacesViewController = UIStoryboard(storyboard: .listOfPlaces).instantiateInitialViewController() as! ListOfPlacesViewController
         listOfPlacesViewController.shops = shops
+        listOfPlacesViewController.switchState = switchState
         viewController.navigationController?.pushViewController(listOfPlacesViewController, animated: true)
     }
     

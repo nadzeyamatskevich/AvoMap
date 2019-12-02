@@ -14,6 +14,7 @@ class ListOfPlacesViewController: UIViewController {
     // - UI
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var contentTypeControl: UISegmentedControl!
     
     // - Manager
     fileprivate var dataSource: ListOfPlacesDataSource!
@@ -21,10 +22,12 @@ class ListOfPlacesViewController: UIViewController {
     
     // - Data
     var shops: [ShopModel] = []
+    var switchState: Int = 0
     
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentTypeControl.selectedSegmentIndex = switchState
         configure()
     }
     
@@ -37,11 +40,6 @@ class ListOfPlacesViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
-    func update() {
-        dataSource.shops = shops
-        tableView.reloadData()
     }
     
 }
@@ -57,6 +55,22 @@ extension ListOfPlacesViewController {
     
     @IBAction func addNewPlaceButtonAction(_ sender: Any) {
         pushAddNewPlaceViewController()
+    }
+    
+    @IBAction func swithContent(_ sender: Any) {
+        updateTableViewData()
+    }
+    
+    func updateTableViewData() {
+        switch self.contentTypeControl.selectedSegmentIndex {
+        case 0:
+            self.saveButton.isHidden = false
+            dataSource.shops = shops.filter {$0.type == "store"}
+        default:
+            self.saveButton.isHidden = true
+            dataSource.shops = shops.filter {$0.type == "food_establishment"}
+        }
+        tableView.reloadData()
     }
     
     func pushAddNewPlaceViewController() {
@@ -96,7 +110,7 @@ extension ListOfPlacesViewController {
                 self?.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
                 strongSelf.shops = response
-                strongSelf.update()
+                strongSelf.updateTableViewData()
                 HPGradientLoading.shared.dismiss()
             }
         }
@@ -117,7 +131,7 @@ extension ListOfPlacesViewController {
     }
     
     func getServerData() {
-        shops.count == 0 ? getShops() : update()
+        shops.count == 0 ? getShops() : updateTableViewData()
     }
     
     func configureDataSource() {

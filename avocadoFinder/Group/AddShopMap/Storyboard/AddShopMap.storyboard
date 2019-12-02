@@ -7,6 +7,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Circe-Bold.ttf">
+            <string>Circe-Bold</string>
+        </array>
+        <array key="Circe-Light.ttf">
+            <string>Circe-Light</string>
+        </array>
+        <array key="Circe-Regular.ttf">
+            <string>Circe-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Add Shop Map View Controller-->
         <scene sceneID="6rH-oQ-7P0">
@@ -21,9 +32,9 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="pix-P6-vxa">
-                                <rect key="frame" x="-10" y="-10" width="395" height="166"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="186"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="DYU-bI-LN0"/>
+                                    <constraint firstAttribute="height" constant="186" id="DYU-bI-LN0"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopPin" translatesAutoresizingMaskIntoConstraints="NO" id="6Ac-VM-M4v">
@@ -39,8 +50,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="knP-uv-AB6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <fontDescription key="fontDescription" name="Circe-Bold" family="Circe" pointSize="27"/>
                                 <state key="normal" title="Выбрать адрес">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -49,17 +59,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jn-KXq">
-                                <rect key="frame" x="16" y="61" width="159.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="28" y="47" width="188" height="20"/>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-xE-WRx">
-                                <rect key="frame" x="16" y="22" width="180" height="29"/>
+                                <rect key="frame" x="16" y="15" width="190" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="bxu-gh-R4W"/>
+                                    <constraint firstAttribute="width" constant="190" id="bxu-gh-R4W"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
                                 <state key="normal" title=" Авокадо карта" image="backButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -76,9 +86,9 @@
                             <constraint firstItem="PO8-Oq-jxa" firstAttribute="leading" secondItem="Qk7-0T-Cou" secondAttribute="leading" id="Duc-i2-NIt"/>
                             <constraint firstItem="pix-P6-vxa" firstAttribute="top" secondItem="z8A-Sw-Sdj" secondAttribute="top" constant="-10" id="Fjr-BF-wEN"/>
                             <constraint firstItem="Qk7-0T-Cou" firstAttribute="bottom" secondItem="ukO-do-vfo" secondAttribute="bottom" constant="40" id="HJK-Hf-jdT"/>
-                            <constraint firstItem="QPI-jn-KXq" firstAttribute="top" secondItem="0Eb-xE-WRx" secondAttribute="bottom" constant="10" id="RNj-Bq-k1k"/>
-                            <constraint firstItem="QPI-jn-KXq" firstAttribute="leading" secondItem="0Eb-xE-WRx" secondAttribute="leading" id="TuR-AT-MLA"/>
-                            <constraint firstItem="0Eb-xE-WRx" firstAttribute="top" secondItem="Qk7-0T-Cou" secondAttribute="top" constant="22" id="UhE-3o-sPU"/>
+                            <constraint firstItem="QPI-jn-KXq" firstAttribute="top" secondItem="0Eb-xE-WRx" secondAttribute="bottom" id="RNj-Bq-k1k"/>
+                            <constraint firstItem="QPI-jn-KXq" firstAttribute="leading" secondItem="0Eb-xE-WRx" secondAttribute="leading" constant="12" id="TuR-AT-MLA"/>
+                            <constraint firstItem="0Eb-xE-WRx" firstAttribute="top" secondItem="Qk7-0T-Cou" secondAttribute="top" constant="15" id="UhE-3o-sPU"/>
                             <constraint firstItem="0Eb-xE-WRx" firstAttribute="leading" secondItem="Qk7-0T-Cou" secondAttribute="leading" constant="16" id="adB-PF-EHL"/>
                             <constraint firstAttribute="trailing" secondItem="pix-P6-vxa" secondAttribute="trailing" constant="-10" id="bTu-Zp-2k9"/>
                             <constraint firstItem="PO8-Oq-jxa" firstAttribute="trailing" secondItem="Qk7-0T-Cou" secondAttribute="trailing" id="fU4-VB-gDv"/>

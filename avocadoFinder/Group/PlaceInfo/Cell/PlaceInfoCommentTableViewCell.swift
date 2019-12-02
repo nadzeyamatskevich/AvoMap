@@ -35,9 +35,9 @@ extension PlaceInfoCommentTableViewCell {
     
     func formatDate(date: String) -> String {
         if let currentDate = Date.stringToDate(dateString: date) {
-            return currentDate.dateToStringDMY()
+            return currentDate.dateToStringTimeDMY()
         }
-        return Date().dateToStringDMY()
+        return Date().dateToStringTimeDMY()
     }
     
 }

@@ -67,6 +67,28 @@
 		937BB88322416C9A00215E58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937BB88222416C9A00215E58 /* MapViewController.swift */; };
 		937BB88822416C9C00215E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937BB88722416C9C00215E58 /* Assets.xcassets */; };
 		937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937BB88922416C9C00215E58 /* LaunchScreen.storyboard */; };
+		938CFCD3238A77FF00953DCF /* KotoriRose-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCD1238A77FE00953DCF /* KotoriRose-Bold.otf */; };
+		938CFCD4238A77FF00953DCF /* KotoriRose-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCD2238A77FE00953DCF /* KotoriRose-Regular.otf */; };
+		938CFCEA238A780700953DCF /* Circe-Light.eot in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCD6238A780700953DCF /* Circe-Light.eot */; };
+		938CFCEB238A780700953DCF /* Circe-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCD7238A780700953DCF /* Circe-ExtraLight.ttf */; };
+		938CFCEC238A780700953DCF /* Circe-ExtraBold.eot in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCD8238A780700953DCF /* Circe-ExtraBold.eot */; };
+		938CFCED238A780700953DCF /* Circe-Regular.woff in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCD9238A780700953DCF /* Circe-Regular.woff */; };
+		938CFCEE238A780700953DCF /* Circe-Thin.woff in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCDA238A780700953DCF /* Circe-Thin.woff */; };
+		938CFCEF238A780700953DCF /* Circe-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCDB238A780700953DCF /* Circe-Light.ttf */; };
+		938CFCF0238A780700953DCF /* Circe-ExtraLight.eot in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCDC238A780700953DCF /* Circe-ExtraLight.eot */; };
+		938CFCF1238A780700953DCF /* Circe-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCDD238A780700953DCF /* Circe-ExtraBold.ttf */; };
+		938CFCF2238A780700953DCF /* Circe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCDE238A780700953DCF /* Circe-Bold.ttf */; };
+		938CFCF3238A780700953DCF /* stylesheet.css in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCDF238A780700953DCF /* stylesheet.css */; };
+		938CFCF4238A780700953DCF /* Circe-Regular.eot in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE0238A780700953DCF /* Circe-Regular.eot */; };
+		938CFCF5238A780700953DCF /* Circe-Light.woff in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE1238A780700953DCF /* Circe-Light.woff */; };
+		938CFCF6238A780700953DCF /* Circe-ExtraBold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE2238A780700953DCF /* Circe-ExtraBold.woff */; };
+		938CFCF7238A780700953DCF /* Circe-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE3238A780700953DCF /* Circe-Thin.ttf */; };
+		938CFCF8238A780700953DCF /* Circe-Bold.eot in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE4238A780700953DCF /* Circe-Bold.eot */; };
+		938CFCF9238A780700953DCF /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE5238A780700953DCF /* demo.html */; };
+		938CFCFA238A780700953DCF /* Circe-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE6238A780700953DCF /* Circe-Regular.ttf */; };
+		938CFCFB238A780700953DCF /* Circe-ExtraLight.woff in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE7238A780700953DCF /* Circe-ExtraLight.woff */; };
+		938CFCFC238A780700953DCF /* Circe-Thin.eot in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE8238A780700953DCF /* Circe-Thin.eot */; };
+		938CFCFD238A780700953DCF /* Circe-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE9238A780700953DCF /* Circe-Bold.woff */; };
 		938E5F1F22DB258500127849 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F1E22DB258500127849 /* SettingsCellType.swift */; };
 		938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */; };
 		9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399376022D7BEC000E00AC2 /* DateExtention.swift */; };
@@ -228,6 +250,28 @@
 		937BB88722416C9C00215E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937BB88A22416C9C00215E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937BB88C22416C9C00215E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		938CFCD1238A77FE00953DCF /* KotoriRose-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KotoriRose-Bold.otf"; sourceTree = "<group>"; };
+		938CFCD2238A77FE00953DCF /* KotoriRose-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KotoriRose-Regular.otf"; sourceTree = "<group>"; };
+		938CFCD6238A780700953DCF /* Circe-Light.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Light.eot"; sourceTree = "<group>"; };
+		938CFCD7238A780700953DCF /* Circe-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraLight.ttf"; sourceTree = "<group>"; };
+		938CFCD8238A780700953DCF /* Circe-ExtraBold.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraBold.eot"; sourceTree = "<group>"; };
+		938CFCD9238A780700953DCF /* Circe-Regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Regular.woff"; sourceTree = "<group>"; };
+		938CFCDA238A780700953DCF /* Circe-Thin.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Thin.woff"; sourceTree = "<group>"; };
+		938CFCDB238A780700953DCF /* Circe-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Light.ttf"; sourceTree = "<group>"; };
+		938CFCDC238A780700953DCF /* Circe-ExtraLight.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraLight.eot"; sourceTree = "<group>"; };
+		938CFCDD238A780700953DCF /* Circe-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraBold.ttf"; sourceTree = "<group>"; };
+		938CFCDE238A780700953DCF /* Circe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.ttf"; sourceTree = "<group>"; };
+		938CFCDF238A780700953DCF /* stylesheet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = stylesheet.css; sourceTree = "<group>"; };
+		938CFCE0238A780700953DCF /* Circe-Regular.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Regular.eot"; sourceTree = "<group>"; };
+		938CFCE1238A780700953DCF /* Circe-Light.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Light.woff"; sourceTree = "<group>"; };
+		938CFCE2238A780700953DCF /* Circe-ExtraBold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraBold.woff"; sourceTree = "<group>"; };
+		938CFCE3238A780700953DCF /* Circe-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Thin.ttf"; sourceTree = "<group>"; };
+		938CFCE4238A780700953DCF /* Circe-Bold.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.eot"; sourceTree = "<group>"; };
+		938CFCE5238A780700953DCF /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
+		938CFCE6238A780700953DCF /* Circe-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Regular.ttf"; sourceTree = "<group>"; };
+		938CFCE7238A780700953DCF /* Circe-ExtraLight.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraLight.woff"; sourceTree = "<group>"; };
+		938CFCE8238A780700953DCF /* Circe-Thin.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Thin.eot"; sourceTree = "<group>"; };
+		938CFCE9238A780700953DCF /* Circe-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.woff"; sourceTree = "<group>"; };
 		938E5F1E22DB258500127849 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
 		938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceLayoutManager.swift; sourceTree = "<group>"; };
 		9399376022D7BEC000E00AC2 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
@@ -673,6 +717,42 @@
 			path = avocadoFinder;
 			sourceTree = "<group>";
 		};
+		938CFCD0238A77FE00953DCF /* Kotori Rose */ = {
+			isa = PBXGroup;
+			children = (
+				938CFCD1238A77FE00953DCF /* KotoriRose-Bold.otf */,
+				938CFCD2238A77FE00953DCF /* KotoriRose-Regular.otf */,
+			);
+			path = "Kotori Rose";
+			sourceTree = "<group>";
+		};
+		938CFCD5238A780700953DCF /* Circe */ = {
+			isa = PBXGroup;
+			children = (
+				938CFCD6238A780700953DCF /* Circe-Light.eot */,
+				938CFCD7238A780700953DCF /* Circe-ExtraLight.ttf */,
+				938CFCD8238A780700953DCF /* Circe-ExtraBold.eot */,
+				938CFCD9238A780700953DCF /* Circe-Regular.woff */,
+				938CFCDA238A780700953DCF /* Circe-Thin.woff */,
+				938CFCDB238A780700953DCF /* Circe-Light.ttf */,
+				938CFCDC238A780700953DCF /* Circe-ExtraLight.eot */,
+				938CFCDD238A780700953DCF /* Circe-ExtraBold.ttf */,
+				938CFCDE238A780700953DCF /* Circe-Bold.ttf */,
+				938CFCDF238A780700953DCF /* stylesheet.css */,
+				938CFCE0238A780700953DCF /* Circe-Regular.eot */,
+				938CFCE1238A780700953DCF /* Circe-Light.woff */,
+				938CFCE2238A780700953DCF /* Circe-ExtraBold.woff */,
+				938CFCE3238A780700953DCF /* Circe-Thin.ttf */,
+				938CFCE4238A780700953DCF /* Circe-Bold.eot */,
+				938CFCE5238A780700953DCF /* demo.html */,
+				938CFCE6238A780700953DCF /* Circe-Regular.ttf */,
+				938CFCE7238A780700953DCF /* Circe-ExtraLight.woff */,
+				938CFCE8238A780700953DCF /* Circe-Thin.eot */,
+				938CFCE9238A780700953DCF /* Circe-Bold.woff */,
+			);
+			path = Circe;
+			sourceTree = "<group>";
+		};
 		938E5F2022DB2D6300127849 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1066,6 +1146,8 @@
 		93B34D98227E1CF700DE48BD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				938CFCD5238A780700953DCF /* Circe */,
+				938CFCD0238A77FE00953DCF /* Kotori Rose */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -1296,19 +1378,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DB41C9227DD48E00CC8113 /* TabBar.storyboard in Resources */,
+				938CFCF4238A780700953DCF /* Circe-Regular.eot in Resources */,
 				9341868B23677A2500A9429B /* AddShopMap.storyboard in Resources */,
+				938CFCEC238A780700953DCF /* Circe-ExtraBold.eot in Resources */,
 				937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */,
 				93A445EF226B019F00386766 /* StaticPage.storyboard in Resources */,
+				938CFCF2238A780700953DCF /* Circe-Bold.ttf in Resources */,
 				93DB41CB227DE4EC00CC8113 /* NewsAndBlog.storyboard in Resources */,
+				938CFCEA238A780700953DCF /* Circe-Light.eot in Resources */,
 				931DF54422C5417400D43AB0 /* README.md in Resources */,
 				93D1A62C22882BDA008DD01D /* PlaceInfo.storyboard in Resources */,
 				93A445BF226AFCCB00386766 /* AddNewPlace.storyboard in Resources */,
 				931DF54022C5417400D43AB0 /* LICENSE in Resources */,
+				938CFCED238A780700953DCF /* Circe-Regular.woff in Resources */,
 				93A445C4226AFD9200386766 /* Map.storyboard in Resources */,
+				938CFCFD238A780700953DCF /* Circe-Bold.woff in Resources */,
+				938CFCF5238A780700953DCF /* Circe-Light.woff in Resources */,
+				938CFCFA238A780700953DCF /* Circe-Regular.ttf in Resources */,
+				938CFCF7238A780700953DCF /* Circe-Thin.ttf in Resources */,
+				938CFCF9238A780700953DCF /* demo.html in Resources */,
+				938CFCF8238A780700953DCF /* Circe-Bold.eot in Resources */,
 				937BB88822416C9C00215E58 /* Assets.xcassets in Resources */,
+				938CFCEE238A780700953DCF /* Circe-Thin.woff in Resources */,
+				938CFCF1238A780700953DCF /* Circe-ExtraBold.ttf in Resources */,
+				938CFCD3238A77FF00953DCF /* KotoriRose-Bold.otf in Resources */,
 				93A445EB226B012200386766 /* Settings.storyboard in Resources */,
+				938CFCD4238A77FF00953DCF /* KotoriRose-Regular.otf in Resources */,
+				938CFCFC238A780700953DCF /* Circe-Thin.eot in Resources */,
+				938CFCEF238A780700953DCF /* Circe-Light.ttf in Resources */,
 				93A445F3226B01FB00386766 /* OneNewsInfo.storyboard in Resources */,
+				938CFCF6238A780700953DCF /* Circe-ExtraBold.woff in Resources */,
+				938CFCF0238A780700953DCF /* Circe-ExtraLight.eot in Resources */,
+				938CFCFB238A780700953DCF /* Circe-ExtraLight.woff in Resources */,
+				938CFCF3238A780700953DCF /* stylesheet.css in Resources */,
 				93A445C9226AFDF000386766 /* ListOfPlaces.storyboard in Resources */,
+				938CFCEB238A780700953DCF /* Circe-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1662,6 +1766,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1669,6 +1774,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";
@@ -1683,6 +1789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1690,6 +1797,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";

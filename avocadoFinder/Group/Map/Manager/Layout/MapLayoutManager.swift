@@ -59,10 +59,12 @@ extension MapLayoutManager: GMUClusterManagerDelegate {
             let lat = shop.latitude
             let lng = shop.longitude
             let shopId = "\(shop.id)"
-            let iconImageView = UIImageView(image: UIImage(named: "shopPin"))
-            
+            let shopType = shop.type
+            let iconImageView = shop.type == "store" ?
+            UIImageView(image: UIImage(named: "shopPin")) :
+            UIImageView(image: UIImage(named: "foodPin"))
             if Double(lat)! > -85.0 && Double(lat)! < 85.0 && Double(lng)! > -180.0 && Double(lng)! < 180.0 {
-                let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView)
+                let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView, shopType: shopType)
                 clusterManager.add(item)
             }            
         }
@@ -106,10 +108,23 @@ extension MapLayoutManager {
                 self?.viewController.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
                 strongSelf.shops = response
-                strongSelf.update()
+                strongSelf.viewController.shops = response
+                strongSelf.updateMapViewData()
                 HPGradientLoading.shared.dismiss()
             }
         }
+    }
+    
+    func updateMapViewData() {
+        switch viewController.contentTypeControl.selectedSegmentIndex {
+        case 0:
+            self.viewController.saveButton.isHidden = false
+            self.shops = viewController.shops.filter {$0.type == "store"}
+        default:
+            self.viewController.saveButton.isHidden = true
+            self.shops = viewController.shops.filter {$0.type == "food_establishment"}
+        }
+        self.update()
     }
     
 }
@@ -178,6 +193,9 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
         if marker.userData is GMUStaticCluster {
             let clusterMarker = marker.userData as! GMUStaticCluster
             marker.icon = generateImageWithText(text: "\(clusterMarker.count)")
+        } else if let shop = marker.userData as? POIItem {
+
+            marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
         } else {
             marker.icon = UIImage(named: "shopPin")
         }

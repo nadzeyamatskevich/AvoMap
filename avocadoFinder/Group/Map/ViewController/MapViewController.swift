@@ -14,11 +14,15 @@ class MapViewController: UIViewController {
     // - UI
     @IBOutlet weak var avoMapView: GMSMapView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var contentTypeControl: UISegmentedControl!
     
     // - Manager
     private var layoutManager: MapLayoutManager!
     private var coordinatorManager: MapCoordinatorManager!
     private var serverManager = MapServerManager()
+    
+    // - Data
+    var shops: [ShopModel] = []
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -37,6 +41,7 @@ class MapViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
+   
 }
 
 // MARK: -
@@ -45,11 +50,15 @@ class MapViewController: UIViewController {
 extension MapViewController {
     
     @IBAction func listOfPlacesButtonAction(_ sender: Any) {
-        coordinatorManager.pushLitsOfPlacesViewController(shops: [])
+        coordinatorManager.pushLitsOfPlacesViewController(shops: [], switchState: contentTypeControl.selectedSegmentIndex)
     }
     
     @IBAction func addNewPlaceButtonAction(_ sender: Any) {
         coordinatorManager.pushAddNewPlaceViewController()
+    }
+    
+    @IBAction func changeContentTypeAction(_ sender: Any) {
+        layoutManager.updateMapViewData()
     }
     
     func openPlaceInfo(shop: ShopModel) {
@@ -57,7 +66,7 @@ extension MapViewController {
     }
     
     func openPlaceList(shops: [ShopModel]) {
-        coordinatorManager.pushLitsOfPlacesViewController(shops: shops)
+        coordinatorManager.pushLitsOfPlacesViewController(shops: shops, switchState: contentTypeControl.selectedSegmentIndex)
     }
     
 }

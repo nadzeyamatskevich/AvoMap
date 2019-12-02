@@ -7,6 +7,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Circe-Bold.ttf">
+            <string>Circe-Bold</string>
+        </array>
+        <array key="Circe-Light.ttf">
+            <string>Circe-Light</string>
+        </array>
+        <array key="Circe-Regular.ttf">
+            <string>Circe-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Place Info View Controller-->
         <scene sceneID="0Mo-Wh-wlB">
@@ -17,17 +28,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="XlX-n8-DT2">
-                                <rect key="frame" x="-10" y="-10" width="395" height="126"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="186"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="126" id="tRn-28-UrT"/>
+                                    <constraint firstAttribute="height" constant="186" id="tRn-28-UrT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSd-Lb-cxZ">
-                                <rect key="frame" x="16" y="22" width="180" height="29"/>
+                                <rect key="frame" x="16" y="15" width="200" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="xyb-7D-KnD"/>
+                                    <constraint firstAttribute="width" constant="200" id="xyb-7D-KnD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-2"/>
                                 <state key="normal" title=" Авокадо карта" image="backButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,52 +48,58 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-eM-acn">
-                                <rect key="frame" x="0.0" y="109" width="375" height="558"/>
+                                <rect key="frame" x="0.0" y="169" width="375" height="498"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceInfoMainInfoTableViewCell" rowHeight="240" id="xxT-wO-pQY" customClass="PlaceInfoMainInfoTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="240"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceInfoMainInfoTableViewCell" rowHeight="302" id="xxT-wO-pQY" customClass="PlaceInfoMainInfoTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="302"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xxT-wO-pQY" id="IA0-SL-27n">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="302"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-Hg-If9">
-                                                    <rect key="frame" x="16" y="8" width="343" height="224"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="286"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-l0-oXL">
-                                                            <rect key="frame" x="8" y="205" width="327" height="1"/>
+                                                            <rect key="frame" x="8" y="205.5" width="327" height="1"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="3HC-ZX-vab"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название магазина" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alA-Eq-IbR">
-                                                            <rect key="frame" x="24" y="25" width="116" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <rect key="frame" x="24" y="25" width="299" height="14.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14.5" id="kNb-wg-LGO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A75-EL-koR">
-                                                            <rect key="frame" x="24" y="47.5" width="295" height="19.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A75-EL-koR">
+                                                            <rect key="frame" x="24" y="47.5" width="295" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="QrO-tr-Rgm">
-                                                            <rect key="frame" x="8" y="75" width="327" height="1"/>
+                                                            <rect key="frame" x="8" y="74.5" width="327" height="1"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="QXO-ms-7Pw"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIu-jc-D9Z">
-                                                            <rect key="frame" x="24" y="90" width="37" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <rect key="frame" x="24" y="89.5" width="299" height="14.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14.5" id="l04-iJ-XDu"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кальварийская, 26" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfW-sm-vwg">
-                                                            <rect key="frame" x="24" y="112.5" width="295" height="19.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <rect key="frame" x="24" y="112" width="295" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -92,15 +109,39 @@
                                                                 <constraint firstAttribute="height" constant="1" id="SnQ-YV-O9e"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDs-UK-3mO">
-                                                            <rect key="frame" x="24" y="155" width="67.5" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя или ник в Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDs-UK-3mO">
+                                                            <rect key="frame" x="24" y="155" width="299" height="14.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14.5" id="S60-oD-dyk"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nadzeyasavictskaya" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9UX-gy-Ks4">
-                                                            <rect key="frame" x="24" y="177.5" width="295" height="19.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <rect key="frame" x="24" y="177.5" width="295" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-Ut-dXI">
+                                                            <rect key="frame" x="8" y="271" width="327" height="1"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="eyA-ZT-l1z"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий или цена" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-Qw-Qsf">
+                                                            <rect key="frame" x="24" y="220.5" width="299" height="14.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="14.5" id="xb4-BA-ROJ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="олололо" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qml-rY-iLK">
+                                                            <rect key="frame" x="24" y="243" width="295" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -108,23 +149,34 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="z3c-l0-oXL" secondAttribute="trailing" constant="8" id="0fs-xC-1hG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6lQ-Qw-Qsf" secondAttribute="trailing" constant="20" id="39u-UL-0rl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="M2A-Ut-dXI" secondAttribute="bottom" constant="14" id="3xD-vD-lsW"/>
                                                         <constraint firstAttribute="trailing" secondItem="QrO-tr-Rgm" secondAttribute="trailing" constant="8" id="9Cf-4x-KXM"/>
                                                         <constraint firstItem="cDs-UK-3mO" firstAttribute="top" secondItem="236-Qa-Coy" secondAttribute="bottom" constant="14" id="9hE-Ot-tQ0"/>
+                                                        <constraint firstItem="6lQ-Qw-Qsf" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="24" id="AHG-EL-9MT"/>
                                                         <constraint firstAttribute="trailing" secondItem="nfW-sm-vwg" secondAttribute="trailing" constant="24" id="BxN-9R-V7Z"/>
                                                         <constraint firstItem="236-Qa-Coy" firstAttribute="top" secondItem="nfW-sm-vwg" secondAttribute="bottom" constant="8" id="EVb-W9-ej3"/>
                                                         <constraint firstItem="9UX-gy-Ks4" firstAttribute="top" secondItem="cDs-UK-3mO" secondAttribute="bottom" constant="8" id="Gta-EY-E7k"/>
                                                         <constraint firstItem="nfW-sm-vwg" firstAttribute="top" secondItem="NIu-jc-D9Z" secondAttribute="bottom" constant="8" id="J9K-tM-lF6"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NIu-jc-D9Z" secondAttribute="trailing" constant="20" id="JhA-wk-8Xk"/>
                                                         <constraint firstAttribute="trailing" secondItem="236-Qa-Coy" secondAttribute="trailing" constant="8" id="K8f-lO-gdP"/>
+                                                        <constraint firstItem="6lQ-Qw-Qsf" firstAttribute="top" secondItem="z3c-l0-oXL" secondAttribute="bottom" constant="14" id="N3h-RI-6V5"/>
+                                                        <constraint firstItem="Qml-rY-iLK" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="24" id="O84-ny-aqt"/>
+                                                        <constraint firstItem="M2A-Ut-dXI" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="8" id="Rbf-UR-0Ac"/>
                                                         <constraint firstAttribute="trailing" secondItem="9UX-gy-Ks4" secondAttribute="trailing" constant="24" id="SaE-kW-JMu"/>
                                                         <constraint firstAttribute="trailing" secondItem="A75-EL-koR" secondAttribute="trailing" constant="24" id="ScB-ut-ZZa"/>
-                                                        <constraint firstAttribute="height" constant="244" id="VI7-UQ-nox"/>
                                                         <constraint firstItem="236-Qa-Coy" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="8" id="WMq-A0-vFF"/>
                                                         <constraint firstItem="9UX-gy-Ks4" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="24" id="ZI1-hK-m9c"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qml-rY-iLK" secondAttribute="trailing" constant="24" id="be4-eG-mmY"/>
                                                         <constraint firstItem="NIu-jc-D9Z" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="24" id="bo5-JR-6Ih"/>
                                                         <constraint firstItem="QrO-tr-Rgm" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="8" id="d9u-g1-btk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cDs-UK-3mO" secondAttribute="trailing" constant="20" id="f45-cO-K7k"/>
                                                         <constraint firstItem="z3c-l0-oXL" firstAttribute="top" secondItem="9UX-gy-Ks4" secondAttribute="bottom" constant="8" id="gJh-bH-EcQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="alA-Eq-IbR" secondAttribute="trailing" constant="20" id="hQc-g9-SbP"/>
                                                         <constraint firstItem="A75-EL-koR" firstAttribute="top" secondItem="alA-Eq-IbR" secondAttribute="bottom" constant="8" id="hqC-Yf-oeC"/>
+                                                        <constraint firstItem="M2A-Ut-dXI" firstAttribute="top" secondItem="Qml-rY-iLK" secondAttribute="bottom" constant="8" id="j2z-Wg-3SP"/>
                                                         <constraint firstItem="nfW-sm-vwg" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="24" id="kOP-KR-Ur4"/>
+                                                        <constraint firstItem="Qml-rY-iLK" firstAttribute="top" secondItem="6lQ-Qw-Qsf" secondAttribute="bottom" constant="8" id="nSd-GT-FKD"/>
                                                         <constraint firstItem="alA-Eq-IbR" firstAttribute="top" secondItem="ktO-Hg-If9" secondAttribute="top" constant="25" id="pgB-Cy-soP"/>
                                                         <constraint firstItem="NIu-jc-D9Z" firstAttribute="top" secondItem="QrO-tr-Rgm" secondAttribute="bottom" constant="14" id="prm-4f-p7q"/>
                                                         <constraint firstItem="QrO-tr-Rgm" firstAttribute="top" secondItem="A75-EL-koR" secondAttribute="bottom" constant="8" id="qZj-Y1-6rK"/>
@@ -132,6 +184,7 @@
                                                         <constraint firstItem="cDs-UK-3mO" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="24" id="uiX-e3-jpW"/>
                                                         <constraint firstItem="z3c-l0-oXL" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="8" id="v8I-BN-x18"/>
                                                         <constraint firstItem="A75-EL-koR" firstAttribute="leading" secondItem="ktO-Hg-If9" secondAttribute="leading" constant="24" id="xF9-FZ-8SS"/>
+                                                        <constraint firstAttribute="trailing" secondItem="M2A-Ut-dXI" secondAttribute="trailing" constant="8" id="zLO-6f-fwb"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -145,6 +198,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="commentLabel" destination="Qml-rY-iLK" id="8MA-8V-XbY"/>
                                             <outlet property="instagramLabel" destination="9UX-gy-Ks4" id="bA7-yl-bz9"/>
                                             <outlet property="mainView" destination="ktO-Hg-If9" id="uWi-5M-a5m"/>
                                             <outlet property="shopAdress" destination="nfW-sm-vwg" id="42A-8a-86G"/>
@@ -152,7 +206,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceInfoAddCommentTableViewCell" rowHeight="200" id="GZj-uD-K2X" customClass="PlaceInfoAddCommentTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="268" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="330" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZj-uD-K2X" id="YhG-ua-2xp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -162,13 +216,13 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="184"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавить комментарий" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-jN-HTN">
-                                                            <rect key="frame" x="24" y="20" width="149.5" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <rect key="frame" x="24" y="20" width="177.5" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Bold" family="Circe" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dividerWhite" translatesAutoresizingMaskIntoConstraints="NO" id="T5k-Tv-q2i">
-                                                            <rect key="frame" x="8" y="70" width="327" height="1"/>
+                                                            <rect key="frame" x="8" y="77" width="327" height="1"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="OYr-Bq-eOB"/>
                                                             </constraints>
@@ -185,6 +239,7 @@
                                                                 <constraint firstAttribute="width" constant="132" id="Jcj-6t-Oak"/>
                                                                 <constraint firstAttribute="height" constant="33" id="csW-OW-UxX"/>
                                                             </constraints>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <state key="normal" title="Опубликовать">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
@@ -193,20 +248,20 @@
                                                             </connections>
                                                         </button>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="@instagram" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-df-eQR">
-                                                            <rect key="frame" x="24" y="37" width="295" height="30"/>
+                                                            <rect key="frame" x="24" y="44" width="295" height="30"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="vTw-Vf-sN4"/>
                                                             </constraints>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Комментарий" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUw-Cd-a87">
-                                                            <rect key="frame" x="24" y="91" width="295" height="37.5"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Комментарий" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUw-Cd-a87">
+                                                            <rect key="frame" x="24" y="98" width="295" height="30.5"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                     </subviews>
@@ -218,7 +273,7 @@
                                                         <constraint firstItem="pQN-QW-4oN" firstAttribute="top" secondItem="EUw-Cd-a87" secondAttribute="bottom" constant="1.5" id="KQM-oW-cks"/>
                                                         <constraint firstItem="KVc-jN-HTN" firstAttribute="top" secondItem="uqd-ml-3d2" secondAttribute="top" constant="20" id="OE4-0H-ofe"/>
                                                         <constraint firstAttribute="trailing" secondItem="EUw-Cd-a87" secondAttribute="trailing" constant="24" id="OuI-e1-9an"/>
-                                                        <constraint firstItem="dmb-df-eQR" firstAttribute="top" secondItem="KVc-jN-HTN" secondAttribute="bottom" constant="2.5" id="PGa-Xv-5p2"/>
+                                                        <constraint firstItem="dmb-df-eQR" firstAttribute="top" secondItem="KVc-jN-HTN" secondAttribute="bottom" constant="5" id="PGa-Xv-5p2"/>
                                                         <constraint firstItem="VmH-nw-Lfq" firstAttribute="top" secondItem="pQN-QW-4oN" secondAttribute="bottom" constant="10" id="Qif-Yn-FEQ"/>
                                                         <constraint firstItem="pQN-QW-4oN" firstAttribute="leading" secondItem="uqd-ml-3d2" secondAttribute="leading" constant="8" id="S4I-fh-7Nw"/>
                                                         <constraint firstAttribute="trailing" secondItem="T5k-Tv-q2i" secondAttribute="trailing" constant="8" id="YRa-CN-MkK"/>
@@ -248,7 +303,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceInfoCommentTableViewCell" rowHeight="100" id="5uv-VY-ye5" customClass="PlaceInfoCommentTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="468" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="530" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5uv-VY-ye5" id="SGc-AU-juw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -258,26 +313,26 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="84"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@nadzeyasavictskaya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHT-JZ-tZt">
-                                                            <rect key="frame" x="24" y="16" width="132.5" height="14.5"/>
+                                                            <rect key="frame" x="24" y="16" width="136.5" height="14.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="14.5" id="oO8-mh-9wg"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Bold" family="Circe" pointSize="14"/>
                                                             <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий Комментарий Комментарий" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuI-uW-MIm">
                                                             <rect key="frame" x="24" y="38.5" width="295" height="45.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="15"/>
                                                             <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="15:35" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RG-s3-Of1">
-                                                            <rect key="frame" x="172.5" y="16" width="154.5" height="14.5"/>
+                                                            <rect key="frame" x="176.5" y="16" width="150.5" height="14"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="kdb-mo-aHk"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="12"/>
                                                             <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -314,6 +369,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNT-u9-isB">
+                                <rect key="frame" x="34" y="47" width="188" height="20"/>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -325,7 +386,9 @@
                             <constraint firstItem="NDb-eM-acn" firstAttribute="top" secondItem="XlX-n8-DT2" secondAttribute="bottom" constant="-7" id="glX-Ud-qCO"/>
                             <constraint firstItem="XlX-n8-DT2" firstAttribute="leading" secondItem="aah-nJ-ubq" secondAttribute="leading" constant="-10" id="pWx-PU-ywa"/>
                             <constraint firstAttribute="trailing" secondItem="XlX-n8-DT2" secondAttribute="trailing" constant="-10" id="toZ-ao-4BF"/>
-                            <constraint firstItem="fSd-Lb-cxZ" firstAttribute="top" secondItem="Ldc-e1-X27" secondAttribute="top" constant="22" id="wHJ-4T-LEq"/>
+                            <constraint firstItem="cNT-u9-isB" firstAttribute="leading" secondItem="Ldc-e1-X27" secondAttribute="leading" constant="34" id="vy0-Tn-drM"/>
+                            <constraint firstItem="fSd-Lb-cxZ" firstAttribute="top" secondItem="Ldc-e1-X27" secondAttribute="top" constant="15" id="wHJ-4T-LEq"/>
+                            <constraint firstItem="cNT-u9-isB" firstAttribute="top" secondItem="fSd-Lb-cxZ" secondAttribute="bottom" id="yw4-qA-Vvz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ldc-e1-X27"/>
                     </view>

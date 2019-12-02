@@ -7,6 +7,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Circe-Bold.ttf">
+            <string>Circe-Bold</string>
+        </array>
+        <array key="Circe-Light.ttf">
+            <string>Circe-Light</string>
+        </array>
+        <array key="Circe-Regular.ttf">
+            <string>Circe-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="sEx-gQ-XIT">
@@ -20,6 +31,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LY5-qy-n1K">
+                                <rect key="frame" x="45" y="184" width="285" height="32"/>
+                                <segments>
+                                    <segment title="Магазины"/>
+                                    <segment title="Заведения"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.48684924839999999" green="0.81574469800000005" blue="0.61807030439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changeContentTypeAction:" destination="qhP-vP-cFk" eventType="valueChanged" id="MH9-S8-pXY"/>
+                                </connections>
+                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGb-cq-dAh">
                                 <rect key="frame" x="305" y="532" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.90426713199999997" blue="0.68068788589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -27,8 +49,8 @@
                                     <constraint firstAttribute="width" constant="60" id="JjZ-Lq-cUk"/>
                                     <constraint firstAttribute="height" constant="60" id="mHi-qM-82n"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="57"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                <fontDescription key="fontDescription" name="Circe-Bold" family="Circe" pointSize="70"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -37,30 +59,31 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="XDt-Sl-vxB">
-                                <rect key="frame" x="-10" y="-10" width="395" height="166"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="186"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="oDv-F0-Yi7"/>
+                                    <constraint firstAttribute="height" constant="186" id="oDv-F0-Yi7"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо карта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tna-oB-b4T">
-                                <rect key="frame" x="16" y="22" width="159.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="16" y="15" width="187" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hb7-Tw-7c3">
-                                <rect key="frame" x="16" y="61" width="159.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="16" y="46.5" width="188" height="20"/>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqL-R0-woh">
-                                <rect key="frame" x="268" y="25.5" width="83" height="22"/>
+                                <rect key="frame" x="251" y="17.5" width="100" height="27"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="KoJ-lZ-hsc"/>
+                                    <constraint firstAttribute="width" constant="100" id="KoJ-lZ-hsc"/>
                                 </constraints>
-                                <inset key="titleEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="74" minY="0.0" maxX="0.0" maxY="-2"/>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="23"/>
+                                <inset key="titleEdgeInsets" minX="-24" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="92" minY="0.0" maxX="0.0" maxY="-2"/>
                                 <state key="normal" title="Список" image="nextButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -75,22 +98,26 @@
                             <constraint firstItem="tna-oB-b4T" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="16" id="Ayb-Za-Dbi"/>
                             <constraint firstItem="Qmg-aZ-UK5" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" id="C8p-lL-aag"/>
                             <constraint firstItem="gqL-R0-woh" firstAttribute="centerY" secondItem="tna-oB-b4T" secondAttribute="centerY" id="HCx-R1-TTv"/>
+                            <constraint firstItem="LY5-qy-n1K" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="45" id="Hah-L1-5bL"/>
+                            <constraint firstItem="LY5-qy-n1K" firstAttribute="top" secondItem="XDt-Sl-vxB" secondAttribute="bottom" constant="8" id="JjH-59-WWo"/>
                             <constraint firstItem="Qmg-aZ-UK5" firstAttribute="top" secondItem="jfo-Rr-EP2" secondAttribute="top" id="JrT-GA-fFA"/>
                             <constraint firstItem="XDt-Sl-vxB" firstAttribute="top" secondItem="jfo-Rr-EP2" secondAttribute="top" constant="-10" id="Up6-Q9-arn"/>
                             <constraint firstItem="Hb7-Tw-7c3" firstAttribute="leading" secondItem="tna-oB-b4T" secondAttribute="leading" id="YnL-C4-oxc"/>
                             <constraint firstItem="Qmg-aZ-UK5" firstAttribute="trailing" secondItem="JQL-eK-snu" secondAttribute="trailing" id="d4x-3z-Uqb"/>
+                            <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="LY5-qy-n1K" secondAttribute="trailing" constant="45" id="daY-8Z-p1O"/>
                             <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="gqL-R0-woh" secondAttribute="trailing" constant="24" id="dp4-TV-W0P"/>
                             <constraint firstItem="JQL-eK-snu" firstAttribute="bottom" secondItem="OGb-cq-dAh" secondAttribute="bottom" constant="75" id="lzB-bL-sTc"/>
                             <constraint firstItem="XDt-Sl-vxB" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="-10" id="sXS-LC-3uT"/>
                             <constraint firstAttribute="trailing" secondItem="XDt-Sl-vxB" secondAttribute="trailing" constant="-10" id="t52-wn-Zkv"/>
                             <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="OGb-cq-dAh" secondAttribute="trailing" constant="10" id="tiy-41-bv5"/>
-                            <constraint firstItem="Hb7-Tw-7c3" firstAttribute="top" secondItem="tna-oB-b4T" secondAttribute="bottom" constant="10" id="vGg-XM-GJE"/>
-                            <constraint firstItem="tna-oB-b4T" firstAttribute="top" secondItem="JQL-eK-snu" secondAttribute="top" constant="22" id="xAE-Xm-efc"/>
+                            <constraint firstItem="Hb7-Tw-7c3" firstAttribute="top" secondItem="tna-oB-b4T" secondAttribute="bottom" id="vGg-XM-GJE"/>
+                            <constraint firstItem="tna-oB-b4T" firstAttribute="top" secondItem="JQL-eK-snu" secondAttribute="top" constant="15" id="xAE-Xm-efc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JQL-eK-snu"/>
                     </view>
                     <connections>
                         <outlet property="avoMapView" destination="Qmg-aZ-UK5" id="qCc-4P-P1v"/>
+                        <outlet property="contentTypeControl" destination="LY5-qy-n1K" id="uSK-ba-j5g"/>
                         <outlet property="saveButton" destination="OGb-cq-dAh" id="nh8-Bw-bM9"/>
                     </connections>
                 </viewController>

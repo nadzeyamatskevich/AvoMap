@@ -31,6 +31,7 @@ class AddNewPlaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,14 +44,19 @@ class AddNewPlaceViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    @IBAction func addressTextFieldAction(_ sender: Any) {
-        shopAddressTextField.resignFirstResponder()
+    @IBAction func addressTextFieldAction(_ sender: UITextField) {
+       sender.resignFirstResponder()
+       let acController = GMSAutocompleteViewController()
+       acController.delegate = self
+       present(acController, animated: true, completion: nil)
+    }
+    
+    @IBAction func openMapAction(_ sender: Any) {
         let addShopMapViewController = UIStoryboard(storyboard: .addShopMap).instantiateInitialViewController() as! AddShopMapViewController
         addShopMapViewController.delegate = self
         self.shopAddressTextField.isSelected = false
         self.navigationController?.pushViewController(addShopMapViewController, animated: true)
     }
-    
 }
 
 // MARK: -
@@ -186,8 +192,8 @@ extension AddNewPlaceViewController {
 
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                //self.view.frame.origin.y -= keyboardSize.height
+            if self.view.frame.height <= 667 && self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height/2
             }
         }
     }
@@ -195,6 +201,7 @@ extension AddNewPlaceViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
+            self.view.endEditing(true)
         }
     }
     

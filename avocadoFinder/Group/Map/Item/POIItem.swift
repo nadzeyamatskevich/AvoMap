@@ -13,11 +13,13 @@ class POIItem: NSObject, GMUClusterItem {
     var position: CLLocationCoordinate2D
     var shopId: String!
     var iconView: UIImageView!
+    var shopType: String
     
-    init(position: CLLocationCoordinate2D, shopId: String, iconView: UIImageView!) {
+    init(position: CLLocationCoordinate2D, shopId: String, iconView: UIImageView!, shopType: String) {
         self.position = position
         self.shopId = shopId
         self.iconView = iconView
+        self.shopType = shopType
     }
 }
 

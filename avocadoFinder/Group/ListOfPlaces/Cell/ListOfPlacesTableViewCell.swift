@@ -40,7 +40,7 @@ extension ListOfPlacesTableViewCell {
     
     func configureMainView() {
         mainView.layer.cornerRadius = 16
-        mainView.setupShadow(color: AppColor.black(alpha: 0.1))
+        mainView.setupOnlyBottomShadow(color: AppColor.black(alpha: 0.1))
     }
     
 }

@@ -14,14 +14,21 @@ extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         let dateString = dateFormatter.string(from: self)
-        return dateString
+        return UTCToLocal(date: dateString, format: "dd.MM.yyyy")
     }
     
     func dateToStringTime() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         let dateString = dateFormatter.string(from: self)
-        return dateString
+        return UTCToLocal(date: dateString, format: "HH:mm")
+    }
+    
+    func dateToStringTimeDMY() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm dd.MM.yyyy"
+        let dateString = dateFormatter.string(from: self)
+        return UTCToLocal(date: dateString, format: "HH:mm dd.MM.yyyy")
     }
     
     static func stringToDate(dateString: String) -> Date? {
@@ -30,4 +37,16 @@ extension Date {
         return dateFormatter.date(from: dateString)
     }
     
+    func UTCToLocal(date: String, format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+
+        let dt = dateFormatter.date(from: date)
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = format
+
+        return dateFormatter.string(from: dt!)
+    }
+
 }

@@ -15,6 +15,7 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var shopTitle: UILabel!
     @IBOutlet weak var shopAdress: UILabel!
     @IBOutlet weak var instagramLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
     
     // - Lifecycle
     override func awakeFromNib() {
@@ -26,6 +27,7 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
         shopTitle.text = shop.name
         shopAdress.text = shop.address
         instagramLabel.text = shop.author
+        commentLabel.text = shop.shopDescription
     }
 }
 
