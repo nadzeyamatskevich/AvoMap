@@ -137,7 +137,7 @@ extension AddNewPlaceViewController {
         newShop.name = shopNameTextField.text!
         newShop.address = shopAddressTextField.text!
         newShop.author = shopAuthorTextField.text!
-        newShop.shopDescription = commentTextField.text ?? ""
+        newShop.shopDescription = commentTextField.text!
         return newShop
     }
     

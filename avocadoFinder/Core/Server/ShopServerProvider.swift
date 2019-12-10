@@ -60,7 +60,7 @@ extension ShopServerProvider: TargetType {
         case .getShops:
             return .requestPlain
         case .addShop(let shop):
-            let params = ["shop": ["name": shop.name, "author": shop.author, "address": shop.address, "latitude": shop.latitude, "longitude": shop.longitude]]
+            let params = ["shop": ["name": shop.name, "author": shop.author, "address": shop.address, "latitude": shop.latitude, "longitude": shop.longitude, "description": shop.shopDescription]]
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .getShopInfo:
             return .requestPlain
