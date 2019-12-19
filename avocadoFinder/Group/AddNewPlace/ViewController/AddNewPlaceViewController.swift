@@ -8,7 +8,6 @@
 
 import UIKit
 import GooglePlaces
-import HPGradientLoading
 
 class AddNewPlaceViewController: UIViewController {
     
@@ -157,14 +156,11 @@ extension AddNewPlaceViewController {
     }
     
     func addShop(shop: ShopModel) {
-        HPGradientLoading.shared.showLoading()
         postShopRequest(shop: shop) { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
-                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
-                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: {
                     strongSelf.navigationController?.popViewController(animated: true)
                 })
@@ -181,7 +177,6 @@ extension AddNewPlaceViewController {
     
     func configure() {
         configureLayoutManager()
-        configureLoader()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }

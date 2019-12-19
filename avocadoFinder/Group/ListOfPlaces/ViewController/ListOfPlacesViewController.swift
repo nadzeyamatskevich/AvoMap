@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import HPGradientLoading
 
 class ListOfPlacesViewController: UIViewController {
 
@@ -102,16 +101,13 @@ extension ListOfPlacesViewController {
     }
     
     func getShops() {
-        HPGradientLoading.shared.showLoading()
         getShopsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
-                HPGradientLoading.shared.dismiss()
                 self?.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
                 strongSelf.shops = response
                 strongSelf.updateTableViewData()
-                HPGradientLoading.shared.dismiss()
             }
         }
     }
@@ -127,7 +123,6 @@ extension ListOfPlacesViewController {
         configureDataSource()
         configureSaveButton()
         getServerData()
-        configureLoader()
     }
     
     func getServerData() {

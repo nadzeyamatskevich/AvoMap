@@ -9,7 +9,6 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
-import HPGradientLoading
 
 class MapLayoutManager: NSObject {
     
@@ -100,17 +99,14 @@ extension MapLayoutManager: CLLocationManagerDelegate {
 extension MapLayoutManager {
     
     func getShops() {
-        HPGradientLoading.shared.showLoading()
         viewController.getShopsRequest() { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
-                HPGradientLoading.shared.dismiss()
                 self?.viewController.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
                 strongSelf.shops = response
                 strongSelf.viewController.shops = response
                 strongSelf.updateMapViewData()
-                HPGradientLoading.shared.dismiss()
             }
         }
     }
@@ -233,7 +229,6 @@ fileprivate extension MapLayoutManager {
         configureSaveButton()
         configureMapDelegate()
         getShops()
-        viewController.configureLoader()
     }
     
     func configureSaveButton() {
