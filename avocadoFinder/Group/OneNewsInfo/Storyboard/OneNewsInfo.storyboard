@@ -85,13 +85,13 @@
                                 </prototypes>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="fvZ-7A-PGl">
-                                <rect key="frame" x="-10" y="-10" width="395.00000000000011" height="186"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="333"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="186" id="uPa-2t-yte"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новость" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-4H-jsu">
-                                <rect key="frame" x="32" y="15" width="327" height="40"/>
+                                <rect key="frame" x="32" y="15" width="327" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -109,7 +109,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="подзаголовок подзаголовок" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-Rj-ee6">
-                                <rect key="frame" x="32" y="55" width="327" height="25.5"/>
+                                <rect key="frame" x="32" y="46.5" width="327" height="20"/>
                                 <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
