@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CTg-ku-POp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CTg-ku-POp">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,9 +32,9 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="pix-P6-vxa">
-                                <rect key="frame" x="-10" y="-10" width="395" height="186"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="124.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="186" id="DYU-bI-LN0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="DYU-bI-LN0"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopPin" translatesAutoresizingMaskIntoConstraints="NO" id="6Ac-VM-M4v">
@@ -59,14 +59,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jn-KXq">
-                                <rect key="frame" x="28" y="47" width="188" height="20"/>
+                                <rect key="frame" x="28" y="55" width="188" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25.5" id="MmP-Ok-0Oy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-xE-WRx">
-                                <rect key="frame" x="16" y="15" width="190" height="32"/>
+                                <rect key="frame" x="16" y="15" width="190" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7xc-pu-iT4"/>
                                     <constraint firstAttribute="width" constant="190" id="bxu-gh-R4W"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
@@ -93,6 +97,7 @@
                             <constraint firstAttribute="trailing" secondItem="pix-P6-vxa" secondAttribute="trailing" constant="-10" id="bTu-Zp-2k9"/>
                             <constraint firstItem="PO8-Oq-jxa" firstAttribute="trailing" secondItem="Qk7-0T-Cou" secondAttribute="trailing" id="fU4-VB-gDv"/>
                             <constraint firstItem="6Ac-VM-M4v" firstAttribute="centerY" secondItem="z8A-Sw-Sdj" secondAttribute="centerY" constant="-30" id="fhz-um-WW4"/>
+                            <constraint firstItem="pix-P6-vxa" firstAttribute="bottom" secondItem="QPI-jn-KXq" secondAttribute="bottom" constant="34" id="l51-NH-UxD"/>
                             <constraint firstItem="Qk7-0T-Cou" firstAttribute="trailing" secondItem="ukO-do-vfo" secondAttribute="trailing" constant="30" id="lQs-mg-vBd"/>
                             <constraint firstItem="ukO-do-vfo" firstAttribute="leading" secondItem="Qk7-0T-Cou" secondAttribute="leading" constant="30" id="oLy-9I-347"/>
                             <constraint firstItem="pix-P6-vxa" firstAttribute="leading" secondItem="z8A-Sw-Sdj" secondAttribute="leading" constant="-10" id="tVb-Cc-ZkI"/>

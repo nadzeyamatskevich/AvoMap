@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ld-Ry-s9J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ld-Ry-s9J">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,14 +28,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="XlX-n8-DT2">
-                                <rect key="frame" x="-10" y="-10" width="395" height="186"/>
+                                <rect key="frame" x="-10" y="-10" width="395" height="124.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="186" id="tRn-28-UrT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="tRn-28-UrT"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSd-Lb-cxZ">
-                                <rect key="frame" x="16" y="15" width="200" height="32"/>
+                                <rect key="frame" x="16" y="15" width="200" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wxr-fa-TdN"/>
                                     <constraint firstAttribute="width" constant="200" id="xyb-7D-KnD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
@@ -48,7 +49,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-eM-acn">
-                                <rect key="frame" x="0.0" y="169" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="107.5" width="375" height="559.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceInfoMainInfoTableViewCell" rowHeight="302" id="xxT-wO-pQY" customClass="PlaceInfoMainInfoTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
@@ -370,7 +371,10 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNT-u9-isB">
-                                <rect key="frame" x="34" y="47" width="188" height="20"/>
+                                <rect key="frame" x="34" y="55" width="188" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25.5" id="uha-53-cso"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -378,6 +382,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="NDb-eM-acn" firstAttribute="top" secondItem="cNT-u9-isB" secondAttribute="bottom" constant="27" id="F9e-gl-J5I"/>
                             <constraint firstItem="Ldc-e1-X27" firstAttribute="bottom" secondItem="NDb-eM-acn" secondAttribute="bottom" id="Ila-jS-vri"/>
                             <constraint firstItem="NDb-eM-acn" firstAttribute="trailing" secondItem="Ldc-e1-X27" secondAttribute="trailing" id="LIj-34-vMR"/>
                             <constraint firstItem="NDb-eM-acn" firstAttribute="leading" secondItem="Ldc-e1-X27" secondAttribute="leading" id="TPs-eY-l2g"/>
