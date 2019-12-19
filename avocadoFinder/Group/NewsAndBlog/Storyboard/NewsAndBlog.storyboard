@@ -106,7 +106,7 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svc-An-WRc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="MWu-uM-HEf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasNewsNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="MWu-uM-HEf">
                                         <rect key="frame" x="-10" y="-8" width="395" height="184"/>
                                     </imageView>
                                 </subviews>
@@ -160,7 +160,7 @@
     </scenes>
     <resources>
         <image name="avoShape" width="81" height="171.5"/>
-        <image name="newsNavBarBg" width="392" height="166.5"/>
         <image name="testAvo" width="480" height="479"/>
+        <image name="xmasNewsNavBarBg" width="392" height="165"/>
     </resources>
 </document>

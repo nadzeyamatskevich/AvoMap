@@ -27,14 +27,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listOfPlacesNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="ST8-Kg-SRo">
-                                <rect key="frame" x="-10" y="-10" width="395.00000000000011" height="145.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasListOfPlacesNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="ST8-Kg-SRo">
+                                <rect key="frame" x="-10" y="-10" width="395" height="145.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="qUL-tN-hLJ"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YY-bA-Pl4">
-                                <rect key="frame" x="35" y="55" width="175.5" height="25.5"/>
+                                <rect key="frame" x="35" y="55" width="188" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.5" id="WfV-G3-5Zq"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                                     <rect key="frame" x="16" y="8" width="343" height="104"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кальварийская, 29" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkA-tw-lwa">
-                                                            <rect key="frame" x="98" y="56.5" width="225" height="22.5"/>
+                                                            <rect key="frame" x="98" y="50" width="225" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                                             <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Magazin 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY4-md-ycv">
-                                                            <rect key="frame" x="98" y="16" width="225" height="32.5"/>
+                                                            <rect key="frame" x="98" y="16" width="225" height="26"/>
                                                             <fontDescription key="fontDescription" name="Circe-Bold" family="Circe" pointSize="22"/>
                                                             <color key="textColor" red="0.18823529410000001" green="0.71764705880000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -188,6 +188,6 @@
     <resources>
         <image name="avoFruit" width="43.5" height="64.5"/>
         <image name="backButton" width="6" height="11"/>
-        <image name="listOfPlacesNavBarBg" width="392" height="166.5"/>
+        <image name="xmasListOfPlacesNavBarBg" width="392" height="164.5"/>
     </resources>
 </document>

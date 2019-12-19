@@ -1776,7 +1776,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D15F213E46698E40DFF7CFB /* Pods-avocadoFinder.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = xmasAppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
@@ -1799,7 +1799,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B7B60020D9015EADB0F15F2 /* Pods-avocadoFinder.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = xmasAppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
