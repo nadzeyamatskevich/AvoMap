@@ -86,10 +86,9 @@ extension PlaceInfoViewController {
             if error != nil {
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
-                strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: {
-                    strongSelf.getShopInfo(shopID: strongSelf.shop.id)
-                    UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
-                })
+                strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: nil)
+                strongSelf.getShopInfo(shopID: strongSelf.shop.id)
+                UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
             }
         }
     }

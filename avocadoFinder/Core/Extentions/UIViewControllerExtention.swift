@@ -15,39 +15,11 @@ extension UIViewController {
     }
     
     func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: UIAlertController.Style.alert)
-        
-        let alerAction = UIAlertAction(
-            title: "OK",
-            style: UIAlertAction.Style.default) { _ in
-                guard let completion = completion else { return }
-                completion()
-        }
-        
-        alert.addAction(alerAction)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func showAlert(title: String, message: String, customActionTitle: String, customActionHandler: @escaping (() -> Void)) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: UIAlertController.Style.alert)
-        
-        let customAction = UIAlertAction(
-            title: customActionTitle,
-            style: UIAlertAction.Style.default) { _ in
-                customActionHandler()
-        }
-        
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-        alert.addAction(customAction)
-        alert.addAction(cancelAction)
-        
-        self.present(alert, animated: true, completion: nil)
+        let avoPopupViewController = UIStoryboard(storyboard: .avoPopup).instantiateInitialViewController() as! AvoPopupViewController
+        avoPopupViewController.modalPresentationStyle = .overFullScreen
+        avoPopupViewController.set(title: title, subtitle: message, buttonText: "OK")
+        avoPopupViewController.alertButtonHandler = completion
+        self.present(avoPopupViewController, animated: false, completion: nil)
     }
     
     func hideKeyboardWhenTappedAround() {

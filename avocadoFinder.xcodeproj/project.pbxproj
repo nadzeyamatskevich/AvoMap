@@ -95,6 +95,7 @@
 		939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */; };
 		939F051D22D237D700180648 /* PlaceInfoServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051C22D237D700180648 /* PlaceInfoServerManager.swift */; };
 		939F052022D2388800180648 /* PlaceInfoDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051F22D2388800180648 /* PlaceInfoDataSourceDelegate.swift */; };
+		93A1F38123AD536300F0A5B7 /* AvoPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A1F38023AD536300F0A5B7 /* AvoPopupViewController.swift */; };
 		93A445BF226AFCCB00386766 /* AddNewPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A445BE226AFCCB00386766 /* AddNewPlace.storyboard */; };
 		93A445C4226AFD9200386766 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A445C3226AFD9200386766 /* Map.storyboard */; };
 		93A445C9226AFDF000386766 /* ListOfPlaces.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A445C8226AFDF000386766 /* ListOfPlaces.storyboard */; };
@@ -279,6 +280,7 @@
 		939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoLayoutManager.swift; sourceTree = "<group>"; };
 		939F051C22D237D700180648 /* PlaceInfoServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoServerManager.swift; sourceTree = "<group>"; };
 		939F051F22D2388800180648 /* PlaceInfoDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoDataSourceDelegate.swift; sourceTree = "<group>"; };
+		93A1F38023AD536300F0A5B7 /* AvoPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvoPopupViewController.swift; sourceTree = "<group>"; };
 		93A445BE226AFCCB00386766 /* AddNewPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNewPlace.storyboard; sourceTree = "<group>"; };
 		93A445C3226AFD9200386766 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		93A445C8226AFDF000386766 /* ListOfPlaces.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfPlaces.storyboard; sourceTree = "<group>"; };
@@ -795,7 +797,6 @@
 				93A445CF226AFE8000386766 /* Settings */,
 				93A445CE226AFE5600386766 /* StaticPage */,
 				93A445CD226AFE3C00386766 /* OneNewsInfo */,
-				93A445CC226AFE2A00386766 /* NewsAndBlog */,
 				93A445CB226AFE2300386766 /* TabBar */,
 				93A445CA226AFE1500386766 /* PlaceInfo */,
 				93330D2E224F54F0000A1BE3 /* AddNewPlace */,
@@ -1066,6 +1067,7 @@
 		93A445DC226AFF1900386766 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				93A445CC226AFE2A00386766 /* NewsAndBlog */,
 				93A445F2226B01FB00386766 /* OneNewsInfo.storyboard */,
 			);
 			path = Storyboard;
@@ -1150,6 +1152,7 @@
 			isa = PBXGroup;
 			children = (
 				93A7094123A5004E00D314CB /* AvoPopup.storyboard */,
+				93A1F38023AD536300F0A5B7 /* AvoPopupViewController.swift */,
 			);
 			path = AvocadoAlert;
 			sourceTree = "<group>";
@@ -1609,6 +1612,7 @@
 				932A65A322B4E6B500065119 /* ShopModel.swift in Sources */,
 				931DF54A22C5417400D43AB0 /* GMUHeatmapTileLayer.m in Sources */,
 				9341868D23677B2E00A9429B /* AddShopMapViewController.swift in Sources */,
+				93A1F38123AD536300F0A5B7 /* AvoPopupViewController.swift in Sources */,
 				93DB41DD227DEC2000CC8113 /* StoryboardEnum.swift in Sources */,
 				931DF54722C5417400D43AB0 /* GMUDefaultClusterIconGenerator.m in Sources */,
 				931DF49522C53DB800D43AB0 /* MapLayoutManager.swift in Sources */,

@@ -25,6 +25,9 @@ enum Storyboard: String {
     // - Settings
     case staticPage = "StaticPage"
     
+    // - Alert
+    case avoPopup = "AvoPopup"
+    
     var filename: String {
         return rawValue
     }

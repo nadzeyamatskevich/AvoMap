@@ -161,9 +161,8 @@ extension AddNewPlaceViewController {
             if error != nil {
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
-                strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: {
-                    strongSelf.navigationController?.popViewController(animated: true)
-                })
+                strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: nil)
+                strongSelf.navigationController?.popViewController(animated: true)
             }
         }
     }
