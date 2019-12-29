@@ -15,6 +15,9 @@ class ListOfPlacesViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var contentTypeControl: UISegmentedControl!
     
+    // - Constraint
+    @IBOutlet weak var segmentControlWidthConstraint: NSLayoutConstraint!
+    
     // - Manager
     fileprivate var dataSource: ListOfPlacesDataSource!
     fileprivate var serverManager = MapServerManager()
@@ -33,6 +36,7 @@ class ListOfPlacesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        configureSegmentControlWidth()
         getServerData()
     }
     
@@ -137,6 +141,17 @@ extension ListOfPlacesViewController {
     func configureSaveButton() {
         saveButton.layer.cornerRadius = 30
         saveButton.setupShadow(color: AppColor.black(alpha: 0.2))
+    }
+    
+    func configureSegmentControlWidth() {
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: AppFont.bold(size:18)]
+        contentTypeControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        contentTypeControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
+        switch UIScreen.main.bounds.height {
+            case ...568: segmentControlWidthConstraint.constant = 180
+            case 667...736: segmentControlWidthConstraint.constant = 200
+            default: segmentControlWidthConstraint.constant = 235
+        }
     }
     
 }
