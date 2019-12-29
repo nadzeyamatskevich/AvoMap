@@ -89,6 +89,7 @@ extension ListOfPlacesDataSource {
     }
     
     func setupDelegates() {
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.delegate = self
         tableView.dataSource = self
     }
