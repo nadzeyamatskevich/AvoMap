@@ -12,6 +12,7 @@ class ListOfPlacesViewController: UIViewController {
 
     // - UI
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var findYourAvocadoLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var contentTypeControl: UISegmentedControl!
     
@@ -25,6 +26,7 @@ class ListOfPlacesViewController: UIViewController {
     // - Data
     var shops: [ShopModel] = []
     var switchState: Int = 0
+    var isHideControl: Bool = false
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -37,6 +39,7 @@ class ListOfPlacesViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         configureSegmentControlWidth()
+        hideSegmentControl()
         getServerData()
     }
     
@@ -131,6 +134,12 @@ extension ListOfPlacesViewController {
     
     func getServerData() {
         shops.count == 0 ? getShops() : updateTableViewData()
+    }
+    
+    func hideSegmentControl() {
+        if isHideControl == false { return }
+        findYourAvocadoLabel.isHidden = false
+        contentTypeControl.isHidden = true
     }
     
     func configureDataSource() {

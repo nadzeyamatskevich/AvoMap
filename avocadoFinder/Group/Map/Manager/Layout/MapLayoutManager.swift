@@ -176,7 +176,7 @@ extension MapLayoutManager: GMSMapViewDelegate {
                 shopArr.append(shops.filter{ $0.id == i.shopId }.first!)                
             }
         }
-        viewController.openPlaceList(shops: shopArr)
+        viewController.openPlaceList(shops: shopArr, isHideControl: true)
     }
 }
 
