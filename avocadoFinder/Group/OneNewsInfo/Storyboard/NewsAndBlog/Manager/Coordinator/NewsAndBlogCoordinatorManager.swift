@@ -17,9 +17,10 @@ class NewsAndBlogCoordinatorManager {
         self.viewController = viewController
     }
     
-    func pushOneNewsInfoViewController(news: NewsModel) {
+    func pushOneNewsInfoViewController(news: NewsModel, image: UIImage?) {
         let postViewController = UIStoryboard(storyboard: .oneNews).instantiateInitialViewController() as! OneNewsInfoViewController
         postViewController.news = news
+        postViewController.image = image
         viewController.navigationController?.pushViewController(postViewController, animated: true)
     }
     

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+import SDWebImage
 
 class OneNewsInfoLayoutManager: NSObject {
     
@@ -22,16 +22,18 @@ class OneNewsInfoLayoutManager: NSObject {
     
 }
 
+
 // MARK: -
 // MARK: - Configure
 
 fileprivate extension OneNewsInfoLayoutManager {
     
     func configure() {
-        configureData()
+        configureImage()
     }
     
-    func configureData() {
-        
+    func configureImage() {
+        let url = URL(string: viewController.news.image_url)
+        viewController.imageView.sd_setImage(with: url, placeholderImage: viewController.image)
     }
 }

@@ -57,7 +57,8 @@ extension NewsAndBlogDataSourceManager: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didTapOnCell(news: news[indexPath.row])
+        let cell = tableView.cellForRow(at: indexPath) as? NewsAndBlogTableViewCell
+        delegate?.didTapOnCell(news: news[indexPath.row], image: cell?.avoImage.image)
     }
     
 }

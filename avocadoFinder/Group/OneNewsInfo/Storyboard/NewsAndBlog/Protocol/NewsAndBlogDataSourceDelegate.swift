@@ -9,5 +9,5 @@
 import UIKit
 
 protocol NewsAndBlogDataSourceDelegate: class {
-    func didTapOnCell(news: NewsModel)
+    func didTapOnCell(news: NewsModel, image: UIImage?)
 }

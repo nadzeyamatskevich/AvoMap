@@ -135,6 +135,7 @@
 		93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */; };
 		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
 		93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */; };
+		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
 		ECC994AD23B8BE4F00C77999 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC994AC23B8BE4F00C77999 /* AppFont.swift */; };
 /* End PBXBuildFile section */
 
@@ -323,6 +324,7 @@
 		93FF9ED622F9FC4400C4D2F0 /* avocadoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avocadoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
 		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
 		ECC994AC23B8BE4F00C77999 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -958,6 +960,7 @@
 				93A445DD226AFF2700386766 /* Manager */,
 				93A445DC226AFF1900386766 /* Storyboard */,
 				93A445DB226AFF0A00386766 /* ViewController */,
+				EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */,
 			);
 			path = OneNewsInfo;
 			sourceTree = "<group>";
@@ -1528,6 +1531,7 @@
 				93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */,
 				934767B323316D550078A5A4 /* PlaceType.swift in Sources */,
 				931DF54822C5417400D43AB0 /* GMUWeightedLatLng.m in Sources */,
+				EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */,
 				938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */,
 				9361F2B42288449400071339 /* PlaceInfoCommentTableViewCell.swift in Sources */,
 				931DF53E22C5417400D43AB0 /* GMUGridBasedClusterAlgorithm.m in Sources */,
