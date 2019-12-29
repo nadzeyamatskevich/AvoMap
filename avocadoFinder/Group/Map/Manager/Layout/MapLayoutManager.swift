@@ -226,14 +226,21 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
 extension MapLayoutManager {
     
     func setupSegmentControlWidth() {
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: AppFont.bold(size:18)]
-        viewController.contentTypeControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
-        viewController.contentTypeControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
+        var attributes: [NSAttributedString.Key : NSObject] = [:]
+        attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
         switch UIScreen.main.bounds.height {
-            case ...568: viewController.segmentControlWidthConstraint.constant = 180
-            case 667...736: viewController.segmentControlWidthConstraint.constant = 200
-            default: viewController.segmentControlWidthConstraint.constant = 235
+            case ...568:
+                viewController.segmentControlWidthConstraint.constant = 180
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:15)
+            case 667...736:
+                viewController.segmentControlWidthConstraint.constant = 200
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:16)
+            default:
+                viewController.segmentControlWidthConstraint.constant = 235
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:18)
         }
+        viewController.contentTypeControl.setTitleTextAttributes(attributes, for: .normal)
+        viewController.contentTypeControl.setTitleTextAttributes(attributes, for: .selected)
     }
     
 }

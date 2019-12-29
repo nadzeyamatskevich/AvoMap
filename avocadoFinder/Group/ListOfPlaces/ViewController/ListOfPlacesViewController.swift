@@ -144,14 +144,21 @@ extension ListOfPlacesViewController {
     }
     
     func configureSegmentControlWidth() {
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: AppFont.bold(size:18)]
-        contentTypeControl.setTitleTextAttributes(titleTextAttributes, for: .normal)
-        contentTypeControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
+        var attributes: [NSAttributedString.Key : NSObject] = [:]
+        attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
         switch UIScreen.main.bounds.height {
-            case ...568: segmentControlWidthConstraint.constant = 180
-            case 667...736: segmentControlWidthConstraint.constant = 200
-            default: segmentControlWidthConstraint.constant = 235
+            case ...568:
+                segmentControlWidthConstraint.constant = 180
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:15)
+            case 667...736:
+                segmentControlWidthConstraint.constant = 200
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:16)
+            default:
+                segmentControlWidthConstraint.constant = 235
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:18)
         }
+        contentTypeControl.setTitleTextAttributes(attributes, for: .normal)
+        contentTypeControl.setTitleTextAttributes(attributes, for: .selected)
     }
     
 }

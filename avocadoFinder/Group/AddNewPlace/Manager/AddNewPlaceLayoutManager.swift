@@ -51,4 +51,12 @@ extension AddNewPlaceLayoutManager {
         viewController.saveButton.setupShadow(color: AppColor.black(alpha: 0.1))
     }
     
+    func configureNavigationBar() {
+        switch UIScreen.main.bounds.height {
+            case ...568:    viewController.navigationBarHeightConstraint.constant = 150
+            case 667...736: viewController.navigationBarHeightConstraint.constant = 176
+            default:        viewController.navigationBarHeightConstraint.constant = 186
+        }
+    }
+    
 }
