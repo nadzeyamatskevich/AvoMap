@@ -176,7 +176,7 @@ extension MapLayoutManager: GMSMapViewDelegate {
                 shopArr.append(shops.filter{ $0.id == i.shopId }.first!)                
             }
         }
-        viewController.openPlaceList(shops: shopArr)
+        viewController.openPlaceList(shops: shopArr, isHideControl: true)
     }
 }
 
@@ -198,14 +198,15 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
     }
     
     func generateImageWithText(text: String) -> UIImage {
-        let image = UIImage(named: "xmasShopPin")!
+        let state = viewController.contentTypeControl.selectedSegmentIndex
+        let image = state == 0 ? UIImage(named: "xmasShopPin")! : UIImage(named: "foodPin")!
         let imageView = UIImageView(image: image)
         imageView.backgroundColor = .clear
         imageView.frame = CGRect(x: 0, y: 0, width: image.size.width - 10, height: image.size.height - 10)
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: image.size.width - 8, height: image.size.height - 30))
         label.backgroundColor = .clear
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = state == 0 ? .white : AppColor.darkGreen
         label.text = text
         
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0);
@@ -215,6 +216,32 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
         UIGraphicsEndImageContext();
         
         return imageWithText!
+    }
+    
+}
+
+
+// MARK: -
+// MARK: - Setup
+
+extension MapLayoutManager {
+    
+    func setupSegmentControlWidth() {
+        var attributes: [NSAttributedString.Key : NSObject] = [:]
+        attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
+        switch UIScreen.main.bounds.height {
+            case ...568:
+                viewController.segmentControlWidthConstraint.constant = 180
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:15)
+            case 667...736:
+                viewController.segmentControlWidthConstraint.constant = 200
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:16)
+            default:
+                viewController.segmentControlWidthConstraint.constant = 235
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:18)
+        }
+        viewController.contentTypeControl.setTitleTextAttributes(attributes, for: .normal)
+        viewController.contentTypeControl.setTitleTextAttributes(attributes, for: .selected)
     }
     
 }

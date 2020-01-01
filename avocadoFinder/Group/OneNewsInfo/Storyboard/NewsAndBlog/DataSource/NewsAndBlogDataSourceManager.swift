@@ -57,7 +57,8 @@ extension NewsAndBlogDataSourceManager: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didTapOnCell(news: news[indexPath.row])
+        let cell = tableView.cellForRow(at: indexPath) as? NewsAndBlogTableViewCell
+        delegate?.didTapOnCell(news: news[indexPath.row], image: cell?.avoImage.image)
     }
     
 }
@@ -89,6 +90,7 @@ extension NewsAndBlogDataSourceManager {
     }
     
     func setupDelegates() {
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.delegate = self
         tableView.dataSource = self
     }

@@ -19,6 +19,9 @@ class AddNewPlaceViewController: UIViewController {
     @IBOutlet weak var shopAuthorTextField: UITextField!
     @IBOutlet weak var commentTextField: UITextField!
     
+    // - Constraint
+    @IBOutlet weak var navigationBarHeightConstraint: NSLayoutConstraint!
+    
     // - Manager
     fileprivate var serverManager = MapServerManager()
     fileprivate var layoutManager: AddNewPlaceLayoutManager!
@@ -36,6 +39,7 @@ class AddNewPlaceViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        layoutManager.configureNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

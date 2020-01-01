@@ -16,6 +16,9 @@ class MapViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var contentTypeControl: UISegmentedControl!
     
+    // - Constraint
+    @IBOutlet weak var segmentControlWidthConstraint: NSLayoutConstraint!
+    
     // - Manager
     private var layoutManager: MapLayoutManager!
     private var coordinatorManager: MapCoordinatorManager!
@@ -34,6 +37,7 @@ class MapViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         layoutManager.getShops()
+        layoutManager.setupSegmentControlWidth()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -65,8 +69,8 @@ extension MapViewController {
         coordinatorManager.pushPlaceViewController(shop: shop)
     }
     
-    func openPlaceList(shops: [ShopModel]) {
-        coordinatorManager.pushLitsOfPlacesViewController(shops: shops, switchState: contentTypeControl.selectedSegmentIndex)
+    func openPlaceList(shops: [ShopModel], isHideControl: Bool = false) {
+        coordinatorManager.pushLitsOfPlacesViewController(shops: shops, switchState: contentTypeControl.selectedSegmentIndex, isHideControl: isHideControl)
     }
     
 }

@@ -42,8 +42,8 @@ class NewsAndBlogViewController: UIViewController {
 // MARK: - Data source delegate
 
 extension NewsAndBlogViewController: NewsAndBlogDataSourceDelegate {
-    func didTapOnCell(news: NewsModel) {
-       coordinatorManager.pushOneNewsInfoViewController(news: news)
+    func didTapOnCell(news: NewsModel, image: UIImage?) {
+       coordinatorManager.pushOneNewsInfoViewController(news: news, image: image)
     }
     
 }

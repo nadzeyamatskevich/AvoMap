@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iNK-jZ-tZG">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iNK-jZ-tZG">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,17 +21,17 @@
             <objects>
                 <viewController id="iNK-jZ-tZG" customClass="AddNewPlaceViewController" customModule="avocadoFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vqS-an-dEk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="gzk-2d-lcC">
-                                <rect key="frame" x="-10" y="-10" width="395" height="186"/>
+                                <rect key="frame" x="-10" y="-10" width="340" height="186"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="186" id="yhU-hH-1Mp"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-sS-rrf">
-                                <rect key="frame" x="16" y="59" width="200" height="32"/>
+                                <rect key="frame" x="16" y="15" width="200" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KjV-aV-V6d"/>
                                 </constraints>
@@ -44,46 +44,46 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woM-kz-Upj">
-                                <rect key="frame" x="16" y="146" width="343" height="304"/>
+                                <rect key="frame" x="16" y="146" width="288" height="304"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="7xK-YN-VH2">
-                                        <rect key="frame" x="8" y="209.66666666666669" width="327" height="1"/>
+                                        <rect key="frame" x="8" y="209" width="272" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="0ce-vV-5l2"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название магазина" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtk-gm-ndu">
-                                        <rect key="frame" x="24" y="20" width="137.33333333333334" height="17.666666666666671"/>
+                                        <rect key="frame" x="24" y="20" width="137.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="yAC-pb-G8c">
-                                        <rect key="frame" x="8" y="73.333333333333343" width="327" height="1"/>
+                                        <rect key="frame" x="8" y="73" width="272" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Nqr-Mm-2ke"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWH-EK-J2P">
-                                        <rect key="frame" x="23.999999999999996" y="88.333333333333343" width="43.666666666666657" height="17.666666666666671"/>
+                                        <rect key="frame" x="24" y="88" width="44" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="Z3r-QK-tCC">
-                                        <rect key="frame" x="8" y="141.33333333333331" width="327" height="1"/>
+                                        <rect key="frame" x="8" y="141" width="272" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="X9o-Ct-cNT"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя или ник в Instagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYe-CS-uUO">
-                                        <rect key="frame" x="24" y="156.33333333333331" width="171.33333333333334" height="17.666666666666657"/>
+                                        <rect key="frame" x="24" y="156" width="171.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="напр. Green" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2U-jl-dtt">
-                                        <rect key="frame" x="24" y="40.333333333333343" width="295" height="30"/>
+                                        <rect key="frame" x="24" y="40" width="240" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="jkB-BL-hqf"/>
                                         </constraints>
@@ -91,7 +91,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="напр. Кальварийская, 26" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gDZ-Ay-aIW">
-                                        <rect key="frame" x="24" y="108.33333333333334" width="255" height="30"/>
+                                        <rect key="frame" x="24" y="108" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="9wh-ie-6xE"/>
                                         </constraints>
@@ -102,7 +102,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="напр. @nadzeyasavictskaya" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3yx-sm-OdR">
-                                        <rect key="frame" x="24" y="176.66666666666669" width="295" height="30"/>
+                                        <rect key="frame" x="24" y="176" width="240" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="6NT-O4-qxv"/>
                                         </constraints>
@@ -110,19 +110,19 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="exI-YL-Rlw">
-                                        <rect key="frame" x="8" y="277.66666666666669" width="327" height="1"/>
+                                        <rect key="frame" x="8" y="277" width="272" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="jXl-Qu-GVk"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Комментарий или цена" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPI-B3-onH">
-                                        <rect key="frame" x="24" y="224.66666666666669" width="163.33333333333334" height="17.666666666666657"/>
+                                        <rect key="frame" x="24" y="224" width="163.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="15"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="напр. Цена 6р, поспеши!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6oU-mV-Z69">
-                                        <rect key="frame" x="24" y="244.66666666666669" width="295" height="30"/>
+                                        <rect key="frame" x="24" y="244" width="240" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="IPp-Xr-nSw"/>
                                         </constraints>
@@ -130,7 +130,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ch-3P-CaY">
-                                        <rect key="frame" x="279" y="99.333333333333343" width="54" height="39"/>
+                                        <rect key="frame" x="224" y="99" width="54" height="39"/>
                                         <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Карта">
@@ -198,10 +198,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasAvocadoShop" translatesAutoresizingMaskIntoConstraints="NO" id="5jY-IC-y4P">
-                                <rect key="frame" x="170" y="470" width="199" height="338"/>
+                                <rect key="frame" x="170" y="470" width="190" height="118"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehu-G7-cmg">
-                                <rect key="frame" x="34" y="91" width="188" height="20"/>
+                                <rect key="frame" x="34" y="47" width="188" height="20"/>
                                 <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -213,15 +213,15 @@
                             <constraint firstItem="Kbl-16-B9G" firstAttribute="trailing" secondItem="gzk-2d-lcC" secondAttribute="trailing" constant="-10" id="Cln-Xh-Cly"/>
                             <constraint firstItem="ehu-G7-cmg" firstAttribute="top" secondItem="G8m-sS-rrf" secondAttribute="bottom" id="HAv-sc-QP3"/>
                             <constraint firstItem="ehu-G7-cmg" firstAttribute="leading" secondItem="Kbl-16-B9G" secondAttribute="leading" constant="34" id="IZn-ua-MJk"/>
-                            <constraint firstItem="Kbl-16-B9G" firstAttribute="bottom" secondItem="5jY-IC-y4P" secondAttribute="bottom" constant="-30" id="K4T-TB-h9v"/>
                             <constraint firstItem="woM-kz-Upj" firstAttribute="top" secondItem="gzk-2d-lcC" secondAttribute="bottom" constant="-30" id="Ng6-o9-hbe"/>
                             <constraint firstItem="gzk-2d-lcC" firstAttribute="leading" secondItem="vqS-an-dEk" secondAttribute="leading" constant="-10" id="SLG-fI-kY0"/>
-                            <constraint firstItem="Kbl-16-B9G" firstAttribute="trailing" secondItem="5jY-IC-y4P" secondAttribute="trailing" constant="6" id="ZPm-Cz-Vm5"/>
+                            <constraint firstItem="Kbl-16-B9G" firstAttribute="trailing" secondItem="5jY-IC-y4P" secondAttribute="trailing" constant="-40" id="ZPm-Cz-Vm5"/>
                             <constraint firstItem="5jY-IC-y4P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="woM-kz-Upj" secondAttribute="bottom" constant="20" id="dXC-W4-FNQ"/>
                             <constraint firstItem="G8m-sS-rrf" firstAttribute="top" secondItem="Kbl-16-B9G" secondAttribute="top" constant="15" id="heu-xb-eE8"/>
                             <constraint firstItem="Kbl-16-B9G" firstAttribute="trailing" secondItem="woM-kz-Upj" secondAttribute="trailing" constant="16" id="n1B-i3-Ajw"/>
                             <constraint firstItem="5jY-IC-y4P" firstAttribute="leading" secondItem="Kbl-16-B9G" secondAttribute="leading" constant="170" id="pIQ-oI-NoH"/>
                             <constraint firstItem="gzk-2d-lcC" firstAttribute="top" secondItem="vqS-an-dEk" secondAttribute="top" constant="-10" id="sfx-3r-eKX"/>
+                            <constraint firstAttribute="bottom" secondItem="5jY-IC-y4P" secondAttribute="bottom" constant="-20" id="tQz-lH-a6q"/>
                             <constraint firstItem="hX6-cq-5Ff" firstAttribute="top" secondItem="woM-kz-Upj" secondAttribute="bottom" constant="24" id="tcZ-eM-81e"/>
                             <constraint firstItem="woM-kz-Upj" firstAttribute="leading" secondItem="vqS-an-dEk" secondAttribute="leading" constant="16" id="xJN-J6-2QD"/>
                             <constraint firstItem="hX6-cq-5Ff" firstAttribute="leading" secondItem="Kbl-16-B9G" secondAttribute="leading" constant="16" id="xon-J3-AMa"/>
@@ -231,6 +231,7 @@
                     <connections>
                         <outlet property="commentTextField" destination="6oU-mV-Z69" id="Sr8-it-9wR"/>
                         <outlet property="mainView" destination="woM-kz-Upj" id="TyD-Mc-b7E"/>
+                        <outlet property="navigationBarHeightConstraint" destination="yhU-hH-1Mp" id="7nh-hH-x1n"/>
                         <outlet property="saveButton" destination="hX6-cq-5Ff" id="Osm-aI-c2i"/>
                         <outlet property="shopAddressTextField" destination="gDZ-Ay-aIW" id="YrG-nF-AJd"/>
                         <outlet property="shopAuthorTextField" destination="3yx-sm-OdR" id="fDf-jT-qpf"/>
@@ -246,6 +247,6 @@
         <image name="backButton" width="6" height="11"/>
         <image name="divider" width="308" height="1"/>
         <image name="navBarBg" width="392" height="166.5"/>
-        <image name="xmasAvocadoShop" width="463" height="488"/>
+        <image name="xmasAvocadoShop" width="231.5" height="244"/>
     </resources>
 </document>

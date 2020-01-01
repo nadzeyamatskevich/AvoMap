@@ -29,14 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setupRootViewController() {
-        var tabBarController: RAMAnimatedTabBarController?
+        //var tabBarController: RAMAnimatedTabBarController?
         
-        tabBarController = UIStoryboard(storyboard: .tabBar).instantiateInitialViewController() as? RAMAnimatedTabBarController
+        let mainController = UIStoryboard(storyboard: .main).instantiateInitialViewController() as? MainViewController
        
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        if let tabBar = tabBarController {
-            let navigationController = UINavigationController(rootViewController: tabBar)
+        if let main = mainController {
+            let navigationController = UINavigationController(rootViewController: main)
             navigationController.navigationBar.isTranslucent = false
             navigationController.setNavigationBarHidden(true, animated: false)
             rootNavigationController = navigationController

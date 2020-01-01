@@ -12,8 +12,12 @@ class ListOfPlacesViewController: UIViewController {
 
     // - UI
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var findYourAvocadoLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var contentTypeControl: UISegmentedControl!
+    
+    // - Constraint
+    @IBOutlet weak var segmentControlWidthConstraint: NSLayoutConstraint!
     
     // - Manager
     fileprivate var dataSource: ListOfPlacesDataSource!
@@ -22,6 +26,7 @@ class ListOfPlacesViewController: UIViewController {
     // - Data
     var shops: [ShopModel] = []
     var switchState: Int = 0
+    var isHideControl: Bool = false
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -33,6 +38,8 @@ class ListOfPlacesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        configureSegmentControlWidth()
+        hideSegmentControl()
         getServerData()
     }
     
@@ -129,6 +136,12 @@ extension ListOfPlacesViewController {
         shops.count == 0 ? getShops() : updateTableViewData()
     }
     
+    func hideSegmentControl() {
+        if isHideControl == false { return }
+        findYourAvocadoLabel.isHidden = false
+        contentTypeControl.isHidden = true
+    }
+    
     func configureDataSource() {
         dataSource = ListOfPlacesDataSource(tableView: tableView)
         dataSource.delegate = self
@@ -137,6 +150,24 @@ extension ListOfPlacesViewController {
     func configureSaveButton() {
         saveButton.layer.cornerRadius = 30
         saveButton.setupShadow(color: AppColor.black(alpha: 0.2))
+    }
+    
+    func configureSegmentControlWidth() {
+        var attributes: [NSAttributedString.Key : NSObject] = [:]
+        attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
+        switch UIScreen.main.bounds.height {
+            case ...568:
+                segmentControlWidthConstraint.constant = 180
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:15)
+            case 667...736:
+                segmentControlWidthConstraint.constant = 200
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:16)
+            default:
+                segmentControlWidthConstraint.constant = 235
+                attributes[NSAttributedString.Key.font] = AppFont.bold(size:18)
+        }
+        contentTypeControl.setTitleTextAttributes(attributes, for: .normal)
+        contentTypeControl.setTitleTextAttributes(attributes, for: .selected)
     }
     
 }

@@ -10,13 +10,18 @@ import UIKit
 
 enum Storyboard: String {
     
+    // - Main
+    case main = "Main"
+    
     // - Tab Bar
     case tabBar = "TabBar"
     
     // - News
     case oneNews = "OneNewsInfo"
+    case newsAndBlog = "NewsAndBlog"
     
     // - Map
+    case map = "Map"
     case listOfPlaces = "ListOfPlaces"
     case placeInfo = "PlaceInfo"
     case addNewPlace = "AddNewPlace"
@@ -24,6 +29,7 @@ enum Storyboard: String {
     
     // - Settings
     case staticPage = "StaticPage"
+    case settings = "Settings"
     
     // - Alert
     case avoPopup = "AvoPopup"

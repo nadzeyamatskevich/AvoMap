@@ -24,6 +24,7 @@ target 'avocadoFinder' do
     
     #image
     pod 'Kingfisher', '~> 5.0'
+    pod 'SDWebImage', '~> 5.0'
     
     #loader
     pod 'HPGradientLoading'
