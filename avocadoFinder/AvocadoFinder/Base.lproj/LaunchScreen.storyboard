@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AVO MAP" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-CU-3vY">
-                                <rect key="frame" x="35.5" y="230.5" width="405" height="395"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="cav-ja-HLf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchBg" translatesAutoresizingMaskIntoConstraints="NO" id="cav-ja-HLf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AVO MAP" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-CU-3vY">
+                                <rect key="frame" x="29.5" y="230.5" width="405" height="395"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,7 +30,7 @@
                             <constraint firstAttribute="bottom" secondItem="cav-ja-HLf" secondAttribute="bottom" id="Qlm-hD-33o"/>
                             <constraint firstAttribute="trailing" secondItem="cav-ja-HLf" secondAttribute="trailing" id="h9W-Yg-hHi"/>
                             <constraint firstItem="cav-ja-HLf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="owo-4d-Rll"/>
-                            <constraint firstItem="Buo-CU-3vY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="31" id="qNc-Lz-ZFo"/>
+                            <constraint firstItem="Buo-CU-3vY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="25" id="qNc-Lz-ZFo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -42,6 +42,6 @@
     </scenes>
     <resources>
         <image name="AVO MAP" width="405.5" height="395"/>
-        <image name="xmasLaunch" width="750" height="1333"/>
+        <image name="launchBg" width="375" height="667"/>
     </resources>
 </document>

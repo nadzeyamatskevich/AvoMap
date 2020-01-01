@@ -36,7 +36,7 @@ class ClusterRender: GMUDefaultClusterRenderer {
 
 class IconGenerator: GMUDefaultClusterIconGenerator {
     override func icon(forSize size: UInt) -> UIImage {
-        return UIImage(named: "xmasShopPin")!
+        return UIImage(named: "shopPin")!
     }
 }
 
