@@ -136,7 +136,11 @@
 		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
 		93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */; };
 		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
+		EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2B23B9487D000A7FDD /* MainViewController.swift */; };
+		EC92FE2E23B9488B000A7FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92FE2D23B9488B000A7FDD /* Main.storyboard */; };
+		EC92FE3123B948A3000A7FDD /* ManagerLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE3023B948A3000A7FDD /* ManagerLayoutManager.swift */; };
 		ECC994AD23B8BE4F00C77999 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC994AC23B8BE4F00C77999 /* AppFont.swift */; };
+		ECFA70B823BB845B00EF0FF8 /* MainNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA70B723BB845B00EF0FF8 /* MainNavigationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -325,7 +329,11 @@
 		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
 		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
+		EC92FE2B23B9487D000A7FDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EC92FE2D23B9488B000A7FDD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EC92FE3023B948A3000A7FDD /* ManagerLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerLayoutManager.swift; sourceTree = "<group>"; };
 		ECC994AC23B8BE4F00C77999 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		ECFA70B723BB845B00EF0FF8 /* MainNavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -797,6 +805,7 @@
 		93A445B6226AFBF900386766 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				EC92FE2723B94826000A7FDD /* Main */,
 				93A7094023A5001000D314CB /* AvocadoAlert */,
 				93DB41CC227DE52C00CC8113 /* Navigation */,
 				93A445CF226AFE8000386766 /* Settings */,
@@ -1304,6 +1313,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC92FE2723B94826000A7FDD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EC92FE2A23B94852000A7FDD /* Manager */,
+				EC92FE2923B9484B000A7FDD /* Storyboard */,
+				EC92FE2823B94842000A7FDD /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EC92FE2823B94842000A7FDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC92FE2B23B9487D000A7FDD /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC92FE2923B9484B000A7FDD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EC92FE2D23B9488B000A7FDD /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EC92FE2A23B94852000A7FDD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EC92FE2F23B94896000A7FDD /* Layout */,
+				ECFA70B723BB845B00EF0FF8 /* MainNavigationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EC92FE2F23B94896000A7FDD /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EC92FE3023B948A3000A7FDD /* ManagerLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		F0268D5CAFDA5CEB5A513D02 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1414,6 +1466,7 @@
 				938CFCED238A780700953DCF /* Circe-Regular.woff in Resources */,
 				93A445C4226AFD9200386766 /* Map.storyboard in Resources */,
 				938CFCFD238A780700953DCF /* Circe-Bold.woff in Resources */,
+				EC92FE2E23B9488B000A7FDD /* Main.storyboard in Resources */,
 				938CFCF5238A780700953DCF /* Circe-Light.woff in Resources */,
 				938CFCFA238A780700953DCF /* Circe-Regular.ttf in Resources */,
 				938CFCF7238A780700953DCF /* Circe-Thin.ttf in Resources */,
@@ -1535,6 +1588,7 @@
 				938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */,
 				9361F2B42288449400071339 /* PlaceInfoCommentTableViewCell.swift in Sources */,
 				931DF53E22C5417400D43AB0 /* GMUGridBasedClusterAlgorithm.m in Sources */,
+				EC92FE3123B948A3000A7FDD /* ManagerLayoutManager.swift in Sources */,
 				931DF49122C52BB700D43AB0 /* POIItem.swift in Sources */,
 				931DF55322C5417400D43AB0 /* GMUPoint.m in Sources */,
 				939F051D22D237D700180648 /* PlaceInfoServerManager.swift in Sources */,
@@ -1557,6 +1611,8 @@
 				931DF55122C5417400D43AB0 /* GMUGroundOverlay.m in Sources */,
 				931DF49422C52D0200D43AB0 /* LocationManager.swift in Sources */,
 				939F052022D2388800180648 /* PlaceInfoDataSourceDelegate.swift in Sources */,
+				ECFA70B823BB845B00EF0FF8 /* MainNavigationManager.swift in Sources */,
+				EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */,
 				93D1A63022883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift in Sources */,
 				93330D2D224F5472000A1BE3 /* ListOfPlacesViewController.swift in Sources */,
 				93DB41DF227DEDB600CC8113 /* StoryboardExtention.swift in Sources */,

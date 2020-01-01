@@ -95,7 +95,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasListOfPlacesNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="ST8-Kg-SRo">
-                                <rect key="frame" x="-10" y="-10" width="340" height="145.5"/>
+                                <rect key="frame" x="0.0" y="-10" width="320" height="145.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="qUL-tN-hLJ"/>
                                 </constraints>
@@ -162,7 +162,7 @@
                             <constraint firstItem="6kS-KV-Aqu" firstAttribute="leading" secondItem="4vv-I6-v2x" secondAttribute="leading" id="7iX-oy-mCc"/>
                             <constraint firstItem="2cd-ud-3kE" firstAttribute="leading" secondItem="4vv-I6-v2x" secondAttribute="leading" constant="34" id="8he-f7-VnJ"/>
                             <constraint firstItem="ST8-Kg-SRo" firstAttribute="top" secondItem="t3R-YY-rPT" secondAttribute="top" constant="-10" id="8oN-o3-P2i"/>
-                            <constraint firstItem="ST8-Kg-SRo" firstAttribute="leading" secondItem="t3R-YY-rPT" secondAttribute="leading" constant="-10" id="Eef-Lh-jjk"/>
+                            <constraint firstItem="ST8-Kg-SRo" firstAttribute="leading" secondItem="t3R-YY-rPT" secondAttribute="leading" id="Eef-Lh-jjk"/>
                             <constraint firstItem="6kS-KV-Aqu" firstAttribute="top" secondItem="ST8-Kg-SRo" secondAttribute="bottom" constant="-10" id="P9k-eh-W4e"/>
                             <constraint firstItem="2cd-ud-3kE" firstAttribute="top" secondItem="u7p-54-lar" secondAttribute="bottom" id="RmR-OB-Sj3"/>
                             <constraint firstItem="6kS-KV-Aqu" firstAttribute="bottom" secondItem="4vv-I6-v2x" secondAttribute="bottom" id="XFs-wc-cHD"/>
@@ -170,7 +170,7 @@
                             <constraint firstItem="4vv-I6-v2x" firstAttribute="trailing" secondItem="zGb-ef-RIE" secondAttribute="trailing" constant="24" id="gUX-ZX-KY3"/>
                             <constraint firstItem="gKS-Hz-cyl" firstAttribute="leading" secondItem="4vv-I6-v2x" secondAttribute="leading" constant="16" id="gkq-BA-EUB"/>
                             <constraint firstItem="gKS-Hz-cyl" firstAttribute="top" secondItem="u7p-54-lar" secondAttribute="bottom" constant="8" id="hts-ID-Qv2"/>
-                            <constraint firstItem="4vv-I6-v2x" firstAttribute="trailing" secondItem="ST8-Kg-SRo" secondAttribute="trailing" constant="-10" id="iEd-2F-oJL"/>
+                            <constraint firstItem="4vv-I6-v2x" firstAttribute="trailing" secondItem="ST8-Kg-SRo" secondAttribute="trailing" id="iEd-2F-oJL"/>
                             <constraint firstItem="4vv-I6-v2x" firstAttribute="bottom" secondItem="zGb-ef-RIE" secondAttribute="bottom" constant="24" id="ieq-tq-HIU"/>
                             <constraint firstItem="u7p-54-lar" firstAttribute="top" secondItem="4vv-I6-v2x" secondAttribute="top" constant="15" id="ilb-iB-hLB"/>
                             <constraint firstItem="u7p-54-lar" firstAttribute="leading" secondItem="4vv-I6-v2x" secondAttribute="leading" constant="16" id="ipT-Ba-1sM"/>

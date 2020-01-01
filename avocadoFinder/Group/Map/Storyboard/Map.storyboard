@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-aZ-UK5" customClass="GMSMapView">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-aZ-UK5" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -90,7 +90,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qmg-aZ-UK5" firstAttribute="bottom" secondItem="JQL-eK-snu" secondAttribute="bottom" id="1SA-Nd-ZVb"/>
+                            <constraint firstItem="JQL-eK-snu" firstAttribute="bottom" secondItem="Qmg-aZ-UK5" secondAttribute="bottom" id="9jg-4U-cXl"/>
                             <constraint firstItem="tna-oB-b4T" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="16" id="Ayb-Za-Dbi"/>
                             <constraint firstItem="Qmg-aZ-UK5" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" id="C8p-lL-aag"/>
                             <constraint firstItem="LY5-qy-n1K" firstAttribute="top" secondItem="tna-oB-b4T" secondAttribute="bottom" constant="8" id="DDD-Zg-ikm"/>
