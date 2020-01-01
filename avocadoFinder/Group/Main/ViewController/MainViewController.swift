@@ -50,18 +50,32 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func tapButtonAction(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.25, animations: { [weak self] in
+        guard side != sender.tag else {return}
+
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
             guard let self = self else { return }
-            self.tapButtonConstraintsCollection[sender.tag].constant = -15
+            self.tapButtonConstraintsCollection[sender.tag].constant = -10
             self.tapButtonConstraintsCollection[self.side].constant = 0
             self.view.layoutIfNeeded()
         }) { [weak self] _ in
             self?.side = sender.tag
         }
+        self.configureIcons(index: sender.tag)
         let screenWidth = CGFloat(UIScreen.main.bounds.width)
         let yPosition = scrollView.bounds.origin.y
         let index = CGFloat(sender.tag)
+
         scrollView.setContentOffset(CGPoint(x: screenWidth * index, y: yPosition), animated: false)
+    }
+    
+    func configureIcons(index: Int) {
+        for i in 0..<tapBarImageViewCollection.count {
+            if i == index {
+                tapBarImageViewCollection[i].image = UIImage(named: SelectedImage.allCases[i].rawValue)
+            } else {
+                tapBarImageViewCollection[i].image = UIImage(named: NotSelectedImage.allCases[i].rawValue)
+            }
+        }
     }
     
 }
@@ -69,9 +83,37 @@ class MainViewController: UIViewController {
 // MARK: - Action
 
 extension MainViewController {
+
+    enum NotSelectedImage: String, CaseIterable {
+        case news
+        case map
+        case settings
+
+        init?(id : Int) {
+            switch id {
+            case 1: self = .news
+            case 2: self = .map
+            case 3: self = .settings
+            default: return nil
+            }
+        }
+    }
     
-    
-    
+    enum SelectedImage: String, CaseIterable {
+        case newsSelect
+        case mapSelect
+        case settingsSelect
+
+        init?(id : Int) {
+            switch id {
+            case 1: self = .newsSelect
+            case 2: self = .mapSelect
+            case 3: self = .settingsSelect
+            default: return nil
+            }
+        }
+    }
+
 }
 
 // MARK: - Configure
@@ -81,6 +123,8 @@ extension MainViewController {
     func configure() {
         configureLayoutManager()
         configureNavigationManager()
+
+        configureIcons(index: side)
     }
     
     func configureLayoutManager() {
