@@ -11,6 +11,8 @@ import UIKit
 class ListOfPlacesViewController: UIViewController {
 
     // - UI
+    @IBOutlet weak var plusView: UIView!
+    @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var findYourAvocadoLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
@@ -18,6 +20,10 @@ class ListOfPlacesViewController: UIViewController {
     
     // - Constraint
     @IBOutlet weak var segmentControlWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var filterBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var filterLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var plusBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var plusRightConstraint: NSLayoutConstraint!
     
     // - Manager
     fileprivate var dataSource: ListOfPlacesDataSource!
@@ -68,6 +74,7 @@ extension ListOfPlacesViewController {
     }
     
     func updateTableViewData() {
+        showButtonsAnimation()
         switch self.contentTypeControl.selectedSegmentIndex {
         case 0:
             self.saveButton.isHidden = false
@@ -82,6 +89,19 @@ extension ListOfPlacesViewController {
     func pushAddNewPlaceViewController() {
         let addNewPlaceViewController = UIStoryboard(storyboard: .addNewPlace).instantiateInitialViewController() as! AddNewPlaceViewController
         self.navigationController?.pushViewController(addNewPlaceViewController, animated: true)
+    }
+    
+    func showButtonsAnimation() {
+        plusView.isHidden = false
+        filterView.isHidden = false
+        UIView.animate(withDuration: 0.5, delay: 0.1, animations: { [weak self] in
+            guard let self = self else { return }
+            self.filterBottomConstraint.constant = -80
+            self.filterLeftConstraint.constant = -80
+            self.plusBottomConstraint.constant = self.contentTypeControl.selectedSegmentIndex == 0 ? -80 : -160
+            self.plusRightConstraint.constant = self.contentTypeControl.selectedSegmentIndex == 0 ? -80 : -160
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
 }
@@ -130,6 +150,14 @@ extension ListOfPlacesViewController {
         configureDataSource()
         configureSaveButton()
         getServerData()
+        configureButtons()
+    }
+    
+    func configureButtons() {
+        self.filterBottomConstraint.constant = -160
+        self.filterLeftConstraint.constant = -160
+        self.plusBottomConstraint.constant = -160
+        self.plusRightConstraint.constant = -160
     }
     
     func getServerData() {

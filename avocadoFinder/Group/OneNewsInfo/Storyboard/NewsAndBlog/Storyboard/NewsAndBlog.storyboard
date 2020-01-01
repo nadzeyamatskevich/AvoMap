@@ -24,8 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-BI-dUF">
-                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-BI-dUF">
+                                <rect key="frame" x="0.0" y="151" width="375" height="516"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsAndBlogTableViewCell" rowHeight="143" id="Thn-Am-6ff" customClass="NewsAndBlogTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
@@ -45,13 +45,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="какая-то новость какая-то новость какая-то новость  какая-то новость какая-то новость какая-то новость " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGi-ih-vrY">
-                                                            <rect key="frame" x="16" y="47.5" width="207" height="57.5"/>
+                                                            <rect key="frame" x="16" y="47.5" width="207" height="45.5"/>
                                                             <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="13"/>
                                                             <color key="textColor" red="0.46274509803921571" green="0.46666666666666667" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testAvo" translatesAutoresizingMaskIntoConstraints="NO" id="CdT-uG-Arm">
-                                                            <rect key="frame" x="227" y="0.0" width="100" height="123.00000000000011"/>
+                                                            <rect key="frame" x="227" y="0.0" width="100" height="123"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="nFu-hu-hNL"/>
                                                             </constraints>
@@ -101,10 +101,10 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svc-An-WRc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasNewsNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="MWu-uM-HEf">
-                                        <rect key="frame" x="0.0" y="-8" width="375.00000000000011" height="165"/>
+                                        <rect key="frame" x="0.0" y="-8" width="375" height="184"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -117,13 +117,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-hh-77E">
-                                <rect key="frame" x="16" y="15" width="208.5" height="40"/>
+                                <rect key="frame" x="16" y="15" width="218.5" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KP-oe-KUs">
-                                <rect key="frame" x="16" y="55" width="349" height="25.5"/>
+                                <rect key="frame" x="16" y="46.5" width="349" height="20"/>
                                 <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

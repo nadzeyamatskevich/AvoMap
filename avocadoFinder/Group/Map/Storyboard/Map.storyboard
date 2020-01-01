@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="XDt-Sl-vxB">
-                                <rect key="frame" x="-10" y="-10" width="395" height="145.5"/>
+                                <rect key="frame" x="0.0" y="-10" width="375" height="145.5"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LY5-qy-n1K">
                                 <rect key="frame" x="16" y="63" width="180" height="32"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо карта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tna-oB-b4T">
-                                <rect key="frame" x="16" y="15" width="187" height="40"/>
+                                <rect key="frame" x="16" y="15" width="174.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BIn-rj-Rps"/>
                                 </constraints>
@@ -73,7 +73,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqL-R0-woh">
-                                <rect key="frame" x="251" y="21.5" width="100" height="27"/>
+                                <rect key="frame" x="251" y="18" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="KoJ-lZ-hsc"/>
                                 </constraints>
@@ -102,8 +102,8 @@
                             <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="gqL-R0-woh" secondAttribute="trailing" constant="24" id="dp4-TV-W0P"/>
                             <constraint firstItem="LY5-qy-n1K" firstAttribute="bottom" secondItem="XDt-Sl-vxB" secondAttribute="bottom" constant="-41.5" id="eOb-gh-uvw"/>
                             <constraint firstItem="JQL-eK-snu" firstAttribute="bottom" secondItem="OGb-cq-dAh" secondAttribute="bottom" constant="75" id="lzB-bL-sTc"/>
-                            <constraint firstItem="XDt-Sl-vxB" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" constant="-10" id="sXS-LC-3uT"/>
-                            <constraint firstAttribute="trailing" secondItem="XDt-Sl-vxB" secondAttribute="trailing" constant="-10" id="t52-wn-Zkv"/>
+                            <constraint firstItem="XDt-Sl-vxB" firstAttribute="leading" secondItem="JQL-eK-snu" secondAttribute="leading" id="sXS-LC-3uT"/>
+                            <constraint firstAttribute="trailing" secondItem="XDt-Sl-vxB" secondAttribute="trailing" id="t52-wn-Zkv"/>
                             <constraint firstItem="JQL-eK-snu" firstAttribute="trailing" secondItem="OGb-cq-dAh" secondAttribute="trailing" constant="10" id="tiy-41-bv5"/>
                             <constraint firstItem="tna-oB-b4T" firstAttribute="top" secondItem="JQL-eK-snu" secondAttribute="top" constant="15" id="xAE-Xm-efc"/>
                         </constraints>
@@ -122,7 +122,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="navBarBg" width="392" height="166.5"/>
+        <image name="navBarBg" width="375" height="166.5"/>
         <image name="nextButton" width="6" height="11"/>
     </resources>
 </document>
