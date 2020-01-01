@@ -10,9 +10,10 @@ import UIKit
 
 enum AppColor {
     
-    static let cyan = color(fromHex: "4cc1c7")
-    static let darkCyan = color(fromHex: "3bbab6")
-    static let green = color(fromHex: "abdc90")
+    static let cyan       = color(fromHex: "4cc1c7")
+    static let darkCyan   = color(fromHex: "3bbab6")
+    static let green      = color(fromHex: "abdc90")
+    static let darkGreen  = color(fromHex: "003300")
     
     static let grayTabBar = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
     

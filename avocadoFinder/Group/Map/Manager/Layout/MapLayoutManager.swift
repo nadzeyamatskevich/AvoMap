@@ -198,14 +198,15 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
     }
     
     func generateImageWithText(text: String) -> UIImage {
-        let image = UIImage(named: "xmasShopPin")!
+        let state = viewController.contentTypeControl.selectedSegmentIndex
+        let image = state == 0 ? UIImage(named: "xmasShopPin")! : UIImage(named: "foodPin")!
         let imageView = UIImageView(image: image)
         imageView.backgroundColor = .clear
         imageView.frame = CGRect(x: 0, y: 0, width: image.size.width - 10, height: image.size.height - 10)
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: image.size.width - 8, height: image.size.height - 30))
         label.backgroundColor = .clear
         label.textAlignment = .center
-        label.textColor = .white
+        label.textColor = state == 0 ? .white : AppColor.darkGreen
         label.text = text
         
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0);
