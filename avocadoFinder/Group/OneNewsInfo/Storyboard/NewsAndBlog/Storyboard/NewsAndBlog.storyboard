@@ -104,13 +104,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="166"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasNewsNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="MWu-uM-HEf">
-                                        <rect key="frame" x="0.0" y="-8" width="375" height="184"/>
+                                        <rect key="frame" x="-10" y="-8" width="395" height="184"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="MWu-uM-HEf" firstAttribute="leading" secondItem="Svc-An-WRc" secondAttribute="leading" id="6L2-z3-ciS"/>
-                                    <constraint firstAttribute="trailing" secondItem="MWu-uM-HEf" secondAttribute="trailing" id="8yQ-aZ-O51"/>
+                                    <constraint firstItem="MWu-uM-HEf" firstAttribute="leading" secondItem="Svc-An-WRc" secondAttribute="leading" constant="-10" id="6L2-z3-ciS"/>
+                                    <constraint firstAttribute="trailing" secondItem="MWu-uM-HEf" secondAttribute="trailing" constant="-10" id="8yQ-aZ-O51"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="166" id="FWl-Wp-ync"/>
                                     <constraint firstItem="MWu-uM-HEf" firstAttribute="top" secondItem="Svc-An-WRc" secondAttribute="top" constant="-8" id="tlI-Ff-lyZ"/>
                                     <constraint firstAttribute="bottom" secondItem="MWu-uM-HEf" secondAttribute="bottom" constant="-10" id="xDw-go-Qzc"/>
@@ -145,6 +145,9 @@
                             <constraint firstItem="p9b-wB-lXq" firstAttribute="trailing" secondItem="3KP-oe-KUs" secondAttribute="trailing" constant="10" id="wrQ-3z-Dyt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p9b-wB-lXq"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="dSV-BI-dUF" id="r8W-Zt-IUs"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CTg-ku-POp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CTg-ku-POp">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jn-KXq">
-                                <rect key="frame" x="28" y="55" width="188" height="25.5"/>
+                                <rect key="frame" x="28" y="55" width="175.5" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.5" id="MmP-Ok-0Oy"/>
                                 </constraints>
@@ -103,6 +103,9 @@
                             <constraint firstItem="pix-P6-vxa" firstAttribute="leading" secondItem="z8A-Sw-Sdj" secondAttribute="leading" constant="-10" id="tVb-Cc-ZkI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qk7-0T-Cou"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="avoMapView" destination="PO8-Oq-jxa" id="SEW-GC-1Eo"/>
@@ -116,7 +119,7 @@
     </scenes>
     <resources>
         <image name="backButton" width="6" height="11"/>
-        <image name="navBarBg" width="392" height="166.5"/>
-        <image name="xmasShopPin" width="98.5" height="170"/>
+        <image name="navBarBg" width="375" height="166.5"/>
+        <image name="xmasShopPin" width="49.5" height="85.5"/>
     </resources>
 </document>

@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="pMv-d5-Sdb">
-                                <rect key="frame" x="0.0" y="-10" width="414" height="168.5"/>
+                                <rect key="frame" x="-10" y="-10" width="434" height="168.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="r21-7e-OLY"/>
                                 </constraints>
@@ -145,7 +145,7 @@
                             <constraint firstItem="dK8-kL-1EC" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" constant="40" id="07o-ie-0il"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="top" secondItem="QMJ-hX-t7d" secondAttribute="bottom" constant="39" id="Hwk-XB-uNh"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="top" secondItem="pMv-d5-Sdb" secondAttribute="bottom" constant="5" id="NEl-53-sq1"/>
-                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="leading" secondItem="Yef-8c-o3K" secondAttribute="leading" id="Ppg-5j-Z9k"/>
+                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="leading" secondItem="Yef-8c-o3K" secondAttribute="leading" constant="-10" id="Ppg-5j-Z9k"/>
                             <constraint firstItem="QMJ-hX-t7d" firstAttribute="top" secondItem="0sF-T1-MPJ" secondAttribute="bottom" id="X1d-VI-BqS"/>
                             <constraint firstItem="QMJ-hX-t7d" firstAttribute="leading" secondItem="0sF-T1-MPJ" secondAttribute="leading" id="aSh-E2-Jpp"/>
                             <constraint firstItem="0sF-T1-MPJ" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="aVK-3n-nBS"/>
@@ -153,10 +153,13 @@
                             <constraint firstItem="dK8-kL-1EC" firstAttribute="trailing" secondItem="4vL-bd-8BO" secondAttribute="trailing" id="bjq-pa-wqf"/>
                             <constraint firstItem="4vL-bd-8BO" firstAttribute="trailing" secondItem="FPt-H3-VMD" secondAttribute="trailing" constant="16" id="ivD-mV-Wj9"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="oBF-tX-ETk"/>
-                            <constraint firstAttribute="trailing" secondItem="pMv-d5-Sdb" secondAttribute="trailing" id="vPr-la-C0p"/>
+                            <constraint firstAttribute="trailing" secondItem="pMv-d5-Sdb" secondAttribute="trailing" constant="-10" id="vPr-la-C0p"/>
                             <constraint firstItem="pMv-d5-Sdb" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" constant="-10" id="x9W-J0-BuZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4vL-bd-8BO"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="FPt-H3-VMD" id="B1N-1K-lBi"/>

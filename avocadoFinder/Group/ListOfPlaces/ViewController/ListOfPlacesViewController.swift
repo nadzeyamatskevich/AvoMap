@@ -96,8 +96,8 @@ extension ListOfPlacesViewController {
         filterView.isHidden = false
         UIView.animate(withDuration: 0.5, delay: 0.1, animations: { [weak self] in
             guard let self = self else { return }
-            self.filterBottomConstraint.constant = -80
-            self.filterLeftConstraint.constant = -80
+//            self.filterBottomConstraint.constant = -80
+//            self.filterLeftConstraint.constant = -80
             self.plusBottomConstraint.constant = self.contentTypeControl.selectedSegmentIndex == 0 ? -80 : -160
             self.plusRightConstraint.constant = self.contentTypeControl.selectedSegmentIndex == 0 ? -80 : -160
             self.view.layoutIfNeeded()
