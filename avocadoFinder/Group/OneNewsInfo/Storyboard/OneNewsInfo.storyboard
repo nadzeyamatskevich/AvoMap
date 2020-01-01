@@ -148,13 +148,67 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnM-5l-dCy">
+                                <rect key="frame" x="307" y="592" width="50" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-0V-Tae">
+                                        <rect key="frame" x="1" y="1" width="48" height="48"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up" translatesAutoresizingMaskIntoConstraints="NO" id="8Ya-ED-0sB">
+                                                <rect key="frame" x="10" y="8" width="28" height="30"/>
+                                                <color key="tintColor" red="0.1333333333" green="0.5450980392" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ill-S3-yJb">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <connections>
+                                                    <action selector="upButtonAction:" destination="mt9-JB-MFp" eventType="touchUpInside" id="zyP-Qh-pqh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431372549022" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="8Ya-ED-0sB" firstAttribute="leading" secondItem="JZC-0V-Tae" secondAttribute="leading" constant="10" id="8Xh-Df-Yfa"/>
+                                            <constraint firstItem="ill-S3-yJb" firstAttribute="top" secondItem="JZC-0V-Tae" secondAttribute="top" id="C0J-pN-MAS"/>
+                                            <constraint firstItem="8Ya-ED-0sB" firstAttribute="top" secondItem="JZC-0V-Tae" secondAttribute="top" constant="8" id="CfO-tb-XEz"/>
+                                            <constraint firstAttribute="bottom" secondItem="ill-S3-yJb" secondAttribute="bottom" id="YHr-vr-CiN"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Ya-ED-0sB" secondAttribute="bottom" constant="10" id="gbp-rG-UtX"/>
+                                            <constraint firstAttribute="trailing" secondItem="ill-S3-yJb" secondAttribute="trailing" id="jMj-HY-6jv"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Ya-ED-0sB" secondAttribute="trailing" constant="10" id="mfd-xb-LuY"/>
+                                            <constraint firstItem="ill-S3-yJb" firstAttribute="leading" secondItem="JZC-0V-Tae" secondAttribute="leading" id="mjk-di-w3R"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.54509803921568623" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="66O-Ut-1AA"/>
+                                    <constraint firstAttribute="height" constant="50" id="ThS-JA-X6w"/>
+                                    <constraint firstItem="JZC-0V-Tae" firstAttribute="leading" secondItem="SnM-5l-dCy" secondAttribute="leading" constant="1" id="e9Q-Ce-IJR"/>
+                                    <constraint firstAttribute="bottom" secondItem="JZC-0V-Tae" secondAttribute="bottom" constant="1" id="khW-5A-tgi"/>
+                                    <constraint firstItem="JZC-0V-Tae" firstAttribute="top" secondItem="SnM-5l-dCy" secondAttribute="top" constant="1" id="oBp-rv-wB8"/>
+                                    <constraint firstAttribute="trailing" secondItem="JZC-0V-Tae" secondAttribute="trailing" constant="1" id="pQC-KX-UAc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="z00-O6-oYh" firstAttribute="top" secondItem="UhK-aj-cYE" secondAttribute="top" id="7uy-Oi-Mo4"/>
                             <constraint firstItem="2iT-nI-6rd" firstAttribute="trailing" secondItem="z00-O6-oYh" secondAttribute="trailing" id="AnG-Bc-2jh"/>
                             <constraint firstAttribute="bottom" secondItem="z00-O6-oYh" secondAttribute="bottom" id="BWm-zM-i1j"/>
+                            <constraint firstItem="2iT-nI-6rd" firstAttribute="bottom" secondItem="SnM-5l-dCy" secondAttribute="bottom" constant="25" id="S2o-LN-Gv0"/>
                             <constraint firstItem="z00-O6-oYh" firstAttribute="leading" secondItem="2iT-nI-6rd" secondAttribute="leading" id="UdJ-jI-Qlf"/>
+                            <constraint firstItem="2iT-nI-6rd" firstAttribute="trailing" secondItem="SnM-5l-dCy" secondAttribute="trailing" constant="18" id="smp-7h-vzb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2iT-nI-6rd"/>
                     </view>
@@ -163,6 +217,7 @@
                         <outlet property="imageView" destination="xwB-SE-NJE" id="a6w-KP-v5I"/>
                         <outlet property="secondTitle" destination="YH0-WM-Ksc" id="7Wm-dB-bN2"/>
                         <outlet property="tableView" destination="z00-O6-oYh" id="ze5-YH-kad"/>
+                        <outlet property="upButtonBottomConstraint" destination="S2o-LN-Gv0" id="Ibv-7u-2Do"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDz-pt-01U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -172,5 +227,6 @@
     </scenes>
     <resources>
         <image name="back" width="32" height="32"/>
+        <image name="up" width="64" height="64"/>
     </resources>
 </document>

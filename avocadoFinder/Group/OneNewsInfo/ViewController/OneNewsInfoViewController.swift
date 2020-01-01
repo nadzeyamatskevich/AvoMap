@@ -17,6 +17,9 @@ class OneNewsInfoViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var secondTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    // - Constraint
+    @IBOutlet weak var upButtonBottomConstraint: NSLayoutConstraint!
+    
     // - Manager
     fileprivate var layoutManager: OneNewsInfoLayoutManager!
     
@@ -63,6 +66,22 @@ extension OneNewsInfoViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func upButtonAction(_ sender: UIButton) {
+        tableView.setContentOffset(.zero, animated: true)
+    }
+    
+}
+
+// MARK: -
+// MARK: - Update
+
+extension OneNewsInfoViewController {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        upButtonBottomConstraint.constant = -250 + (self.tableView.contentOffset.y * 1.3)
+        if upButtonBottomConstraint.constant > 25 { upButtonBottomConstraint.constant = 25}
+    }
+    
 }
 
 
@@ -73,6 +92,7 @@ extension OneNewsInfoViewController {
     
     func configure() {
         configureLayoutManager()
+        upButtonBottomConstraint.constant = -200
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
@@ -100,17 +120,16 @@ extension OneNewsInfoViewController {
 class OneNewsImageCell: UITableViewCell {
     
     // - UI
-       @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var newsImageView: UIImageView!
        
-       // - Lifecycle
-       override func awakeFromNib() {
-           super.awakeFromNib()
-       }
+    // - Lifecycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     func set(image: String) {
         newsImageView.kf.setImage(with: URL(string: image))
     }
-
 
 }
 
