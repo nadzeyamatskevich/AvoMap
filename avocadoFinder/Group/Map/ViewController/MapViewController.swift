@@ -14,9 +14,18 @@ class MapViewController: UIViewController {
     // - UI
     @IBOutlet weak var avoMapView: GMSMapView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var contentTypeControl: UISegmentedControl!
+    
+    // - Constraint
+    @IBOutlet weak var segmentControlWidthConstraint: NSLayoutConstraint!
     
     // - Manager
-    private let locationManager = CLLocationManager()
+    private var layoutManager: MapLayoutManager!
+    private var coordinatorManager: MapCoordinatorManager!
+    private var serverManager = MapServerManager()
+    
+    // - Data
+    var shops: [ShopModel] = []
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -27,6 +36,8 @@ class MapViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        layoutManager.getShops()
+        layoutManager.setupSegmentControlWidth()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -34,84 +45,63 @@ class MapViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
+   
 }
 
+// MARK: -
 // MARK: - Navigation
-//
 
 extension MapViewController {
     
     @IBAction func listOfPlacesButtonAction(_ sender: Any) {
-        pushLitsOfPlacesViewController()
+        coordinatorManager.pushLitsOfPlacesViewController(shops: [], switchState: contentTypeControl.selectedSegmentIndex)
     }
     
     @IBAction func addNewPlaceButtonAction(_ sender: Any) {
-        pushAddNewPlaceViewController()
+        coordinatorManager.pushAddNewPlaceViewController()
     }
     
-    func pushLitsOfPlacesViewController() {
-        let listOfPlacesViewController = UIStoryboard(storyboard: .listOfPlaces).instantiateInitialViewController() as! ListOfPlacesViewController
-        self.navigationController?.pushViewController(listOfPlacesViewController, animated: true)
+    @IBAction func changeContentTypeAction(_ sender: Any) {
+        layoutManager.updateMapViewData()
     }
     
-    func pushAddNewPlaceViewController() {
-        let addNewPlaceViewController = UIStoryboard(storyboard: .addNewPlace).instantiateInitialViewController() as! AddNewPlaceViewController
-        self.navigationController?.pushViewController(addNewPlaceViewController, animated: true)
+    func openPlaceInfo(shop: ShopModel) {
+        coordinatorManager.pushPlaceViewController(shop: shop)
+    }
+    
+    func openPlaceList(shops: [ShopModel], isHideControl: Bool = false) {
+        coordinatorManager.pushLitsOfPlacesViewController(shops: shops, switchState: contentTypeControl.selectedSegmentIndex, isHideControl: isHideControl)
     }
     
 }
 
+// MARK: -
+// MARK: - Server
 
-// MARK: - CLLocationManagerDelegate
-//
-
-extension MapViewController: CLLocationManagerDelegate {
+extension MapViewController {
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
-        guard status == .authorizedWhenInUse else {
-            return
-        }
-        
-        locationManager.startUpdatingLocation()
-        
-        
-        avoMapView.isMyLocationEnabled = true
-        avoMapView.settings.myLocationButton = true
+    func getShopsRequest(completion: @escaping ((_ successModel: [ShopModel]?, _ error: ErrorModel?) -> ())) {
+        serverManager.getShops(completion: completion)
     }
     
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-        
-        
-        avoMapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-        
-        
-        locationManager.stopUpdatingLocation()
-    }
 }
 
+// MARK: -
 // MARK: - Configure
-//
 
 extension MapViewController {
     
     func configure() {
-        configureMapDelegate()
-        configureSaveButton()
+        configureLayoutManager()
+        configureCoordinatorManager()
     }
     
-    func configureMapDelegate() {
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+    func configureLayoutManager() {
+        layoutManager = MapLayoutManager(viewController: self)
     }
     
-    func configureSaveButton() {
-        saveButton.layer.cornerRadius = 40
-        saveButton.setupShadow(color: AppColor.black(alpha: 0.1))
+    func configureCoordinatorManager() {
+        coordinatorManager = MapCoordinatorManager(viewController: self)
     }
     
 }

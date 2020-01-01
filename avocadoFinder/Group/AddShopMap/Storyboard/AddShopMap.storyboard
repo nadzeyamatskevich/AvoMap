@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CTg-ku-POp">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Circe-Bold.ttf">
+            <string>Circe-Bold</string>
+        </array>
+        <array key="Circe-Light.ttf">
+            <string>Circe-Light</string>
+        </array>
+        <array key="Circe-Regular.ttf">
+            <string>Circe-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add Shop Map View Controller-->
+        <scene sceneID="6rH-oQ-7P0">
+            <objects>
+                <viewController storyboardIdentifier="AddShopMapViewController" id="CTg-ku-POp" customClass="AddShopMapViewController" customModule="avocadoFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8A-Sw-Sdj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PO8-Oq-jxa" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="pix-P6-vxa">
+                                <rect key="frame" x="-10" y="-10" width="395" height="124.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="DYU-bI-LN0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasShopPin" translatesAutoresizingMaskIntoConstraints="NO" id="6Ac-VM-M4v">
+                                <rect key="frame" x="165.5" y="273.5" width="44" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="14H-RP-hV8"/>
+                                    <constraint firstAttribute="height" constant="60" id="Qix-Ex-Xra"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukO-do-vfo">
+                                <rect key="frame" x="30" y="567" width="315" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.90426713199999997" blue="0.68068788589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="knP-uv-AB6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Circe-Bold" family="Circe" pointSize="27"/>
+                                <state key="normal" title="Выбрать адрес">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewPlaceButtonAction:" destination="CTg-ku-POp" eventType="touchUpInside" id="mev-1v-P4m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jn-KXq">
+                                <rect key="frame" x="28" y="55" width="188" height="25.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25.5" id="MmP-Ok-0Oy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-xE-WRx">
+                                <rect key="frame" x="16" y="15" width="190" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7xc-pu-iT4"/>
+                                    <constraint firstAttribute="width" constant="190" id="bxu-gh-R4W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
+                                <state key="normal" title=" Авокадо карта" image="backButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backAction:" destination="CTg-ku-POp" eventType="touchUpInside" id="QKC-JQ-ajv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Ac-VM-M4v" firstAttribute="centerX" secondItem="z8A-Sw-Sdj" secondAttribute="centerX" id="0Ff-Ug-ALo"/>
+                            <constraint firstItem="PO8-Oq-jxa" firstAttribute="bottom" secondItem="Qk7-0T-Cou" secondAttribute="bottom" id="30t-sg-yv7"/>
+                            <constraint firstItem="PO8-Oq-jxa" firstAttribute="top" secondItem="z8A-Sw-Sdj" secondAttribute="top" id="DI8-bq-gWX"/>
+                            <constraint firstItem="PO8-Oq-jxa" firstAttribute="leading" secondItem="Qk7-0T-Cou" secondAttribute="leading" id="Duc-i2-NIt"/>
+                            <constraint firstItem="pix-P6-vxa" firstAttribute="top" secondItem="z8A-Sw-Sdj" secondAttribute="top" constant="-10" id="Fjr-BF-wEN"/>
+                            <constraint firstItem="Qk7-0T-Cou" firstAttribute="bottom" secondItem="ukO-do-vfo" secondAttribute="bottom" constant="40" id="HJK-Hf-jdT"/>
+                            <constraint firstItem="QPI-jn-KXq" firstAttribute="top" secondItem="0Eb-xE-WRx" secondAttribute="bottom" id="RNj-Bq-k1k"/>
+                            <constraint firstItem="QPI-jn-KXq" firstAttribute="leading" secondItem="0Eb-xE-WRx" secondAttribute="leading" constant="12" id="TuR-AT-MLA"/>
+                            <constraint firstItem="0Eb-xE-WRx" firstAttribute="top" secondItem="Qk7-0T-Cou" secondAttribute="top" constant="15" id="UhE-3o-sPU"/>
+                            <constraint firstItem="0Eb-xE-WRx" firstAttribute="leading" secondItem="Qk7-0T-Cou" secondAttribute="leading" constant="16" id="adB-PF-EHL"/>
+                            <constraint firstAttribute="trailing" secondItem="pix-P6-vxa" secondAttribute="trailing" constant="-10" id="bTu-Zp-2k9"/>
+                            <constraint firstItem="PO8-Oq-jxa" firstAttribute="trailing" secondItem="Qk7-0T-Cou" secondAttribute="trailing" id="fU4-VB-gDv"/>
+                            <constraint firstItem="6Ac-VM-M4v" firstAttribute="centerY" secondItem="z8A-Sw-Sdj" secondAttribute="centerY" constant="-30" id="fhz-um-WW4"/>
+                            <constraint firstItem="pix-P6-vxa" firstAttribute="bottom" secondItem="QPI-jn-KXq" secondAttribute="bottom" constant="34" id="l51-NH-UxD"/>
+                            <constraint firstItem="Qk7-0T-Cou" firstAttribute="trailing" secondItem="ukO-do-vfo" secondAttribute="trailing" constant="30" id="lQs-mg-vBd"/>
+                            <constraint firstItem="ukO-do-vfo" firstAttribute="leading" secondItem="Qk7-0T-Cou" secondAttribute="leading" constant="30" id="oLy-9I-347"/>
+                            <constraint firstItem="pix-P6-vxa" firstAttribute="leading" secondItem="z8A-Sw-Sdj" secondAttribute="leading" constant="-10" id="tVb-Cc-ZkI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qk7-0T-Cou"/>
+                    </view>
+                    <connections>
+                        <outlet property="avoMapView" destination="PO8-Oq-jxa" id="SEW-GC-1Eo"/>
+                        <outlet property="saveButton" destination="ukO-do-vfo" id="1qD-jf-J84"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9g5-Ih-LcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="6" height="11"/>
+        <image name="navBarBg" width="392" height="166.5"/>
+        <image name="xmasShopPin" width="98.5" height="170"/>
+    </resources>
+</document>

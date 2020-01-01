@@ -12,15 +12,57 @@ class PlaceInfoAddCommentTableViewCell: UITableViewCell {
 
     // - UI
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var authorTextField: UITextField!
+    @IBOutlet weak var commentTextField: UITextField!
+    
+    // - Delegate
+    var delegate: PlaceInfoDataSourceDelegate?
     
     // - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()
     }
+    
+}
 
-    // - Action
-    @IBAction func addCommentButtonAction(_ sender: Any){
+// MARK: -
+// MARK: - Action
+
+extension PlaceInfoAddCommentTableViewCell {
+    
+    @IBAction func addCommentButtonAction(_ sender: Any) {
+        if checkComment() {
+            delegate?.addCommentAction(comment: createComment())
+            self.authorTextField.text = ""
+            self.commentTextField.text = ""
+        }
+    }
+    
+}
+
+
+// MARK: -
+// MARK: - Delegate
+
+extension PlaceInfoAddCommentTableViewCell {
+    
+    func checkComment() -> Bool {
+        if authorTextField.text == "" {
+            delegate?.showErrorAlert(message: "Напишите свое имя :)")
+        } else if commentTextField.text == "" {
+            delegate?.showErrorAlert(message: "Напишите комментарий :)")
+        } else {
+            return true
+        }
+        return false
+    }
+    
+    func createComment() -> CommentModel {
+        let newComment = CommentModel()
+        newComment.author = authorTextField.text!
+        newComment.body = commentTextField.text!
+        return newComment
     }
     
 }
@@ -37,6 +79,7 @@ extension PlaceInfoAddCommentTableViewCell {
     func configureMainView() {
         mainView.layer.cornerRadius = 16
         mainView.setupShadow(color: AppColor.black(alpha: 0.1))
+        self.authorTextField.text = UserDefaults.standard.string(forKey: UserDefaultsEnum.authorNameKey.rawValue) ?? ""
     }
     
 }

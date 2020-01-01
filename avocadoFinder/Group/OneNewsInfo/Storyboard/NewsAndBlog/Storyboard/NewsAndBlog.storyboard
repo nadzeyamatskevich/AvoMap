@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hhV-XY-R6r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Circe-Light.ttf">
+            <string>Circe-Light</string>
+        </array>
+        <array key="Circe-Regular.ttf">
+            <string>Circe-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--News And Blog View Controller-->
+        <scene sceneID="j4V-my-fKn">
+            <objects>
+                <viewController id="hhV-XY-R6r" customClass="NewsAndBlogViewController" customModule="avocadoFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DcS-TN-t3D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-BI-dUF">
+                                <rect key="frame" x="0.0" y="132" width="375" height="535"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsAndBlogTableViewCell" rowHeight="143" id="Thn-Am-6ff" customClass="NewsAndBlogTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Thn-Am-6ff" id="Vg2-1f-npv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-7r-qfF">
+                                                    <rect key="frame" x="24" y="10" width="327" height="123"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Новость " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qea-ax-ioE">
+                                                            <rect key="frame" x="16" y="16" width="231" height="27.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                            <color key="textColor" red="0.18823529411764706" green="0.71764705882352942" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="какая-то новость какая-то новость какая-то новость  какая-то новость какая-то новость какая-то новость " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGi-ih-vrY">
+                                                            <rect key="frame" x="16" y="47.5" width="207" height="57.5"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="13"/>
+                                                            <color key="textColor" red="0.46274509803921571" green="0.46666666666666667" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testAvo" translatesAutoresizingMaskIntoConstraints="NO" id="CdT-uG-Arm">
+                                                            <rect key="frame" x="227" y="0.0" width="100" height="123.00000000000011"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="nFu-hu-hNL"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avoShape" translatesAutoresizingMaskIntoConstraints="NO" id="Hrs-8J-Lfm">
+                                                            <rect key="frame" x="227" y="0.0" width="61" height="123"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="61" id="Riz-LJ-YmH"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="DGi-ih-vrY" firstAttribute="top" secondItem="Qea-ax-ioE" secondAttribute="bottom" constant="4" id="6Lf-wW-lXk"/>
+                                                        <constraint firstItem="Qea-ax-ioE" firstAttribute="top" secondItem="r6r-7r-qfF" secondAttribute="top" constant="16" id="EAB-3R-J4S"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CdT-uG-Arm" secondAttribute="trailing" id="Rku-fn-xjm"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Hrs-8J-Lfm" secondAttribute="trailing" constant="39" id="T4P-up-fC5"/>
+                                                        <constraint firstItem="Hrs-8J-Lfm" firstAttribute="top" secondItem="r6r-7r-qfF" secondAttribute="top" id="YsB-rm-yze"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Hrs-8J-Lfm" secondAttribute="bottom" id="amY-6D-V2G"/>
+                                                        <constraint firstItem="CdT-uG-Arm" firstAttribute="leading" secondItem="DGi-ih-vrY" secondAttribute="trailing" constant="4" id="gkv-gM-9L9"/>
+                                                        <constraint firstItem="CdT-uG-Arm" firstAttribute="leading" secondItem="Qea-ax-ioE" secondAttribute="trailing" constant="-20" id="k9A-Y0-Ye8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="CdT-uG-Arm" secondAttribute="bottom" id="kev-89-4bM"/>
+                                                        <constraint firstAttribute="height" constant="118" id="oQi-I8-yCj"/>
+                                                        <constraint firstItem="CdT-uG-Arm" firstAttribute="top" secondItem="r6r-7r-qfF" secondAttribute="top" id="rtX-TR-pkZ"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DGi-ih-vrY" secondAttribute="bottom" constant="16" id="sCa-ho-bOZ"/>
+                                                        <constraint firstItem="Qea-ax-ioE" firstAttribute="leading" secondItem="r6r-7r-qfF" secondAttribute="leading" constant="16" id="syY-gr-FlZ"/>
+                                                        <constraint firstItem="DGi-ih-vrY" firstAttribute="leading" secondItem="r6r-7r-qfF" secondAttribute="leading" constant="16" id="tUf-dy-ySB"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="r6r-7r-qfF" firstAttribute="top" secondItem="Vg2-1f-npv" secondAttribute="top" constant="10" id="6Pt-JX-CHa"/>
+                                                <constraint firstAttribute="bottom" secondItem="r6r-7r-qfF" secondAttribute="bottom" constant="10" id="FVn-yQ-CaO"/>
+                                                <constraint firstItem="r6r-7r-qfF" firstAttribute="leading" secondItem="Vg2-1f-npv" secondAttribute="leading" constant="24" id="Mwu-Dh-q3x"/>
+                                                <constraint firstAttribute="trailing" secondItem="r6r-7r-qfF" secondAttribute="trailing" constant="24" id="hir-Kr-F70"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="avoImage" destination="CdT-uG-Arm" id="9Ip-GK-e8c"/>
+                                            <outlet property="mainView" destination="r6r-7r-qfF" id="gJG-yC-X3T"/>
+                                            <outlet property="subtitleLabel" destination="DGi-ih-vrY" id="zcc-Ie-eul"/>
+                                            <outlet property="titleLabel" destination="Qea-ax-ioE" id="NSx-k3-6SD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svc-An-WRc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasNewsNavBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="MWu-uM-HEf">
+                                        <rect key="frame" x="0.0" y="-8" width="375.00000000000011" height="165"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MWu-uM-HEf" firstAttribute="leading" secondItem="Svc-An-WRc" secondAttribute="leading" id="6L2-z3-ciS"/>
+                                    <constraint firstAttribute="trailing" secondItem="MWu-uM-HEf" secondAttribute="trailing" id="8yQ-aZ-O51"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="166" id="FWl-Wp-ync"/>
+                                    <constraint firstItem="MWu-uM-HEf" firstAttribute="top" secondItem="Svc-An-WRc" secondAttribute="top" constant="-8" id="tlI-Ff-lyZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="MWu-uM-HEf" secondAttribute="bottom" constant="-10" id="xDw-go-Qzc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-hh-77E">
+                                <rect key="frame" x="16" y="15" width="208.5" height="40"/>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KP-oe-KUs">
+                                <rect key="frame" x="16" y="55" width="349" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Svc-An-WRc" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" id="CMv-qe-jRR"/>
+                            <constraint firstItem="3KP-oe-KUs" firstAttribute="top" secondItem="mIY-hh-77E" secondAttribute="bottom" id="EoS-Z4-G1y"/>
+                            <constraint firstItem="dSV-BI-dUF" firstAttribute="top" secondItem="Svc-An-WRc" secondAttribute="bottom" constant="-15" id="I3q-3s-yfi"/>
+                            <constraint firstItem="mIY-hh-77E" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" constant="16" id="K72-Tf-K5v"/>
+                            <constraint firstItem="3KP-oe-KUs" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" constant="16" id="P3e-US-fJu"/>
+                            <constraint firstItem="mIY-hh-77E" firstAttribute="top" secondItem="p9b-wB-lXq" secondAttribute="top" constant="15" id="Wps-Rs-TI0"/>
+                            <constraint firstItem="Svc-An-WRc" firstAttribute="trailing" secondItem="p9b-wB-lXq" secondAttribute="trailing" id="bbV-4m-dYU"/>
+                            <constraint firstItem="p9b-wB-lXq" firstAttribute="bottom" secondItem="dSV-BI-dUF" secondAttribute="bottom" id="fS0-yO-VNj"/>
+                            <constraint firstItem="Svc-An-WRc" firstAttribute="top" secondItem="DcS-TN-t3D" secondAttribute="top" id="iRU-Dn-A0c"/>
+                            <constraint firstItem="p9b-wB-lXq" firstAttribute="trailing" secondItem="dSV-BI-dUF" secondAttribute="trailing" id="lkL-JH-UwL"/>
+                            <constraint firstItem="dSV-BI-dUF" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" id="ukb-fj-LcK"/>
+                            <constraint firstItem="p9b-wB-lXq" firstAttribute="trailing" secondItem="3KP-oe-KUs" secondAttribute="trailing" constant="10" id="wrQ-3z-Dyt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p9b-wB-lXq"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dSV-BI-dUF" id="r8W-Zt-IUs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8xV-Xa-eLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607.20000000000005" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avoShape" width="81" height="171.5"/>
+        <image name="testAvo" width="480" height="479"/>
+        <image name="xmasNewsNavBarBg" width="392" height="165"/>
+    </resources>
+</document>

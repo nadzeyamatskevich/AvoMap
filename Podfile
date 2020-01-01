@@ -16,5 +16,17 @@ target 'avocadoFinder' do
     
     #device
     pod 'Device'
+    
+    #API
+    pod 'Moya', '~> 12.0'
+    pod 'SwiftyJSON', '~> 5.0'
+    pod 'RealmSwift'
+    
+    #image
+    pod 'Kingfisher', '~> 5.0'
+    pod 'SDWebImage', '~> 5.0'
+    
+    #loader
+    pod 'HPGradientLoading'
 
 end

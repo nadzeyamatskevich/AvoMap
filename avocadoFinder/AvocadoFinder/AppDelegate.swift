@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        GMSServices.provideAPIKey("AIzaSyCPUsnbGEHyVdj3RyKYIy1OPEA6uulnyn0")
-        GMSPlacesClient.provideAPIKey("AIzaSyCPUsnbGEHyVdj3RyKYIy1OPEA6uulnyn0")
+        GMSPlacesClient.provideAPIKey("AIzaSyA4eeMxsmUH9GUG_H_4gEuO2qJyRvANi7s")
+        GMSServices.provideAPIKey("AIzaSyA4eeMxsmUH9GUG_H_4gEuO2qJyRvANi7s")
         
         setupRootViewController()
         self.application = application
@@ -29,14 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func setupRootViewController() {
-        var tabBarController: RAMAnimatedTabBarController?
+        //var tabBarController: RAMAnimatedTabBarController?
         
-        tabBarController = UIStoryboard(storyboard: .tabBar).instantiateInitialViewController() as? RAMAnimatedTabBarController
+        let mainController = UIStoryboard(storyboard: .main).instantiateInitialViewController() as? MainViewController
        
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        if let tabBar = tabBarController {
-            let navigationController = UINavigationController(rootViewController: tabBar)
+        if let main = mainController {
+            let navigationController = UINavigationController(rootViewController: main)
             navigationController.navigationBar.isTranslucent = false
             navigationController.setNavigationBarHidden(true, animated: false)
             rootNavigationController = navigationController

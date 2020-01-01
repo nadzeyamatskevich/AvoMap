@@ -16,6 +16,9 @@ class ListOfPlacesDataSource: NSObject {
     // - Delegate
     weak var delegate: ListOfPlacesDataSourceDelegate?
     
+    // - Data
+    var shops: [ShopModel] = []
+    
     // - Lifecycle
     init(tableView: UITableView) {
         self.tableView = tableView
@@ -35,7 +38,7 @@ class ListOfPlacesDataSource: NSObject {
 extension ListOfPlacesDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return shops.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +57,7 @@ extension ListOfPlacesDataSource: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didTapOnCell(shop: indexPath.row)
+        delegate?.didTapOnCell(shop: shops[indexPath.row])
     }
     
 }
@@ -66,6 +69,7 @@ extension ListOfPlacesDataSource {
     
     func shopCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.shopCell, for: indexPath) as! ListOfPlacesTableViewCell
+        cell.set(shop: shops[indexPath.row])
         return cell
     }
     
@@ -85,6 +89,7 @@ extension ListOfPlacesDataSource {
     }
     
     func setupDelegates() {
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         tableView.delegate = self
         tableView.dataSource = self
     }

@@ -21,8 +21,12 @@ class ListOfPlacesTableViewCell: UITableViewCell {
         configure()
     }
 
-    func set() {}
-
+    func set(shop: ShopModel) {
+        shopNameLabel.text = shop.name
+        shopAddressLabel.text = shop.address
+        shop.type == PlaceType.store.rawValue ? (fruilImageView.image = #imageLiteral(resourceName: "avoFruit")) : (fruilImageView.image = #imageLiteral(resourceName: "foodPin"))
+    }
+    
 }
 
 // MARK: -
@@ -36,7 +40,7 @@ extension ListOfPlacesTableViewCell {
     
     func configureMainView() {
         mainView.layer.cornerRadius = 16
-        mainView.setupShadow(color: AppColor.black(alpha: 0.1))
+        mainView.setupOnlyBottomShadow(color: AppColor.black(alpha: 0.1))
     }
     
 }

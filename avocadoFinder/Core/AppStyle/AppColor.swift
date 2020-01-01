@@ -10,20 +10,12 @@ import UIKit
 
 enum AppColor {
     
-    static let cyan = color(fromHex: "4cc1c7")
-    static let darkCyan = color(fromHex: "30b7ba")
-    static let brownGrey = color(fromHex: "858585")
-    static let veryLightPink = color(fromHex: "dedede")
-    static let orangeyRed = color(fromHex: "fd3838")
-    static let lightGrey = color(fromHex: "ebebeb")
-    static let grayShadow = color(fromHex: "E5E5E5")
-    static let verylightGrey = color(fromHex: "f8f8f8")
+    static let cyan       = color(fromHex: "4cc1c7")
+    static let darkCyan   = color(fromHex: "3bbab6")
+    static let green      = color(fromHex: "abdc90")
+    static let darkGreen  = color(fromHex: "003300")
     
     static let grayTabBar = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
-    
-    static func orange(alpha: CGFloat = 1.0) -> UIColor {
-        return color(fromHex: "f76c00", alpha: alpha)
-    }
     
     static func black(alpha: CGFloat = 1.0) -> UIColor {
         return color(fromHex: "000000", alpha: alpha)
@@ -31,14 +23,6 @@ enum AppColor {
     
     static func white(alpha: CGFloat = 1.0) -> UIColor {
         return color(fromHex: "ffffff", alpha: alpha)
-    }
-    
-    static func orangeyRed(alpha: CGFloat = 1.0) -> UIColor {
-        return color(fromHex: "fd3838", alpha: alpha)
-    }
-    
-    static func orangeShadow(alpha: CGFloat = 1.0) -> UIColor {
-        return color(fromHex: "#F76C00", alpha: alpha)
     }
     
 }
