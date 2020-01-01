@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HPGradientLoading
 
 class PlaceInfoViewController: UIViewController {
     
@@ -81,11 +82,14 @@ extension PlaceInfoViewController {
     }
     
     func addComment(comment: CommentModel) {
+        HPGradientLoading.shared.showLoading()
         postCommentRequest(comment: comment) { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: nil)
                 strongSelf.getShopInfo(shopID: strongSelf.shop.id)
                 UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
