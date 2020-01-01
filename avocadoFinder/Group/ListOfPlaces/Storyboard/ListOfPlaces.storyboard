@@ -165,7 +165,6 @@
                             <constraint firstItem="ST8-Kg-SRo" firstAttribute="leading" secondItem="t3R-YY-rPT" secondAttribute="leading" id="Eef-Lh-jjk"/>
                             <constraint firstItem="6kS-KV-Aqu" firstAttribute="top" secondItem="ST8-Kg-SRo" secondAttribute="bottom" constant="-10" id="P9k-eh-W4e"/>
                             <constraint firstItem="2cd-ud-3kE" firstAttribute="top" secondItem="u7p-54-lar" secondAttribute="bottom" id="RmR-OB-Sj3"/>
-                            <constraint firstItem="6kS-KV-Aqu" firstAttribute="bottom" secondItem="4vv-I6-v2x" secondAttribute="bottom" id="XFs-wc-cHD"/>
                             <constraint firstItem="6kS-KV-Aqu" firstAttribute="top" secondItem="4vv-I6-v2x" secondAttribute="top" constant="125.5" id="fJx-xm-MtP"/>
                             <constraint firstItem="4vv-I6-v2x" firstAttribute="trailing" secondItem="zGb-ef-RIE" secondAttribute="trailing" constant="24" id="gUX-ZX-KY3"/>
                             <constraint firstItem="gKS-Hz-cyl" firstAttribute="leading" secondItem="4vv-I6-v2x" secondAttribute="leading" constant="16" id="gkq-BA-EUB"/>
@@ -174,6 +173,7 @@
                             <constraint firstItem="4vv-I6-v2x" firstAttribute="bottom" secondItem="zGb-ef-RIE" secondAttribute="bottom" constant="24" id="ieq-tq-HIU"/>
                             <constraint firstItem="u7p-54-lar" firstAttribute="top" secondItem="4vv-I6-v2x" secondAttribute="top" constant="15" id="ilb-iB-hLB"/>
                             <constraint firstItem="u7p-54-lar" firstAttribute="leading" secondItem="4vv-I6-v2x" secondAttribute="leading" constant="16" id="ipT-Ba-1sM"/>
+                            <constraint firstAttribute="bottom" secondItem="6kS-KV-Aqu" secondAttribute="bottom" id="sX4-HL-Umo"/>
                             <constraint firstItem="6kS-KV-Aqu" firstAttribute="trailing" secondItem="4vv-I6-v2x" secondAttribute="trailing" id="y4I-h1-4Le"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4vv-I6-v2x"/>
