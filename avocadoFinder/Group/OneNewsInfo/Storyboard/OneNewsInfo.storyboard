@@ -11,9 +11,6 @@
         <array key="Circe-Light.ttf">
             <string>Circe-Light</string>
         </array>
-        <array key="Circe-Regular.ttf">
-            <string>Circe-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--One News Info View Controller-->
@@ -90,10 +87,17 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="uPa-2t-yte"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новость" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-4H-jsu">
-                                <rect key="frame" x="32" y="15" width="327" height="31.5"/>
-                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdd-4H-jsu">
+                                <rect key="frame" x="32" y="23" width="327" height="31.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Новость">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="27" name="Circe-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" maximumLineHeight="32" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrp-2W-D4k">
@@ -109,7 +113,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="подзаголовок подзаголовок" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjE-Rj-ee6">
-                                <rect key="frame" x="32" y="46.5" width="327" height="20"/>
+                                <rect key="frame" x="32" y="54.5" width="327" height="20"/>
                                 <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -121,7 +125,7 @@
                             <constraint firstItem="Rrp-2W-D4k" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" constant="16" id="5Tb-lq-5ML"/>
                             <constraint firstItem="XjE-Rj-ee6" firstAttribute="leading" secondItem="AR9-4A-gKI" secondAttribute="leading" constant="32" id="GcH-x4-Vb3"/>
                             <constraint firstItem="fvZ-7A-PGl" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XjE-Rj-ee6" secondAttribute="bottom" constant="25" id="Gy5-Tt-BmQ"/>
-                            <constraint firstItem="fdd-4H-jsu" firstAttribute="top" secondItem="AR9-4A-gKI" secondAttribute="top" constant="15" id="HqQ-jD-0PW"/>
+                            <constraint firstItem="fdd-4H-jsu" firstAttribute="top" secondItem="AR9-4A-gKI" secondAttribute="top" constant="23" id="HqQ-jD-0PW"/>
                             <constraint firstAttribute="trailing" secondItem="fvZ-7A-PGl" secondAttribute="trailing" constant="-10" id="JHp-2c-Vw1"/>
                             <constraint firstItem="fvZ-7A-PGl" firstAttribute="leading" secondItem="lIH-JV-dkj" secondAttribute="leading" constant="-10" id="JbG-v1-OaI"/>
                             <constraint firstItem="XjE-Rj-ee6" firstAttribute="top" secondItem="fdd-4H-jsu" secondAttribute="bottom" id="KC2-wb-RnQ"/>

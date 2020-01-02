@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		46F652E6369686EE39895275 /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A692ADB42CBF376A96C7361 /* Pods_avocadoFinder.framework */; };
+		8A50011A23BE01C900C205BE /* TrianglePlaceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50011923BE01C900C205BE /* TrianglePlaceInfoView.swift */; };
 		931DF49122C52BB700D43AB0 /* POIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49022C52BB700D43AB0 /* POIItem.swift */; };
 		931DF49422C52D0200D43AB0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49322C52D0200D43AB0 /* LocationManager.swift */; };
 		931DF49522C53DB800D43AB0 /* MapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B022B4F32C00065119 /* MapLayoutManager.swift */; };
@@ -150,6 +151,7 @@
 /* Begin PBXFileReference section */
 		0A692ADB42CBF376A96C7361 /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D15F213E46698E40DFF7CFB /* Pods-avocadoFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		8A50011923BE01C900C205BE /* TrianglePlaceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrianglePlaceInfoView.swift; sourceTree = "<group>"; };
 		8B7B60020D9015EADB0F15F2 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
 		931DF49022C52BB700D43AB0 /* POIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIItem.swift; sourceTree = "<group>"; };
 		931DF49322C52D0200D43AB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -343,6 +345,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A50011823BE017E00C205BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A50011923BE01C900C205BE /* TrianglePlaceInfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		931DF48F22C52B9B00D43AB0 /* Item */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,8 +927,9 @@
 				93D1A62E2288305A008DD01D /* DataSource */,
 				93D1A62D22883051008DD01D /* Cell */,
 				93A445E7226AFFB700386766 /* Manager */,
-				93A445E6226AFFAC00386766 /* Storyboard */,
+				8A50011823BE017E00C205BE /* View */,
 				93A445E5226AFFA100386766 /* ViewController */,
+				93A445E6226AFFAC00386766 /* Storyboard */,
 			);
 			path = PlaceInfo;
 			sourceTree = "<group>";
@@ -1469,22 +1480,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97D843031CD90122C1F1F6D4 /* [CP] Embed Pods Frameworks */ = {
@@ -1493,42 +1497,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
-				"${BUILT_PRODUCTS_DIR}/HPGradientLoading/HPGradientLoading.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/VisualEffectView/VisualEffectView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGradientLoading.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualEffectView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1542,6 +1519,7 @@
 				93D1A62722881BB5008DD01D /* ListOfPlacesDataSource.swift in Sources */,
 				932A65AC22B4EE9600065119 /* Constants.swift in Sources */,
 				93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */,
+				8A50011A23BE01C900C205BE /* TrianglePlaceInfoView.swift in Sources */,
 				93FD666122D9E4CF0094A5A5 /* SettingsDataSource.swift in Sources */,
 				93D1A62A22881C1E008DD01D /* ListOfPlacesDataSourceDelegate.swift in Sources */,
 				931DF54922C5417400D43AB0 /* GMUGradient.m in Sources */,
