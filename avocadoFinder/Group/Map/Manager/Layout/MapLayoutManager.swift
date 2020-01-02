@@ -13,7 +13,7 @@ import GoogleMaps
 class MapLayoutManager: NSObject {
     
     // - UI
-    fileprivate unowned let viewController: MapViewController
+    private unowned let viewController: MapViewController
     
     // - Data
     private var selectedMarker: GMSMarker?
@@ -31,6 +31,79 @@ class MapLayoutManager: NSObject {
     
     func update() {
         configureShopsMarkers()
+    }
+    
+}
+
+// MARK: -
+// MARK: - Action
+
+extension MapLayoutManager {
+    
+    func myLocationButtonAction() {
+        guard let lat = viewController.avoMapView.myLocation?.coordinate.latitude,
+              let lng = viewController.avoMapView.myLocation?.coordinate.longitude else { return }
+
+        let camera = GMSCameraPosition.camera(withLatitude: lat ,longitude: lng , zoom: 12)
+        viewController.avoMapView.animate(to: camera)
+    }
+    
+}
+
+// MARK: -
+// MARK: - Animation
+
+extension MapLayoutManager {
+    
+    func hidePluseButton() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let vc = self?.viewController else { return }
+            vc.plusBottomConstraint.constant = -160
+            vc.plusRightConstraint.constant = -160
+            vc.view.layoutIfNeeded()
+        }
+    }
+    
+    func showPluseButton() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let vc = self?.viewController else { return }
+            vc.plusBottomConstraint.constant = -80
+            vc.plusRightConstraint.constant = -80
+            vc.view.layoutIfNeeded()
+        }
+    }
+    
+    func makeInactiveSegmentControl() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let vc = self?.viewController else { return }
+            vc.contentTypeControl.isUserInteractionEnabled = false
+            vc.contentTypeControl.alpha = 0.5
+            vc.view.layoutIfNeeded()
+        }
+    }
+    
+    func makeActiveSegmentControl() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let vc = self?.viewController else { return }
+            vc.contentTypeControl.isUserInteractionEnabled = true
+            vc.contentTypeControl.alpha = 1
+            vc.view.layoutIfNeeded()
+        }
+    }
+    
+}
+
+// MARK: -
+// MARK: - GMUClusterManagerDelegate
+
+extension MapLayoutManager {
+    
+    func listOfPlacesButtonAction() {
+        if viewController.isListHidden {
+            showList()
+        } else {
+            hideList()
+        }
     }
     
 }
@@ -81,7 +154,7 @@ extension MapLayoutManager: CLLocationManagerDelegate {
         guard status == .authorizedWhenInUse else {return}
         locationManager.startUpdatingLocation()
         viewController.avoMapView.isMyLocationEnabled = true
-        viewController.avoMapView.settings.myLocationButton = true
+        viewController.avoMapView.settings.myLocationButton = false
     }
     
     
@@ -116,9 +189,11 @@ extension MapLayoutManager {
         case 0:
             self.viewController.saveButton.isHidden = false
             self.shops = viewController.shops.filter {$0.type == "store"}
+            showPluseButton()
         default:
             self.viewController.saveButton.isHidden = true
             self.shops = viewController.shops.filter {$0.type == "food_establishment"}
+            hidePluseButton()
         }
         self.update()
     }
@@ -177,6 +252,7 @@ extension MapLayoutManager: GMSMapViewDelegate {
             }
         }
         viewController.openPlaceList(shops: shopArr, isHideControl: true)
+        makeInactiveSegmentControl()
     }
 }
 
@@ -244,6 +320,36 @@ extension MapLayoutManager {
         viewController.contentTypeControl.setTitleTextAttributes(attributes, for: .selected)
     }
     
+    func hideList() {
+        viewController.isListHidden = true
+        viewController.listButton.setImage(UIImage(named: "list"), for: .normal)
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+            guard let сonstraint =  self?.viewController.listTopConstraint else { return }
+            сonstraint.constant += UIScreen.main.bounds.height
+            self?.viewController.view.layoutIfNeeded()
+        },completion: { [weak self] _ in
+            self?.viewController.view.isUserInteractionEnabled = true
+            self?.makeActiveSegmentControl()
+        })
+    }
+    
+    func showList() {
+        viewController.isListHidden = false
+        viewController.listButton.setImage(UIImage(named: "global"), for: .normal)
+        viewController.view.isUserInteractionEnabled = false
+        UIView.animate(withDuration: 0.5, animations: { [weak self] in
+            guard let сonstraint =  self?.viewController.listTopConstraint else { return }
+            сonstraint.constant -= UIScreen.main.bounds.height
+            self?.viewController.view.layoutIfNeeded()
+        }, completion: { [weak self] _ in
+            self?.viewController.view.isUserInteractionEnabled = true
+        })
+    }
+    
+    func viewWillAppear() {
+        getShops()
+        setupSegmentControlWidth()
+    }
 }
 
 // MARK: -
@@ -256,6 +362,9 @@ fileprivate extension MapLayoutManager {
         configureSaveButton()
         configureMapDelegate()
         getShops()
+        DispatchQueue.main.async { [weak self] in
+            self?.hideList()
+        }
     }
     
     func configureSaveButton() {
@@ -270,6 +379,7 @@ fileprivate extension MapLayoutManager {
     }
     
     func configureShopsMarkers() {
+        viewController.updateTableViewData()
         viewController.avoMapView.clear()
         generateClusterItems()
     }

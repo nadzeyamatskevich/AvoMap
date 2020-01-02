@@ -12,20 +12,32 @@ import GoogleMaps
 class MapViewController: UIViewController {
 
     // - UI
+    @IBOutlet weak var listButton: UIButton!
+    @IBOutlet weak var listView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var avoMapView: GMSMapView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var contentTypeControl: UISegmentedControl!
     
     // - Constraint
+    @IBOutlet weak var listTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var segmentControlWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var filterBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var filterLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var plusBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var plusRightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var myLocationBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var myLocationRightConstraint: NSLayoutConstraint!
     
     // - Manager
     private var layoutManager: MapLayoutManager!
     private var coordinatorManager: MapCoordinatorManager!
     private var serverManager = MapServerManager()
+    private var dataSource: ListOfPlacesDataSource!
     
     // - Data
     var shops: [ShopModel] = []
+    var isListHidden = true
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -36,8 +48,7 @@ class MapViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        layoutManager.getShops()
-        layoutManager.setupSegmentControlWidth()
+        layoutManager.viewWillAppear()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,7 +56,9 @@ class MapViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-   
+    @IBAction func addNewPlaceButtonAction(_ sender: Any) {
+           coordinatorManager.pushAddNewPlaceViewController()
+       }
 }
 
 // MARK: -
@@ -54,11 +67,7 @@ class MapViewController: UIViewController {
 extension MapViewController {
     
     @IBAction func listOfPlacesButtonAction(_ sender: Any) {
-        coordinatorManager.pushLitsOfPlacesViewController(shops: [], switchState: contentTypeControl.selectedSegmentIndex)
-    }
-    
-    @IBAction func addNewPlaceButtonAction(_ sender: Any) {
-        coordinatorManager.pushAddNewPlaceViewController()
+        layoutManager.listOfPlacesButtonAction()
     }
     
     @IBAction func changeContentTypeAction(_ sender: Any) {
@@ -70,7 +79,12 @@ extension MapViewController {
     }
     
     func openPlaceList(shops: [ShopModel], isHideControl: Bool = false) {
-        coordinatorManager.pushLitsOfPlacesViewController(shops: shops, switchState: contentTypeControl.selectedSegmentIndex, isHideControl: isHideControl)
+        dataSource.set(shops: shops)
+        layoutManager.showList()
+    }
+    
+    @IBAction func myLocationButtonAction(_ sender: UIButton) {
+        layoutManager.myLocationButtonAction()
     }
     
 }
@@ -94,6 +108,7 @@ extension MapViewController {
     func configure() {
         configureLayoutManager()
         configureCoordinatorManager()
+        configureDataSource()
     }
     
     func configureLayoutManager() {
@@ -102,6 +117,36 @@ extension MapViewController {
     
     func configureCoordinatorManager() {
         coordinatorManager = MapCoordinatorManager(viewController: self)
+    }
+    
+    func configureDataSource() {
+        dataSource = ListOfPlacesDataSource(tableView: tableView)
+        dataSource.delegate = self
+    }
+    
+    func updateTableViewData() {
+          switch self.contentTypeControl.selectedSegmentIndex {
+          case 0:
+              self.saveButton.isHidden = false
+              dataSource.shops = shops.filter {$0.type == "store"}
+          default:
+              self.saveButton.isHidden = true
+              dataSource.shops = shops.filter {$0.type == "food_establishment"}
+          }
+          tableView.reloadData()
+      }
+  
+    
+}
+
+// MARK: -
+// MARK: - Data source delegate
+
+extension MapViewController: MapDelegate {
+    func didTapOnCell(shop: ShopModel) {
+        let placeInfoViewController = UIStoryboard(storyboard: .placeInfo).instantiateInitialViewController() as! PlaceInfoViewController
+        placeInfoViewController.shop = shop
+        self.navigationController?.pushViewController(placeInfoViewController, animated: true)
     }
     
 }
