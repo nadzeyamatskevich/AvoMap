@@ -17,6 +17,8 @@ class ShopModel: Object, Codable {
     @objc dynamic var latitude = ""
     @objc dynamic var longitude = ""
     @objc dynamic var name = ""
+    @objc dynamic var price = ""
+    @objc dynamic var inserted_at = ""
     @objc dynamic var shopDescription = ""
     var recent_comments = List<CommentModel>()
     
@@ -34,6 +36,8 @@ class ShopModel: Object, Codable {
         case name
         case recent_comments
         case description
+        case price
+        case inserted_at
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -47,6 +51,8 @@ class ShopModel: Object, Codable {
         longitude = try values.decodeIfPresent(String.self, forKey: .longitude) ?? ""
         name = try values.decodeIfPresent(String.self, forKey: .name) ?? ""
         shopDescription = try values.decodeIfPresent(String.self, forKey: .description) ?? ""
+        price = try values.decodeIfPresent(String.self, forKey: .price) ?? ""
+        inserted_at = try values.decodeIfPresent(String.self, forKey: .inserted_at) ?? ""
         
         if let recent_comments = try values.decodeIfPresent([CommentModel].self, forKey: .recent_comments) {
             self.recent_comments.append(objectsIn: recent_comments)
@@ -63,6 +69,8 @@ class ShopModel: Object, Codable {
         try container.encode(longitude, forKey: .longitude)
         try container.encode(name, forKey: .name)
         try container.encode(shopDescription, forKey: .description)
+        try container.encode(price, forKey: .price)
+        try container.encode(inserted_at, forKey: .inserted_at)
         try container.encode(Array(recent_comments), forKey: .recent_comments)
     }
     
