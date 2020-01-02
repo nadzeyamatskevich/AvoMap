@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jn-KXq">
-                                <rect key="frame" x="28" y="55" width="188" height="25.5"/>
+                                <rect key="frame" x="28" y="55" width="175.5" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.5" id="MmP-Ok-0Oy"/>
                                 </constraints>
@@ -103,6 +103,9 @@
                             <constraint firstItem="pix-P6-vxa" firstAttribute="leading" secondItem="z8A-Sw-Sdj" secondAttribute="leading" constant="-10" id="tVb-Cc-ZkI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qk7-0T-Cou"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="avoMapView" destination="PO8-Oq-jxa" id="SEW-GC-1Eo"/>
@@ -116,7 +119,7 @@
     </scenes>
     <resources>
         <image name="backButton" width="6" height="11"/>
-        <image name="navBarBg" width="392" height="166.5"/>
+        <image name="navBarBg" width="375" height="166.5"/>
         <image name="shopPin" width="49.5" height="73.5"/>
     </resources>
 </document>

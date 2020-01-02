@@ -24,10 +24,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-BI-dUF">
-                                <rect key="frame" x="0.0" y="166" width="375" height="501"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-BI-dUF">
+                                <rect key="frame" x="0.0" y="151" width="375" height="516"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewsAndBlogTableViewCell" rowHeight="143" id="Thn-Am-6ff" customClass="NewsAndBlogTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="143"/>
@@ -134,7 +133,7 @@
                         <constraints>
                             <constraint firstItem="Svc-An-WRc" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" id="CMv-qe-jRR"/>
                             <constraint firstItem="3KP-oe-KUs" firstAttribute="top" secondItem="mIY-hh-77E" secondAttribute="bottom" id="EoS-Z4-G1y"/>
-                            <constraint firstItem="dSV-BI-dUF" firstAttribute="top" secondItem="Svc-An-WRc" secondAttribute="bottom" id="I3q-3s-yfi"/>
+                            <constraint firstItem="dSV-BI-dUF" firstAttribute="top" secondItem="Svc-An-WRc" secondAttribute="bottom" constant="-15" id="I3q-3s-yfi"/>
                             <constraint firstItem="mIY-hh-77E" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" constant="16" id="K72-Tf-K5v"/>
                             <constraint firstItem="3KP-oe-KUs" firstAttribute="leading" secondItem="p9b-wB-lXq" secondAttribute="leading" constant="16" id="P3e-US-fJu"/>
                             <constraint firstItem="mIY-hh-77E" firstAttribute="top" secondItem="p9b-wB-lXq" secondAttribute="top" constant="15" id="Wps-Rs-TI0"/>
@@ -146,6 +145,9 @@
                             <constraint firstItem="p9b-wB-lXq" firstAttribute="trailing" secondItem="3KP-oe-KUs" secondAttribute="trailing" constant="10" id="wrQ-3z-Dyt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p9b-wB-lXq"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="dSV-BI-dUF" id="r8W-Zt-IUs"/>

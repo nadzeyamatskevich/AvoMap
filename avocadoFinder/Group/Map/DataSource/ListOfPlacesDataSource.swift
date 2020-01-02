@@ -2,8 +2,8 @@
 //  ListOfPlacesDataSource.swift
 //  avocadoFinder
 //
-//  Created by Nadzeya Savitskaya on 5/12/19.
-//  Copyright © 2019 Nadzeya Savitskaya. All rights reserved.
+//  Created by Nick Poe on 1/1/20.
+//  Copyright © 2020 Nadzeya Savitskaya. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class ListOfPlacesDataSource: NSObject {
     fileprivate unowned let tableView: UITableView
     
     // - Delegate
-    weak var delegate: ListOfPlacesDataSourceDelegate?
+    weak var delegate: MapDelegate?
     
     // - Data
     var shops: [ShopModel] = []
@@ -27,6 +27,11 @@ class ListOfPlacesDataSource: NSObject {
     }
     
     func update() {
+        tableView.reloadData()
+    }
+    
+    func set(shops: [ShopModel]) {
+        self.shops = shops
         tableView.reloadData()
     }
     
@@ -89,7 +94,7 @@ extension ListOfPlacesDataSource {
     }
     
     func setupDelegates() {
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         tableView.delegate = self
         tableView.dataSource = self
     }
