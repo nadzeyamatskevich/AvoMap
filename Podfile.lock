@@ -1,35 +1,37 @@
 PODS:
-  - Alamofire (4.8.2)
-  - Device (3.1.2)
-  - GoogleMaps (3.1.0):
-    - GoogleMaps/Maps (= 3.1.0)
-  - GoogleMaps/Base (3.1.0)
-  - GoogleMaps/Maps (3.1.0):
+  - Alamofire (4.9.1)
+  - Device (3.2.1)
+  - GoogleMaps (3.7.0):
+    - GoogleMaps/Maps (= 3.7.0)
+  - GoogleMaps/Base (3.7.0)
+  - GoogleMaps/Maps (3.7.0):
     - GoogleMaps/Base
-  - GooglePlaces (3.1.0):
-    - GoogleMaps/Base (= 3.1.0)
+  - GooglePlaces (3.7.0):
+    - GoogleMaps/Base (= 3.7.0)
   - HPGradientLoading (1.3.3):
     - SnapKit (~> 5.0.0)
     - VisualEffectView (~> 4.0.0)
-  - Kingfisher (5.6.0)
+  - Kingfisher (5.12.0):
+    - Kingfisher/Core (= 5.12.0)
+  - Kingfisher/Core (5.12.0)
   - Moya (12.0.1):
     - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
   - RAMAnimatedTabBarController (4.0.1)
-  - Realm (3.16.2):
-    - Realm/Headers (= 3.16.2)
-  - Realm/Headers (3.16.2)
-  - RealmSwift (3.16.2):
-    - Realm (= 3.16.2)
+  - Realm (4.3.0):
+    - Realm/Headers (= 4.3.0)
+  - Realm/Headers (4.3.0)
+  - RealmSwift (4.3.0):
+    - Realm (= 4.3.0)
   - Result (4.1.0)
-  - SDWebImage (5.4.0):
-    - SDWebImage/Core (= 5.4.0)
-  - SDWebImage/Core (5.4.0)
-  - SnapKit (5.0.0)
+  - SDWebImage (5.4.1):
+    - SDWebImage/Core (= 5.4.1)
+  - SDWebImage/Core (5.4.1)
+  - SnapKit (5.0.1)
   - SwiftyJSON (5.0.0)
-  - VisualEffectView (4.0.0)
+  - VisualEffectView (4.0.2)
 
 DEPENDENCIES:
   - Device
@@ -70,22 +72,22 @@ CHECKOUT OPTIONS:
     :git: https://github.com/denbay/animated-tab-bar.git
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Device: 62242076214c30fb5760174b3601cefafa70a481
-  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
-  GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
+  GooglePlaces: a62077320f9d64239245af63aa1aa136393ebeb6
   HPGradientLoading: b9e46a196b8caf68bd520de3ae02fcddbf5c3781
-  Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
+  Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   RAMAnimatedTabBarController: 677d6f7ec7e88b1089486f4db49b0a5067e8ad1c
-  Realm: 0e73b4edeb5b6a90da3d83206883b2e34e00eb38
-  RealmSwift: a81e650171ef0a5f999df1ed8d39ba8d6fce88a4
+  Realm: 9357c3589555793e1860a7104a7412bca4a48d99
+  RealmSwift: 402f1e379a8ef82c635313037b043f0f06de880c
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
-  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SDWebImage: 29c340dbdcef342bb13125553f4e19ce056b07a7
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  VisualEffectView: 9e9883f07d8a929b98c9c08a068f726279d92754
+  VisualEffectView: 8c05bdc77490d84aabfa9fd17b1ffd6476da0e2c
 
 PODFILE CHECKSUM: 823284ecf39d2eea975ae1467296ed0c321d678f
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.5.3

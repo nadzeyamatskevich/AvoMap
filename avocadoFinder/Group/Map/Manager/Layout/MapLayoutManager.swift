@@ -133,7 +133,7 @@ extension MapLayoutManager: GMUClusterManagerDelegate {
             let shopId = "\(shop.id)"
             let shopType = shop.type
             let iconImageView = shop.type == "store" ?
-            UIImageView(image: UIImage(named: "xmasShopPin")) :
+            UIImageView(image: UIImage(named: "shopPin")) :
             UIImageView(image: UIImage(named: "foodPin"))
             if Double(lat)! > -85.0 && Double(lat)! < 85.0 && Double(lng)! > -180.0 && Double(lng)! < 180.0 {
                 let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView, shopType: shopType)
@@ -267,15 +267,15 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
             marker.icon = generateImageWithText(text: "\(clusterMarker.count)")
         } else if let shop = marker.userData as? POIItem {
 
-            marker.icon = shop.shopType == "store" ? UIImage(named: "xmasShopPin") : UIImage(named: "foodPin")
+            marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
         } else {
-            marker.icon = UIImage(named: "xmasShopPin")
+            marker.icon = UIImage(named: "shopPin")
         }
     }
     
     func generateImageWithText(text: String) -> UIImage {
         let state = viewController.contentTypeControl.selectedSegmentIndex
-        let image = state == 0 ? UIImage(named: "xmasShopPin")! : UIImage(named: "foodPin")!
+        let image = state == 0 ? UIImage(named: "shopPin")! : UIImage(named: "foodPin")!
         let imageView = UIImageView(image: image)
         imageView.backgroundColor = .clear
         imageView.frame = CGRect(x: 0, y: 0, width: image.size.width - 10, height: image.size.height - 10)
@@ -391,7 +391,7 @@ fileprivate extension MapLayoutManager {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 42, height: 51))
             imageView.contentMode = .scaleAspectFit
             imageView.backgroundColor = .clear
-            shop.type == PlaceType.store.rawValue ? (imageView.image = #imageLiteral(resourceName: "xmasShopPin")) : (imageView.image = #imageLiteral(resourceName: "foodPin"))
+            shop.type == PlaceType.store.rawValue ? (imageView.image = #imageLiteral(resourceName: "shopPin")) : (imageView.image = #imageLiteral(resourceName: "foodPin"))
             
             let marker = GMSMarker()
             marker.iconView = imageView

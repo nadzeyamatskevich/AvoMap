@@ -8,6 +8,7 @@
 
 import UIKit
 import GooglePlaces
+import HPGradientLoading
 
 class AddNewPlaceViewController: UIViewController {
     
@@ -160,11 +161,14 @@ extension AddNewPlaceViewController {
     }
     
     func addShop(shop: ShopModel) {
+        HPGradientLoading.shared.showLoading()
         postShopRequest(shop: shop) { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: nil)
                 strongSelf.navigationController?.popViewController(animated: true)
             }
