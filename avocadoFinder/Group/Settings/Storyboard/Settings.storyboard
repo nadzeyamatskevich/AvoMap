@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j8b-fO-TXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j8b-fO-TXA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +42,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasAvocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-kL-1EC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-kL-1EC">
                                 <rect key="frame" x="289" y="40" width="125" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="9JZ-Cf-vKC"/>
@@ -65,7 +65,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minina" translatesAutoresizingMaskIntoConstraints="NO" id="d4x-iu-1Dm">
-                                                    <rect key="frame" x="36" y="12" width="40" height="40.5"/>
+                                                    <rect key="frame" x="36" y="12" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="NWa-Ym-ZSt"/>
                                                         <constraint firstAttribute="width" constant="40" id="m5A-ms-Lbv"/>
@@ -87,11 +87,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="d4x-iu-1Dm" firstAttribute="leading" secondItem="9uw-W2-sCg" secondAttribute="leadingMargin" constant="16" id="Rq0-2Y-AW7"/>
-                                                <constraint firstItem="D2D-Va-A77" firstAttribute="top" secondItem="9uw-W2-sCg" secondAttribute="top" constant="17" id="bmU-rc-J6y"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="D2D-Va-A77" secondAttribute="bottomMargin" constant="14" id="cGC-e1-fF4"/>
-                                                <constraint firstItem="d4x-iu-1Dm" firstAttribute="top" secondItem="9uw-W2-sCg" secondAttribute="top" constant="12" id="eCS-Y4-K9t"/>
-                                                <constraint firstAttribute="bottom" secondItem="d4x-iu-1Dm" secondAttribute="bottom" constant="11.5" id="eDg-iG-Ehi"/>
+                                                <constraint firstItem="D2D-Va-A77" firstAttribute="centerY" secondItem="9uw-W2-sCg" secondAttribute="centerY" id="TGj-Ko-7UB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="D2D-Va-A77" secondAttribute="trailing" constant="16" id="kcb-OL-7uo"/>
+                                                <constraint firstItem="d4x-iu-1Dm" firstAttribute="centerY" secondItem="9uw-W2-sCg" secondAttribute="centerY" id="sx6-oE-Zkc"/>
                                                 <constraint firstItem="D2D-Va-A77" firstAttribute="leading" secondItem="d4x-iu-1Dm" secondAttribute="trailing" constant="16" id="xfF-B9-npf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -171,8 +169,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avocadoSettingsNavBar" width="141" height="211.5"/>
         <image name="minina" width="422" height="411"/>
         <image name="navBarBg" width="375" height="166.5"/>
-        <image name="xmasAvocadoSettingsNavBar" width="141" height="232"/>
     </resources>
 </document>

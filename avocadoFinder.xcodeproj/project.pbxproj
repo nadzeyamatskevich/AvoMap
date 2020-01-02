@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46F652E6369686EE39895275 /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A692ADB42CBF376A96C7361 /* Pods_avocadoFinder.framework */; };
 		931DF49122C52BB700D43AB0 /* POIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49022C52BB700D43AB0 /* POIItem.swift */; };
 		931DF49422C52D0200D43AB0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49322C52D0200D43AB0 /* LocationManager.swift */; };
 		931DF49522C53DB800D43AB0 /* MapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B022B4F32C00065119 /* MapLayoutManager.swift */; };
@@ -48,9 +47,6 @@
 		932A65AC22B4EE9600065119 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65AB22B4EE9600065119 /* Constants.swift */; };
 		932A65B322B4F45900065119 /* MapCoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B222B4F45900065119 /* MapCoordinatorManager.swift */; };
 		932A65B522B4F49000065119 /* MapServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B422B4F49000065119 /* MapServerManager.swift */; };
-		932A65BB22B5283B00065119 /* NewsAndBlogLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65BA22B5283B00065119 /* NewsAndBlogLayoutManager.swift */; };
-		932A65BD22B528D900065119 /* NewsAndBlogCoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65BC22B528D900065119 /* NewsAndBlogCoordinatorManager.swift */; };
-		932A65BF22B529A700065119 /* NewsAndBlogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65BE22B529A700065119 /* NewsAndBlogServerManager.swift */; };
 		93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93330D2A224F53C6000A1BE3 /* AddNewPlaceViewController.swift */; };
 		93330D33224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93330D32224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift */; };
 		933B493522C29BD60011FE5F /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933B493422C29BD60011FE5F /* UIViewControllerExtention.swift */; };
@@ -58,6 +54,14 @@
 		9341868B23677A2500A9429B /* AddShopMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9341868A23677A2500A9429B /* AddShopMap.storyboard */; };
 		9341868D23677B2E00A9429B /* AddShopMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9341868C23677B2E00A9429B /* AddShopMapViewController.swift */; };
 		934767B323316D550078A5A4 /* PlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934767B223316D550078A5A4 /* PlaceType.swift */; };
+		93539FCD23BE0733007D4F44 /* NewsAndBlogDataSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93539FBD23BE0733007D4F44 /* NewsAndBlogDataSourceManager.swift */; };
+		93539FCE23BE0733007D4F44 /* NewsAndBlog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93539FBF23BE0733007D4F44 /* NewsAndBlog.storyboard */; };
+		93539FCF23BE0733007D4F44 /* NewsAndBlogDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93539FC123BE0733007D4F44 /* NewsAndBlogDataSourceDelegate.swift */; };
+		93539FD023BE0733007D4F44 /* NewsAndBlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93539FC323BE0733007D4F44 /* NewsAndBlogTableViewCell.swift */; };
+		93539FD123BE0733007D4F44 /* NewsAndBlogCoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93539FC623BE0733007D4F44 /* NewsAndBlogCoordinatorManager.swift */; };
+		93539FD223BE0733007D4F44 /* NewsAndBlogLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93539FC823BE0733007D4F44 /* NewsAndBlogLayoutManager.swift */; };
+		93539FD323BE0733007D4F44 /* NewsAndBlogServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93539FCA23BE0733007D4F44 /* NewsAndBlogServerManager.swift */; };
+		93539FD423BE0733007D4F44 /* NewsAndBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93539FCC23BE0733007D4F44 /* NewsAndBlogViewController.swift */; };
 		9361F2B02288433C00071339 /* PlaceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361F2AF2288433C00071339 /* PlaceInfoViewController.swift */; };
 		9361F2B2228843D300071339 /* PlaceInfoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361F2B1228843D300071339 /* PlaceInfoDataSource.swift */; };
 		9361F2B42288449400071339 /* PlaceInfoCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9361F2B32288449400071339 /* PlaceInfoCommentTableViewCell.swift */; };
@@ -104,17 +108,12 @@
 		93A445F1226B01D300386766 /* OneNewsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A445F0226B01D300386766 /* OneNewsInfoViewController.swift */; };
 		93A445F3226B01FB00386766 /* OneNewsInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A445F2226B01FB00386766 /* OneNewsInfo.storyboard */; };
 		93A7094223A5004E00D314CB /* AvoPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A7094123A5004E00D314CB /* AvoPopup.storyboard */; };
-		93B34D97227E18B400DE48BD /* NewsAndBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B34D96227E18B400DE48BD /* NewsAndBlogViewController.swift */; };
-		93B34D9A227E20DD00DE48BD /* NewsAndBlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B34D99227E20DD00DE48BD /* NewsAndBlogTableViewCell.swift */; };
-		93B34D9C227E213800DE48BD /* NewsAndBlogDataSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B34D9B227E213800DE48BD /* NewsAndBlogDataSourceManager.swift */; };
-		93B34D9F227E2B8F00DE48BD /* NewsAndBlogDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B34D9E227E2B8F00DE48BD /* NewsAndBlogDataSourceDelegate.swift */; };
 		93D1A62C22882BDA008DD01D /* PlaceInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D1A62B22882BDA008DD01D /* PlaceInfo.storyboard */; };
 		93D1A63022883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D1A62F22883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift */; };
 		93D1A6322288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D1A6312288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift */; };
 		93D1BDEA2336962800E26354 /* UserDefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D1BDE92336962800E26354 /* UserDefaultsEnum.swift */; };
 		93DB41C7227DD47E00CC8113 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41C6227DD47E00CC8113 /* TabBarViewController.swift */; };
 		93DB41C9227DD48E00CC8113 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DB41C8227DD48E00CC8113 /* TabBar.storyboard */; };
-		93DB41CB227DE4EC00CC8113 /* NewsAndBlog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93DB41CA227DE4EC00CC8113 /* NewsAndBlog.storyboard */; };
 		93DB41CE227DE54600CC8113 /* AlwaysPoppableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41CD227DE54600CC8113 /* AlwaysPoppableNavigationController.swift */; };
 		93DB41D3227DE79A00CC8113 /* OvalTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41D2227DE79A00CC8113 /* OvalTabBarView.swift */; };
 		93DB41D6227DE7E200CC8113 /* TabBarItemEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB41D5227DE7E200CC8113 /* TabBarItemEnum.swift */; };
@@ -131,6 +130,7 @@
 		93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */; };
 		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
 		93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */; };
+		BBFCEEF309BE9BAFAB8256D3 /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21365C1D80A34EF047AED880 /* Pods_avocadoFinder.framework */; };
 		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
 		EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2B23B9487D000A7FDD /* MainViewController.swift */; };
 		EC92FE2E23B9488B000A7FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92FE2D23B9488B000A7FDD /* Main.storyboard */; };
@@ -152,9 +152,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A692ADB42CBF376A96C7361 /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D15F213E46698E40DFF7CFB /* Pods-avocadoFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.debug.xcconfig"; sourceTree = "<group>"; };
-		8B7B60020D9015EADB0F15F2 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
+		11BBA67F90D636BA1729A7B1 /* Pods-avocadoFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		21365C1D80A34EF047AED880 /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931DF49022C52BB700D43AB0 /* POIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIItem.swift; sourceTree = "<group>"; };
 		931DF49322C52D0200D43AB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		931DF4F822C5417300D43AB0 /* GMUGridBasedClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGridBasedClusterAlgorithm.m; sourceTree = "<group>"; };
@@ -235,9 +234,6 @@
 		932A65B022B4F32C00065119 /* MapLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLayoutManager.swift; sourceTree = "<group>"; };
 		932A65B222B4F45900065119 /* MapCoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinatorManager.swift; sourceTree = "<group>"; };
 		932A65B422B4F49000065119 /* MapServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapServerManager.swift; sourceTree = "<group>"; };
-		932A65BA22B5283B00065119 /* NewsAndBlogLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogLayoutManager.swift; sourceTree = "<group>"; };
-		932A65BC22B528D900065119 /* NewsAndBlogCoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogCoordinatorManager.swift; sourceTree = "<group>"; };
-		932A65BE22B529A700065119 /* NewsAndBlogServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogServerManager.swift; sourceTree = "<group>"; };
 		93330D2A224F53C6000A1BE3 /* AddNewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceViewController.swift; sourceTree = "<group>"; };
 		93330D32224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPlacesTableViewCell.swift; sourceTree = "<group>"; };
 		933B493422C29BD60011FE5F /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
@@ -245,6 +241,14 @@
 		9341868A23677A2500A9429B /* AddShopMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddShopMap.storyboard; sourceTree = "<group>"; };
 		9341868C23677B2E00A9429B /* AddShopMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShopMapViewController.swift; sourceTree = "<group>"; };
 		934767B223316D550078A5A4 /* PlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceType.swift; sourceTree = "<group>"; };
+		93539FBD23BE0733007D4F44 /* NewsAndBlogDataSourceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndBlogDataSourceManager.swift; sourceTree = "<group>"; };
+		93539FBF23BE0733007D4F44 /* NewsAndBlog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsAndBlog.storyboard; sourceTree = "<group>"; };
+		93539FC123BE0733007D4F44 /* NewsAndBlogDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndBlogDataSourceDelegate.swift; sourceTree = "<group>"; };
+		93539FC323BE0733007D4F44 /* NewsAndBlogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndBlogTableViewCell.swift; sourceTree = "<group>"; };
+		93539FC623BE0733007D4F44 /* NewsAndBlogCoordinatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndBlogCoordinatorManager.swift; sourceTree = "<group>"; };
+		93539FC823BE0733007D4F44 /* NewsAndBlogLayoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndBlogLayoutManager.swift; sourceTree = "<group>"; };
+		93539FCA23BE0733007D4F44 /* NewsAndBlogServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndBlogServerManager.swift; sourceTree = "<group>"; };
+		93539FCC23BE0733007D4F44 /* NewsAndBlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsAndBlogViewController.swift; sourceTree = "<group>"; };
 		9361F2AF2288433C00071339 /* PlaceInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoViewController.swift; sourceTree = "<group>"; };
 		9361F2B1228843D300071339 /* PlaceInfoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoDataSource.swift; sourceTree = "<group>"; };
 		9361F2B32288449400071339 /* PlaceInfoCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCommentTableViewCell.swift; sourceTree = "<group>"; };
@@ -293,17 +297,12 @@
 		93A445F0226B01D300386766 /* OneNewsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsInfoViewController.swift; sourceTree = "<group>"; };
 		93A445F2226B01FB00386766 /* OneNewsInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OneNewsInfo.storyboard; sourceTree = "<group>"; };
 		93A7094123A5004E00D314CB /* AvoPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AvoPopup.storyboard; sourceTree = "<group>"; };
-		93B34D96227E18B400DE48BD /* NewsAndBlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogViewController.swift; sourceTree = "<group>"; };
-		93B34D99227E20DD00DE48BD /* NewsAndBlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogTableViewCell.swift; sourceTree = "<group>"; };
-		93B34D9B227E213800DE48BD /* NewsAndBlogDataSourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogDataSourceManager.swift; sourceTree = "<group>"; };
-		93B34D9E227E2B8F00DE48BD /* NewsAndBlogDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndBlogDataSourceDelegate.swift; sourceTree = "<group>"; };
 		93D1A62B22882BDA008DD01D /* PlaceInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaceInfo.storyboard; sourceTree = "<group>"; };
 		93D1A62F22883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoMainInfoTableViewCell.swift; sourceTree = "<group>"; };
 		93D1A6312288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoAddCommentTableViewCell.swift; sourceTree = "<group>"; };
 		93D1BDE92336962800E26354 /* UserDefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEnum.swift; sourceTree = "<group>"; };
 		93DB41C6227DD47E00CC8113 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		93DB41C8227DD48E00CC8113 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		93DB41CA227DE4EC00CC8113 /* NewsAndBlog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsAndBlog.storyboard; sourceTree = "<group>"; };
 		93DB41CD227DE54600CC8113 /* AlwaysPoppableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysPoppableNavigationController.swift; sourceTree = "<group>"; };
 		93DB41D2227DE79A00CC8113 /* OvalTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalTabBarView.swift; sourceTree = "<group>"; };
 		93DB41D5227DE7E200CC8113 /* TabBarItemEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemEnum.swift; sourceTree = "<group>"; };
@@ -322,6 +321,7 @@
 		93FF9ED622F9FC4400C4D2F0 /* avocadoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avocadoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
 		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5E066B3D75EC91F10E82855 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
 		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
 		EC92FE2B23B9487D000A7FDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC92FE2D23B9488B000A7FDD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -337,7 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F652E6369686EE39895275 /* Pods_avocadoFinder.framework in Frameworks */,
+				BBFCEEF309BE9BAFAB8256D3 /* Pods_avocadoFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,30 +554,6 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		932A65B622B5275500065119 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				932A65BA22B5283B00065119 /* NewsAndBlogLayoutManager.swift */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
-		932A65B722B5276000065119 /* Server */ = {
-			isa = PBXGroup;
-			children = (
-				932A65BE22B529A700065119 /* NewsAndBlogServerManager.swift */,
-			);
-			path = Server;
-			sourceTree = "<group>";
-		};
-		932A65B822B5276D00065119 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				932A65BC22B528D900065119 /* NewsAndBlogCoordinatorManager.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		932A65B922B527D500065119 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,6 +647,94 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		93539FBB23BE0733007D4F44 /* NewsAndBlog */ = {
+			isa = PBXGroup;
+			children = (
+				93539FBC23BE0733007D4F44 /* DataSource */,
+				93539FBE23BE0733007D4F44 /* Storyboard */,
+				93539FC023BE0733007D4F44 /* Protocol */,
+				93539FC223BE0733007D4F44 /* Cell */,
+				93539FC423BE0733007D4F44 /* Manager */,
+				93539FCB23BE0733007D4F44 /* ViewController */,
+			);
+			name = NewsAndBlog;
+			path = avocadoFinder/Group/NewsAndBlog;
+			sourceTree = SOURCE_ROOT;
+		};
+		93539FBC23BE0733007D4F44 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				93539FBD23BE0733007D4F44 /* NewsAndBlogDataSourceManager.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		93539FBE23BE0733007D4F44 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				93539FBF23BE0733007D4F44 /* NewsAndBlog.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		93539FC023BE0733007D4F44 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				93539FC123BE0733007D4F44 /* NewsAndBlogDataSourceDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		93539FC223BE0733007D4F44 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				93539FC323BE0733007D4F44 /* NewsAndBlogTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		93539FC423BE0733007D4F44 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				93539FC523BE0733007D4F44 /* Coordinator */,
+				93539FC723BE0733007D4F44 /* Layout */,
+				93539FC923BE0733007D4F44 /* Server */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		93539FC523BE0733007D4F44 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				93539FC623BE0733007D4F44 /* NewsAndBlogCoordinatorManager.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		93539FC723BE0733007D4F44 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				93539FC823BE0733007D4F44 /* NewsAndBlogLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		93539FC923BE0733007D4F44 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				93539FCA23BE0733007D4F44 /* NewsAndBlogServerManager.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		93539FCB23BE0733007D4F44 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93539FCC23BE0733007D4F44 /* NewsAndBlogViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		937129EA227B73580062AC78 /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,8 +750,8 @@
 				937BB87F22416C9900215E58 /* avocadoFinder */,
 				93FF9ED722F9FC4500C4D2F0 /* avocadoFinderTests */,
 				937BB87E22416C9900215E58 /* Products */,
-				F0268D5CAFDA5CEB5A513D02 /* Pods */,
-				E854A7C58D5265F6F01886D8 /* Frameworks */,
+				B24883019DFDDCFD93D091EB /* Pods */,
+				A5942E95875FF3A96885BB7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -789,6 +853,7 @@
 				93DB41CC227DE52C00CC8113 /* Navigation */,
 				93A445CF226AFE8000386766 /* Settings */,
 				93A445CE226AFE5600386766 /* StaticPage */,
+				93539FBB23BE0733007D4F44 /* NewsAndBlog */,
 				93A445CD226AFE3C00386766 /* OneNewsInfo */,
 				93A445CB226AFE2300386766 /* TabBar */,
 				93A445CA226AFE1500386766 /* PlaceInfo */,
@@ -912,19 +977,6 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		93A445CC226AFE2A00386766 /* NewsAndBlog */ = {
-			isa = PBXGroup;
-			children = (
-				93B34D9D227E2B6C00DE48BD /* Protocol */,
-				93A445E4226AFF9000386766 /* Cell */,
-				93A445E3226AFF7C00386766 /* DataSource */,
-				93A445E2226AFF6F00386766 /* Manager */,
-				93A445E1226AFF6400386766 /* Storyboard */,
-				93A445E0226AFF5C00386766 /* ViewController */,
-			);
-			path = NewsAndBlog;
-			sourceTree = "<group>";
-		};
 		93A445CD226AFE3C00386766 /* OneNewsInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1044,7 +1096,6 @@
 		93A445DC226AFF1900386766 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				93A445CC226AFE2A00386766 /* NewsAndBlog */,
 				93A445F2226B01FB00386766 /* OneNewsInfo.storyboard */,
 			);
 			path = Storyboard;
@@ -1056,48 +1107,6 @@
 				932A65B922B527D500065119 /* Layout */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		93A445E0226AFF5C00386766 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				93B34D96227E18B400DE48BD /* NewsAndBlogViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		93A445E1226AFF6400386766 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				93DB41CA227DE4EC00CC8113 /* NewsAndBlog.storyboard */,
-			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		93A445E2226AFF6F00386766 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				932A65B822B5276D00065119 /* Coordinator */,
-				932A65B722B5276000065119 /* Server */,
-				932A65B622B5275500065119 /* Layout */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		93A445E3226AFF7C00386766 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				93B34D9B227E213800DE48BD /* NewsAndBlogDataSourceManager.swift */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		93A445E4226AFF9000386766 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				93B34D99227E20DD00DE48BD /* NewsAndBlogTableViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		93A445E5226AFFA100386766 /* ViewController */ = {
@@ -1141,14 +1150,6 @@
 				938CFCD0238A77FE00953DCF /* Kotori Rose */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		93B34D9D227E2B6C00DE48BD /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				93B34D9E227E2B8F00DE48BD /* NewsAndBlogDataSourceDelegate.swift */,
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		93D1A62D22883051008DD01D /* Cell */ = {
@@ -1259,12 +1260,21 @@
 			path = avocadoFinderTests;
 			sourceTree = "<group>";
 		};
-		E854A7C58D5265F6F01886D8 /* Frameworks */ = {
+		A5942E95875FF3A96885BB7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A692ADB42CBF376A96C7361 /* Pods_avocadoFinder.framework */,
+				21365C1D80A34EF047AED880 /* Pods_avocadoFinder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B24883019DFDDCFD93D091EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11BBA67F90D636BA1729A7B1 /* Pods-avocadoFinder.debug.xcconfig */,
+				C5E066B3D75EC91F10E82855 /* Pods-avocadoFinder.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		EC92FE2723B94826000A7FDD /* Main */ = {
@@ -1326,15 +1336,6 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		F0268D5CAFDA5CEB5A513D02 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6D15F213E46698E40DFF7CFB /* Pods-avocadoFinder.debug.xcconfig */,
-				8B7B60020D9015EADB0F15F2 /* Pods-avocadoFinder.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1342,12 +1343,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 937BB88F22416C9C00215E58 /* Build configuration list for PBXNativeTarget "avocadoFinder" */;
 			buildPhases = (
-				3228C10CEA93CFF28C275285 /* [CP] Check Pods Manifest.lock */,
+				D4993AD91B3C12D357036F49 /* [CP] Check Pods Manifest.lock */,
 				937BB87922416C9900215E58 /* Sources */,
 				937BB87A22416C9900215E58 /* Frameworks */,
 				937BB87B22416C9900215E58 /* Resources */,
-				9249EE20AD564AF6470BB4EF /* [CP] Copy Pods Resources */,
-				97D843031CD90122C1F1F6D4 /* [CP] Embed Pods Frameworks */,
+				DEDCBD30AD96CDD9AEF5CAD2 /* [CP] Embed Pods Frameworks */,
+				88E149DF7B687B7EF884195B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1426,7 +1427,6 @@
 				937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */,
 				93A445EF226B019F00386766 /* StaticPage.storyboard in Resources */,
 				938CFCF2238A780700953DCF /* Circe-Bold.ttf in Resources */,
-				93DB41CB227DE4EC00CC8113 /* NewsAndBlog.storyboard in Resources */,
 				93A7094223A5004E00D314CB /* AvoPopup.storyboard in Resources */,
 				938CFCEA238A780700953DCF /* Circe-Light.eot in Resources */,
 				931DF54422C5417400D43AB0 /* README.md in Resources */,
@@ -1440,6 +1440,7 @@
 				938CFCF5238A780700953DCF /* Circe-Light.woff in Resources */,
 				938CFCFA238A780700953DCF /* Circe-Regular.ttf in Resources */,
 				938CFCF7238A780700953DCF /* Circe-Thin.ttf in Resources */,
+				93539FCE23BE0733007D4F44 /* NewsAndBlog.storyboard in Resources */,
 				938CFCF9238A780700953DCF /* demo.html in Resources */,
 				938CFCF8238A780700953DCF /* Circe-Bold.eot in Resources */,
 				937BB88822416C9C00215E58 /* Assets.xcassets in Resources */,
@@ -1469,7 +1470,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3228C10CEA93CFF28C275285 /* [CP] Check Pods Manifest.lock */ = {
+		88E149DF7B687B7EF884195B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4993AD91B3C12D357036F49 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1491,38 +1516,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9249EE20AD564AF6470BB4EF /* [CP] Copy Pods Resources */ = {
+		DEDCBD30AD96CDD9AEF5CAD2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		97D843031CD90122C1F1F6D4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/HPGradientLoading/HPGradientLoading.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/VisualEffectView/VisualEffectView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGradientLoading.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualEffectView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1533,6 +1570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				931DF55022C5417400D43AB0 /* GMUFeature.m in Sources */,
+				93539FD423BE0733007D4F44 /* NewsAndBlogViewController.swift in Sources */,
 				932A65AC22B4EE9600065119 /* Constants.swift in Sources */,
 				93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */,
 				93FD666122D9E4CF0094A5A5 /* SettingsDataSource.swift in Sources */,
@@ -1542,12 +1580,11 @@
 				932A65A722B4ED5500065119 /* NewsServerProvider.swift in Sources */,
 				931DF55222C5417400D43AB0 /* GMUStyle.m in Sources */,
 				931DF54E22C5417400D43AB0 /* GMUPlacemark.m in Sources */,
-				932A65BD22B528D900065119 /* NewsAndBlogCoordinatorManager.swift in Sources */,
 				931DF54D22C5417400D43AB0 /* GMUGeometryCollection.m in Sources */,
-				93B34D9A227E20DD00DE48BD /* NewsAndBlogTableViewCell.swift in Sources */,
 				937BB88322416C9A00215E58 /* MapViewController.swift in Sources */,
+				93539FCF23BE0733007D4F44 /* NewsAndBlogDataSourceDelegate.swift in Sources */,
 				931DF54322C5417400D43AB0 /* GMUSimpleClusterAlgorithm.m in Sources */,
-				932A65BB22B5283B00065119 /* NewsAndBlogLayoutManager.swift in Sources */,
+				93539FD023BE0733007D4F44 /* NewsAndBlogTableViewCell.swift in Sources */,
 				93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */,
 				934767B323316D550078A5A4 /* PlaceType.swift in Sources */,
 				931DF54822C5417400D43AB0 /* GMUWeightedLatLng.m in Sources */,
@@ -1564,7 +1601,7 @@
 				93D1A6322288407D008DD01D /* PlaceInfoAddCommentTableViewCell.swift in Sources */,
 				93DB41CE227DE54600CC8113 /* AlwaysPoppableNavigationController.swift in Sources */,
 				937129EC227B736D0062AC78 /* AppColor.swift in Sources */,
-				932A65BF22B529A700065119 /* NewsAndBlogServerManager.swift in Sources */,
+				93539FD223BE0733007D4F44 /* NewsAndBlogLayoutManager.swift in Sources */,
 				932A659822B4E45300065119 /* HandleResponceMethod.swift in Sources */,
 				939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */,
 				932A659A22B4E4C600065119 /* ServerAuthorizedHeaders.swift in Sources */,
@@ -1581,6 +1618,7 @@
 				ECFA70B823BB845B00EF0FF8 /* MainNavigationManager.swift in Sources */,
 				EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */,
 				93D1A63022883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift in Sources */,
+				93539FD123BE0733007D4F44 /* NewsAndBlogCoordinatorManager.swift in Sources */,
 				93DB41DF227DEDB600CC8113 /* StoryboardExtention.swift in Sources */,
 				9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */,
 				93330D33224F56B5000A1BE3 /* ListOfPlacesTableViewCell.swift in Sources */,
@@ -1598,13 +1636,13 @@
 				93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */,
 				931DF54B22C5417400D43AB0 /* GMUKMLParser.m in Sources */,
 				931DF55622C5417400D43AB0 /* GQTPointQuadTree.m in Sources */,
+				93539FD323BE0733007D4F44 /* NewsAndBlogServerManager.swift in Sources */,
 				ECFA70BE23BD279500EF0FF8 /* MapDelegate.swift in Sources */,
+				93539FCD23BE0733007D4F44 /* NewsAndBlogDataSourceManager.swift in Sources */,
 				93A445ED226B017C00386766 /* StaticPageViewController.swift in Sources */,
-				93B34D9C227E213800DE48BD /* NewsAndBlogDataSourceManager.swift in Sources */,
 				932A65B322B4F45900065119 /* MapCoordinatorManager.swift in Sources */,
 				93DB41D3227DE79A00CC8113 /* OvalTabBarView.swift in Sources */,
 				93DB41D6227DE7E200CC8113 /* TabBarItemEnum.swift in Sources */,
-				93B34D9F227E2B8F00DE48BD /* NewsAndBlogDataSourceDelegate.swift in Sources */,
 				931DF55522C5417400D43AB0 /* GMUGeoJSONParser.m in Sources */,
 				937BB88122416C9900215E58 /* AppDelegate.swift in Sources */,
 				932A65A322B4E6B500065119 /* ShopModel.swift in Sources */,
@@ -1619,7 +1657,6 @@
 				931DF54F22C5417400D43AB0 /* GMUPolygon.m in Sources */,
 				93DB41C7227DD47E00CC8113 /* TabBarViewController.swift in Sources */,
 				932A65A522B4E6C400065119 /* CommentModel.swift in Sources */,
-				93B34D97227E18B400DE48BD /* NewsAndBlogViewController.swift in Sources */,
 				933B493722C2A4150011FE5F /* OneNewsInfoLayoutManager.swift in Sources */,
 				932A65B522B4F49000065119 /* MapServerManager.swift in Sources */,
 				931DF54122C5417400D43AB0 /* GMUDefaultClusterRenderer.m in Sources */,
@@ -1776,12 +1813,12 @@
 		};
 		937BB89022416C9C00215E58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D15F213E46698E40DFF7CFB /* Pods-avocadoFinder.debug.xcconfig */;
+			baseConfigurationReference = 11BBA67F90D636BA1729A7B1 /* Pods-avocadoFinder.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = xmasAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1799,12 +1836,12 @@
 		};
 		937BB89122416C9C00215E58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B7B60020D9015EADB0F15F2 /* Pods-avocadoFinder.release.xcconfig */;
+			baseConfigurationReference = C5E066B3D75EC91F10E82855 /* Pods-avocadoFinder.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = xmasAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
