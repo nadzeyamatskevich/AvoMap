@@ -56,9 +56,6 @@ class MapViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-    @IBAction func addNewPlaceButtonAction(_ sender: Any) {
-           coordinatorManager.pushAddNewPlaceViewController()
-       }
 }
 
 // MARK: -
@@ -85,6 +82,10 @@ extension MapViewController {
     
     @IBAction func myLocationButtonAction(_ sender: UIButton) {
         layoutManager.myLocationButtonAction()
+    }
+    
+    @IBAction func addNewPlaceButtonAction(_ sender: Any) {
+        coordinatorManager.pushAddNewPlaceViewController()
     }
     
 }
