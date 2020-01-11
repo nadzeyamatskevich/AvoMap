@@ -21,8 +21,11 @@ class SettingsCellConfigurator {
         addAuthorCell(value: AppAuthors.yanaPoddubskaya.rawValue)
         addAuthorCell(value: AppAuthors.katyarunkevich.rawValue)
         addAuthorCell(value: AppAuthors.antonsavicky.rawValue)
-        addInfoCell(value: AppDocuments.privacyPolicy.rawValue)
-        addInfoCell(value: AppDocuments.termsAndCondition.rawValue)
+        addAuthorCell(value: AppAuthors.avoMap.rawValue)
+        //addInfoCell(value: AppDocuments.privacyPolicy.rawValue)
+        //addInfoCell(value: AppDocuments.termsAndCondition.rawValue)
+        addInfoCell(value: AppInfo.addPlace.rawValue)
+        addInfoCell(value: AppInfo.proposeWork.rawValue)
         
         return cells
     }

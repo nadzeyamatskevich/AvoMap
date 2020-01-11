@@ -61,7 +61,7 @@ class AddNewPlaceViewController: UIViewController {
         addShopMapViewController.delegate = self
         self.shopAddressTextField.isSelected = false
         addAnalyticsEventMap()
-        self.navigationController?.pushViewController(addShopMapViewController, animated: true)
+        self.present(addShopMapViewController, animated: true, completion: nil)
     }
 }
 

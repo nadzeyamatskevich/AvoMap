@@ -84,11 +84,11 @@ extension AddShopMapViewController {
     
     @IBAction func addNewPlaceButtonAction(_ sender: Any) {
         delegate?.didAddLocation(latitude: avoMapView.projection.coordinate(for: avoMapView.center).latitude, longitude: avoMapView.projection.coordinate(for: avoMapView.center).longitude)
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func searchButtonAction(_ sender: UIButton) {

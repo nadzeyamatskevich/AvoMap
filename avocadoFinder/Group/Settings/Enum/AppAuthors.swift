@@ -14,6 +14,7 @@ enum AppAuthors: String {
     case yanaPoddubskaya = "@yana.poddubskaya"
     case katyarunkevich = "@katyarunkevich"
     case antonsavicky = "@anton.savitski"
+    case avoMap = "@avo_map"
     
     var avatarImage: String {
         switch self {
@@ -27,6 +28,8 @@ enum AppAuthors: String {
             return "antonsav"
         case .katyarunkevich:
             return "katya"
+        case .avoMap:
+            return "avoMap"
         }
     }
     
@@ -44,4 +47,9 @@ enum AppDocuments: String {
             return "https://avo-map.gitlab.io/terms-and-conditions"
         }
     }
+}
+
+enum AppInfo: String {
+    case addPlace = "Предложить заведение"
+    case proposeWork = "Предложить сотрудничество"
 }
