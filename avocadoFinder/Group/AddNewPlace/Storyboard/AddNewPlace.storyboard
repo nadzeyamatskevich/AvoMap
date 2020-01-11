@@ -131,10 +131,11 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ch-3P-CaY">
                                         <rect key="frame" x="224" y="104" width="54" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Карта">
-                                            <color key="titleColor" red="0.30918661260000002" green="0.31110739549999999" blue="0.38980339279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.0081427851689999994" green="0.44491571190000001" blue="0.38852256540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="openMapAction:" destination="iNK-jZ-tZG" eventType="touchUpInside" id="v6f-au-pkf"/>
@@ -184,7 +185,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX6-cq-5Ff">
                                 <rect key="frame" x="16" y="474" width="166" height="45"/>
-                                <color key="backgroundColor" red="0.0" green="0.90426713199999997" blue="0.68068788589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.48684924839999999" green="0.81574469800000005" blue="0.61807030439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="8Eq-pX-KbI"/>
                                     <constraint firstAttribute="height" constant="45" id="cM5-G9-svq"/>

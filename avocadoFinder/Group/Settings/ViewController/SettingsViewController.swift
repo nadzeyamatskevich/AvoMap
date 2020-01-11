@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import MessageUI
 
 class SettingsViewController: UIViewController {
     
@@ -39,7 +41,7 @@ class SettingsViewController: UIViewController {
 // MARK: -
 // MARK: - Navigation
 
-extension SettingsViewController: SettingsDataSourceDelegate {
+extension SettingsViewController: SettingsDataSourceDelegate, MFMailComposeViewControllerDelegate {
     
     func didTapOnCell(value: String) {
         openStaticPage(value: value)
@@ -52,8 +54,26 @@ extension SettingsViewController: SettingsDataSourceDelegate {
         case AppDocuments.termsAndCondition.rawValue:
             UIApplication.shared.open(NSURL(string: AppDocuments.termsAndCondition.urlForDocument)! as URL, options: [:], completionHandler: nil)
         default:
-            break
+            sendEmail(topic: value)
         }
+    }
+    
+    func sendEmail(topic: String) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["avomapminsk@gmail.com"])
+            mail.setMessageBody("<p>\(topic)</p>", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+            showAlert(title: "Ошибка!", message: "У вас не настроена почта, поэтому вы можете нам написать в директ инстаграмма)")
+        }
+    }
+
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     
 }
@@ -67,6 +87,7 @@ extension SettingsViewController {
         setupCellConfigurator()
         configureDataSource()
         configureTableView()
+        addAnalyticsEvent()
     }
     
     func configureDataSource() {
@@ -81,6 +102,10 @@ extension SettingsViewController {
     func configureTableView() {
         tableView.layer.masksToBounds = true
         tableView.layer.cornerRadius = 16
+    }
+    
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_settings", parameters: [:])
     }
     
 }

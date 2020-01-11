@@ -2,7 +2,6 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "toast-with-avocado-and-cress-royalty-free-image-544809990-1541541433.jpg",
       "scale" : "1x"
     },
     {
@@ -11,6 +10,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "Icon-App-40x40@3x.png",
       "scale" : "3x"
     }
   ],

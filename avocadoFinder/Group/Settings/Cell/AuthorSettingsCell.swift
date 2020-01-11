@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AuthorSettingsCell: UITableViewCell {
 
@@ -59,6 +60,8 @@ extension AuthorSettingsCell {
             return avatarImageView.image = UIImage(named: AppAuthors.katyarunkevich.avatarImage)
         case AppAuthors.antonsavicky.rawValue:
             return avatarImageView.image = UIImage(named: AppAuthors.antonsavicky.avatarImage)
+        case AppAuthors.avoMap.rawValue:
+            return avatarImageView.image = UIImage(named: AppAuthors.avoMap.avatarImage)
         default:
             break
         }
@@ -91,6 +94,12 @@ extension AuthorSettingsCell {
         } else {
             UIApplication.shared.open(NSURL(string: "http://instagram.com/\(user)")! as URL, options: [:], completionHandler: nil)
         }
+    }
+    
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_profile", parameters: [
+            "name": self.author as NSObject
+        ])
     }
     
 }

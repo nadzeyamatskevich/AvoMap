@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>559643986076-t9gkmv7ukn4l9vt8k70aak1h3eimhk6j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.559643986076-t9gkmv7ukn4l9vt8k70aak1h3eimhk6j</string>
+	<key>API_KEY</key>
+	<string>AIzaSyASdV0OnpMCPF0Wu3of-orC6--KWZe4PVs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>559643986076</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nadzeya.avocadoFinder</string>
+	<key>PROJECT_ID</key>
+	<string>avo-map-669d3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>avo-map-669d3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:559643986076:ios:c0ab7a950f73ecce1a8559</string>
+	<key>DATABASE_URL</key>
+	<string>https://avo-map-669d3.firebaseio.com</string>
+</dict>
+</plist>

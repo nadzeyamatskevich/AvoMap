@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import GoogleMaps
+import Firebase
 
 class MapLayoutManager: NSObject {
     
@@ -101,9 +102,19 @@ extension MapLayoutManager {
     func listOfPlacesButtonAction() {
         if viewController.isListHidden {
             showList()
+            addAnalyticsEventOpenList()
         } else {
             hideList()
+            addAnalyticsEventOpenMap()
         }
+    }
+    
+    func addAnalyticsEventOpenMap() {
+        Analytics.logEvent("open_map", parameters: [:])
+    }
+    
+    func addAnalyticsEventOpenList() {
+        Analytics.logEvent("open_list", parameters: [:])
     }
     
 }
@@ -189,13 +200,23 @@ extension MapLayoutManager {
         case 0:
             self.viewController.saveButton.isHidden = false
             self.shops = viewController.shops.filter {$0.type == "store"}
+            addAnalyticsEventOpenShops()
             showPluseButton()
         default:
             self.viewController.saveButton.isHidden = true
             self.shops = viewController.shops.filter {$0.type == "food_establishment"}
+            addAnalyticsEventOpenCafe()
             hidePluseButton()
         }
         self.update()
+    }
+    
+    func addAnalyticsEventOpenShops() {
+        Analytics.logEvent("open_shops", parameters: [:])
+    }
+    
+    func addAnalyticsEventOpenCafe() {
+        Analytics.logEvent("open_cafe", parameters: [:])
     }
     
 }
