@@ -191,7 +191,8 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
             marker.icon = generateImageWithText(text: "\(clusterMarker.count)")
         } else if let shop = marker.userData as? POIItem {
 
-            marker.icon = shop.shopType == "store" ? generateAvoPinWithPrice(text: shop.price) : UIImage(named: "foodPin")
+            marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
+            //marker.icon = shop.shopType == "store" ? generateAvoPinWithPrice(text: shop.price) : UIImage(named: "foodPin")
         } else {
             marker.icon = UIImage(named: "shopPin")
         }
@@ -303,7 +304,7 @@ fileprivate extension MapLayoutManager {
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 42, height: 51))
             imageView.contentMode = .scaleAspectFit
             imageView.backgroundColor = .clear
-            shop.type == PlaceType.store.rawValue ? (imageView.image = #imageLiteral(resourceName: "avoPin")) : (imageView.image = #imageLiteral(resourceName: "foodPin"))
+            shop.type == PlaceType.store.rawValue ? (imageView.image = #imageLiteral(resourceName: "shopPin")) : (imageView.image = #imageLiteral(resourceName: "foodPin"))
             
             let marker = GMSMarker()
             marker.iconView = imageView
