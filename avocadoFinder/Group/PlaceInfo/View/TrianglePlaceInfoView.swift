@@ -27,8 +27,8 @@ class TriangleView : UIView {
         context.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
         context.addLine(to: CGPoint(x: (rect.maxX / 2.0), y: rect.minY))
         context.closePath()
-
-        context.setFillColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.90)
+        
+        context.setFillColor(AppColor.black(alpha: 0.90).cgColor)
         context.fillPath()
     }
 }

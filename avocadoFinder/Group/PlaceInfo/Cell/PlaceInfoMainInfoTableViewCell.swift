@@ -23,6 +23,11 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()
+        
+        let labelTapGesture = UITapGestureRecognizer(target:self,action:#selector(copyToClipboard))
+        labelTapGesture.numberOfTapsRequired = 2
+        instagramLabel.isUserInteractionEnabled = true
+        instagramLabel.addGestureRecognizer(labelTapGesture)
     }
 
     func set(shop: ShopModel) {
@@ -30,10 +35,6 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
         shopAdress.text = shop.address
         instagramLabel.text = shop.author
         commentLabel.text = shop.shopDescription
-        
-        let labelTapGesture = UILongPressGestureRecognizer(target:self,action:#selector(copyToClipboard))
-        instagramLabel.isUserInteractionEnabled = true
-        instagramLabel.addGestureRecognizer(labelTapGesture)
     }
 }
 
@@ -72,14 +73,15 @@ extension PlaceInfoMainInfoTableViewCell {
     @objc func copyToClipboard() {
         let pasteboard = UIPasteboard.general
         pasteboard.string = self.instagramLabel.text
-        if self.popupView.alpha == 0.0 {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             self.popupView.alpha = 1.0
             self.triangleView.alpha = 1.0
-        } else {
-            UIView.animate(withDuration: 0.5, delay: 2, options: .curveEaseOut, animations: {
+        }, completion: {
+            finished in
+            UIView.animate(withDuration: 0.5, delay: 1, options: .curveEaseOut, animations: {
                 self.popupView.alpha = 0.0
                 self.triangleView.alpha = 0.0
             })
-        }
+        })
     }
 }
