@@ -28,5 +28,8 @@ target 'avocadoFinder' do
     
     #loader
     pod 'HPGradientLoading'
+    
+    # add the Firebase pod for Google Analytics
+    pod 'Firebase/Analytics'
 
 end

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8ABCE677179B0C0701ECFE /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E4602B8E49AFA079533ABA /* Pods_avocadoFinder.framework */; };
 		931DF49122C52BB700D43AB0 /* POIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49022C52BB700D43AB0 /* POIItem.swift */; };
 		931DF49422C52D0200D43AB0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49322C52D0200D43AB0 /* LocationManager.swift */; };
 		931DF49522C53DB800D43AB0 /* MapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B022B4F32C00065119 /* MapLayoutManager.swift */; };
@@ -94,6 +95,7 @@
 		938CFCFD238A780700953DCF /* Circe-Bold.woff in Resources */ = {isa = PBXBuildFile; fileRef = 938CFCE9238A780700953DCF /* Circe-Bold.woff */; };
 		938E5F1F22DB258500127849 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F1E22DB258500127849 /* SettingsCellType.swift */; };
 		938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */; };
+		9397954A23C9CFC500A1DAF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9397954923C9CFC500A1DAF5 /* GoogleService-Info.plist */; };
 		9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399376022D7BEC000E00AC2 /* DateExtention.swift */; };
 		939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */; };
 		939F051D22D237D700180648 /* PlaceInfoServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051C22D237D700180648 /* PlaceInfoServerManager.swift */; };
@@ -130,7 +132,6 @@
 		93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */; };
 		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
 		93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */; };
-		BBFCEEF309BE9BAFAB8256D3 /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21365C1D80A34EF047AED880 /* Pods_avocadoFinder.framework */; };
 		EC186E1423BE563000B9DF8B /* AddShopMapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */; };
 		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
 		EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2B23B9487D000A7FDD /* MainViewController.swift */; };
@@ -154,8 +155,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11BBA67F90D636BA1729A7B1 /* Pods-avocadoFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.debug.xcconfig"; sourceTree = "<group>"; };
-		21365C1D80A34EF047AED880 /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A3FCE6732EF6BA7B24459B3 /* Pods-avocadoFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		72480DE9CD5BD0147733A672 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
 		931DF49022C52BB700D43AB0 /* POIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIItem.swift; sourceTree = "<group>"; };
 		931DF49322C52D0200D43AB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		931DF4F822C5417300D43AB0 /* GMUGridBasedClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGridBasedClusterAlgorithm.m; sourceTree = "<group>"; };
@@ -285,6 +286,7 @@
 		938CFCE9238A780700953DCF /* Circe-Bold.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.woff"; sourceTree = "<group>"; };
 		938E5F1E22DB258500127849 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
 		938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceLayoutManager.swift; sourceTree = "<group>"; };
+		9397954923C9CFC500A1DAF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9399376022D7BEC000E00AC2 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoLayoutManager.swift; sourceTree = "<group>"; };
 		939F051C22D237D700180648 /* PlaceInfoServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoServerManager.swift; sourceTree = "<group>"; };
@@ -323,7 +325,7 @@
 		93FF9ED622F9FC4400C4D2F0 /* avocadoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avocadoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
 		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5E066B3D75EC91F10E82855 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
+		B3E4602B8E49AFA079533ABA /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddShopMapLayoutManager.swift; path = avocadoFinder/Group/AddShopMap/Protocol/AddShopMapLayoutManager.swift; sourceTree = SOURCE_ROOT; };
 		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
 		EC92FE2B23B9487D000A7FDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -341,7 +343,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBFCEEF309BE9BAFAB8256D3 /* Pods_avocadoFinder.framework in Frameworks */,
+				4D8ABCE677179B0C0701ECFE /* Pods_avocadoFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +357,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		288774C2E8C58A80A6C06FD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3E4602B8E49AFA079533ABA /* Pods_avocadoFinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7820A29709D93E6279183B9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A3FCE6732EF6BA7B24459B3 /* Pods-avocadoFinder.debug.xcconfig */,
+				72480DE9CD5BD0147733A672 /* Pods-avocadoFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		931DF48F22C52B9B00D43AB0 /* Item */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,8 +775,8 @@
 				937BB87F22416C9900215E58 /* avocadoFinder */,
 				93FF9ED722F9FC4500C4D2F0 /* avocadoFinderTests */,
 				937BB87E22416C9900215E58 /* Products */,
-				B24883019DFDDCFD93D091EB /* Pods */,
-				A5942E95875FF3A96885BB7F /* Frameworks */,
+				7820A29709D93E6279183B9B /* Pods */,
+				288774C2E8C58A80A6C06FD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -778,6 +797,7 @@
 				93A445BA226AFC8500386766 /* Core */,
 				93330D2F224F5505000A1BE3 /* AvocadoFinder */,
 				937BB88C22416C9C00215E58 /* Info.plist */,
+				9397954923C9CFC500A1DAF5 /* GoogleService-Info.plist */,
 				931DF55822C547CB00D43AB0 /* AVOMAP-Bridging-Header.h */,
 			);
 			path = avocadoFinder;
@@ -1266,23 +1286,6 @@
 			path = avocadoFinderTests;
 			sourceTree = "<group>";
 		};
-		A5942E95875FF3A96885BB7F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				21365C1D80A34EF047AED880 /* Pods_avocadoFinder.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B24883019DFDDCFD93D091EB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				11BBA67F90D636BA1729A7B1 /* Pods-avocadoFinder.debug.xcconfig */,
-				C5E066B3D75EC91F10E82855 /* Pods-avocadoFinder.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		EC92FE2723B94826000A7FDD /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1357,12 +1360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 937BB88F22416C9C00215E58 /* Build configuration list for PBXNativeTarget "avocadoFinder" */;
 			buildPhases = (
-				D4993AD91B3C12D357036F49 /* [CP] Check Pods Manifest.lock */,
+				97F027558BB70FDCEBCE2F97 /* [CP] Check Pods Manifest.lock */,
 				937BB87922416C9900215E58 /* Sources */,
 				937BB87A22416C9900215E58 /* Frameworks */,
 				937BB87B22416C9900215E58 /* Resources */,
-				DEDCBD30AD96CDD9AEF5CAD2 /* [CP] Embed Pods Frameworks */,
-				88E149DF7B687B7EF884195B /* [CP] Copy Pods Resources */,
+				AE210DA67B2A23BD7CB1B40B /* [CP] Embed Pods Frameworks */,
+				47FF3AEDC3E7843FD7D382D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1445,6 +1448,7 @@
 				938CFCEA238A780700953DCF /* Circe-Light.eot in Resources */,
 				931DF54422C5417400D43AB0 /* README.md in Resources */,
 				93D1A62C22882BDA008DD01D /* PlaceInfo.storyboard in Resources */,
+				9397954A23C9CFC500A1DAF5 /* GoogleService-Info.plist in Resources */,
 				93A445BF226AFCCB00386766 /* AddNewPlace.storyboard in Resources */,
 				931DF54022C5417400D43AB0 /* LICENSE in Resources */,
 				938CFCED238A780700953DCF /* Circe-Regular.woff in Resources */,
@@ -1484,24 +1488,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		88E149DF7B687B7EF884195B /* [CP] Copy Pods Resources */ = {
+		47FF3AEDC3E7843FD7D382D9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D4993AD91B3C12D357036F49 /* [CP] Check Pods Manifest.lock */ = {
+		97F027558BB70FDCEBCE2F97 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1523,21 +1534,54 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEDCBD30AD96CDD9AEF5CAD2 /* [CP] Embed Pods Frameworks */ = {
+		AE210DA67B2A23BD7CB1B40B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/HPGradientLoading/HPGradientLoading.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/VisualEffectView/VisualEffectView.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGradientLoading.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualEffectView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1793,11 +1837,11 @@
 		};
 		937BB89022416C9C00215E58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11BBA67F90D636BA1729A7B1 /* Pods-avocadoFinder.debug.xcconfig */;
+			baseConfigurationReference = 1A3FCE6732EF6BA7B24459B3 /* Pods-avocadoFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1805,7 +1849,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";
@@ -1816,11 +1860,11 @@
 		};
 		937BB89122416C9C00215E58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5E066B3D75EC91F10E82855 /* Pods-avocadoFinder.release.xcconfig */;
+			baseConfigurationReference = 72480DE9CD5BD0147733A672 /* Pods-avocadoFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1828,7 +1872,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";

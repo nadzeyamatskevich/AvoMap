@@ -9,6 +9,7 @@
 import UIKit
 import GooglePlaces
 import HPGradientLoading
+import Firebase
 
 class AddNewPlaceViewController: UIViewController {
     
@@ -59,6 +60,7 @@ class AddNewPlaceViewController: UIViewController {
         let addShopMapViewController = UIStoryboard(storyboard: .addShopMap).instantiateInitialViewController() as! AddShopMapViewController
         addShopMapViewController.delegate = self
         self.shopAddressTextField.isSelected = false
+        addAnalyticsEventMap()
         self.navigationController?.pushViewController(addShopMapViewController, animated: true)
     }
 }
@@ -91,6 +93,7 @@ extension AddNewPlaceViewController: GMSAutocompleteViewControllerDelegate {
         shopAddressTextField.text = place.name
         newShop.longitude = "\(place.coordinate.longitude)"
         newShop.latitude = "\(place.coordinate.latitude)"
+        addAnalyticsEventText()
         dismiss(animated: true, completion: nil)
     }
     
@@ -170,6 +173,7 @@ extension AddNewPlaceViewController {
             } else if response != nil {
                 HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: nil)
+                self?.addAnalyticsEventAddPlace()
                 strongSelf.navigationController?.popViewController(animated: true)
             }
         }
@@ -184,12 +188,29 @@ extension AddNewPlaceViewController {
     
     func configure() {
         configureLayoutManager()
+        addAnalyticsEvent()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func configureLayoutManager() {
         layoutManager = AddNewPlaceLayoutManager(viewController: self)
+    }
+    
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_addNewPlace", parameters: [:])
+    }
+    
+    func addAnalyticsEventAddPlace() {
+        Analytics.logEvent("add_newPlace", parameters: [:])
+    }
+    
+    func addAnalyticsEventMap() {
+        Analytics.logEvent("newPlace_openMap", parameters: [:])
+    }
+    
+    func addAnalyticsEventText() {
+        Analytics.logEvent("newPlace_openTextField", parameters: [:])
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
 
 class MapViewController: UIViewController {
 
@@ -48,6 +49,7 @@ class MapViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+        addAnalyticsEvent()
         layoutManager.viewWillAppear()
     }
     
@@ -136,6 +138,10 @@ extension MapViewController {
           }
           tableView.reloadData()
       }
+    
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_map", parameters: [:])
+    }
   
     
 }
