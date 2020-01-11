@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -131,11 +131,13 @@
 		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
 		93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */; };
 		BBFCEEF309BE9BAFAB8256D3 /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21365C1D80A34EF047AED880 /* Pods_avocadoFinder.framework */; };
+		EC186E1423BE563000B9DF8B /* AddShopMapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */; };
 		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
 		EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2B23B9487D000A7FDD /* MainViewController.swift */; };
 		EC92FE2E23B9488B000A7FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92FE2D23B9488B000A7FDD /* Main.storyboard */; };
 		EC92FE3123B948A3000A7FDD /* ManagerLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE3023B948A3000A7FDD /* ManagerLayoutManager.swift */; };
 		ECC994AD23B8BE4F00C77999 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC994AC23B8BE4F00C77999 /* AppFont.swift */; };
+		ECF2B5E023BE2123003398D3 /* AddShopMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF2B5DF23BE2123003398D3 /* AddShopMapDelegate.swift */; };
 		ECFA70B823BB845B00EF0FF8 /* MainNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA70B723BB845B00EF0FF8 /* MainNavigationManager.swift */; };
 		ECFA70BB23BD265F00EF0FF8 /* ListOfPlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA70BA23BD265F00EF0FF8 /* ListOfPlacesDataSource.swift */; };
 		ECFA70BE23BD279500EF0FF8 /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA70BD23BD279500EF0FF8 /* MapDelegate.swift */; };
@@ -322,11 +324,13 @@
 		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
 		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E066B3D75EC91F10E82855 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
+		EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddShopMapLayoutManager.swift; path = avocadoFinder/Group/AddShopMap/Protocol/AddShopMapLayoutManager.swift; sourceTree = SOURCE_ROOT; };
 		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
 		EC92FE2B23B9487D000A7FDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC92FE2D23B9488B000A7FDD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EC92FE3023B948A3000A7FDD /* ManagerLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerLayoutManager.swift; sourceTree = "<group>"; };
 		ECC994AC23B8BE4F00C77999 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		ECF2B5DF23BE2123003398D3 /* AddShopMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShopMapDelegate.swift; sourceTree = "<group>"; };
 		ECFA70B723BB845B00EF0FF8 /* MainNavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationManager.swift; sourceTree = "<group>"; };
 		ECFA70BA23BD265F00EF0FF8 /* ListOfPlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPlacesDataSource.swift; sourceTree = "<group>"; };
 		ECFA70BD23BD279500EF0FF8 /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
@@ -609,6 +613,7 @@
 		93418686236779E100A9429B /* AddShopMap */ = {
 			isa = PBXGroup;
 			children = (
+				ECF2B5DE23BE2102003398D3 /* Protocol */,
 				9341868923677A1200A9429B /* Manager */,
 				9341868823677A0000A9429B /* Storyboard */,
 				93418687236779F600A9429B /* ViewController */,
@@ -635,6 +640,7 @@
 		9341868923677A1200A9429B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1320,6 +1326,14 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		ECF2B5DE23BE2102003398D3 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				ECF2B5DF23BE2123003398D3 /* AddShopMapDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		ECFA70B923BD263C00EF0FF8 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1476,22 +1490,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D4993AD91B3C12D357036F49 /* [CP] Check Pods Manifest.lock */ = {
@@ -1522,44 +1529,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
-				"${BUILT_PRODUCTS_DIR}/HPGradientLoading/HPGradientLoading.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/VisualEffectView/VisualEffectView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGradientLoading.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualEffectView.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1614,10 +1592,12 @@
 				938E5F1F22DB258500127849 /* SettingsCellType.swift in Sources */,
 				931DF55122C5417400D43AB0 /* GMUGroundOverlay.m in Sources */,
 				931DF49422C52D0200D43AB0 /* LocationManager.swift in Sources */,
+				ECF2B5E023BE2123003398D3 /* AddShopMapDelegate.swift in Sources */,
 				939F052022D2388800180648 /* PlaceInfoDataSourceDelegate.swift in Sources */,
 				ECFA70B823BB845B00EF0FF8 /* MainNavigationManager.swift in Sources */,
 				EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */,
 				93D1A63022883081008DD01D /* PlaceInfoMainInfoTableViewCell.swift in Sources */,
+				EC186E1423BE563000B9DF8B /* AddShopMapLayoutManager.swift in Sources */,
 				93539FD123BE0733007D4F44 /* NewsAndBlogCoordinatorManager.swift in Sources */,
 				93DB41DF227DEDB600CC8113 /* StoryboardExtention.swift in Sources */,
 				9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */,

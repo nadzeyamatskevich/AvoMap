@@ -46,7 +46,7 @@ DEPENDENCIES:
   - SwiftyJSON (~> 5.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Device
     - GoogleMaps
@@ -90,4 +90,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 823284ecf39d2eea975ae1467296ed0c321d678f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4
