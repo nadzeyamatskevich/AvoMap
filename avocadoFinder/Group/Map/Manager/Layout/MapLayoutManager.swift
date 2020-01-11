@@ -136,7 +136,7 @@ extension MapLayoutManager: GMUClusterManagerDelegate {
             UIImageView(image: UIImage(named: "shopPin")) :
             UIImageView(image: UIImage(named: "foodPin"))
             if Double(lat)! > -85.0 && Double(lat)! < 85.0 && Double(lng)! > -180.0 && Double(lng)! < 180.0 {
-                let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView, shopType: shopType)
+                let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView, shopType: shopType)//, price: shop.price)
                 clusterManager.add(item)
             }            
         }
@@ -268,6 +268,7 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
         } else if let shop = marker.userData as? POIItem {
 
             marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
+            //marker.icon = shop.shopType == "store" ? generateAvoPinWithPrice(text: shop.price) : UIImage(named: "foodPin")
         } else {
             marker.icon = UIImage(named: "shopPin")
         }
@@ -278,18 +279,40 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
         let image = state == 0 ? UIImage(named: "shopPin")! : UIImage(named: "foodPin")!
         let imageView = UIImageView(image: image)
         imageView.backgroundColor = .clear
-        imageView.frame = CGRect(x: 0, y: 0, width: image.size.width - 10, height: image.size.height - 10)
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: image.size.width - 8, height: image.size.height - 30))
+        imageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height - 20))
         label.backgroundColor = .clear
         label.textAlignment = .center
         label.textColor = state == 0 ? .white : AppColor.darkGreen
+        label.text = text
+        
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let imageWithText = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return imageWithText!
+    }
+    
+    func generateAvoPinWithPrice(text: String) -> UIImage {
+        let image = UIImage(named: "avoPin")!
+        
+        let imageView = UIImageView(image: image)
+        imageView.backgroundColor = .clear
+        imageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+        
+        let label = UILabel(frame: CGRect(x: 0, y: image.size.width/3, width: image.size.width, height: image.size.height/4))
+        label.backgroundColor = .red
+        label.textAlignment = .center
+        label.textColor = .white
         label.text = text
         
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, 0);
         imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
         label.layer.render(in: UIGraphicsGetCurrentContext()!)
         let imageWithText = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext();
+        UIGraphicsEndImageContext()
         
         return imageWithText!
     }
