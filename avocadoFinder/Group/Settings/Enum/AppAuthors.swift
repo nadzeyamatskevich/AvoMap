@@ -49,7 +49,7 @@ enum AppDocuments: String {
     }
 }
 
-enum AppInfo: String {
+enum AppInfoCell: String {
     case addPlace = "Предложить заведение"
     case proposeWork = "Предложить сотрудничество"
 }

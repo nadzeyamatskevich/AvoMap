@@ -96,6 +96,7 @@
 		938E5F1F22DB258500127849 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F1E22DB258500127849 /* SettingsCellType.swift */; };
 		938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */; };
 		9397954A23C9CFC500A1DAF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9397954923C9CFC500A1DAF5 /* GoogleService-Info.plist */; };
+		9397954C23CB1FB600A1DAF5 /* AppUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9397954B23CB1FB600A1DAF5 /* AppUpdater.swift */; };
 		9399376122D7BEC000E00AC2 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399376022D7BEC000E00AC2 /* DateExtention.swift */; };
 		939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */; };
 		939F051D22D237D700180648 /* PlaceInfoServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939F051C22D237D700180648 /* PlaceInfoServerManager.swift */; };
@@ -287,6 +288,8 @@
 		938E5F1E22DB258500127849 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
 		938E5F2122DB2D8000127849 /* AddNewPlaceLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceLayoutManager.swift; sourceTree = "<group>"; };
 		9397954923C9CFC500A1DAF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9397954B23CB1FB600A1DAF5 /* AppUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdater.swift; sourceTree = "<group>"; };
+		9397954D23CB24C300A1DAF5 /* avocadoFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = avocadoFinder.entitlements; sourceTree = "<group>"; };
 		9399376022D7BEC000E00AC2 /* DateExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		939F051822D236AE00180648 /* PlaceInfoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoLayoutManager.swift; sourceTree = "<group>"; };
 		939F051C22D237D700180648 /* PlaceInfoServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoServerManager.swift; sourceTree = "<group>"; };
@@ -386,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				931DF49322C52D0200D43AB0 /* LocationManager.swift */,
+				9397954B23CB1FB600A1DAF5 /* AppUpdater.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -792,6 +796,7 @@
 		937BB87F22416C9900215E58 /* avocadoFinder */ = {
 			isa = PBXGroup;
 			children = (
+				9397954D23CB24C300A1DAF5 /* avocadoFinder.entitlements */,
 				931DF4F722C5417300D43AB0 /* Google-Maps-iOS-Utils */,
 				93A445B6226AFBF900386766 /* Group */,
 				93A445BA226AFC8500386766 /* Core */,
@@ -1656,6 +1661,7 @@
 				933B493522C29BD60011FE5F /* UIViewControllerExtention.swift in Sources */,
 				9361F2B2228843D300071339 /* PlaceInfoDataSource.swift in Sources */,
 				93A445F1226B01D300386766 /* OneNewsInfoViewController.swift in Sources */,
+				9397954C23CB1FB600A1DAF5 /* AppUpdater.swift in Sources */,
 				931DF55722C5417400D43AB0 /* GQTPointQuadTreeChild.m in Sources */,
 				93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */,
 				931DF54B22C5417400D43AB0 /* GMUKMLParser.m in Sources */,
@@ -1840,6 +1846,7 @@
 			baseConfigurationReference = 1A3FCE6732EF6BA7B24459B3 /* Pods-avocadoFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = avocadoFinder/avocadoFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;
@@ -1863,6 +1870,7 @@
 			baseConfigurationReference = 72480DE9CD5BD0147733A672 /* Pods-avocadoFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = avocadoFinder/avocadoFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 66SNAL3L8F;

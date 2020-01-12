@@ -15,10 +15,10 @@ extension UIViewController {
         self.showAlert(title: "Ошибка", message: error, completion: completion)
     }
     
-    func showAlert(title: String, message: String, completion: (() -> Void)? = nil) {
+    func showAlert(title: String, message: String, buttonText: String = "OK", completion: (() -> Void)? = nil) {
         let avoPopupViewController = UIStoryboard(storyboard: .avoPopup).instantiateInitialViewController() as! AvoPopupViewController
         avoPopupViewController.modalPresentationStyle = .overFullScreen
-        avoPopupViewController.set(title: title, subtitle: message, buttonText: "OK")
+        avoPopupViewController.set(title: title, subtitle: message, buttonText: buttonText)
         avoPopupViewController.alertButtonHandler = completion
         self.present(avoPopupViewController, animated: false, completion: nil)
     }

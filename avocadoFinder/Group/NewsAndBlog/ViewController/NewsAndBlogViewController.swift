@@ -29,6 +29,7 @@ class NewsAndBlogViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
         layoutManager.viewWillAppear(animated)
+        AppUpdater.shared.showUpdate(withConfirmation: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
