@@ -17,6 +17,7 @@ class MainLayoutManager: NSObject {
     private var mapVC: MapViewController
     private var newsVC: NewsAndBlogViewController
     private var settingsVC: SettingsViewController
+    private var recipesVC: StaticPageViewController
     private var screens: [UIViewController]
     
     // - Data
@@ -29,7 +30,8 @@ class MainLayoutManager: NSObject {
         newsVC = UIStoryboard(storyboard: .newsAndBlog).instantiateInitialViewController() as! NewsAndBlogViewController
         mapVC = UIStoryboard(storyboard: .map).instantiateInitialViewController() as! MapViewController
         settingsVC = UIStoryboard(storyboard: .settings).instantiateInitialViewController() as! SettingsViewController
-        screens = [newsVC, mapVC, settingsVC]
+        recipesVC = UIStoryboard(storyboard: .staticPage).instantiateInitialViewController() as! StaticPageViewController
+        screens = [newsVC, recipesVC, mapVC, settingsVC]
         super.init()
         configure()
     }

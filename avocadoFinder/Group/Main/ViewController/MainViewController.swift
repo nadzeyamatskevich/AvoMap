@@ -86,14 +86,16 @@ extension MainViewController {
 
     enum NotSelectedImage: String, CaseIterable {
         case news
+        case recipes
         case map
         case settings
 
         init?(id : Int) {
             switch id {
             case 1: self = .news
-            case 2: self = .map
-            case 3: self = .settings
+            case 2: self = .recipes
+            case 3: self = .map
+            case 4: self = .settings
             default: return nil
             }
         }
@@ -101,14 +103,16 @@ extension MainViewController {
     
     enum SelectedImage: String, CaseIterable {
         case newsSelect
+        case recipesSelect
         case mapSelect
         case settingsSelect
 
         init?(id : Int) {
             switch id {
             case 1: self = .newsSelect
-            case 2: self = .mapSelect
-            case 3: self = .settingsSelect
+            case 3: self = .mapSelect
+            case 2: self = .recipesSelect
+            case 4: self = .settingsSelect
             default: return nil
             }
         }

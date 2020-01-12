@@ -112,20 +112,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-4K-lGX">
-                                                    <rect key="frame" x="44" y="17" width="302" height="30.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="hih-Q0-lac"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="44" y="18" width="302" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="19"/>
                                                     <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gy5-4K-lGX" secondAttribute="bottom" constant="16.5" id="aEX-GG-aSB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gy5-4K-lGX" secondAttribute="trailing" constant="16" id="ccr-O3-quO"/>
-                                                <constraint firstItem="gy5-4K-lGX" firstAttribute="top" secondItem="9zH-Aq-a4J" secondAttribute="top" constant="17" id="qZC-I4-Uaq"/>
                                                 <constraint firstItem="gy5-4K-lGX" firstAttribute="leading" secondItem="9zH-Aq-a4J" secondAttribute="leadingMargin" constant="24" id="sGZ-hb-A1j"/>
+                                                <constraint firstItem="gy5-4K-lGX" firstAttribute="centerY" secondItem="9zH-Aq-a4J" secondAttribute="centerY" id="wUa-gj-CUZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
