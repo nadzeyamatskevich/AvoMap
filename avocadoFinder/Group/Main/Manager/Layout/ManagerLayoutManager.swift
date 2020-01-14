@@ -17,7 +17,7 @@ class MainLayoutManager: NSObject {
     private var mapVC: MapViewController
     private var newsVC: NewsAndBlogViewController
     private var settingsVC: SettingsViewController
-    private var recipesVC: StaticPageViewController
+    private var recipesVC: RecipesViewController
     private var screens: [UIViewController]
     
     // - Data
@@ -30,7 +30,7 @@ class MainLayoutManager: NSObject {
         newsVC = UIStoryboard(storyboard: .newsAndBlog).instantiateInitialViewController() as! NewsAndBlogViewController
         mapVC = UIStoryboard(storyboard: .map).instantiateInitialViewController() as! MapViewController
         settingsVC = UIStoryboard(storyboard: .settings).instantiateInitialViewController() as! SettingsViewController
-        recipesVC = UIStoryboard(storyboard: .staticPage).instantiateInitialViewController() as! StaticPageViewController
+        recipesVC = UIStoryboard(storyboard: .recipes).instantiateInitialViewController() as! RecipesViewController
         screens = [newsVC, recipesVC, mapVC, settingsVC]
         super.init()
         configure()
@@ -76,7 +76,6 @@ extension MainLayoutManager {
             $1.willMove(toParent: vc)
             $1.view.frame = vc.containerView.frame
             $1.view.frame.origin = CGPoint(x: Int(vc.containerView.bounds.width) * $0, y: yPosition)
-//            setupDelegate(object: $1)
         }
     }
     
@@ -89,13 +88,6 @@ extension MainLayoutManager {
         vc.scrollView.bounces = false
     }
     
-//    func setupDelegate(object: UIViewController) {
-//        if let plan = object as? PlanVC { plan.delegate = vc}
-//        if let statistics = object as? StatisticsWithHistoryVC { statistics.delegate = vc}
-//        if let profile = object as? ProfileVC { profile.delegate = vc}
-//        if let more = object as? MoreVC { more.delegate = vc}
-//    }
-    
 }
 
 // MARK: - Configure
@@ -104,10 +96,6 @@ private extension MainLayoutManager {
     
     func configure() {
         setupScrollView()
-    }
-    
-    func initViewControllers() {
-        
     }
 
 }
