@@ -28,8 +28,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.application = application
 
         FirebaseApp.configure()
+        
+        setUserID()
 
         return true
+    }
+    
+    func setUserID() {
+        if let id = KeychainManager.shared.id {
+            print("id -> \(id)")
+        } else {
+            KeychainManager.shared.saveUserID(UUID().uuidString)
+        }
     }
 
     func setupRootViewController() {

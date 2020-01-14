@@ -1,0 +1,44 @@
+//
+//  AddNewPlaceDescriptionTableViewCell.swift
+//  avocadoFinder
+//
+//  Created by Nick Poe on 1/14/20.
+//  Copyright © 2020 Nadzeya Savitskaya. All rights reserved.
+//
+
+import UIKit
+
+class AddNewPlaceDescriptionTableViewCell: UITableViewCell {
+    
+    // - UI
+    @IBOutlet var degreeOfRipenessImageViewCollection: [UIImageView]!
+    @IBOutlet weak var degreeOfRipenessSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var productSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var commentTextField: UITextField!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configureMainView()
+    }
+    
+    func configureMainView() {
+        mainView.layer.cornerRadius = 16
+        mainView.setupOnlyBottomShadow(color: AppColor.black(alpha: 0.1))
+    }
+    
+    func changeType(isAVO: Bool) {
+        if #available(iOS 13.0, *) {
+            productSegmentedControl.selectedSegmentTintColor = isAVO ? AppColor.avo : AppColor.orange
+            degreeOfRipenessSegmentedControl.selectedSegmentTintColor = isAVO ? AppColor.avo : AppColor.orange
+        } else {
+            productSegmentedControl.tintColor = isAVO ? AppColor.avo : AppColor.orange
+            degreeOfRipenessSegmentedControl.tintColor = isAVO ? AppColor.avo : AppColor.orange
+        }
+        let badImage = isAVO ? UIImage(named: "badAvocado") : UIImage(named: "badMango")
+        let image = isAVO ? UIImage(named: "shopPin") : UIImage(named: "mango")
+        UIView.transition(with: degreeOfRipenessImageViewCollection[1], duration: 0.5, options: .transitionCrossDissolve, animations: { self.degreeOfRipenessImageViewCollection[1].image = badImage }, completion: nil)
+        UIView.transition(with: degreeOfRipenessImageViewCollection[0], duration: 0.5, options: .transitionCrossDissolve, animations: { self.degreeOfRipenessImageViewCollection[0].image = image }, completion: nil)
+    }
+
+}

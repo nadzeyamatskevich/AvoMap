@@ -146,11 +146,11 @@ extension UIView {
         superview?.insertSubview(shadowView, belowSubview: self)
     }
     
-    func setupShadow(color: UIColor) {
+    func setupShadow(color: UIColor, radius: CGFloat = 10) {
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOpacity = 1.0
         self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 10
+        self.layer.shadowRadius = radius
         self.layer.masksToBounds = false
     }
     

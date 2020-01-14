@@ -14,7 +14,8 @@ enum AppColor {
     static let darkCyan   = color(fromHex: "3bbab6")
     static let green      = color(fromHex: "abdc90")
     static let darkGreen  = color(fromHex: "003300")
-    
+    static let avo        = color(fromHex: "7CD09E")
+    static let orange     = color(fromHex: "FFA93F")
     static let grayTabBar = UIColor(red: 144/255, green: 144/255, blue: 144/255, alpha: 1)
     
     static func black(alpha: CGFloat = 1.0) -> UIColor {

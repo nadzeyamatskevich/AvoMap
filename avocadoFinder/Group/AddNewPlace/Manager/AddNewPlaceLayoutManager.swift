@@ -19,6 +19,11 @@ class AddNewPlaceLayoutManager: NSObject {
         configure()
     }
     
+    func changeNavbar(isAVO: Bool) {
+        let image = isAVO ? UIImage(named: "listOfPlacesNavBarBg") : UIImage(named: "orangeNavBar")
+        UIView.transition(with: viewController.navBarImageView, duration: 0.5, options: .transitionCrossDissolve, animations: { self.viewController.navBarImageView.image = image }, completion: nil)
+    }
+    
 }
 
 // MARK: -
@@ -28,35 +33,18 @@ extension AddNewPlaceLayoutManager {
     
     func configure() {
         configureKeyboard()
-        configureMainView()
-        configureSaveButton()
-        configureAuthorName()
-    }
-    
-    func configureAuthorName() {
-        viewController.shopAuthorTextField.text = UserDefaults.standard.string(forKey: UserDefaultsEnum.authorNameKey.rawValue) ?? ""
     }
     
     func configureKeyboard() {
         viewController.hideKeyboardWhenTappedAround()
     }
     
-    func configureMainView() {
-        viewController.mainView.layer.cornerRadius = 16
-        viewController.mainView.setupShadow(color: AppColor.black(alpha: 0.1))
-    }
-    
-    func configureSaveButton() {
-        viewController.saveButton.layer.cornerRadius = 16
-        viewController.saveButton.setupShadow(color: AppColor.black(alpha: 0.1))
-    }
-    
-    func configureNavigationBar() {
-        switch UIScreen.main.bounds.height {
-            case ...568:    viewController.navigationBarHeightConstraint.constant = 150
-            case 667...736: viewController.navigationBarHeightConstraint.constant = 176
-            default:        viewController.navigationBarHeightConstraint.constant = 186
-        }
-    }
+//    func configureNavigationBar() {
+//        switch UIScreen.main.bounds.height {
+//            case ...568:    viewController.navigationBarHeightConstraint.constant = 150
+//            case 667...736: viewController.navigationBarHeightConstraint.constant = 176
+//            default:        viewController.navigationBarHeightConstraint.constant = 186
+//        }
+//    }
     
 }

@@ -71,6 +71,7 @@ PODS:
   - HPGradientLoading (1.3.3):
     - SnapKit (~> 5.0.0)
     - VisualEffectView (~> 4.0.0)
+  - KeychainAccess (4.1.0)
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
@@ -104,6 +105,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - HPGradientLoading
+  - KeychainAccess
   - Kingfisher (~> 5.0)
   - Moya (~> 12.0)
   - RAMAnimatedTabBarController (from `https://github.com/denbay/animated-tab-bar.git`)
@@ -128,6 +130,7 @@ SPEC REPOS:
     - GooglePlaces
     - GoogleUtilities
     - HPGradientLoading
+    - KeychainAccess
     - Kingfisher
     - Moya
     - nanopb
@@ -164,6 +167,7 @@ SPEC CHECKSUMS:
   GooglePlaces: a62077320f9d64239245af63aa1aa136393ebeb6
   GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
   HPGradientLoading: b9e46a196b8caf68bd520de3ae02fcddbf5c3781
+  KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -176,6 +180,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   VisualEffectView: 8c05bdc77490d84aabfa9fd17b1ffd6476da0e2c
 
-PODFILE CHECKSUM: d947a20a7dd4c08a495b02ea3a34d979a28c6a9b
+PODFILE CHECKSUM: a63d3c04b9cc0d75356668be614df1bc34f4663a
 
 COCOAPODS: 1.8.4

@@ -31,5 +31,8 @@ target 'avocadoFinder' do
     
     # add the Firebase pod for Google Analytics
     pod 'Firebase/Analytics'
+    
+    # Keychain
+    pod 'KeychainAccess'
 
 end
