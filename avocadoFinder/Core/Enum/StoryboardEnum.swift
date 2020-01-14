@@ -13,6 +13,10 @@ enum Storyboard: String {
     // - Main
     case main = "Main"
     
+    // - Recipes
+    case recipes = "Recipes"
+    case recipeInfo = "RecipeInfo"
+    
     // - Tab Bar
     case tabBar = "TabBar"
     

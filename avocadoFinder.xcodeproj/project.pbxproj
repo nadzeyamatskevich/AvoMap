@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -133,6 +133,19 @@
 		93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD666C22D9F2670094A5A5 /* SettingsCellViewModel.swift */; };
 		93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FD667022D9F7650094A5A5 /* AppAuthors.swift */; };
 		93FF9ED922F9FC4500C4D2F0 /* avocadoFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */; };
+		EC07952123CDB21200CD2689 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07952023CDB21200CD2689 /* RecipesViewController.swift */; };
+		EC07952323CDB22600CD2689 /* RecipesDataSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07952223CDB22600CD2689 /* RecipesDataSourceManager.swift */; };
+		EC07952523CDB28C00CD2689 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07952423CDB28C00CD2689 /* RecipeTableViewCell.swift */; };
+		EC07952823CDB2B700CD2689 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC07952723CDB2B700CD2689 /* Recipes.storyboard */; };
+		EC07952B23CDB83600CD2689 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07952A23CDB83600CD2689 /* RecipeModel.swift */; };
+		EC07952E23CDB8D100CD2689 /* RecipesDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07952D23CDB8D100CD2689 /* RecipesDataSourceDelegate.swift */; };
+		EC07953323CDB99400CD2689 /* RecipesServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07953223CDB99400CD2689 /* RecipesServerManager.swift */; };
+		EC07953523CDBA1000CD2689 /* RecipesServerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07953423CDBA1000CD2689 /* RecipesServerProvider.swift */; };
+		EC07953723CDBAAF00CD2689 /* RecipesLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07953623CDBAAF00CD2689 /* RecipesLayoutManager.swift */; };
+		EC07953923CDBC8B00CD2689 /* RecipesCoordinatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07953823CDBC8B00CD2689 /* RecipesCoordinatorManager.swift */; };
+		EC07953F23CDBDA300CD2689 /* RecipeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07953E23CDBDA300CD2689 /* RecipeInfoViewController.swift */; };
+		EC07954123CDBE3600CD2689 /* RecipeInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC07954023CDBE3600CD2689 /* RecipeInfo.storyboard */; };
+		EC07954323CDBEA300CD2689 /* RecipeInfoLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07954223CDBEA300CD2689 /* RecipeInfoLayoutManager.swift */; };
 		EC186E1423BE563000B9DF8B /* AddShopMapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */; };
 		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
 		EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2B23B9487D000A7FDD /* MainViewController.swift */; };
@@ -329,6 +342,19 @@
 		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
 		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3E4602B8E49AFA079533ABA /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC07952023CDB21200CD2689 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		EC07952223CDB22600CD2689 /* RecipesDataSourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDataSourceManager.swift; sourceTree = "<group>"; };
+		EC07952423CDB28C00CD2689 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		EC07952723CDB2B700CD2689 /* Recipes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
+		EC07952A23CDB83600CD2689 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		EC07952D23CDB8D100CD2689 /* RecipesDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDataSourceDelegate.swift; sourceTree = "<group>"; };
+		EC07953223CDB99400CD2689 /* RecipesServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesServerManager.swift; sourceTree = "<group>"; };
+		EC07953423CDBA1000CD2689 /* RecipesServerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesServerProvider.swift; sourceTree = "<group>"; };
+		EC07953623CDBAAF00CD2689 /* RecipesLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesLayoutManager.swift; sourceTree = "<group>"; };
+		EC07953823CDBC8B00CD2689 /* RecipesCoordinatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCoordinatorManager.swift; sourceTree = "<group>"; };
+		EC07953E23CDBDA300CD2689 /* RecipeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoViewController.swift; sourceTree = "<group>"; };
+		EC07954023CDBE3600CD2689 /* RecipeInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeInfo.storyboard; sourceTree = "<group>"; };
+		EC07954223CDBEA300CD2689 /* RecipeInfoLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfoLayoutManager.swift; sourceTree = "<group>"; };
 		EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddShopMapLayoutManager.swift; path = avocadoFinder/Group/AddShopMap/Protocol/AddShopMapLayoutManager.swift; sourceTree = SOURCE_ROOT; };
 		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
 		EC92FE2B23B9487D000A7FDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -511,6 +537,7 @@
 			children = (
 				932A65A622B4ED5500065119 /* NewsServerProvider.swift */,
 				932A65A822B4ED6600065119 /* ShopServerProvider.swift */,
+				EC07953423CDBA1000CD2689 /* RecipesServerProvider.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -879,6 +906,8 @@
 		93A445B6226AFBF900386766 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				EC07953A23CDBD1300CD2689 /* RecipeInfo */,
+				EC07951A23CDACE800CD2689 /* Recipes */,
 				EC92FE2723B94826000A7FDD /* Main */,
 				93A7094023A5001000D314CB /* AvocadoAlert */,
 				93DB41CC227DE52C00CC8113 /* Navigation */,
@@ -949,6 +978,7 @@
 		93A445BD226AFCA200386766 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC07952923CDB81300CD2689 /* Recipes */,
 				932A659F22B4E68E00065119 /* Shop */,
 				932A659E22B4E67E00065119 /* News */,
 				932A659B22B4E55200065119 /* Error */,
@@ -1291,6 +1321,143 @@
 			path = avocadoFinderTests;
 			sourceTree = "<group>";
 		};
+		EC07951A23CDACE800CD2689 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				EC07952C23CDB8C200CD2689 /* Protocol */,
+				EC07952623CDB2A800CD2689 /* Storyboard */,
+				EC07951E23CDAD4500CD2689 /* Manager */,
+				EC07951D23CDAD3E00CD2689 /* Cell */,
+				EC07951C23CDAD3200CD2689 /* DataSource */,
+				EC07951B23CDACF800CD2689 /* ViewController */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		EC07951B23CDACF800CD2689 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC07952023CDB21200CD2689 /* RecipesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC07951C23CDAD3200CD2689 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EC07952223CDB22600CD2689 /* RecipesDataSourceManager.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EC07951D23CDAD3E00CD2689 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC07952423CDB28C00CD2689 /* RecipeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EC07951E23CDAD4500CD2689 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EC07953123CDB97400CD2689 /* Server */,
+				EC07953023CDB96C00CD2689 /* Layout */,
+				EC07952F23CDB96500CD2689 /* Coordinator */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EC07952623CDB2A800CD2689 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EC07952723CDB2B700CD2689 /* Recipes.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EC07952923CDB81300CD2689 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				EC07952A23CDB83600CD2689 /* RecipeModel.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		EC07952C23CDB8C200CD2689 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EC07952D23CDB8D100CD2689 /* RecipesDataSourceDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EC07952F23CDB96500CD2689 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EC07953823CDBC8B00CD2689 /* RecipesCoordinatorManager.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EC07953023CDB96C00CD2689 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EC07953623CDBAAF00CD2689 /* RecipesLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EC07953123CDB97400CD2689 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				EC07953223CDB99400CD2689 /* RecipesServerManager.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		EC07953A23CDBD1300CD2689 /* RecipeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EC07953D23CDBD3700CD2689 /* Manager */,
+				EC07953C23CDBD3100CD2689 /* Storyboard */,
+				EC07953B23CDBD2A00CD2689 /* ViewController */,
+			);
+			path = RecipeInfo;
+			sourceTree = "<group>";
+		};
+		EC07953B23CDBD2A00CD2689 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC07953E23CDBDA300CD2689 /* RecipeInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EC07953C23CDBD3100CD2689 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EC07954023CDBE3600CD2689 /* RecipeInfo.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EC07953D23CDBD3700CD2689 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EC07954523CDBEB000CD2689 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EC07954523CDBEB000CD2689 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EC07954223CDBEA300CD2689 /* RecipeInfoLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		EC92FE2723B94826000A7FDD /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1446,6 +1613,7 @@
 				938CFCF4238A780700953DCF /* Circe-Regular.eot in Resources */,
 				9341868B23677A2500A9429B /* AddShopMap.storyboard in Resources */,
 				938CFCEC238A780700953DCF /* Circe-ExtraBold.eot in Resources */,
+				EC07952823CDB2B700CD2689 /* Recipes.storyboard in Resources */,
 				937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */,
 				93A445EF226B019F00386766 /* StaticPage.storyboard in Resources */,
 				938CFCF2238A780700953DCF /* Circe-Bold.ttf in Resources */,
@@ -1465,6 +1633,7 @@
 				938CFCF7238A780700953DCF /* Circe-Thin.ttf in Resources */,
 				93539FCE23BE0733007D4F44 /* NewsAndBlog.storyboard in Resources */,
 				938CFCF9238A780700953DCF /* demo.html in Resources */,
+				EC07954123CDBE3600CD2689 /* RecipeInfo.storyboard in Resources */,
 				938CFCF8238A780700953DCF /* Circe-Bold.eot in Resources */,
 				937BB88822416C9C00215E58 /* Assets.xcassets in Resources */,
 				938CFCEE238A780700953DCF /* Circe-Thin.woff in Resources */,
@@ -1499,22 +1668,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97F027558BB70FDCEBCE2F97 /* [CP] Check Pods Manifest.lock */ = {
@@ -1545,48 +1707,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/HPGradientLoading/HPGradientLoading.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/VisualEffectView/VisualEffectView.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGradientLoading.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisualEffectView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1599,21 +1728,26 @@
 				931DF55022C5417400D43AB0 /* GMUFeature.m in Sources */,
 				93539FD423BE0733007D4F44 /* NewsAndBlogViewController.swift in Sources */,
 				932A65AC22B4EE9600065119 /* Constants.swift in Sources */,
+				EC07952523CDB28C00CD2689 /* RecipeTableViewCell.swift in Sources */,
 				93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */,
 				93FD666122D9E4CF0094A5A5 /* SettingsDataSource.swift in Sources */,
+				EC07953323CDB99400CD2689 /* RecipesServerManager.swift in Sources */,
 				931DF54922C5417400D43AB0 /* GMUGradient.m in Sources */,
 				931DF55422C5417400D43AB0 /* GMULineString.m in Sources */,
 				931DF54C22C5417400D43AB0 /* GMUGeometryRenderer.m in Sources */,
 				932A65A722B4ED5500065119 /* NewsServerProvider.swift in Sources */,
 				931DF55222C5417400D43AB0 /* GMUStyle.m in Sources */,
+				EC07953923CDBC8B00CD2689 /* RecipesCoordinatorManager.swift in Sources */,
 				931DF54E22C5417400D43AB0 /* GMUPlacemark.m in Sources */,
 				931DF54D22C5417400D43AB0 /* GMUGeometryCollection.m in Sources */,
 				937BB88322416C9A00215E58 /* MapViewController.swift in Sources */,
 				93539FCF23BE0733007D4F44 /* NewsAndBlogDataSourceDelegate.swift in Sources */,
 				931DF54322C5417400D43AB0 /* GMUSimpleClusterAlgorithm.m in Sources */,
+				EC07953723CDBAAF00CD2689 /* RecipesLayoutManager.swift in Sources */,
 				93539FD023BE0733007D4F44 /* NewsAndBlogTableViewCell.swift in Sources */,
 				93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */,
 				934767B323316D550078A5A4 /* PlaceType.swift in Sources */,
+				EC07952123CDB21200CD2689 /* RecipesViewController.swift in Sources */,
 				931DF54822C5417400D43AB0 /* GMUWeightedLatLng.m in Sources */,
 				EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */,
 				938E5F2222DB2D8000127849 /* AddNewPlaceLayoutManager.swift in Sources */,
@@ -1631,6 +1765,7 @@
 				93539FD223BE0733007D4F44 /* NewsAndBlogLayoutManager.swift in Sources */,
 				932A659822B4E45300065119 /* HandleResponceMethod.swift in Sources */,
 				939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */,
+				EC07952B23CDB83600CD2689 /* RecipeModel.swift in Sources */,
 				932A659A22B4E4C600065119 /* ServerAuthorizedHeaders.swift in Sources */,
 				931DF54522C5417400D43AB0 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				9361F2B02288433C00071339 /* PlaceInfoViewController.swift in Sources */,
@@ -1656,10 +1791,12 @@
 				93FD666A22D9F1CF0094A5A5 /* SettingsCellConfigurator.swift in Sources */,
 				93DB41DB227DEA6400CC8113 /* UIViewExtention.swift in Sources */,
 				931DF53F22C5417400D43AB0 /* GMUClusterManager.m in Sources */,
+				EC07952E23CDB8D100CD2689 /* RecipesDataSourceDelegate.swift in Sources */,
 				93DB41D9227DE9FA00CC8113 /* TabBarAnimation.swift in Sources */,
 				ECC994AD23B8BE4F00C77999 /* AppFont.swift in Sources */,
 				933B493522C29BD60011FE5F /* UIViewControllerExtention.swift in Sources */,
 				9361F2B2228843D300071339 /* PlaceInfoDataSource.swift in Sources */,
+				EC07952323CDB22600CD2689 /* RecipesDataSourceManager.swift in Sources */,
 				93A445F1226B01D300386766 /* OneNewsInfoViewController.swift in Sources */,
 				9397954C23CB1FB600A1DAF5 /* AppUpdater.swift in Sources */,
 				931DF55722C5417400D43AB0 /* GQTPointQuadTreeChild.m in Sources */,
@@ -1669,6 +1806,8 @@
 				93539FD323BE0733007D4F44 /* NewsAndBlogServerManager.swift in Sources */,
 				ECFA70BE23BD279500EF0FF8 /* MapDelegate.swift in Sources */,
 				93539FCD23BE0733007D4F44 /* NewsAndBlogDataSourceManager.swift in Sources */,
+				EC07954323CDBEA300CD2689 /* RecipeInfoLayoutManager.swift in Sources */,
+				EC07953523CDBA1000CD2689 /* RecipesServerProvider.swift in Sources */,
 				93A445ED226B017C00386766 /* StaticPageViewController.swift in Sources */,
 				932A65B322B4F45900065119 /* MapCoordinatorManager.swift in Sources */,
 				93DB41D3227DE79A00CC8113 /* OvalTabBarView.swift in Sources */,
@@ -1685,6 +1824,7 @@
 				93D1BDEA2336962800E26354 /* UserDefaultsEnum.swift in Sources */,
 				932A65A922B4ED6600065119 /* ShopServerProvider.swift in Sources */,
 				931DF54F22C5417400D43AB0 /* GMUPolygon.m in Sources */,
+				EC07953F23CDBDA300CD2689 /* RecipeInfoViewController.swift in Sources */,
 				93DB41C7227DD47E00CC8113 /* TabBarViewController.swift in Sources */,
 				932A65A522B4E6C400065119 /* CommentModel.swift in Sources */,
 				933B493722C2A4150011FE5F /* OneNewsInfoLayoutManager.swift in Sources */,
