@@ -11,6 +11,7 @@ import GoogleMaps
 import GooglePlaces
 import RAMAnimatedTabBarController
 import Firebase
+import AlamofireNetworkActivityLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -58,6 +59,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         window?.makeKeyAndVisible()
+    }
+    
+    func configureNetworkActivityLogger() {
+        NetworkActivityLogger.shared.level = .debug
+        NetworkActivityLogger.shared.startLogging()
     }
     
 }

@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
+  - AlamofireNetworkActivityLogger (2.4.0):
+    - Alamofire (~> 4.8)
   - Device (3.2.1)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
@@ -100,6 +102,7 @@ PODS:
   - VisualEffectView (4.0.2)
 
 DEPENDENCIES:
+  - AlamofireNetworkActivityLogger (~> 2.0)
   - Device
   - Firebase/Analytics
   - GoogleMaps
@@ -116,6 +119,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireNetworkActivityLogger
     - Device
     - Firebase
     - FirebaseAnalytics
@@ -153,6 +157,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireNetworkActivityLogger: 6d3398c692d2c5d83b0c58793537860aca1e383d
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
@@ -180,6 +185,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   VisualEffectView: 8c05bdc77490d84aabfa9fd17b1ffd6476da0e2c
 
-PODFILE CHECKSUM: a63d3c04b9cc0d75356668be614df1bc34f4663a
+PODFILE CHECKSUM: a22f6bf89f1a9adddf22ebd125240391ede7930f
 
 COCOAPODS: 1.8.4

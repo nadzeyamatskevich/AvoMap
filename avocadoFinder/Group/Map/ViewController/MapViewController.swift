@@ -39,6 +39,7 @@ class MapViewController: UIViewController {
     // - Data
     var shops: [ShopModel] = []
     var isListHidden = true
+    var type: TypeOfFruit = .mango
     
     // - Lifecycle
     override func viewDidLoad() {
