@@ -27,6 +27,8 @@ class MapCoordinatorManager {
     
     func pushAddNewPlaceViewController() {
         let addNewPlaceViewController = UIStoryboard(storyboard: .addNewPlace).instantiateInitialViewController() as! AddNewPlaceViewController
+        addNewPlaceViewController.type = viewController.type
+        addNewPlaceViewController.delegate = viewController
         viewController.navigationController?.pushViewController(addNewPlaceViewController, animated: true)
     }
     

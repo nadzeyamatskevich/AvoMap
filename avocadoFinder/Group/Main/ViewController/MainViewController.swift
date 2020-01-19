@@ -80,6 +80,7 @@ class MainViewController: UIViewController {
     
 }
 
+// MARK: -
 // MARK: - Action
 
 extension MainViewController {
@@ -120,6 +121,7 @@ extension MainViewController {
 
 }
 
+// MARK: -
 // MARK: - Configure
 
 extension MainViewController {
@@ -140,4 +142,20 @@ extension MainViewController {
     }
     
 }
+
+// MARK: -
+// MARK: - MainDelegate
+
+extension MainViewController: MainDelegate {
+    
+    func changeType(type: TypeOfFruit) {
+        layoutManager.newsVC.changType(type: type)
+        layoutManager.recipesVC.changType(type: type)
+        layoutManager.settingsVC.changType(type: type)
+    }
+    
+    
+}
+
+
 

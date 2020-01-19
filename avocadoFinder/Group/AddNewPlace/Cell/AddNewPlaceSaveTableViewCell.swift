@@ -23,5 +23,9 @@ class AddNewPlaceSaveTableViewCell: UITableViewCell {
             self?.viewBackgroundView.backgroundColor = isAVO ? AppColor.avo : AppColor.orange
         }
     }
+    
+    func setType(type: TypeOfFruit) {
+        viewBackgroundView.backgroundColor = type == .avocado ? AppColor.avo : AppColor.orange
+    }
 
 }

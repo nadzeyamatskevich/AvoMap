@@ -12,6 +12,7 @@ class NewsAndBlogViewController: UIViewController {
     
     // - UI
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navBarBgImageView: UIImageView!
     
     // - Manager
     fileprivate var layoutManager: NewsAndBlogLayoutManager!
@@ -35,6 +36,11 @@ class NewsAndBlogViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    func changType(type: TypeOfFruit) {
+        let image = type == .avocado ? UIImage(named: "newsNavBarBg") : UIImage(named: "mangoNavBar")
+        navBarBgImageView.image = image
     }
 
 }

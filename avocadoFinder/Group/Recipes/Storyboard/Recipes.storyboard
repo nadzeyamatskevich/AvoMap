@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GRs-ew-aQo">
-                                <rect key="frame" x="0.0" y="131" width="414" height="731"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Recipe" rowHeight="143" id="tVx-Ns-RFk" customClass="RecipeTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
@@ -101,10 +101,10 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFD-hT-aHM">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderRecipes" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-uT-YHU">
-                                        <rect key="frame" x="0.0" y="-8" width="414" height="167"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,8 +112,8 @@
                                     <constraint firstItem="VYP-uT-YHU" firstAttribute="leading" secondItem="vFD-hT-aHM" secondAttribute="leading" id="18B-pj-uod"/>
                                     <constraint firstAttribute="bottom" secondItem="VYP-uT-YHU" secondAttribute="bottom" constant="7" id="41M-Mk-HnA"/>
                                     <constraint firstAttribute="trailing" secondItem="VYP-uT-YHU" secondAttribute="trailing" id="QcC-d5-apA"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="166" id="sBb-hF-Y6P"/>
-                                    <constraint firstItem="VYP-uT-YHU" firstAttribute="top" secondItem="vFD-hT-aHM" secondAttribute="top" constant="-8" id="sac-QS-nYi"/>
+                                    <constraint firstAttribute="height" constant="164" id="sBb-hF-Y6P"/>
+                                    <constraint firstItem="VYP-uT-YHU" firstAttribute="top" secondItem="vFD-hT-aHM" secondAttribute="top" id="sac-QS-nYi"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо рецепты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKl-vl-PBL">
@@ -141,7 +141,7 @@
                             <constraint firstItem="4iZ-L2-Xcr" firstAttribute="leading" secondItem="ZQ2-lT-IEE" secondAttribute="leading" constant="16" id="bWh-PZ-9ld"/>
                             <constraint firstItem="vFD-hT-aHM" firstAttribute="leading" secondItem="ZQ2-lT-IEE" secondAttribute="leading" id="dlx-u3-DtK"/>
                             <constraint firstItem="IKl-vl-PBL" firstAttribute="top" secondItem="ZQ2-lT-IEE" secondAttribute="top" constant="15" id="qeL-Yk-pOF"/>
-                            <constraint firstItem="GRs-ew-aQo" firstAttribute="top" secondItem="vFD-hT-aHM" secondAttribute="bottom" constant="-35" id="t0J-zw-PJj"/>
+                            <constraint firstItem="GRs-ew-aQo" firstAttribute="top" secondItem="vFD-hT-aHM" secondAttribute="bottom" constant="-36" id="t0J-zw-PJj"/>
                             <constraint firstItem="ZQ2-lT-IEE" firstAttribute="trailing" secondItem="4iZ-L2-Xcr" secondAttribute="trailing" constant="10" id="yJP-R9-1cl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZQ2-lT-IEE"/>
@@ -150,6 +150,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="navBarBgImageView" destination="VYP-uT-YHU" id="QLk-pO-bdk"/>
                         <outlet property="tableView" destination="GRs-ew-aQo" id="X8Q-U8-EGl"/>
                     </connections>
                 </viewController>
@@ -159,7 +160,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HeaderRecipes" width="750" height="333"/>
+        <image name="HeaderRecipes" width="375" height="160"/>
         <image name="avoShape" width="81" height="171.5"/>
     </resources>
 </document>

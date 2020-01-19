@@ -29,8 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.application = application
 
         FirebaseApp.configure()
-        
         setUserID()
+        
+        configureNetworkActivityLogger()
 
         return true
     }

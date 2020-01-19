@@ -11,7 +11,7 @@ import UIKit
 class AddNewPlaceLayoutManager: NSObject {
     
     // - UI
-    fileprivate unowned let viewController: AddNewPlaceViewController
+    private unowned let viewController: AddNewPlaceViewController
     
     init(viewController: AddNewPlaceViewController) {
         self.viewController = viewController
@@ -33,18 +33,15 @@ extension AddNewPlaceLayoutManager {
     
     func configure() {
         configureKeyboard()
+        setNavBar()
     }
     
     func configureKeyboard() {
         viewController.hideKeyboardWhenTappedAround()
     }
     
-//    func configureNavigationBar() {
-//        switch UIScreen.main.bounds.height {
-//            case ...568:    viewController.navigationBarHeightConstraint.constant = 150
-//            case 667...736: viewController.navigationBarHeightConstraint.constant = 176
-//            default:        viewController.navigationBarHeightConstraint.constant = 186
-//        }
-//    }
+    func setNavBar() {
+        viewController.navBarImageView.image = viewController.type == .avocado ? #imageLiteral(resourceName: "listOfPlacesNavBarBg") : #imageLiteral(resourceName: "orangeNavBar")
+    }
     
 }

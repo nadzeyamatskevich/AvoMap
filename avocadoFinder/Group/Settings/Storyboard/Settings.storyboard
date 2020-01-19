@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="pMv-d5-Sdb">
-                                <rect key="frame" x="-10" y="-10" width="434" height="168.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="158.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="r21-7e-OLY"/>
                                 </constraints>
@@ -42,13 +42,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-kL-1EC">
-                                <rect key="frame" x="289" y="40" width="125" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="9JZ-Cf-vKC"/>
-                                    <constraint firstAttribute="height" constant="120" id="rUp-ZW-8Wt"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-hX-t7d">
                                 <rect key="frame" x="16" y="99" width="175.5" height="25.5"/>
                                 <constraints>
@@ -130,6 +123,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-kL-1EC">
+                                <rect key="frame" x="289" y="40" width="125" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="9JZ-Cf-vKC"/>
+                                    <constraint firstAttribute="height" constant="120" id="rUp-ZW-8Wt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -137,7 +137,7 @@
                             <constraint firstItem="4vL-bd-8BO" firstAttribute="bottom" secondItem="FPt-H3-VMD" secondAttribute="bottom" constant="20" id="9tf-Nl-5cy"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="top" secondItem="QMJ-hX-t7d" secondAttribute="bottom" constant="39" id="Hwk-XB-uNh"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="top" secondItem="pMv-d5-Sdb" secondAttribute="bottom" constant="5" id="NEl-53-sq1"/>
-                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="leading" secondItem="Yef-8c-o3K" secondAttribute="leading" constant="-10" id="Ppg-5j-Z9k"/>
+                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="leading" secondItem="Yef-8c-o3K" secondAttribute="leading" id="Ppg-5j-Z9k"/>
                             <constraint firstItem="QMJ-hX-t7d" firstAttribute="top" secondItem="0sF-T1-MPJ" secondAttribute="bottom" id="X1d-VI-BqS"/>
                             <constraint firstItem="QMJ-hX-t7d" firstAttribute="leading" secondItem="0sF-T1-MPJ" secondAttribute="leading" id="aSh-E2-Jpp"/>
                             <constraint firstItem="0sF-T1-MPJ" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="aVK-3n-nBS"/>
@@ -145,8 +145,8 @@
                             <constraint firstItem="dK8-kL-1EC" firstAttribute="trailing" secondItem="4vL-bd-8BO" secondAttribute="trailing" id="bjq-pa-wqf"/>
                             <constraint firstItem="4vL-bd-8BO" firstAttribute="trailing" secondItem="FPt-H3-VMD" secondAttribute="trailing" constant="16" id="ivD-mV-Wj9"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="oBF-tX-ETk"/>
-                            <constraint firstAttribute="trailing" secondItem="pMv-d5-Sdb" secondAttribute="trailing" constant="-10" id="vPr-la-C0p"/>
-                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" constant="-10" id="x9W-J0-BuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="pMv-d5-Sdb" secondAttribute="trailing" id="vPr-la-C0p"/>
+                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" id="x9W-J0-BuZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4vL-bd-8BO"/>
                         <userDefinedRuntimeAttributes>
@@ -154,6 +154,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="navBarBgImageView" destination="pMv-d5-Sdb" id="Jgt-U2-9z9"/>
                         <outlet property="tableView" destination="FPt-H3-VMD" id="B1N-1K-lBi"/>
                     </connections>
                 </viewController>
@@ -165,6 +166,6 @@
     <resources>
         <image name="avocadoSettingsNavBar" width="141" height="211.5"/>
         <image name="minina" width="422" height="411"/>
-        <image name="navBarBg" width="375" height="166.5"/>
+        <image name="navBarBg" width="562.5" height="222.5"/>
     </resources>
 </document>

@@ -11,11 +11,15 @@ import UIKit
 class RecipesLayoutManager: NSObject {
     
     // - UI
-    fileprivate unowned let viewController: RecipesViewController
+    private unowned let viewController: RecipesViewController
+    
+    // - Manager
+    private let userDefaultsManager = UserDefaultsManager()
     
     init(viewController: RecipesViewController) {
         self.viewController = viewController
         super.init()
+        configure()
     }
     
     func viewWillAppear(_ animated: Bool) {
@@ -49,6 +53,12 @@ private extension RecipesLayoutManager {
     
     func getServerData() {
         getRecipes()
+    }
+    
+    func configure() {
+        let type = userDefaultsManager.get(data: .type)
+        let image = type == "\(TypeOfFruit.mango)" ?  #imageLiteral(resourceName: "mangoNavBar") : #imageLiteral(resourceName: "HeaderRecipes")
+        viewController.navBarBgImageView.image = image
     }
     
 }

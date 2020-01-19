@@ -158,6 +158,8 @@
 		EC07956323CE602F00CD2689 /* VoluteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956223CE602F00CD2689 /* VoluteTableViewCell.swift */; };
 		EC07956623CE622000CD2689 /* VolutesDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956523CE622000CD2689 /* VolutesDataSourceDelegate.swift */; };
 		EC07956823D4808400CD2689 /* TypeOfFruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956723D4808400CD2689 /* TypeOfFruit.swift */; };
+		EC07956B23D4C2BB00CD2689 /* MainDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956A23D4C2BB00CD2689 /* MainDelegate.swift */; };
+		EC07956D23D4EF7D00CD2689 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956C23D4EF7D00CD2689 /* UserDefaultsManager.swift */; };
 		EC186E1423BE563000B9DF8B /* AddShopMapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */; };
 		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
 		EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2B23B9487D000A7FDD /* MainViewController.swift */; };
@@ -379,6 +381,8 @@
 		EC07956223CE602F00CD2689 /* VoluteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoluteTableViewCell.swift; sourceTree = "<group>"; };
 		EC07956523CE622000CD2689 /* VolutesDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolutesDataSourceDelegate.swift; sourceTree = "<group>"; };
 		EC07956723D4808400CD2689 /* TypeOfFruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFruit.swift; sourceTree = "<group>"; };
+		EC07956A23D4C2BB00CD2689 /* MainDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDelegate.swift; sourceTree = "<group>"; };
+		EC07956C23D4EF7D00CD2689 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddShopMapLayoutManager.swift; path = avocadoFinder/Group/AddShopMap/Protocol/AddShopMapLayoutManager.swift; sourceTree = SOURCE_ROOT; };
 		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
 		EC92FE2B23B9487D000A7FDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -441,6 +445,7 @@
 				931DF49322C52D0200D43AB0 /* LocationManager.swift */,
 				9397954B23CB1FB600A1DAF5 /* AppUpdater.swift */,
 				EC07955023CDF5DF00CD2689 /* KeychainManager.swift */,
+				EC07956C23D4EF7D00CD2689 /* UserDefaultsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1566,9 +1571,18 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		EC07956923D4C2A800CD2689 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EC07956A23D4C2BB00CD2689 /* MainDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		EC92FE2723B94826000A7FDD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				EC07956923D4C2A800CD2689 /* Protocol */,
 				EC92FE2A23B94852000A7FDD /* Manager */,
 				EC92FE2923B9484B000A7FDD /* Storyboard */,
 				EC92FE2823B94842000A7FDD /* ViewController */,
@@ -1850,6 +1864,7 @@
 				931DF55222C5417400D43AB0 /* GMUStyle.m in Sources */,
 				EC07953923CDBC8B00CD2689 /* RecipesCoordinatorManager.swift in Sources */,
 				931DF54E22C5417400D43AB0 /* GMUPlacemark.m in Sources */,
+				EC07956B23D4C2BB00CD2689 /* MainDelegate.swift in Sources */,
 				931DF54D22C5417400D43AB0 /* GMUGeometryCollection.m in Sources */,
 				937BB88322416C9A00215E58 /* MapViewController.swift in Sources */,
 				93539FCF23BE0733007D4F44 /* NewsAndBlogDataSourceDelegate.swift in Sources */,
@@ -1919,6 +1934,7 @@
 				93A445F1226B01D300386766 /* OneNewsInfoViewController.swift in Sources */,
 				9397954C23CB1FB600A1DAF5 /* AppUpdater.swift in Sources */,
 				931DF55722C5417400D43AB0 /* GQTPointQuadTreeChild.m in Sources */,
+				EC07956D23D4EF7D00CD2689 /* UserDefaultsManager.swift in Sources */,
 				93FD667122D9F7650094A5A5 /* AppAuthors.swift in Sources */,
 				931DF54B22C5417400D43AB0 /* GMUKMLParser.m in Sources */,
 				931DF55622C5417400D43AB0 /* GQTPointQuadTree.m in Sources */,
@@ -2133,7 +2149,7 @@
 				CODE_SIGN_ENTITLEMENTS = avocadoFinder/avocadoFinder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = 66SNAL3L8F;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = avocadoFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2141,7 +2157,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

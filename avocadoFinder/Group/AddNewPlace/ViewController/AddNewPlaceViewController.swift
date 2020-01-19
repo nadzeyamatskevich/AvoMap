@@ -28,6 +28,10 @@ class AddNewPlaceViewController: UIViewController {
     // - Data
     private let newShop = ShopModel()
     private var userName = ""
+    var type: TypeOfFruit = .avocado
+    
+    // - Delegate
+    var delegate: MapDelegate?
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -59,8 +63,10 @@ class AddNewPlaceViewController: UIViewController {
     
     @IBAction func changeTypeSegmentedControlAction(_ sender: UISegmentedControl) {
         let state = sender.selectedSegmentIndex == 0 ? true : false
+        type = sender.selectedSegmentIndex == 0 ? .avocado : .mango
         dataSource.changeType(isAVO: state)
         layoutManager.changeNavbar(isAVO: state)
+        delegate?.updateTypeAfterReturn(type: type)
     }
     
     @IBAction func openMapAction(_ sender: Any) {
@@ -207,7 +213,7 @@ extension AddNewPlaceViewController {
     func configureDataSource() {
         dataSource = AddNewPlaceDataSourceManager(tableView: tableView)
         dataSource.delegate = self
-        dataSource.set(userName: userName)
+        dataSource.set(userName: userName, type: type)
     }
     
     func addAnalyticsEvent() {

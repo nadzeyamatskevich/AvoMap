@@ -22,6 +22,7 @@ class AddNewPlaceDataSourceManager: NSObject {
     private(set) var address: String = ""
     private(set) var name: String = ""
     private(set) var comment: String = ""
+    private(set) var type: TypeOfFruit = .avocado
     
     // - Lifecycle
     init(tableView: UITableView) {
@@ -30,7 +31,8 @@ class AddNewPlaceDataSourceManager: NSObject {
         configure()
     }
     
-    func set(userName: String) {
+    func set(userName: String, type: TypeOfFruit) {
+        self.type = type
         self.userName = userName
         configureCells()
         tableView.reloadData()
@@ -103,11 +105,13 @@ extension AddNewPlaceDataSourceManager {
     
     func descriptionCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.description.rawValue, for: indexPath) as! AddNewPlaceDescriptionTableViewCell
+        cell.setType(type: type)
         return cell
     }
     
     func saveCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.save.rawValue, for: indexPath) as! AddNewPlaceSaveTableViewCell
+        cell.setType(type: type)
         return cell
     }
     

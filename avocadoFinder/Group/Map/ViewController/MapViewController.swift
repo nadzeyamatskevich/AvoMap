@@ -13,12 +13,15 @@ import Firebase
 class MapViewController: UIViewController {
 
     // - UI
+    @IBOutlet weak var myPosition: UIView!
+    @IBOutlet weak var plusView: UIView!
+    @IBOutlet weak var navBarBgImageView: UIImageView!
     @IBOutlet weak var listButton: UIButton!
     @IBOutlet weak var listView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var avoMapView: GMSMapView!
-    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var contentTypeControl: UISegmentedControl!
+    @IBOutlet weak var typeControl: UISegmentedControl!
     
     // - Constraint
     @IBOutlet weak var listTopConstraint: NSLayoutConstraint!
@@ -35,11 +38,15 @@ class MapViewController: UIViewController {
     private var coordinatorManager: MapCoordinatorManager!
     private var serverManager = MapServerManager()
     private var dataSource: ListOfPlacesDataSource!
+    private let userDefaultsManager = UserDefaultsManager()
     
     // - Data
     var shops: [ShopModel] = []
     var isListHidden = true
-    var type: TypeOfFruit = .mango
+    var type: TypeOfFruit = .avocado
+    
+    // - Delegate
+    var delegate: MainDelegate?
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -57,6 +64,19 @@ class MapViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    @IBAction func changeTypeControlAction(_ sender: UISegmentedControl) {
+        let state: TypeOfFruit = sender.selectedSegmentIndex == 0 ? .avocado : .mango
+        update(type: state)
+    }
+    
+    func update(type: TypeOfFruit) {
+        self.type = type
+        updateTableViewData()
+        layoutManager.updateMapViewData()
+        layoutManager.changeStyle(type: type)
+        delegate?.changeType(type: type)
+        userDefaultsManager.save(value: "\(type)", data: .type)
     }
     
 }
@@ -129,15 +149,24 @@ extension MapViewController {
     }
     
     func updateTableViewData() {
-          switch self.contentTypeControl.selectedSegmentIndex {
-          case 0:
-              self.saveButton.isHidden = false
-              dataSource.shops = shops.filter {$0.type == "store"}
-          default:
-              self.saveButton.isHidden = true
-              dataSource.shops = shops.filter {$0.type == "food_establishment"}
-          }
-          tableView.reloadData()
+        switch type {
+        case .avocado:
+            switch self.contentTypeControl.selectedSegmentIndex {
+            case 0:
+                dataSource.shops = shops.filter {$0.type == "store"}
+            default:
+                dataSource.shops = shops.filter {$0.type == "food_establishment"}
+            }
+        case .mango:
+            switch self.contentTypeControl.selectedSegmentIndex {
+            case 0:
+                dataSource.shops = shops.filter {$0.type == "store_mango"}
+            default:
+                dataSource.shops = shops.filter {$0.type == "food_establishment_mango"}
+            }
+        }
+        layoutManager.changeStyle(type: type)
+        tableView.reloadData()
       }
     
     func addAnalyticsEvent() {
@@ -155,6 +184,11 @@ extension MapViewController: MapDelegate {
         let placeInfoViewController = UIStoryboard(storyboard: .placeInfo).instantiateInitialViewController() as! PlaceInfoViewController
         placeInfoViewController.shop = shop
         self.navigationController?.pushViewController(placeInfoViewController, animated: true)
+    }
+    
+    func updateTypeAfterReturn(type: TypeOfFruit) {
+        typeControl.selectedSegmentIndex = type == .avocado ? 0 : 1
+        update(type: type)
     }
     
 }

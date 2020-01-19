@@ -23,6 +23,7 @@ class MapLayoutManager: NSObject {
     // - Manager
     var clusterManager: GMUClusterManager!
     private var locationManager = CLLocationManager()
+    private let userDefaultsManager = UserDefaultsManager()
     
     init(viewController: MapViewController) {
         self.viewController = viewController
@@ -196,19 +197,58 @@ extension MapLayoutManager {
     }
     
     func updateMapViewData() {
-        switch viewController.contentTypeControl.selectedSegmentIndex {
-        case 0:
-            self.viewController.saveButton.isHidden = false
-            self.shops = viewController.shops.filter {$0.type == "store"}
-            addAnalyticsEventOpenShops()
-            showPluseButton()
-        default:
-            self.viewController.saveButton.isHidden = true
-            self.shops = viewController.shops.filter {$0.type == "food_establishment"}
-            addAnalyticsEventOpenCafe()
-            hidePluseButton()
+        switch viewController.type {
+        case .avocado:
+            switch viewController.contentTypeControl.selectedSegmentIndex {
+            case 0:
+                self.shops = viewController.shops.filter {$0.type == "store"}
+                addAnalyticsEventOpenShops()
+                showPluseButton()
+            default:
+                self.shops = viewController.shops.filter {$0.type == "food_establishment"}
+                addAnalyticsEventOpenCafe()
+                hidePluseButton()
+            }
+        case .mango:
+            switch viewController.contentTypeControl.selectedSegmentIndex {
+            case 0:
+                self.shops = viewController.shops.filter {$0.type == "store_mango"}
+                addAnalyticsEventOpenShops()
+                showPluseButton()
+            default:
+                self.shops = viewController.shops.filter {$0.type == "food_establishment_mango"}
+                addAnalyticsEventOpenCafe()
+                hidePluseButton()
+            }
         }
         self.update()
+    }
+    
+    func changeStyle(type: TypeOfFruit) {
+        let image = type == .avocado ? UIImage(named: "navBarBg") : UIImage(named: "mangoNavBar")
+        let typeControl = viewController.typeControl
+        let contentTypeControl = viewController.contentTypeControl
+        UIView.transition(with: viewController.navBarBgImageView, duration: 0.5, options: .transitionCrossDissolve, animations: { self.viewController.navBarBgImageView.image = image }, completion: nil)
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.viewController.plusView.backgroundColor = type == .avocado ? AppColor.avo : AppColor.orange
+            self?.viewController.myPosition.backgroundColor = type == .avocado ? AppColor.avo : AppColor.orange
+            typeControl?.backgroundColor = type == .avocado ? AppColor.avo60 : AppColor.orange60
+            contentTypeControl?.backgroundColor = type == .avocado ? AppColor.avo60 : AppColor.orange60
+        }
+        UIView.transition(with: typeControl!, duration: 0.5, options: [.beginFromCurrentState , .transitionCrossDissolve], animations: { () -> Void in
+            if #available(iOS 13.0, *) {
+                typeControl?.selectedSegmentTintColor = type == .avocado ? AppColor.avo : AppColor.orange
+            } else {
+                typeControl?.tintColor = type == .avocado ? AppColor.avo : AppColor.orange
+            }
+        }, completion: nil)
+        UIView.transition(with: contentTypeControl!, duration: 0.5, options: [.beginFromCurrentState , .transitionCrossDissolve], animations: { () -> Void in
+            if #available(iOS 13.0, *) {
+                contentTypeControl?.selectedSegmentTintColor = type == .avocado ? AppColor.avo : AppColor.orange
+            } else {
+                contentTypeControl?.tintColor = type == .avocado ? AppColor.avo : AppColor.orange
+            }
+        }, completion: nil)
     }
     
     func addAnalyticsEventOpenShops() {
@@ -287,18 +327,55 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
             let clusterMarker = marker.userData as! GMUStaticCluster
             marker.icon = generateImageWithText(text: "\(clusterMarker.count)")
         } else if let shop = marker.userData as? POIItem {
-
-            marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
+//            if viewController.type == .avocado{
+//                marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
+//            } else {
+//                marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
+//            }
+//
+//            switch shop.shopType {
+//                case "store": marker.icon = UIImage(named: "mango")
+//                case "food_establishment": marker.icon = UIImage(named: "mango")
+//                case "store_mango": marker.icon = UIImage(named: "foodPin")
+//                case "food_establishment_mango": marker.icon = UIImage(named: "shopPin")
+//                default: marker.icon = UIImage(named: "foodPin")
+//            }
+            setIconForMarker(willRenderMarker: marker,shopType:shop.shopType)
             //marker.icon = shop.shopType == "store" ? generateAvoPinWithPrice(text: shop.price) : UIImage(named: "foodPin")
         } else {
             marker.icon = UIImage(named: "shopPin")
         }
     }
     
+    func setIconForMarker(willRenderMarker marker: GMSMarker, shopType: String) {
+        switch shopType {
+            case "store": marker.icon = UIImage(named: "shopPin")
+            case "food_establishment": marker.icon = UIImage(named: "foodPin")
+            case "store_mango": marker.icon = UIImage(named: "foodPin")
+            case "food_establishment_mango": marker.icon = UIImage(named: "mango")
+            default: marker.icon = UIImage(named: "mango")
+        }
+    }
+    
+    func getIcon() -> UIImage? {
+        switch viewController.type {
+        case .avocado:
+            switch viewController.contentTypeControl.selectedSegmentIndex {
+                case 0:  return UIImage(named: "shopPin")
+                default: return UIImage(named: "foodPin")
+            }
+        case .mango:
+            switch viewController.contentTypeControl.selectedSegmentIndex {
+                case 0:  return UIImage(named: "mango")
+                default: return UIImage(named: "mango")
+            }
+        }
+    }
+    
     func generateImageWithText(text: String) -> UIImage {
         let state = viewController.contentTypeControl.selectedSegmentIndex
-        let image = state == 0 ? UIImage(named: "shopPin")! : UIImage(named: "foodPin")!
-        let imageView = UIImageView(image: image)
+        let image = getIcon() ?? UIImage()
+        let imageView = UIImageView(image: getIcon())
         imageView.backgroundColor = .clear
         imageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height - 20))
@@ -403,17 +480,18 @@ fileprivate extension MapLayoutManager {
     
     func configure() {
         initializeClusterItems()
-        configureSaveButton()
         configureMapDelegate()
         getShops()
+        configureType()
         DispatchQueue.main.async { [weak self] in
             self?.hideList()
         }
     }
     
-    func configureSaveButton() {
-        viewController.saveButton.layer.cornerRadius = 30
-        viewController.saveButton.setupShadow(color: AppColor.black(alpha: 0.2))
+    func configureType() {
+        let type = userDefaultsManager.get(data: .type)
+        viewController.type = type == "\(TypeOfFruit.mango)" ? .mango : .avocado
+        viewController.typeControl.selectedSegmentIndex = type == "\(TypeOfFruit.mango)" ? 1 : 0
     }
     
     func configureMapDelegate() {

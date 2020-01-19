@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "HeaderRecipes.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "HeaderRecipes.png",
       "scale" : "2x"
     },
     {

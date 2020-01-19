@@ -40,5 +40,21 @@ class AddNewPlaceDescriptionTableViewCell: UITableViewCell {
         UIView.transition(with: degreeOfRipenessImageViewCollection[1], duration: 0.5, options: .transitionCrossDissolve, animations: { self.degreeOfRipenessImageViewCollection[1].image = badImage }, completion: nil)
         UIView.transition(with: degreeOfRipenessImageViewCollection[0], duration: 0.5, options: .transitionCrossDissolve, animations: { self.degreeOfRipenessImageViewCollection[0].image = image }, completion: nil)
     }
+    
+    func setType(type: TypeOfFruit) {
+        let isAVO = type == .avocado
+        if #available(iOS 13.0, *) {
+            productSegmentedControl.selectedSegmentTintColor = isAVO ? AppColor.avo : AppColor.orange
+            degreeOfRipenessSegmentedControl.selectedSegmentTintColor = isAVO ? AppColor.avo : AppColor.orange
+        } else {
+            productSegmentedControl.tintColor = isAVO ? AppColor.avo : AppColor.orange
+            degreeOfRipenessSegmentedControl.tintColor = isAVO ? AppColor.avo : AppColor.orange
+        }
+        productSegmentedControl.selectedSegmentIndex = isAVO ? 0 : 1
+        let badImage = isAVO ? UIImage(named: "badAvocado") : UIImage(named: "badMango")
+        let image = isAVO ? UIImage(named: "shopPin") : UIImage(named: "mango")
+        self.degreeOfRipenessImageViewCollection[1].image = badImage
+        self.degreeOfRipenessImageViewCollection[0].image = image
+    }
 
 }

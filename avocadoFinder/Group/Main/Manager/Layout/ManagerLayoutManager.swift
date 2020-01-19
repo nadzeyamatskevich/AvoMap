@@ -14,10 +14,10 @@ class MainLayoutManager: NSObject {
     // - Init
     private unowned let vc: MainViewController
     private var childNavigationController: UINavigationController!
-    private var mapVC: MapViewController
-    private var newsVC: NewsAndBlogViewController
-    private var settingsVC: SettingsViewController
-    private var recipesVC: RecipesViewController
+    var mapVC: MapViewController
+    var newsVC: NewsAndBlogViewController
+    var settingsVC: SettingsViewController
+    var recipesVC: RecipesViewController
     private var screens: [UIViewController]
     
     // - Data
@@ -29,6 +29,7 @@ class MainLayoutManager: NSObject {
         self.vc = viewController
         newsVC = UIStoryboard(storyboard: .newsAndBlog).instantiateInitialViewController() as! NewsAndBlogViewController
         mapVC = UIStoryboard(storyboard: .map).instantiateInitialViewController() as! MapViewController
+        mapVC.delegate = vc
         settingsVC = UIStoryboard(storyboard: .settings).instantiateInitialViewController() as! SettingsViewController
         recipesVC = UIStoryboard(storyboard: .recipes).instantiateInitialViewController() as! RecipesViewController
         screens = [newsVC, recipesVC, mapVC, settingsVC]

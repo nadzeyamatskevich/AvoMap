@@ -11,12 +11,15 @@ import UIKit
 class NewsAndBlogLayoutManager: NSObject {
     
     // - UI
-    fileprivate unowned let viewController: NewsAndBlogViewController
+    private unowned let viewController: NewsAndBlogViewController
+    
+    // - Manager
+    private let userDefaultsManager = UserDefaultsManager()
     
     init(viewController: NewsAndBlogViewController) {
         self.viewController = viewController
         super.init()
-        configureLoader()
+        configure()
     }
     
     func viewWillAppear(_ animated: Bool) {
@@ -52,7 +55,10 @@ fileprivate extension NewsAndBlogLayoutManager {
         getNews()
     }
     
-    func configureLoader() {
+    func configure() {
+        let type = userDefaultsManager.get(data: .type)
+        let image = type == "\(TypeOfFruit.mango)" ?  #imageLiteral(resourceName: "mangoNavBar") : #imageLiteral(resourceName: "newsNavBarBg")
+        viewController.navBarBgImageView.image = image
     }
     
 }

@@ -14,10 +14,12 @@ class SettingsViewController: UIViewController {
     
     // - UI
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navBarBgImageView: UIImageView!
 
     // - Manager
-    fileprivate var dataSource: SettingsDataSource!
+    private var dataSource: SettingsDataSource!
     private var cellConfigurator: SettingsCellConfigurator!
+    private let userDefaultsManager = UserDefaultsManager()
 
     
     // - Lifecycle
@@ -34,6 +36,11 @@ class SettingsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    func changType(type: TypeOfFruit) {
+        let image = type == .avocado ? UIImage(named: "navBarBg") : UIImage(named: "mangoNavBar")
+        navBarBgImageView.image = image
     }
     
 }
@@ -88,6 +95,7 @@ extension SettingsViewController {
         configureDataSource()
         configureTableView()
         addAnalyticsEvent()
+        configureNavBar()
     }
     
     func configureDataSource() {
@@ -106,6 +114,12 @@ extension SettingsViewController {
     
     func addAnalyticsEvent() {
         Analytics.logEvent("open_settings", parameters: [:])
+    }
+    
+    func configureNavBar() {
+        let type = userDefaultsManager.get(data: .type)
+        let image = type == "\(TypeOfFruit.mango)" ?  #imageLiteral(resourceName: "mangoNavBar") : #imageLiteral(resourceName: "navBarBg")
+        navBarBgImageView.image = image
     }
     
 }
