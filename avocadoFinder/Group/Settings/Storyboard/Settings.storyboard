@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j8b-fO-TXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j8b-fO-TXA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,13 +28,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBarBg" translatesAutoresizingMaskIntoConstraints="NO" id="pMv-d5-Sdb">
-                                <rect key="frame" x="-10" y="-10" width="434" height="168.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="158.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="r21-7e-OLY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо команда" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sF-T1-MPJ">
-                                <rect key="frame" x="16" y="59" width="223.5" height="40"/>
+                                <rect key="frame" x="16" y="59" width="209" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="vhc-sQ-W4d"/>
                                 </constraints>
@@ -42,19 +42,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmasAvocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-kL-1EC">
-                                <rect key="frame" x="289" y="40" width="125" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-hX-t7d">
+                                <rect key="frame" x="16" y="99" width="175.5" height="25.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="9JZ-Cf-vKC"/>
-                                    <constraint firstAttribute="height" constant="120" id="rUp-ZW-8Wt"/>
+                                    <constraint firstAttribute="height" constant="25.5" id="aVF-Np-qL3"/>
                                 </constraints>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-H3-VMD">
-                                <rect key="frame" x="16" y="163.5" width="382" height="318"/>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-H3-VMD">
+                                <rect key="frame" x="16" y="163.5" width="382" height="678.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="318" id="zkc-ou-VSh"/>
-                                </constraints>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AuthorSettingsCell" rowHeight="64" id="VCJ-qL-6PI" customClass="AuthorSettingsCell" customModule="avocadoFinder" customModuleProvider="target">
@@ -65,7 +64,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minina" translatesAutoresizingMaskIntoConstraints="NO" id="d4x-iu-1Dm">
-                                                    <rect key="frame" x="36" y="12" width="40" height="40.5"/>
+                                                    <rect key="frame" x="36" y="12" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="NWa-Ym-ZSt"/>
                                                         <constraint firstAttribute="width" constant="40" id="m5A-ms-Lbv"/>
@@ -87,11 +86,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="d4x-iu-1Dm" firstAttribute="leading" secondItem="9uw-W2-sCg" secondAttribute="leadingMargin" constant="16" id="Rq0-2Y-AW7"/>
-                                                <constraint firstItem="D2D-Va-A77" firstAttribute="top" secondItem="9uw-W2-sCg" secondAttribute="top" constant="17" id="bmU-rc-J6y"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="D2D-Va-A77" secondAttribute="bottomMargin" constant="14" id="cGC-e1-fF4"/>
-                                                <constraint firstItem="d4x-iu-1Dm" firstAttribute="top" secondItem="9uw-W2-sCg" secondAttribute="top" constant="12" id="eCS-Y4-K9t"/>
-                                                <constraint firstAttribute="bottom" secondItem="d4x-iu-1Dm" secondAttribute="bottom" constant="11.5" id="eDg-iG-Ehi"/>
+                                                <constraint firstItem="D2D-Va-A77" firstAttribute="centerY" secondItem="9uw-W2-sCg" secondAttribute="centerY" id="TGj-Ko-7UB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="D2D-Va-A77" secondAttribute="trailing" constant="16" id="kcb-OL-7uo"/>
+                                                <constraint firstItem="d4x-iu-1Dm" firstAttribute="centerY" secondItem="9uw-W2-sCg" secondAttribute="centerY" id="sx6-oE-Zkc"/>
                                                 <constraint firstItem="D2D-Va-A77" firstAttribute="leading" secondItem="d4x-iu-1Dm" secondAttribute="trailing" constant="16" id="xfF-B9-npf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -108,20 +105,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-4K-lGX">
-                                                    <rect key="frame" x="44" y="17" width="302" height="30.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="hih-Q0-lac"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="44" y="18" width="302" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="19"/>
                                                     <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gy5-4K-lGX" secondAttribute="bottom" constant="16.5" id="aEX-GG-aSB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gy5-4K-lGX" secondAttribute="trailing" constant="16" id="ccr-O3-quO"/>
-                                                <constraint firstItem="gy5-4K-lGX" firstAttribute="top" secondItem="9zH-Aq-a4J" secondAttribute="top" constant="17" id="qZC-I4-Uaq"/>
                                                 <constraint firstItem="gy5-4K-lGX" firstAttribute="leading" secondItem="9zH-Aq-a4J" secondAttribute="leadingMargin" constant="24" id="sGZ-hb-A1j"/>
+                                                <constraint firstItem="gy5-4K-lGX" firstAttribute="centerY" secondItem="9zH-Aq-a4J" secondAttribute="centerY" id="wUa-gj-CUZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -130,22 +123,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-hX-t7d">
-                                <rect key="frame" x="16" y="99" width="188" height="25.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocadoSettingsNavBar" translatesAutoresizingMaskIntoConstraints="NO" id="dK8-kL-1EC">
+                                <rect key="frame" x="289" y="40" width="125" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25.5" id="aVF-Np-qL3"/>
+                                    <constraint firstAttribute="width" constant="125" id="9JZ-Cf-vKC"/>
+                                    <constraint firstAttribute="height" constant="120" id="rUp-ZW-8Wt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dK8-kL-1EC" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" constant="40" id="07o-ie-0il"/>
+                            <constraint firstItem="4vL-bd-8BO" firstAttribute="bottom" secondItem="FPt-H3-VMD" secondAttribute="bottom" constant="20" id="9tf-Nl-5cy"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="top" secondItem="QMJ-hX-t7d" secondAttribute="bottom" constant="39" id="Hwk-XB-uNh"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="top" secondItem="pMv-d5-Sdb" secondAttribute="bottom" constant="5" id="NEl-53-sq1"/>
-                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="leading" secondItem="Yef-8c-o3K" secondAttribute="leading" constant="-10" id="Ppg-5j-Z9k"/>
+                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="leading" secondItem="Yef-8c-o3K" secondAttribute="leading" id="Ppg-5j-Z9k"/>
                             <constraint firstItem="QMJ-hX-t7d" firstAttribute="top" secondItem="0sF-T1-MPJ" secondAttribute="bottom" id="X1d-VI-BqS"/>
                             <constraint firstItem="QMJ-hX-t7d" firstAttribute="leading" secondItem="0sF-T1-MPJ" secondAttribute="leading" id="aSh-E2-Jpp"/>
                             <constraint firstItem="0sF-T1-MPJ" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="aVK-3n-nBS"/>
@@ -153,12 +145,16 @@
                             <constraint firstItem="dK8-kL-1EC" firstAttribute="trailing" secondItem="4vL-bd-8BO" secondAttribute="trailing" id="bjq-pa-wqf"/>
                             <constraint firstItem="4vL-bd-8BO" firstAttribute="trailing" secondItem="FPt-H3-VMD" secondAttribute="trailing" constant="16" id="ivD-mV-Wj9"/>
                             <constraint firstItem="FPt-H3-VMD" firstAttribute="leading" secondItem="4vL-bd-8BO" secondAttribute="leading" constant="16" id="oBF-tX-ETk"/>
-                            <constraint firstAttribute="trailing" secondItem="pMv-d5-Sdb" secondAttribute="trailing" constant="-10" id="vPr-la-C0p"/>
-                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" constant="-10" id="x9W-J0-BuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="pMv-d5-Sdb" secondAttribute="trailing" id="vPr-la-C0p"/>
+                            <constraint firstItem="pMv-d5-Sdb" firstAttribute="top" secondItem="Yef-8c-o3K" secondAttribute="top" id="x9W-J0-BuZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4vL-bd-8BO"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="navBarBgImageView" destination="pMv-d5-Sdb" id="Jgt-U2-9z9"/>
                         <outlet property="tableView" destination="FPt-H3-VMD" id="B1N-1K-lBi"/>
                     </connections>
                 </viewController>
@@ -168,8 +164,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avocadoSettingsNavBar" width="141" height="211.5"/>
         <image name="minina" width="422" height="411"/>
-        <image name="navBarBg" width="392" height="166.5"/>
-        <image name="xmasAvocadoSettingsNavBar" width="141" height="232"/>
+        <image name="navBarBg" width="562.5" height="222.5"/>
     </resources>
 </document>

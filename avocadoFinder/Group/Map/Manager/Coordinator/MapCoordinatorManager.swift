@@ -18,15 +18,17 @@ class MapCoordinatorManager {
     }
     
     func pushLitsOfPlacesViewController(shops: [ShopModel], switchState: Int, isHideControl: Bool = false) {
-        let listOfPlacesViewController = UIStoryboard(storyboard: .listOfPlaces).instantiateInitialViewController() as! ListOfPlacesViewController
-        listOfPlacesViewController.shops = shops
-        listOfPlacesViewController.switchState = switchState
-        listOfPlacesViewController.isHideControl = isHideControl
-        viewController.navigationController?.pushViewController(listOfPlacesViewController, animated: true)
+//        let listOfPlacesViewController = UIStoryboard(storyboard: .listOfPlaces).instantiateInitialViewController() as! ListOfPlacesViewController
+//        listOfPlacesViewController.shops = shops
+//        listOfPlacesViewController.switchState = switchState
+//        listOfPlacesViewController.isHideControl = isHideControl
+//        viewController.navigationController?.pushViewController(listOfPlacesViewController, animated: true)
     }
     
     func pushAddNewPlaceViewController() {
         let addNewPlaceViewController = UIStoryboard(storyboard: .addNewPlace).instantiateInitialViewController() as! AddNewPlaceViewController
+        addNewPlaceViewController.type = viewController.type
+        addNewPlaceViewController.delegate = viewController
         viewController.navigationController?.pushViewController(addNewPlaceViewController, animated: true)
     }
     

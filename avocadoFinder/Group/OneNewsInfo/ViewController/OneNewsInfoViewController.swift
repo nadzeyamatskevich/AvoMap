@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Firebase
 
 class OneNewsInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -94,12 +95,19 @@ extension OneNewsInfoViewController {
         configureLayoutManager()
         upButtonBottomConstraint.constant = -200
         self.setNeedsStatusBarAppearanceUpdate()
+        addAnalyticsEvent()
     }
     
     func configureLayoutManager() {
         layoutManager = OneNewsInfoLayoutManager(viewController: self)
         self.secondTitle.text = self.news.subtitle
         self.firstTitle.text = self.news.title
+    }
+    
+   func addAnalyticsEvent() {
+        Analytics.logEvent("open_news", parameters: [
+            "name": self.news.title as NSObject
+        ])
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

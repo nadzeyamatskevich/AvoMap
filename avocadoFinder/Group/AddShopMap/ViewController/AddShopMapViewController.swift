@@ -8,26 +8,30 @@
 
 import UIKit
 import GoogleMaps
-
-protocol AddShopMapDelegate: class {
-    func didAddLocation(latitude: Double, longitude: Double)
-}
+import GooglePlaces
 
 class AddShopMapViewController: UIViewController {
 
     // - UI
     @IBOutlet weak var avoMapView: GMSMapView!
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    // - Manager
+    private var layoutManager: AddShopMapLayoutManager!
     
     // - Delegate
     weak var delegate: AddShopMapDelegate?
     private var locationManager = CLLocationManager()
     
+    // - Data
+    var address: GMSAddress?
+    var addressString: String?
+    var changeAddress = true
+    
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSaveButton()
-        configureMapDelegate()
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,15 +43,15 @@ class AddShopMapViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
-    func configureSaveButton() {
-        saveButton.layer.cornerRadius = 16
-        saveButton.setupShadow(color: AppColor.black(alpha: 0.1))
-    }
 
     func configureMapDelegate() {
+        avoMapView.delegate = self
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+    }
+    
+    func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) {
+        layoutManager.reverseGeocodeCoordinate(coordinate)
     }
 
 }
@@ -74,17 +78,76 @@ extension AddShopMapViewController: CLLocationManagerDelegate {
 
 
 // MARK: -
-// MARK: - Navigation
+// MARK: - Action
 
 extension AddShopMapViewController {
     
     @IBAction func addNewPlaceButtonAction(_ sender: Any) {
         delegate?.didAddLocation(latitude: avoMapView.projection.coordinate(for: avoMapView.center).latitude, longitude: avoMapView.projection.coordinate(for: avoMapView.center).longitude)
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func backAction(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func searchButtonAction(_ sender: UIButton) {
+        layoutManager.searchButtonAction()
+    }
+    
+    @IBAction func myLocationButtonAction(_ sender: UIButton) {
+        layoutManager.myLocationButtonAction()
+    }
+    
+}
+
+// MARK: -
+// MARK: - GMSAutocompleteView
+
+extension AddShopMapViewController: GMSAutocompleteViewControllerDelegate {
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        layoutManager.didAutocomplete(viewController, place: place)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Error: ", error.localizedDescription)
+    }
+    
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: -
+// MARK: - GMSMapViewDelegate
+
+extension AddShopMapViewController: GMSMapViewDelegate {
+
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        reverseGeocodeCoordinate(position.target)
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        let position = GMSCameraUpdate.setTarget(coordinate)
+        mapView.animate(with: position)
+    }
+  
+}
+
+// MARK: -
+// MARK: - Configure
+
+extension AddShopMapViewController {
+    
+    func configure() {
+        configureMapDelegate()
+        configureLayoutManager()
+    }
+    
+    func configureLayoutManager() {
+        layoutManager = AddShopMapLayoutManager(viewController: self)
     }
     
 }

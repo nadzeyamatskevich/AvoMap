@@ -10,4 +10,7 @@ import Foundation
 
 enum Constants {
     static let baseURL = "https://avo-map.herokuapp.com/api/v1"
+    static let name = "name"
+    static let id = "id"
+    static let service = Bundle.main.bundleIdentifier ?? "com.nadzeya.avocadoFinder"
 }

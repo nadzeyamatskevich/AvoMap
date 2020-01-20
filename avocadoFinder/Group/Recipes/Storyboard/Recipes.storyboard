@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M5Z-Nm-t4C">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Circe-Light.ttf">
+            <string>Circe-Light</string>
+        </array>
+        <array key="Circe-Regular.ttf">
+            <string>Circe-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Recipes View Controller-->
+        <scene sceneID="KnA-Xv-gUD">
+            <objects>
+                <viewController id="M5Z-Nm-t4C" customClass="RecipesViewController" customModule="avocadoFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6HG-IX-nZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GRs-ew-aQo">
+                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Recipe" rowHeight="143" id="tVx-Ns-RFk" customClass="RecipeTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="143"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tVx-Ns-RFk" id="EUB-tv-Idt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyv-ZC-q5l">
+                                                    <rect key="frame" x="24" y="10" width="366" height="123"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Новость " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7J-fo-79Z">
+                                                            <rect key="frame" x="16" y="16" width="270" height="27.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                            <color key="textColor" red="0.18823529410000001" green="0.71764705880000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="какая-то новость какая-то новость какая-то новость  какая-то новость какая-то новость какая-то новость " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-1s-WLY">
+                                                            <rect key="frame" x="16" y="47.5" width="246" height="57.5"/>
+                                                            <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="13"/>
+                                                            <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vZA-sg-u3M">
+                                                            <rect key="frame" x="266" y="0.0" width="100" height="123"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="4Fm-oS-BwQ"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avoShape" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-QM-eNN">
+                                                            <rect key="frame" x="266" y="0.0" width="61" height="123"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="61" id="cWb-ke-N6D"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="hh2-1s-WLY" firstAttribute="leading" secondItem="pyv-ZC-q5l" secondAttribute="leading" constant="16" id="1Ah-cM-kNw"/>
+                                                        <constraint firstItem="vZA-sg-u3M" firstAttribute="leading" secondItem="hh2-1s-WLY" secondAttribute="trailing" constant="4" id="3Os-Oj-Zu3"/>
+                                                        <constraint firstItem="vZA-sg-u3M" firstAttribute="leading" secondItem="o7J-fo-79Z" secondAttribute="trailing" constant="-20" id="6hV-Kf-PGl"/>
+                                                        <constraint firstItem="o7J-fo-79Z" firstAttribute="top" secondItem="pyv-ZC-q5l" secondAttribute="top" constant="16" id="8MG-X2-PxN"/>
+                                                        <constraint firstItem="o7J-fo-79Z" firstAttribute="leading" secondItem="pyv-ZC-q5l" secondAttribute="leading" constant="16" id="9WT-tz-Jcf"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hh2-1s-WLY" secondAttribute="bottom" constant="16" id="AeB-TN-BOq"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vZA-sg-u3M" secondAttribute="trailing" id="CGY-1r-fqc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2bP-QM-eNN" secondAttribute="trailing" constant="39" id="Glz-8U-VCR"/>
+                                                        <constraint firstItem="2bP-QM-eNN" firstAttribute="top" secondItem="pyv-ZC-q5l" secondAttribute="top" id="KWB-f4-2in"/>
+                                                        <constraint firstAttribute="height" constant="118" id="MCF-IM-S9z"/>
+                                                        <constraint firstItem="vZA-sg-u3M" firstAttribute="top" secondItem="pyv-ZC-q5l" secondAttribute="top" id="gO7-od-dN3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2bP-QM-eNN" secondAttribute="bottom" id="qQu-OC-Vf2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vZA-sg-u3M" secondAttribute="bottom" id="szC-tK-3Vf"/>
+                                                        <constraint firstItem="hh2-1s-WLY" firstAttribute="top" secondItem="o7J-fo-79Z" secondAttribute="bottom" constant="4" id="vwb-eO-m0A"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="pyv-ZC-q5l" firstAttribute="leading" secondItem="EUB-tv-Idt" secondAttribute="leading" constant="24" id="9aj-15-GdB"/>
+                                                <constraint firstAttribute="trailing" secondItem="pyv-ZC-q5l" secondAttribute="trailing" constant="24" id="X4z-UJ-3OX"/>
+                                                <constraint firstAttribute="bottom" secondItem="pyv-ZC-q5l" secondAttribute="bottom" constant="10" id="p9x-SH-zr1"/>
+                                                <constraint firstItem="pyv-ZC-q5l" firstAttribute="top" secondItem="EUB-tv-Idt" secondAttribute="top" constant="10" id="rLY-DP-b0N"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="avoImage" destination="vZA-sg-u3M" id="8F2-fH-Pok"/>
+                                            <outlet property="mainView" destination="pyv-ZC-q5l" id="rBv-k9-fYI"/>
+                                            <outlet property="subtitleLabel" destination="hh2-1s-WLY" id="MCu-pG-bay"/>
+                                            <outlet property="titleLabel" destination="o7J-fo-79Z" id="Z0s-Wo-w1D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFD-hT-aHM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderRecipes" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-uT-YHU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VYP-uT-YHU" firstAttribute="leading" secondItem="vFD-hT-aHM" secondAttribute="leading" id="18B-pj-uod"/>
+                                    <constraint firstAttribute="bottom" secondItem="VYP-uT-YHU" secondAttribute="bottom" constant="7" id="41M-Mk-HnA"/>
+                                    <constraint firstAttribute="trailing" secondItem="VYP-uT-YHU" secondAttribute="trailing" id="QcC-d5-apA"/>
+                                    <constraint firstAttribute="height" constant="164" id="sBb-hF-Y6P"/>
+                                    <constraint firstItem="VYP-uT-YHU" firstAttribute="top" secondItem="vFD-hT-aHM" secondAttribute="top" id="sac-QS-nYi"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авокадо рецепты" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKl-vl-PBL">
+                                <rect key="frame" x="16" y="59" width="212" height="40"/>
+                                <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="найди свой авокадо 🥑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-L2-Xcr">
+                                <rect key="frame" x="16" y="99" width="388" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Circe-Light" family="Circe" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZQ2-lT-IEE" firstAttribute="bottom" secondItem="GRs-ew-aQo" secondAttribute="bottom" id="0hq-Go-WWv"/>
+                            <constraint firstItem="vFD-hT-aHM" firstAttribute="trailing" secondItem="ZQ2-lT-IEE" secondAttribute="trailing" id="7YE-am-pb0"/>
+                            <constraint firstItem="4iZ-L2-Xcr" firstAttribute="top" secondItem="IKl-vl-PBL" secondAttribute="bottom" id="AdQ-eA-NPu"/>
+                            <constraint firstItem="ZQ2-lT-IEE" firstAttribute="trailing" secondItem="GRs-ew-aQo" secondAttribute="trailing" id="F2q-6R-I3h"/>
+                            <constraint firstItem="IKl-vl-PBL" firstAttribute="leading" secondItem="ZQ2-lT-IEE" secondAttribute="leading" constant="16" id="Jzg-qd-uz5"/>
+                            <constraint firstItem="GRs-ew-aQo" firstAttribute="leading" secondItem="ZQ2-lT-IEE" secondAttribute="leading" id="OW1-OU-rjG"/>
+                            <constraint firstItem="vFD-hT-aHM" firstAttribute="top" secondItem="6HG-IX-nZ7" secondAttribute="top" id="OYJ-0z-p5c"/>
+                            <constraint firstItem="4iZ-L2-Xcr" firstAttribute="leading" secondItem="ZQ2-lT-IEE" secondAttribute="leading" constant="16" id="bWh-PZ-9ld"/>
+                            <constraint firstItem="vFD-hT-aHM" firstAttribute="leading" secondItem="ZQ2-lT-IEE" secondAttribute="leading" id="dlx-u3-DtK"/>
+                            <constraint firstItem="IKl-vl-PBL" firstAttribute="top" secondItem="ZQ2-lT-IEE" secondAttribute="top" constant="15" id="qeL-Yk-pOF"/>
+                            <constraint firstItem="GRs-ew-aQo" firstAttribute="top" secondItem="vFD-hT-aHM" secondAttribute="bottom" constant="-36" id="t0J-zw-PJj"/>
+                            <constraint firstItem="ZQ2-lT-IEE" firstAttribute="trailing" secondItem="4iZ-L2-Xcr" secondAttribute="trailing" constant="10" id="yJP-R9-1cl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZQ2-lT-IEE"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="navBarBgImageView" destination="VYP-uT-YHU" id="QLk-pO-bdk"/>
+                        <outlet property="tableView" destination="GRs-ew-aQo" id="X8Q-U8-EGl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIs-69-SNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HeaderRecipes" width="375" height="160"/>
+        <image name="avoShape" width="81" height="171.5"/>
+    </resources>
+</document>

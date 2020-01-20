@@ -8,26 +8,30 @@
 
 import UIKit
 import GooglePlaces
+import HPGradientLoading
+import Firebase
 
 class AddNewPlaceViewController: UIViewController {
     
     // - UI
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var shopNameTextField: UITextField!
-    @IBOutlet weak var shopAddressTextField: UITextField!
-    @IBOutlet weak var shopAuthorTextField: UITextField!
-    @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var navBarImageView: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
     
     // - Constraint
     @IBOutlet weak var navigationBarHeightConstraint: NSLayoutConstraint!
     
     // - Manager
-    fileprivate var serverManager = MapServerManager()
-    fileprivate var layoutManager: AddNewPlaceLayoutManager!
+    private var serverManager = MapServerManager()
+    private var layoutManager: AddNewPlaceLayoutManager!
+    private var dataSource: AddNewPlaceDataSourceManager!
     
     // - Data
-    let newShop = ShopModel()
+    private let newShop = ShopModel()
+    private var userName = ""
+    var type: TypeOfFruit = .avocado
+    
+    // - Delegate
+    var delegate: MapDelegate?
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -39,7 +43,6 @@ class AddNewPlaceViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        layoutManager.configureNavigationBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,12 +56,24 @@ class AddNewPlaceViewController: UIViewController {
        acController.delegate = self
        present(acController, animated: true, completion: nil)
     }
+    @IBAction func changeCurrencyButtonAction(_ sender: UIButton) {
+        let volutesVC = UIStoryboard(storyboard: .volutes).instantiateInitialViewController() as! VolutesViewController
+        self.present(volutesVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func changeTypeSegmentedControlAction(_ sender: UISegmentedControl) {
+        let state = sender.selectedSegmentIndex == 0 ? true : false
+        type = sender.selectedSegmentIndex == 0 ? .avocado : .mango
+        dataSource.changeType(isAVO: state)
+        layoutManager.changeNavbar(isAVO: state)
+        delegate?.updateTypeAfterReturn(type: type)
+    }
     
     @IBAction func openMapAction(_ sender: Any) {
         let addShopMapViewController = UIStoryboard(storyboard: .addShopMap).instantiateInitialViewController() as! AddShopMapViewController
         addShopMapViewController.delegate = self
-        self.shopAddressTextField.isSelected = false
-        self.navigationController?.pushViewController(addShopMapViewController, animated: true)
+        addAnalyticsEventMap()
+        self.present(addShopMapViewController, animated: true, completion: nil)
     }
 }
 
@@ -75,10 +90,10 @@ extension AddNewPlaceViewController: AddShopMapDelegate {
         
         let geocoder = GMSGeocoder()
 
-        geocoder.reverseGeocodeCoordinate(coordinate) { response , error in
+        geocoder.reverseGeocodeCoordinate(coordinate) { [weak self] response , error in
             if let address = response?.firstResult() {
                 let lines = address.lines! as [String]
-                self.shopAddressTextField.text = lines.joined(separator: "\n")
+                self?.dataSource.setAddress(lines.joined(separator: "\n"))
             }
         }
     }
@@ -87,9 +102,10 @@ extension AddNewPlaceViewController: AddShopMapDelegate {
 
 extension AddNewPlaceViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        shopAddressTextField.text = place.name
+        dataSource.setAddress(place.name ?? "nil")
         newShop.longitude = "\(place.coordinate.longitude)"
         newShop.latitude = "\(place.coordinate.latitude)"
+        addAnalyticsEventText()
         dismiss(animated: true, completion: nil)
     }
     
@@ -120,15 +136,14 @@ extension AddNewPlaceViewController {
     }
     
     func checkShopInfo() -> Bool {
-        if shopNameTextField.text == "" {
+        
+        if dataSource.address == "" {
             self.showAlert(title: "Упс, ошибка!", message: "Напишите название магазина :)")
-        } else if shopAddressTextField.text == "" {
+        } else if dataSource.address == "" {
             self.showAlert(title: "Упс, ошибка!", message: "Напишите адрес магазина :)")
-        } else if shopAuthorTextField.text == "" {
+        } else if userName == "" {
             self.showAlert(title: "Упс, ошибка!", message: "Напишите свое имя :)")
-        } else if commentTextField.text == "" {
-            self.showAlert(title: "Упс, ошибка!", message: "Напишите комментарий или цену :)")
-        } else if commentTextField.text?.count ?? 0 > 280 {
+        } else if dataSource.comment.count > 280 {
             self.showAlert(title: "Упс, ошибка!", message: "Комментарий должен быть до 280 символов :)")
         } else {
             return true
@@ -137,15 +152,15 @@ extension AddNewPlaceViewController {
     }
     
     func createShopModel() -> ShopModel {
-        newShop.name = shopNameTextField.text!
-        newShop.address = shopAddressTextField.text!
-        newShop.author = shopAuthorTextField.text!
-        newShop.shopDescription = commentTextField.text!
+        newShop.name = dataSource.name
+        newShop.address = dataSource.address
+        newShop.author = dataSource.userName
+        newShop.shopDescription = dataSource.comment
         return newShop
     }
     
     func saveAuthorName() {
-        UserDefaults.standard.set(shopAuthorTextField.text ?? "", forKey: UserDefaultsEnum.authorNameKey.rawValue)
+//        UserDefaults.standard.set(shopAuthorTextField.text ?? "", forKey: UserDefaultsEnum.authorNameKey.rawValue)
     }
     
 }
@@ -160,12 +175,16 @@ extension AddNewPlaceViewController {
     }
     
     func addShop(shop: ShopModel) {
+        HPGradientLoading.shared.showLoading()
         postShopRequest(shop: shop) { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: nil)
+                self?.addAnalyticsEventAddPlace()
                 strongSelf.navigationController?.popViewController(animated: true)
             }
         }
@@ -179,13 +198,38 @@ extension AddNewPlaceViewController {
 extension AddNewPlaceViewController {
     
     func configure() {
+        userName = KeychainManager.shared.name ?? ""
         configureLayoutManager()
+        configureDataSource()
+        addAnalyticsEvent()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func configureLayoutManager() {
         layoutManager = AddNewPlaceLayoutManager(viewController: self)
+    }
+    
+    func configureDataSource() {
+        dataSource = AddNewPlaceDataSourceManager(tableView: tableView)
+        dataSource.delegate = self
+        dataSource.set(userName: userName, type: type)
+    }
+    
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_addNewPlace", parameters: [:])
+    }
+    
+    func addAnalyticsEventAddPlace() {
+        Analytics.logEvent("add_newPlace", parameters: [:])
+    }
+    
+    func addAnalyticsEventMap() {
+        Analytics.logEvent("newPlace_openMap", parameters: [:])
+    }
+    
+    func addAnalyticsEventText() {
+        Analytics.logEvent("newPlace_openTextField", parameters: [:])
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -202,6 +246,13 @@ extension AddNewPlaceViewController {
             self.view.endEditing(true)
         }
     }
+    
+}
+
+// MARK: -
+// MARK: - AddNewPlaceDelegate
+
+extension AddNewPlaceViewController: AddNewPlaceDelegate {
     
 }
 

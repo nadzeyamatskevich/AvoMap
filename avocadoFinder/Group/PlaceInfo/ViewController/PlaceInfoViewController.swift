@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import HPGradientLoading
+import Firebase
 
 class PlaceInfoViewController: UIViewController {
     
@@ -81,12 +83,16 @@ extension PlaceInfoViewController {
     }
     
     func addComment(comment: CommentModel) {
+        HPGradientLoading.shared.showLoading()
         postCommentRequest(comment: comment) { [weak self] (response, error) in
             guard let strongSelf = self else { return }
             if error != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
+                HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: nil)
+                self?.addAnalyticsEventAddComment()
                 strongSelf.getShopInfo(shopID: strongSelf.shop.id)
                 UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
             }
@@ -119,6 +125,7 @@ extension PlaceInfoViewController {
     func configure() {
         configureLayoutManager()
         configureDataSource()
+        addAnalyticsEvent()
     }
     
     func configureLayoutManager() {
@@ -133,6 +140,18 @@ extension PlaceInfoViewController {
     
     func getServerData() {
         getShopInfo(shopID: shop.id)
+    }
+    
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_place", parameters: [
+            "type": self.shop.type as NSObject
+        ])
+    }
+    
+    func addAnalyticsEventAddComment() {
+        Analytics.logEvent("added_comment", parameters: [
+            "type": self.shop.type as NSObject
+        ])
     }
     
 }

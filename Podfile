@@ -14,19 +14,26 @@ target 'avocadoFinder' do
     #Tab bar
     pod 'RAMAnimatedTabBarController', :git => 'https://github.com/denbay/animated-tab-bar.git’
     
-    #device
+    #Device
     pod 'Device'
     
     #API
     pod 'Moya', '~> 12.0'
     pod 'SwiftyJSON', '~> 5.0'
     pod 'RealmSwift'
+    pod 'AlamofireNetworkActivityLogger', '~> 2.0'
     
-    #image
+    #Image
     pod 'Kingfisher', '~> 5.0'
     pod 'SDWebImage', '~> 5.0'
     
-    #loader
+    #Loader
     pod 'HPGradientLoading'
+    
+    # Add the Firebase pod for Google Analytics
+    pod 'Firebase/Analytics'
+    
+    # Keychain
+    pod 'KeychainAccess'
 
 end
