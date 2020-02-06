@@ -11,21 +11,24 @@ import UIKit
 class AddNewPlaceSaveTableViewCell: UITableViewCell {
     
     // - UI
-    @IBOutlet weak var viewBackgroundView: UIView!
     @IBOutlet weak var saveButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.saveButton.layer.cornerRadius = 18
     }
     
     func changeType(isAVO: Bool) {
         UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.viewBackgroundView.backgroundColor = isAVO ? AppColor.avo : AppColor.orange
+            self?.saveButton.backgroundColor = isAVO ? AppColor.avo : AppColor.orange
         }
     }
     
+    @IBAction func saveButtonAction(_ sender: Any) {
+    }
+    
     func setType(type: TypeOfFruit) {
-        viewBackgroundView.backgroundColor = type == .avocado ? AppColor.avo : AppColor.orange
+        saveButton.backgroundColor = type == .avocado ? AppColor.avo : AppColor.orange
     }
 
 }

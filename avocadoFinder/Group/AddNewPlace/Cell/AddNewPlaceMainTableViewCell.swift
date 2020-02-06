@@ -15,10 +15,20 @@ class AddNewPlaceMainTableViewCell: UITableViewCell {
     @IBOutlet weak var shopNameTextField: UITextField!
     @IBOutlet weak var shopAddressTextField: UITextField!
     @IBOutlet weak var shopAuthorTextField: UITextField!
+    
+    var delegate: AddNewPlaceMainCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         configureMainView()
+    }
+    
+    @IBAction func textFieldAction(_ sender: UITextField) {
+        self.delegate?.openGoogleAutocompleteVC(sender)
+    }
+    
+    @IBAction func openMap(_ sender: Any) {
+        self.delegate?.openMap()
     }
     
     func setAddress(_ address: String) {
@@ -31,3 +41,4 @@ class AddNewPlaceMainTableViewCell: UITableViewCell {
     }
 
 }
+

@@ -16,7 +16,11 @@ class AddNewPlaceDescriptionTableViewCell: UITableViewCell {
     @IBOutlet weak var productSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var commentTextField: UITextField!
-
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var currencyButton: UIButton!
+    
+    var delegate: AddNewPlaceDescriptionCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureMainView()
@@ -27,6 +31,14 @@ class AddNewPlaceDescriptionTableViewCell: UITableViewCell {
         mainView.setupOnlyBottomShadow(color: AppColor.black(alpha: 0.1))
     }
     
+    @IBAction func currencyButtonAction(_ sender: Any) {
+        self.delegate?.openCurrencyVC()
+    }
+
+    @IBAction func changeFruitTypeSegmentControlAction(_ sender: UISegmentedControl) {
+        self.delegate?.changeFruitType(selectedSegment: sender.selectedSegmentIndex)
+    }
+
     func changeType(isAVO: Bool) {
         if #available(iOS 13.0, *) {
             productSegmentedControl.selectedSegmentTintColor = isAVO ? AppColor.avo : AppColor.orange

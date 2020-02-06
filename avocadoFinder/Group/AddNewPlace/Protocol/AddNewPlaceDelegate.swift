@@ -8,6 +8,18 @@
 
 import UIKit
 
-protocol AddNewPlaceDelegate: class {
-    
+protocol AddNewPlaceMainCellDelegate: class {
+    func openGoogleAutocompleteVC(_ sender: UITextField)
+    func openMap()
 }
+
+protocol AddNewPlaceDescriptionCellDelegate: class {
+    func openCurrencyVC()
+    func changeFruitType(selectedSegment: Int)
+}
+
+protocol AddNewPlaceSaveCellDelegate: class {
+    func saveNewPlace()
+}
+
+protocol AddNewPlaceDelegate: class {}

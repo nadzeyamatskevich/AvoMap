@@ -94,7 +94,7 @@ extension PlaceInfoViewController {
                 strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: nil)
                 self?.addAnalyticsEventAddComment()
                 strongSelf.getShopInfo(shopID: strongSelf.shop.id)
-                UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
+                //UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
             }
         }
     }

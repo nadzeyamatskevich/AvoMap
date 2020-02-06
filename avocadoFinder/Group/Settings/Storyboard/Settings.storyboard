@@ -54,7 +54,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-H3-VMD">
                                 <rect key="frame" x="16" y="163.5" width="382" height="678.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <color key="separatorColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AuthorSettingsCell" rowHeight="64" id="VCJ-qL-6PI" customClass="AuthorSettingsCell" customModule="avocadoFinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="64"/>
@@ -64,14 +65,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minina" translatesAutoresizingMaskIntoConstraints="NO" id="d4x-iu-1Dm">
-                                                    <rect key="frame" x="36" y="12" width="40" height="40"/>
+                                                    <rect key="frame" x="20" y="12" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="NWa-Ym-ZSt"/>
                                                         <constraint firstAttribute="width" constant="40" id="m5A-ms-Lbv"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2D-Va-A77">
-                                                    <rect key="frame" x="92" y="17" width="254" height="30"/>
+                                                    <rect key="frame" x="76" y="17" width="270" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="VXa-Yy-a6I"/>
                                                     </constraints>
@@ -85,13 +86,14 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="d4x-iu-1Dm" firstAttribute="leading" secondItem="9uw-W2-sCg" secondAttribute="leadingMargin" constant="16" id="Rq0-2Y-AW7"/>
+                                                <constraint firstItem="d4x-iu-1Dm" firstAttribute="leading" secondItem="9uw-W2-sCg" secondAttribute="leading" constant="20" id="Rq0-2Y-AW7"/>
                                                 <constraint firstItem="D2D-Va-A77" firstAttribute="centerY" secondItem="9uw-W2-sCg" secondAttribute="centerY" id="TGj-Ko-7UB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="D2D-Va-A77" secondAttribute="trailing" constant="16" id="kcb-OL-7uo"/>
                                                 <constraint firstItem="d4x-iu-1Dm" firstAttribute="centerY" secondItem="9uw-W2-sCg" secondAttribute="centerY" id="sx6-oE-Zkc"/>
                                                 <constraint firstItem="D2D-Va-A77" firstAttribute="leading" secondItem="d4x-iu-1Dm" secondAttribute="trailing" constant="16" id="xfF-B9-npf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="avatarImageView" destination="d4x-iu-1Dm" id="cDU-zC-knp"/>
                                             <outlet property="igButton" destination="D2D-Va-A77" id="4zX-CP-Zdl"/>
@@ -105,7 +107,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-4K-lGX">
-                                                    <rect key="frame" x="44" y="18" width="302" height="28.5"/>
+                                                    <rect key="frame" x="20" y="18" width="326" height="28.5"/>
                                                     <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="19"/>
                                                     <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -113,10 +115,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gy5-4K-lGX" secondAttribute="trailing" constant="16" id="ccr-O3-quO"/>
-                                                <constraint firstItem="gy5-4K-lGX" firstAttribute="leading" secondItem="9zH-Aq-a4J" secondAttribute="leadingMargin" constant="24" id="sGZ-hb-A1j"/>
+                                                <constraint firstItem="gy5-4K-lGX" firstAttribute="leading" secondItem="9zH-Aq-a4J" secondAttribute="leadingMargin" id="sGZ-hb-A1j"/>
                                                 <constraint firstItem="gy5-4K-lGX" firstAttribute="centerY" secondItem="9zH-Aq-a4J" secondAttribute="centerY" id="wUa-gj-CUZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="gy5-4K-lGX" id="BLU-2k-lOk"/>
                                         </connections>

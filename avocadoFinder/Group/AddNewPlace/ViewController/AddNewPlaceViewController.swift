@@ -17,9 +17,6 @@ class AddNewPlaceViewController: UIViewController {
     @IBOutlet weak var navBarImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    // - Constraint
-    @IBOutlet weak var navigationBarHeightConstraint: NSLayoutConstraint!
-    
     // - Manager
     private var serverManager = MapServerManager()
     private var layoutManager: AddNewPlaceLayoutManager!
@@ -49,36 +46,11 @@ class AddNewPlaceViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    
-    @IBAction func addressTextFieldAction(_ sender: UITextField) {
-       sender.resignFirstResponder()
-       let acController = GMSAutocompleteViewController()
-       acController.delegate = self
-       present(acController, animated: true, completion: nil)
-    }
-    @IBAction func changeCurrencyButtonAction(_ sender: UIButton) {
-        let volutesVC = UIStoryboard(storyboard: .volutes).instantiateInitialViewController() as! VolutesViewController
-        self.present(volutesVC, animated: true, completion: nil)
-    }
-    
-    @IBAction func changeTypeSegmentedControlAction(_ sender: UISegmentedControl) {
-        let state = sender.selectedSegmentIndex == 0 ? true : false
-        type = sender.selectedSegmentIndex == 0 ? .avocado : .mango
-        dataSource.changeType(isAVO: state)
-        layoutManager.changeNavbar(isAVO: state)
-        delegate?.updateTypeAfterReturn(type: type)
-    }
-    
-    @IBAction func openMapAction(_ sender: Any) {
-        let addShopMapViewController = UIStoryboard(storyboard: .addShopMap).instantiateInitialViewController() as! AddShopMapViewController
-        addShopMapViewController.delegate = self
-        addAnalyticsEventMap()
-        self.present(addShopMapViewController, animated: true, completion: nil)
-    }
+
 }
 
 // MARK: -
-// MARK: - Configure
+// MARK: - Delegates
 
 extension AddNewPlaceViewController: AddShopMapDelegate {
     
@@ -101,6 +73,7 @@ extension AddNewPlaceViewController: AddShopMapDelegate {
 }
 
 extension AddNewPlaceViewController: GMSAutocompleteViewControllerDelegate {
+   
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         dataSource.setAddress(place.name ?? "nil")
         newShop.longitude = "\(place.coordinate.longitude)"
@@ -119,17 +92,60 @@ extension AddNewPlaceViewController: GMSAutocompleteViewControllerDelegate {
     
 }
 
-// MARK: -
-// MARK: - Actions
+extension AddNewPlaceViewController: AddNewPlaceMainCellDelegate {
 
-extension AddNewPlaceViewController {
-    @IBAction func saveNewPlaceAction(_ sender: Any) {
+    func openGoogleAutocompleteVC(_ sender: UITextField) {
+        sender.resignFirstResponder()
+        let acController = GMSAutocompleteViewController()
+        acController.delegate = self
+        present(acController, animated: true, completion: nil)
+    }
+    
+    func openMap() {
+        let addShopMapViewController = UIStoryboard(storyboard: .addShopMap).instantiateInitialViewController() as! AddShopMapViewController
+        addShopMapViewController.delegate = self
+        addAnalyticsEventMap()
+        self.present(addShopMapViewController, animated: true, completion: nil)
+    }
+
+}
+
+extension AddNewPlaceViewController: AddNewPlaceSaveCellDelegate {
+    
+    func saveNewPlace() {
         if checkShopInfo() {
             addShop(shop: createShopModel())
             saveAuthorName()
         }
-        
     }
+
+}
+
+extension AddNewPlaceViewController: AddNewPlaceDescriptionCellDelegate {
+    func changeFruitType(selectedSegment: Int) {
+        let state = selectedSegment == 0 ? true : false
+        type = selectedSegment == 0 ? .avocado : .mango
+        dataSource.changeType(isAVO: state)
+        layoutManager.changeNavbar(isAVO: state)
+        delegate?.updateTypeAfterReturn(type: type)
+    }
+    
+    
+    func openCurrencyVC() {
+        let volutesVC = UIStoryboard(storyboard: .volutes).instantiateInitialViewController() as! VolutesViewController
+        self.present(volutesVC, animated: true, completion: nil)
+    }
+
+}
+
+extension AddNewPlaceViewController: AddNewPlaceDelegate {
+    
+}
+
+// MARK: -
+// MARK: - Actions
+
+extension AddNewPlaceViewController {
     
     @IBAction func backButtonAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
@@ -215,22 +231,6 @@ extension AddNewPlaceViewController {
         dataSource.delegate = self
         dataSource.set(userName: userName, type: type)
     }
-    
-    func addAnalyticsEvent() {
-        Analytics.logEvent("open_addNewPlace", parameters: [:])
-    }
-    
-    func addAnalyticsEventAddPlace() {
-        Analytics.logEvent("add_newPlace", parameters: [:])
-    }
-    
-    func addAnalyticsEventMap() {
-        Analytics.logEvent("newPlace_openMap", parameters: [:])
-    }
-    
-    func addAnalyticsEventText() {
-        Analytics.logEvent("newPlace_openTextField", parameters: [:])
-    }
 
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
@@ -249,10 +249,23 @@ extension AddNewPlaceViewController {
     
 }
 
-// MARK: -
-// MARK: - AddNewPlaceDelegate
 
-extension AddNewPlaceViewController: AddNewPlaceDelegate {
+//
+extension AddNewPlaceViewController {
     
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_addNewPlace", parameters: [:])
+    }
+    
+    func addAnalyticsEventAddPlace() {
+        Analytics.logEvent("add_newPlace", parameters: [:])
+    }
+    
+    func addAnalyticsEventMap() {
+        Analytics.logEvent("newPlace_openMap", parameters: [:])
+    }
+    
+    func addAnalyticsEventText() {
+        Analytics.logEvent("newPlace_openTextField", parameters: [:])
+    }
 }
-

@@ -117,7 +117,7 @@ DEPENDENCIES:
   - SwiftyJSON (~> 5.0)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireNetworkActivityLogger
     - Device
@@ -187,4 +187,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a22f6bf89f1a9adddf22ebd125240391ede7930f
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.5.3

@@ -71,6 +71,10 @@ extension SettingsDataSource: UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .zero
+    }
+    
 }
 
 // MARK: -

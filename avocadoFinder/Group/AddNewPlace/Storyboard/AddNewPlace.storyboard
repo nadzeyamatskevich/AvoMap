@@ -99,7 +99,7 @@
                                                             <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <connections>
-                                                                <action selector="addressTextFieldAction:" destination="iNK-jZ-tZG" eventType="editingDidBegin" id="1Dm-lA-xeE"/>
+                                                                <action selector="textFieldAction:" destination="w0s-RB-Lp7" eventType="editingDidEnd" id="swr-Ec-we0"/>
                                                             </connections>
                                                         </textField>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="напр. @nadzeyasavictskaya" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YRi-i3-2Za">
@@ -118,9 +118,6 @@
                                                             <state key="normal" title="Карта">
                                                                 <color key="titleColor" red="0.0081427851689999994" green="0.44491571190000001" blue="0.38852256540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="openMapAction:" destination="iNK-jZ-tZG" eventType="touchUpInside" id="An3-U2-r4N"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,6 +166,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="mainView" destination="eIm-sW-23J" id="chL-5C-OSX"/>
+                                            <outlet property="shopAddressTextField" destination="8Uy-o0-Sm6" id="ooj-js-zLl"/>
+                                            <outlet property="shopAuthorTextField" destination="YRi-i3-2Za" id="5Eq-pg-31z"/>
+                                            <outlet property="shopNameTextField" destination="UA5-CN-ZuZ" id="ZQm-5E-RsH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MainWithoutName" id="9fH-no-tAI" customClass="AddNewPlaceMainTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
@@ -227,7 +227,7 @@
                                                             <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                             <connections>
-                                                                <action selector="addressTextFieldAction:" destination="iNK-jZ-tZG" eventType="editingDidBegin" id="W8l-G7-zNz"/>
+                                                                <action selector="textFieldAction:" destination="9fH-no-tAI" eventType="editingDidEnd" id="o0P-Ua-BSf"/>
                                                             </connections>
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nn-CR-GYX">
@@ -239,7 +239,7 @@
                                                                 <color key="titleColor" red="0.0081427851689999994" green="0.44491571190000001" blue="0.38852256540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="openMapAction:" destination="iNK-jZ-tZG" eventType="touchUpInside" id="vqH-uX-tn2"/>
+                                                                <action selector="openMap:" destination="9fH-no-tAI" eventType="touchUpInside" id="w1U-gO-7gm"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -280,6 +280,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="mainView" destination="DnZ-FP-Gzg" id="b0W-AV-Q9M"/>
+                                            <outlet property="shopAddressTextField" destination="rwl-1m-xGJ" id="f70-TX-XpU"/>
+                                            <outlet property="shopNameTextField" destination="iC5-8X-CiP" id="XeY-C7-CfM"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Description" id="s3Y-af-sby" customClass="AddNewPlaceDescriptionTableViewCell" customModule="avocadoFinder" customModuleProvider="target">
@@ -313,7 +315,7 @@
                                                             </segments>
                                                             <color key="selectedSegmentTintColor" red="0.48627450980392156" green="0.81568627450980391" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
-                                                                <action selector="changeTypeSegmentedControlAction:" destination="iNK-jZ-tZG" eventType="valueChanged" id="odl-fc-Gta"/>
+                                                                <action selector="changeFruitTypeSegmentControlAction:" destination="s3Y-af-sby" eventType="valueChanged" id="YdA-xC-rfh"/>
                                                             </connections>
                                                         </segmentedControl>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopPin" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-2x-FKs">
@@ -324,7 +326,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mango" translatesAutoresizingMaskIntoConstraints="NO" id="hej-DN-Tsl">
-                                                            <rect key="frame" x="290.5" y="43" width="28.5" height="42"/>
+                                                            <rect key="frame" x="290.5" y="43" width="28.500000000000114" height="42"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="28.5" id="JpG-x9-QoZ"/>
                                                                 <constraint firstAttribute="height" constant="42" id="eTj-AQ-QtW"/>
@@ -413,9 +415,6 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Circe-Regular" family="Circe" pointSize="17"/>
                                                             <textInputTraits key="textInputTraits"/>
-                                                            <connections>
-                                                                <action selector="addressTextFieldAction:" destination="iNK-jZ-tZG" eventType="editingDidBegin" id="jcF-xD-hLh"/>
-                                                            </connections>
                                                         </textField>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="h5y-Ze-quq">
                                                             <rect key="frame" x="8" y="293" width="327" height="1"/>
@@ -436,7 +435,7 @@
                                                                 <constraint firstAttribute="height" constant="30" id="W3L-JN-88z"/>
                                                             </constraints>
                                                             <connections>
-                                                                <action selector="changeCurrencyButtonAction:" destination="iNK-jZ-tZG" eventType="touchUpInside" id="vdq-KL-UJk"/>
+                                                                <action selector="currencyButtonAction:" destination="s3Y-af-sby" eventType="touchUpInside" id="rzF-dw-467"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -499,8 +498,11 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="commentTextField" destination="tTv-tL-aIf" id="VeE-Du-6Bx"/>
+                                            <outlet property="currencyButton" destination="H2w-HB-jG4" id="fil-w1-vfy"/>
                                             <outlet property="degreeOfRipenessSegmentedControl" destination="ulG-WY-e4k" id="34X-mZ-vIO"/>
                                             <outlet property="mainView" destination="ytM-mU-LfF" id="cyM-vP-eXW"/>
+                                            <outlet property="priceTextField" destination="nLf-K6-a3R" id="s5G-BH-XDB"/>
                                             <outlet property="productSegmentedControl" destination="nWg-JA-711" id="ugf-fg-JOS"/>
                                             <outletCollection property="degreeOfRipenessImageViewCollection" destination="QSx-i7-ZW4" collectionClass="NSMutableArray" id="6iA-7V-chZ"/>
                                             <outletCollection property="degreeOfRipenessImageViewCollection" destination="4iX-2N-q05" collectionClass="NSMutableArray" id="4j9-UX-KFM"/>
@@ -513,19 +515,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k9j-vg-78m">
-                                                    <rect key="frame" x="16" y="5" width="166" height="45"/>
-                                                    <color key="backgroundColor" red="0.48627450980392156" green="0.81568627450980391" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="20"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX6-cq-5Ff">
                                                     <rect key="frame" x="16" y="5" width="166" height="45"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.48684924839999999" green="0.81574469800000005" blue="0.61807030439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="166" id="8Eq-pX-KbI"/>
                                                         <constraint firstAttribute="height" constant="45" id="cM5-G9-svq"/>
@@ -540,20 +532,19 @@
                                                             <integer key="value" value="13"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="saveButtonAction:" destination="R5q-RC-7nh" eventType="touchUpInside" id="Rsc-zu-7rQ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="k9j-vg-78m" firstAttribute="top" secondItem="hX6-cq-5Ff" secondAttribute="top" id="Cra-B2-xhE"/>
-                                                <constraint firstItem="k9j-vg-78m" firstAttribute="trailing" secondItem="hX6-cq-5Ff" secondAttribute="trailing" id="IlS-rK-cPD"/>
                                                 <constraint firstItem="hX6-cq-5Ff" firstAttribute="centerY" secondItem="izu-bZ-vZP" secondAttribute="centerY" id="XwU-ne-bYq"/>
-                                                <constraint firstItem="k9j-vg-78m" firstAttribute="leading" secondItem="hX6-cq-5Ff" secondAttribute="leading" id="adh-3z-yzh"/>
-                                                <constraint firstItem="k9j-vg-78m" firstAttribute="bottom" secondItem="hX6-cq-5Ff" secondAttribute="bottom" id="pPq-tw-m8O"/>
                                                 <constraint firstItem="hX6-cq-5Ff" firstAttribute="left" secondItem="izu-bZ-vZP" secondAttribute="left" constant="16" id="uT6-2r-gzp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="viewBackgroundView" destination="k9j-vg-78m" id="baL-KE-CzK"/>
+                                            <outlet property="saveButton" destination="hX6-cq-5Ff" id="wby-qP-TVl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -619,7 +610,7 @@
         <image name="badAvocado" width="28.5" height="42"/>
         <image name="divider" width="308" height="1"/>
         <image name="listOfPlacesNavBarBg" width="375" height="149.5"/>
-        <image name="mango" width="28.5" height="42"/>
+        <image name="mango" width="491" height="724"/>
         <image name="shopPin" width="49.5" height="73.5"/>
     </resources>
 </document>

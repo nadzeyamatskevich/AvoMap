@@ -14,6 +14,7 @@ class UserDefaultsManager: NSObject {
     
     enum Data: String {
         case type = "type"
+        case authorNameKey = "authorName"
     }
     
     func get(data: Data) -> String {
