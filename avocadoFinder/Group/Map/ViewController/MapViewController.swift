@@ -144,7 +144,7 @@ extension MapViewController {
     }
     
     func configureDataSource() {
-        dataSource = ListOfPlacesDataSource(tableView: tableView)
+        dataSource = ListOfPlacesDataSource(tableView: tableView, viewController: self)
         dataSource.delegate = self
     }
     

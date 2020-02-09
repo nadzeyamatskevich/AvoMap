@@ -132,13 +132,22 @@ extension AddNewPlaceViewController: AddNewPlaceDescriptionCellDelegate {
     
     
     func openCurrencyVC() {
-        let volutesVC = UIStoryboard(storyboard: .volutes).instantiateInitialViewController() as! VolutesViewController
-        self.present(volutesVC, animated: true, completion: nil)
+        let currenciesVC = UIStoryboard(storyboard: .currencies).instantiateInitialViewController() as! CurrenciesViewController
+        currenciesVC.modalPresentationStyle = .fullScreen
+        currenciesVC.modalTransitionStyle = .crossDissolve
+        currenciesVC.modalPresentationStyle = .overCurrentContext
+        currenciesVC.addNewPlaceDelegate = self
+        self.present(currenciesVC, animated: true, completion: nil)
     }
 
 }
 
 extension AddNewPlaceViewController: AddNewPlaceDelegate {
+    func setCurreny(currency: CurrencyModel) {
+        UserDefaultsManager.shared.save(value: currency.currency, data: .selectedСurrency)
+        dataSource.setCurrency(currency)
+    }
+    
     
 }
 
@@ -229,7 +238,9 @@ extension AddNewPlaceViewController {
     func configureDataSource() {
         dataSource = AddNewPlaceDataSourceManager(tableView: tableView)
         dataSource.delegate = self
-        dataSource.set(userName: userName, type: type)
+        dataSource.descriptionCelldelegate = self
+        let currency = CurrencyManager.shared.selectedСurrency
+        dataSource.set(userName: userName, type: type, currency: currency)
     }
 
     @objc func keyboardWillShow(notification: NSNotification) {

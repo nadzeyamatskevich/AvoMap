@@ -15,6 +15,7 @@ class AddNewPlaceDataSourceManager: NSObject {
     
     // - Delegate
     weak var delegate: AddNewPlaceDelegate?
+    weak var descriptionCelldelegate: AddNewPlaceDescriptionCellDelegate?
     
     // - Data
     private(set) var cells: [Cell] = []
@@ -23,6 +24,7 @@ class AddNewPlaceDataSourceManager: NSObject {
     private(set) var name: String = ""
     private(set) var comment: String = ""
     private(set) var type: TypeOfFruit = .avocado
+    private(set) var currency = "BYR"
     
     // - Lifecycle
     init(tableView: UITableView) {
@@ -31,9 +33,10 @@ class AddNewPlaceDataSourceManager: NSObject {
         configure()
     }
     
-    func set(userName: String, type: TypeOfFruit) {
+    func set(userName: String, type: TypeOfFruit, currency: String) {
         self.type = type
         self.userName = userName
+        self.currency = currency
         configureCells()
         tableView.reloadData()
     }
@@ -42,6 +45,12 @@ class AddNewPlaceDataSourceManager: NSObject {
         self.address = address
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? AddNewPlaceMainTableViewCell
         cell?.setAddress(address)
+    }
+    
+    func setCurrency(_ currency: CurrencyModel) {
+        self.currency = currency.currency
+        let cell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? AddNewPlaceDescriptionTableViewCell
+        cell?.setCurrency(currency.currency)
     }
     
     func update() {
@@ -105,7 +114,8 @@ extension AddNewPlaceDataSourceManager {
     
     func descriptionCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.description.rawValue, for: indexPath) as! AddNewPlaceDescriptionTableViewCell
-        cell.setType(type: type)
+        cell.set(type: type, currency: currency)
+        cell.delegate = descriptionCelldelegate
         return cell
     }
     

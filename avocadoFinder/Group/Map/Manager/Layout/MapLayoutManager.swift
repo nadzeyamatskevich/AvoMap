@@ -460,7 +460,7 @@ extension MapLayoutManager {
         viewController.view.isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.5, animations: { [weak self] in
             guard let сonstraint =  self?.viewController.listTopConstraint else { return }
-            сonstraint.constant -= UIScreen.main.bounds.height
+            сonstraint.constant = -20
             self?.viewController.view.layoutIfNeeded()
         }, completion: { [weak self] _ in
             self?.viewController.view.isUserInteractionEnabled = true

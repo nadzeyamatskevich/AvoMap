@@ -10,6 +10,8 @@ import UIKit
 
 enum AppColor {
     
+    static let selected   = color(fromHex: "027163")
+    static let darkBlack  = color(fromHex: "2F3337")
     static let cyan       = color(fromHex: "4cc1c7")
     static let darkCyan   = color(fromHex: "3bbab6")
     static let green      = color(fromHex: "abdc90")
