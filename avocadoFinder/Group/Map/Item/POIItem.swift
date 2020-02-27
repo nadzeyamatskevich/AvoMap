@@ -14,14 +14,16 @@ class POIItem: NSObject, GMUClusterItem {
     var shopId: String!
     var iconView: UIImageView!
     var shopType: String
+    var isRipe: Bool
     var price: String
     
-    init(position: CLLocationCoordinate2D, shopId: String, iconView: UIImageView!, shopType: String, price: String = "0000") {
+    init(position: CLLocationCoordinate2D, shopId: String, iconView: UIImageView!, shopType: String, isRipe: Bool, price: String = "0000") {
         self.position = position
         self.shopId = shopId
         self.iconView = iconView
         self.shopType = shopType
         self.price = price
+        self.isRipe = isRipe
     }
 }
 

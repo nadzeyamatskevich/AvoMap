@@ -211,6 +211,7 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="commentLabel" destination="Qml-rY-iLK" id="8MA-8V-XbY"/>
+                                            <outlet property="dateLabel" destination="0BJ-7n-RQb" id="jzP-hx-oFv"/>
                                             <outlet property="instagramLabel" destination="9UX-gy-Ks4" id="bA7-yl-bz9"/>
                                             <outlet property="mainView" destination="ktO-Hg-If9" id="uWi-5M-a5m"/>
                                             <outlet property="shopAdress" destination="nfW-sm-vwg" id="42A-8a-86G"/>
@@ -412,6 +413,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="navBar" destination="XlX-n8-DT2" id="DpR-oM-pEj"/>
                         <outlet property="tableVIew" destination="NDb-eM-acn" id="Smy-a9-TQy"/>
                     </connections>
                 </viewController>

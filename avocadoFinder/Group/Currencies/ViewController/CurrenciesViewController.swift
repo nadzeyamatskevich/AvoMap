@@ -24,7 +24,7 @@ class CurrenciesViewController: UIViewController {
     
     // - Data
     private(set) var currencies: [CurrencyModel] = []
-    private(set) var selectedСurrency: String = "BYR"
+    private(set) var selectedСurrency: String = "BYN"
     
     // - Lifecycle
     override func viewDidLoad() {

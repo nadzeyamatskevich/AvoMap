@@ -20,6 +20,8 @@ class ShopModel: Object, Codable {
     @objc dynamic var price = ""
     @objc dynamic var inserted_at = ""
     @objc dynamic var shopDescription = ""
+    @objc dynamic var ripe = false
+    @objc dynamic var currency = ""
     var recent_comments = List<CommentModel>()
     
     override public static func primaryKey() -> String? {
@@ -38,6 +40,8 @@ class ShopModel: Object, Codable {
         case description
         case price
         case inserted_at
+        case ripe
+        case currency
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -53,6 +57,8 @@ class ShopModel: Object, Codable {
         shopDescription = try values.decodeIfPresent(String.self, forKey: .description) ?? ""
         price = try values.decodeIfPresent(String.self, forKey: .price) ?? ""
         inserted_at = try values.decodeIfPresent(String.self, forKey: .inserted_at) ?? ""
+        ripe = try values.decodeIfPresent(Bool.self, forKey: .ripe) ?? false
+        currency = try values.decodeIfPresent(String.self, forKey: .currency) ?? ""
         
         if let recent_comments = try values.decodeIfPresent([CommentModel].self, forKey: .recent_comments) {
             self.recent_comments.append(objectsIn: recent_comments)
@@ -71,6 +77,8 @@ class ShopModel: Object, Codable {
         try container.encode(shopDescription, forKey: .description)
         try container.encode(price, forKey: .price)
         try container.encode(inserted_at, forKey: .inserted_at)
+        try container.encode(ripe, forKey: .ripe)
+        try container.encode(currency, forKey: .currency)
         try container.encode(Array(recent_comments), forKey: .recent_comments)
     }
     

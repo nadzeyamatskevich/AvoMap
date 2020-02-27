@@ -16,6 +16,8 @@ class AddNewPlaceDataSourceManager: NSObject {
     // - Delegate
     weak var delegate: AddNewPlaceDelegate?
     weak var descriptionCelldelegate: AddNewPlaceDescriptionCellDelegate?
+    weak var addNewPlaceMainCellDelegate: AddNewPlaceMainCellDelegate?
+    weak var addNewPlaceSaveCellDelegate: AddNewPlaceSaveCellDelegate?
     
     // - Data
     private(set) var cells: [Cell] = []
@@ -24,7 +26,7 @@ class AddNewPlaceDataSourceManager: NSObject {
     private(set) var name: String = ""
     private(set) var comment: String = ""
     private(set) var type: TypeOfFruit = .avocado
-    private(set) var currency = "BYR"
+    private(set) var currency = "BYN"
     
     // - Lifecycle
     init(tableView: UITableView) {
@@ -62,6 +64,7 @@ class AddNewPlaceDataSourceManager: NSObject {
         cell?.changeType(isAVO: isAVO)
         let saveCell = tableView.cellForRow(at: IndexPath(row: 2, section: 0)) as? AddNewPlaceSaveTableViewCell
         saveCell?.changeType(isAVO: isAVO)
+        type = isAVO ? .avocado : .mango
     }
     
 }
@@ -104,11 +107,13 @@ extension AddNewPlaceDataSourceManager {
     
     func mainCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.main.rawValue, for: indexPath) as! AddNewPlaceMainTableViewCell
+        cell.delegate = addNewPlaceMainCellDelegate
         return cell
     }
     
     func mainWithoutNameCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.mainWithoutName.rawValue, for: indexPath) as! AddNewPlaceMainTableViewCell
+        cell.delegate = addNewPlaceMainCellDelegate
         return cell
     }
     
@@ -122,6 +127,7 @@ extension AddNewPlaceDataSourceManager {
     func saveCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.save.rawValue, for: indexPath) as! AddNewPlaceSaveTableViewCell
         cell.setType(type: type)
+        cell.delegate = addNewPlaceSaveCellDelegate
         return cell
     }
     

@@ -64,7 +64,7 @@ final class CurrencyManager: NSObject {
         if countryCodesOfEuropean.contains(regionCode) {
             return "EUR"
         } else if regionCode == "BY" {
-            return "BYR"
+            return "BYN"
         } else if regionCode == "RU"{
             return "RUB"
         } else if regionCode == "UA" {

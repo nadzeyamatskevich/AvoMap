@@ -19,7 +19,7 @@ class CurrenciesDataSource: NSObject {
     
     // - Data
     private(set) var currencies: [CurrencyModel] = []
-    private(set) var selectedСurrency: String = "BYR"
+    private(set) var selectedСurrency: String = "BYN"
     
     // - Lifecycle
     init(tableView: UITableView) {

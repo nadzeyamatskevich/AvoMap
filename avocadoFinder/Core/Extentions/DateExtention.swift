@@ -31,6 +31,13 @@ extension Date {
         return UTCToLocal(date: dateString, format: "HH:mm dd.MM.yyyy")
     }
     
+    func dateToStringTimeDM() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm dd.MM"
+        let dateString = dateFormatter.string(from: self)
+        return UTCToLocal(date: dateString, format: "HH:mm dd.MM")
+    }
+    
     static func stringToDate(dateString: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"

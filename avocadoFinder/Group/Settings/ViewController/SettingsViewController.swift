@@ -54,12 +54,28 @@ extension SettingsViewController: SettingsDataSourceDelegate, MFMailComposeViewC
         openStaticPage(value: value)
     }
     
+    func changeName() {
+        let alert = UIAlertController(title: "Введите новое имя", message: "", preferredStyle: .alert)
+
+        alert.addTextField { (textField) in
+            textField.text = KeychainManager.shared.name ?? ""
+        }
+
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            KeychainManager.shared.saveName(textField?.text)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func openStaticPage(value: String) {
         switch value {
         case AppDocuments.privacyPolicy.rawValue:
             UIApplication.shared.open(NSURL(string: AppDocuments.privacyPolicy.urlForDocument)! as URL, options: [:], completionHandler: nil)
         case AppDocuments.termsAndCondition.rawValue:
             UIApplication.shared.open(NSURL(string: AppDocuments.termsAndCondition.urlForDocument)! as URL, options: [:], completionHandler: nil)
+        case AppInfoCell.changeName.rawValue:
+            changeName()
         default:
             sendEmail(topic: value)
         }

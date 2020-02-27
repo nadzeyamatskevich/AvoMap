@@ -21,7 +21,7 @@ target 'avocadoFinder' do
     pod 'Moya', '~> 12.0'
     pod 'SwiftyJSON', '~> 5.0'
     pod 'RealmSwift'
-    pod 'AlamofireNetworkActivityLogger', '~> 2.0'
+    #pod 'AlamofireNetworkActivityLogger', '~> 2.0'
     
     #Image
     pod 'Kingfisher', '~> 5.0'

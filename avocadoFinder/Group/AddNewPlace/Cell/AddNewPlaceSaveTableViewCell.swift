@@ -12,6 +12,8 @@ class AddNewPlaceSaveTableViewCell: UITableViewCell {
     
     // - UI
     @IBOutlet weak var saveButton: UIButton!
+    
+    var delegate: AddNewPlaceSaveCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +27,7 @@ class AddNewPlaceSaveTableViewCell: UITableViewCell {
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
+        self.delegate?.saveNewPlace()
     }
     
     func setType(type: TypeOfFruit) {

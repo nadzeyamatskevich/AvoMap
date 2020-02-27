@@ -25,11 +25,16 @@ class ListOfPlacesTableViewCell: UITableViewCell {
         shopNameLabel.text = shop.name
         shopAddressLabel.text = shop.address
         switch shop.type {
-            case "store":                    fruilImageView.image = #imageLiteral(resourceName: "avoFruit")
-            case "food_establishment":       fruilImageView.image = #imageLiteral(resourceName: "foodPin")
-            case "store_mango":              fruilImageView.image = #imageLiteral(resourceName: "mango")
-            case "food_establishment_mango": fruilImageView.image = #imageLiteral(resourceName: "mango")
-            default: print()
+        case PlaceType.store.rawValue: fruilImageView.image = shop.ripe ?
+            #imageLiteral(resourceName: "shopPin").sd_rotatedImage(withAngle: .pi, fitSize: false) : #imageLiteral(resourceName: "badAvocado").sd_rotatedImage(withAngle: .pi, fitSize: false)
+            
+        case PlaceType.food_establishment.rawValue:       fruilImageView.image = #imageLiteral(resourceName: "foodPin")
+            
+        case PlaceType.store_mango.rawValue: fruilImageView.image = shop.ripe ? #imageLiteral(resourceName: "mango") : #imageLiteral(resourceName: "badMango")
+            
+        case PlaceType.food_establishment_mango.rawValue: fruilImageView.image = #imageLiteral(resourceName: "mango")
+            
+        default: print()
         }
     }
     

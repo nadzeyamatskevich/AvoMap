@@ -52,4 +52,5 @@ enum AppDocuments: String {
 enum AppInfoCell: String {
     case addPlace = "Предложить заведение"
     case proposeWork = "Предложить сотрудничество"
+    case changeName = "Изменить имя"
 }

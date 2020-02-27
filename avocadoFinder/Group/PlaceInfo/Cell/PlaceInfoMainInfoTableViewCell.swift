@@ -16,6 +16,7 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var shopAdress: UILabel!
     @IBOutlet weak var instagramLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     // - Lifecycle
     override func awakeFromNib() {
@@ -27,8 +28,14 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
         shopTitle.text = shop.name
         shopAdress.text = shop.address
         instagramLabel.text = shop.author
-        commentLabel.text = shop.shopDescription
+        commentLabel.text = shop.shopDescription + (shop.price.count > 0 ? " - " + shop.price + shop.currency : "")
+        if let date = Date.stringToDate(dateString: shop.inserted_at) {
+            dateLabel.text = date.dateToStringTimeDM()
+        } else {
+            dateLabel.text = ""
+        }
     }
+
 }
 
 // MARK: -
