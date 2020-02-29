@@ -184,6 +184,8 @@ extension AddNewPlaceViewController {
             self.showAlert(title: "Упс, ошибка!", message: "Напишите свое имя :)")
         } else if newShop.shopDescription.count > 280 {
             self.showAlert(title: "Упс, ошибка!", message: "Комментарий должен быть до 280 символов :)")
+        } else if newShop.price.count > 6 {
+            self.showAlert(title: "Упс, ошибка!", message: "Цена должена быть до 5 символов :)")
         } else {
             return true
         }
@@ -220,16 +222,15 @@ extension AddNewPlaceViewController {
     func addShop(shop: ShopModel) {
         HPGradientLoading.shared.showLoading()
         postShopRequest(shop: shop) { [weak self] (response, error) in
-            //guard let strongSelf = self else {return }
-            print("PRINT HERE", error, response)
+            guard let strongSelf = self else {return }
             if error != nil {
                 HPGradientLoading.shared.dismiss()
-                self?.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
+                strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
                 HPGradientLoading.shared.dismiss()
-                self?.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: nil)
-                self?.addAnalyticsEventAddPlace()
-                self?.navigationController?.popViewController(animated: true)
+                strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: nil)
+                strongSelf.addAnalyticsEventAddPlace()
+                strongSelf.navigationController?.popViewController(animated: true)
             }
         }
     }

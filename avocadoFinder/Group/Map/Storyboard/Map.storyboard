@@ -364,7 +364,7 @@
         <image name="avoFruit" width="43.5" height="64.5"/>
         <image name="global" width="32" height="32"/>
         <image name="gps" width="32" height="32"/>
-        <image name="mango" width="49.5" height="73"/>
+        <image name="mango" width="43" height="63.5"/>
         <image name="navBarBg" width="562.5" height="222.5"/>
     </resources>
 </document>

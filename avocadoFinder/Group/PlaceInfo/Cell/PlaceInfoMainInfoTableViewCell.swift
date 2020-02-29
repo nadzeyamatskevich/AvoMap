@@ -28,7 +28,7 @@ class PlaceInfoMainInfoTableViewCell: UITableViewCell {
         shopTitle.text = shop.name
         shopAdress.text = shop.address
         instagramLabel.text = shop.author
-        commentLabel.text = shop.shopDescription + (shop.price.count > 0 ? " - " + shop.price + shop.currency : "")
+        commentLabel.text = shop.shopDescription + (shop.price != "0.00" ? " - " + shop.price + shop.currency : "")
         if let date = Date.stringToDate(dateString: shop.inserted_at) {
             dateLabel.text = date.dateToStringTimeDM()
         } else {

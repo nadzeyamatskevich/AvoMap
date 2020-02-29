@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewsAndBlogViewController: UIViewController {
     
@@ -39,7 +40,7 @@ class NewsAndBlogViewController: UIViewController {
     }
     
     func changType(type: TypeOfFruit) {
-        let image = type == .avocado ? UIImage(named: "newsNavBarBg") : UIImage(named: "mangoNavBar")
+        let image = type == .avocado ? UIImage(named: "newsNavBarBg") : UIImage(named: "orangeNavBar")
         navBarBgImageView.image = image
     }
 
@@ -50,7 +51,7 @@ class NewsAndBlogViewController: UIViewController {
 
 extension NewsAndBlogViewController: NewsAndBlogDataSourceDelegate {
     func didTapOnCell(news: NewsModel, image: UIImage?) {
-       coordinatorManager.pushOneNewsInfoViewController(news: news, image: image)
+        coordinatorManager.pushOneNewsInfoViewController(news: news, image: image)
     }
     
 }
@@ -80,6 +81,7 @@ extension NewsAndBlogViewController {
         configureLayoutManager()
         configureDataSource()
         configureCoordinatorManager()
+        addAnalyticsEvent()
     }
     
     func configureLayoutManager() {
@@ -95,4 +97,8 @@ extension NewsAndBlogViewController {
         dataSource.delegate = self
     }
     
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_blog", parameters: [:])
+    }
+
 }

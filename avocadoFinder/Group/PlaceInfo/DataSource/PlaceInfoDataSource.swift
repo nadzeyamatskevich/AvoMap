@@ -78,6 +78,7 @@ extension PlaceInfoDataSource {
     
     func addCommentCell(for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.addCommentCell, for: indexPath) as! PlaceInfoAddCommentTableViewCell
+        cell.set(shop: shop)
         cell.delegate = addCommentDelegate
         return cell
     }

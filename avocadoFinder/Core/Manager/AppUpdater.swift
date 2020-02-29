@@ -95,27 +95,8 @@ extension UIViewController {
                 UIApplication.shared.openURL(url)
             }
         })
-        /*let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-
-        if !Force {
-            let notNowButton = UIAlertAction(title: "Not Now", style: .default)
-            alertController.addAction(notNowButton)
-        }
-
-        let updateButton = UIAlertAction(title: "Update", style: .default) { (action:UIAlertAction) in
-            guard let url = URL(string: AppURL) else {
-                return
-            }
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
-
-        alertController.addAction(updateButton)
-        self.present(alertController, animated: true, completion: nil)*/
     }
+
 }
 extension Bundle {
     static func appName() -> String {

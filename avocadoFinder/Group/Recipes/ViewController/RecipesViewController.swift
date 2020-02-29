@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RecipesViewController: UIViewController {
     
@@ -81,6 +82,7 @@ extension RecipesViewController {
         configureLayoutManager()
         configureDataSource()
         configureCoordinatorManager()
+        addAnalyticsEvent()
     }
     
     func configureLayoutManager() {
@@ -96,4 +98,8 @@ extension RecipesViewController {
         dataSource.delegate = self
     }
     
+    func addAnalyticsEvent() {
+        Analytics.logEvent("open_recipes", parameters: [:])
+    }
+
 }

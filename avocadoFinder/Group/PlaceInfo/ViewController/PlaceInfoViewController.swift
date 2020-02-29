@@ -129,7 +129,7 @@ extension PlaceInfoViewController {
         addAnalyticsEvent()
 
         if shop.type == "\(PlaceType.food_establishment_mango)" || shop.type == "\(PlaceType.store_mango)" {
-            navBar.image = UIImage(named: "mangoNavBar")
+            navBar.image = UIImage(named: "orangeNavBar")
         } else {
             navBar.image = UIImage(named: "navBarBg")
         }

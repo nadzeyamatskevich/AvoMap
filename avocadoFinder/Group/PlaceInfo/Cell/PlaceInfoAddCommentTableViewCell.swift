@@ -24,6 +24,11 @@ class PlaceInfoAddCommentTableViewCell: UITableViewCell {
         configure()
     }
     
+    func set(shop: ShopModel) {
+        let isMango = shop.type == PlaceType.store_mango.rawValue || shop.type == PlaceType.food_establishment_mango.rawValue
+        mainView.backgroundColor = !isMango ? AppColor.avo : AppColor.orange
+    }
+    
 }
 
 // MARK: -
@@ -79,7 +84,7 @@ extension PlaceInfoAddCommentTableViewCell {
     func configureMainView() {
         mainView.layer.cornerRadius = 16
         mainView.setupShadow(color: AppColor.black(alpha: 0.1))
-        //self.authorTextField.text = UserDefaults.standard.string(forKey: UserDefaultsEnum.authorNameKey.rawValue) ?? ""
+        self.authorTextField.text = KeychainManager.shared.name
     }
     
 }

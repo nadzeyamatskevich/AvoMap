@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TypeOfFruit {
+enum TypeOfFruit: String {
     case avocado
     case mango
 }

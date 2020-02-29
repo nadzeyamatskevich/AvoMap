@@ -110,7 +110,7 @@ extension RecipeInfoViewController {
     }
     
    func addAnalyticsEvent() {
-        Analytics.logEvent("open_news", parameters: [
+        Analytics.logEvent("open_recipe", parameters: [
             "name": self.recipe.title as NSObject
         ])
     }

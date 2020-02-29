@@ -43,6 +43,12 @@ class ListOfPlacesDataSource: NSObject {
 // MARK: - UITableViewDataSource
 
 extension ListOfPlacesDataSource: UITableViewDataSource {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y < -100 {
+            delegate?.hidePlaceList()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shops.count
