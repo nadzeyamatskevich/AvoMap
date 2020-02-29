@@ -76,6 +76,7 @@ extension AddNewPlaceViewController: GMSAutocompleteViewControllerDelegate {
    
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         dataSource.setAddress(place.name ?? "nil")
+        newShop.name = place.name ?? ""
         newShop.longitude = "\(place.coordinate.longitude)"
         newShop.latitude = "\(place.coordinate.latitude)"
         addAnalyticsEventText()
@@ -132,13 +133,22 @@ extension AddNewPlaceViewController: AddNewPlaceDescriptionCellDelegate {
     
     
     func openCurrencyVC() {
-        let volutesVC = UIStoryboard(storyboard: .volutes).instantiateInitialViewController() as! VolutesViewController
-        self.present(volutesVC, animated: true, completion: nil)
+        let currenciesVC = UIStoryboard(storyboard: .currencies).instantiateInitialViewController() as! CurrenciesViewController
+        currenciesVC.modalPresentationStyle = .fullScreen
+        currenciesVC.modalTransitionStyle = .crossDissolve
+        currenciesVC.modalPresentationStyle = .overCurrentContext
+        currenciesVC.addNewPlaceDelegate = self
+        self.present(currenciesVC, animated: true, completion: nil)
     }
 
 }
 
 extension AddNewPlaceViewController: AddNewPlaceDelegate {
+    func setCurreny(currency: CurrencyModel) {
+        UserDefaultsManager.shared.save(value: currency.currency, data: .selectedСurrency)
+        dataSource.setCurrency(currency)
+    }
+    
     
 }
 
@@ -152,15 +162,30 @@ extension AddNewPlaceViewController {
     }
     
     func checkShopInfo() -> Bool {
+        if let mainCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? AddNewPlaceMainTableViewCell {
+            if userName.count < 1 {
+                userName = mainCell.shopAuthorTextField.text ?? ""
+            }
+            newShop.name = mainCell.shopNameTextField.text ?? ""
+        }
         
-        if dataSource.address == "" {
+        if let descriptionCell = tableView.cellForRow(at: IndexPath(row: 1, section: 0)) as? AddNewPlaceDescriptionTableViewCell {
+            newShop.shopDescription = descriptionCell.commentTextField.text ?? ""
+            newShop.ripe = descriptionCell.degreeOfRipenessSegmentedControl.selectedSegmentIndex == 1 ? false : true
+            newShop.price = descriptionCell.priceTextField.text ?? ""
+            newShop.currency = descriptionCell.currencyLabel.text ?? ""
+        }
+        
+        if newShop.name == "" {
             self.showAlert(title: "Упс, ошибка!", message: "Напишите название магазина :)")
         } else if dataSource.address == "" {
             self.showAlert(title: "Упс, ошибка!", message: "Напишите адрес магазина :)")
         } else if userName == "" {
             self.showAlert(title: "Упс, ошибка!", message: "Напишите свое имя :)")
-        } else if dataSource.comment.count > 280 {
+        } else if newShop.shopDescription.count > 280 {
             self.showAlert(title: "Упс, ошибка!", message: "Комментарий должен быть до 280 символов :)")
+        } else if newShop.price.count > 6 {
+            self.showAlert(title: "Упс, ошибка!", message: "Цена должена быть до 5 символов :)")
         } else {
             return true
         }
@@ -168,15 +193,19 @@ extension AddNewPlaceViewController {
     }
     
     func createShopModel() -> ShopModel {
-        newShop.name = dataSource.name
         newShop.address = dataSource.address
-        newShop.author = dataSource.userName
-        newShop.shopDescription = dataSource.comment
+        newShop.author = userName
+        switch dataSource.type {
+        case .avocado:
+            newShop.type = PlaceType.store.rawValue
+        case .mango:
+            newShop.type = PlaceType.store_mango.rawValue
+        }
         return newShop
     }
     
     func saveAuthorName() {
-//        UserDefaults.standard.set(shopAuthorTextField.text ?? "", forKey: UserDefaultsEnum.authorNameKey.rawValue)
+        KeychainManager.shared.saveName(userName)
     }
     
 }
@@ -193,14 +222,14 @@ extension AddNewPlaceViewController {
     func addShop(shop: ShopModel) {
         HPGradientLoading.shared.showLoading()
         postShopRequest(shop: shop) { [weak self] (response, error) in
-            guard let strongSelf = self else { return }
+            guard let strongSelf = self else {return }
             if error != nil {
                 HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if response != nil {
                 HPGradientLoading.shared.dismiss()
                 strongSelf.showAlert(title: "Отлично!", message: "Наводка сохранена :) Спасибо.", completion: nil)
-                self?.addAnalyticsEventAddPlace()
+                strongSelf.addAnalyticsEventAddPlace()
                 strongSelf.navigationController?.popViewController(animated: true)
             }
         }
@@ -229,21 +258,22 @@ extension AddNewPlaceViewController {
     func configureDataSource() {
         dataSource = AddNewPlaceDataSourceManager(tableView: tableView)
         dataSource.delegate = self
-        dataSource.set(userName: userName, type: type)
+        dataSource.descriptionCelldelegate = self
+        dataSource.addNewPlaceMainCellDelegate = self
+        dataSource.addNewPlaceSaveCellDelegate = self
+        let currency = CurrencyManager.shared.selectedСurrency
+        dataSource.set(userName: userName, type: type, currency: currency)
     }
 
-    @objc func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow(_ notification:Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.height <= 667 && self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height/2
-            }
+            tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: keyboardSize.height + 20, right: 0)
         }
     }
-
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-            self.view.endEditing(true)
+    
+    @objc func keyboardWillHide(_ notification:Notification) {
+        if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         }
     }
     

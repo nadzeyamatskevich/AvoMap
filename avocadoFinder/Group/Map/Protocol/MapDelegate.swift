@@ -11,4 +11,5 @@ import UIKit
 protocol MapDelegate: class {
     func didTapOnCell(shop: ShopModel)
     func updateTypeAfterReturn(type: TypeOfFruit)
+    func hidePlaceList()
 }

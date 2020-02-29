@@ -22,4 +22,6 @@ protocol AddNewPlaceSaveCellDelegate: class {
     func saveNewPlace()
 }
 
-protocol AddNewPlaceDelegate: class {}
+protocol AddNewPlaceDelegate: class {
+    func setCurreny(currency: CurrencyModel)
+}

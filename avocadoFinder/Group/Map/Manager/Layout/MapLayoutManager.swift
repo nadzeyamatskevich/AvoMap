@@ -148,7 +148,7 @@ extension MapLayoutManager: GMUClusterManagerDelegate {
             UIImageView(image: UIImage(named: "shopPin")) :
             UIImageView(image: UIImage(named: "foodPin"))
             if Double(lat)! > -85.0 && Double(lat)! < 85.0 && Double(lng)! > -180.0 && Double(lng)! < 180.0 {
-                let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView, shopType: shopType)//, price: shop.price)
+                let item = POIItem(position: CLLocationCoordinate2DMake(Double(lat)!, Double(lng)!), shopId: shopId, iconView: iconImageView, shopType: shopType, isRipe: shop.ripe)//, price: shop.price)
                 clusterManager.add(item)
             }            
         }
@@ -327,31 +327,17 @@ extension MapLayoutManager: GMUClusterRendererDelegate {
             let clusterMarker = marker.userData as! GMUStaticCluster
             marker.icon = generateImageWithText(text: "\(clusterMarker.count)")
         } else if let shop = marker.userData as? POIItem {
-//            if viewController.type == .avocado{
-//                marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
-//            } else {
-//                marker.icon = shop.shopType == "store" ? UIImage(named: "shopPin") : UIImage(named: "foodPin")
-//            }
-//
-//            switch shop.shopType {
-//                case "store": marker.icon = UIImage(named: "mango")
-//                case "food_establishment": marker.icon = UIImage(named: "mango")
-//                case "store_mango": marker.icon = UIImage(named: "foodPin")
-//                case "food_establishment_mango": marker.icon = UIImage(named: "shopPin")
-//                default: marker.icon = UIImage(named: "foodPin")
-//            }
-            setIconForMarker(willRenderMarker: marker,shopType:shop.shopType)
-            //marker.icon = shop.shopType == "store" ? generateAvoPinWithPrice(text: shop.price) : UIImage(named: "foodPin")
+            setIconForMarker(willRenderMarker: marker, shop: shop)
         } else {
             marker.icon = UIImage(named: "shopPin")
         }
     }
     
-    func setIconForMarker(willRenderMarker marker: GMSMarker, shopType: String) {
-        switch shopType {
-            case "store": marker.icon = UIImage(named: "shopPin")
+    func setIconForMarker(willRenderMarker marker: GMSMarker, shop: POIItem) {
+        switch shop.shopType {
+            case "store": marker.icon = shop.isRipe ? UIImage(named: "shopPin") : UIImage(named: "badAvocado")
             case "food_establishment": marker.icon = UIImage(named: "foodPin")
-            case "store_mango": marker.icon = UIImage(named: "foodPin")
+            case "store_mango": marker.icon = shop.isRipe ? UIImage(named: "mango") : UIImage(named: "badMango")
             case "food_establishment_mango": marker.icon = UIImage(named: "mango")
             default: marker.icon = UIImage(named: "mango")
         }
@@ -460,7 +446,7 @@ extension MapLayoutManager {
         viewController.view.isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.5, animations: { [weak self] in
             guard let сonstraint =  self?.viewController.listTopConstraint else { return }
-            сonstraint.constant -= UIScreen.main.bounds.height
+            сonstraint.constant = -20
             self?.viewController.view.layoutIfNeeded()
         }, completion: { [weak self] _ in
             self?.viewController.view.isUserInteractionEnabled = true

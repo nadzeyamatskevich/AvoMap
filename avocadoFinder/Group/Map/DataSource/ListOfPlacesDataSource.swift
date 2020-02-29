@@ -11,7 +11,8 @@ import UIKit
 class ListOfPlacesDataSource: NSObject {
     
     // - UI
-    fileprivate unowned let tableView: UITableView
+    private unowned let tableView: UITableView
+    private unowned let viewController: MapViewController
     
     // - Delegate
     weak var delegate: MapDelegate?
@@ -20,8 +21,9 @@ class ListOfPlacesDataSource: NSObject {
     var shops: [ShopModel] = []
     
     // - Lifecycle
-    init(tableView: UITableView) {
+    init(tableView: UITableView, viewController: MapViewController) {
         self.tableView = tableView
+        self.viewController = viewController
         super.init()
         configure()
     }
@@ -41,6 +43,12 @@ class ListOfPlacesDataSource: NSObject {
 // MARK: - UITableViewDataSource
 
 extension ListOfPlacesDataSource: UITableViewDataSource {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y < -100 {
+            delegate?.hidePlaceList()
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shops.count

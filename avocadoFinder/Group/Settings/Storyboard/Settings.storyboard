@@ -157,6 +157,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="avoImage" destination="dK8-kL-1EC" id="a09-Tk-S8q"/>
                         <outlet property="navBarBgImageView" destination="pMv-d5-Sdb" id="Jgt-U2-9z9"/>
                         <outlet property="tableView" destination="FPt-H3-VMD" id="B1N-1K-lBi"/>
                     </connections>

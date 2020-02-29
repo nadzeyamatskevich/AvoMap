@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3139DDE5AB4AAA98327B5DF1 /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B09B7B6A92C62BA7F72459 /* Pods_avocadoFinder.framework */; };
+		54767041361DF0DAF8F21DEC /* Pods_avocadoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC4D410A4D7B3F302841FDE /* Pods_avocadoFinder.framework */; };
 		931DF49122C52BB700D43AB0 /* POIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49022C52BB700D43AB0 /* POIItem.swift */; };
 		931DF49422C52D0200D43AB0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931DF49322C52D0200D43AB0 /* LocationManager.swift */; };
 		931DF49522C53DB800D43AB0 /* MapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932A65B022B4F32C00065119 /* MapLayoutManager.swift */; };
@@ -151,15 +151,17 @@
 		EC07955123CDF5DF00CD2689 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07955023CDF5DF00CD2689 /* KeychainManager.swift */; };
 		EC07955423CDFC2300CD2689 /* AddNewPlaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07955323CDFC2300CD2689 /* AddNewPlaceDelegate.swift */; };
 		EC07955623CE329100CD2689 /* AddNewPlaceSaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07955523CE329100CD2689 /* AddNewPlaceSaveTableViewCell.swift */; };
-		EC07955D23CE54FC00CD2689 /* VolutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07955C23CE54FC00CD2689 /* VolutesViewController.swift */; };
-		EC07955F23CE552300CD2689 /* Volutes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC07955E23CE552300CD2689 /* Volutes.storyboard */; };
-		EC07956123CE565900CD2689 /* VolutesDataSourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956023CE565900CD2689 /* VolutesDataSourceManager.swift */; };
-		EC07956323CE602F00CD2689 /* VoluteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956223CE602F00CD2689 /* VoluteTableViewCell.swift */; };
-		EC07956623CE622000CD2689 /* VolutesDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956523CE622000CD2689 /* VolutesDataSourceDelegate.swift */; };
+		EC07955D23CE54FC00CD2689 /* CurrenciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07955C23CE54FC00CD2689 /* CurrenciesViewController.swift */; };
+		EC07955F23CE552300CD2689 /* Currencies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC07955E23CE552300CD2689 /* Currencies.storyboard */; };
+		EC07956123CE565900CD2689 /* CurrenciesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956023CE565900CD2689 /* CurrenciesDataSource.swift */; };
+		EC07956323CE602F00CD2689 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956223CE602F00CD2689 /* CurrencyTableViewCell.swift */; };
+		EC07956623CE622000CD2689 /* CurrenciesDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956523CE622000CD2689 /* CurrenciesDataSourceDelegate.swift */; };
 		EC07956823D4808400CD2689 /* TypeOfFruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956723D4808400CD2689 /* TypeOfFruit.swift */; };
 		EC07956B23D4C2BB00CD2689 /* MainDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956A23D4C2BB00CD2689 /* MainDelegate.swift */; };
 		EC07956D23D4EF7D00CD2689 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC07956C23D4EF7D00CD2689 /* UserDefaultsManager.swift */; };
 		EC186E1423BE563000B9DF8B /* AddShopMapLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */; };
+		EC70752B23EF38C4004107BA /* currencies.json in Resources */ = {isa = PBXBuildFile; fileRef = EC70752A23EF38C4004107BA /* currencies.json */; };
+		EC70752D23EF3D05004107BA /* CurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70752C23EF3D05004107BA /* CurrencyManager.swift */; };
 		EC92FE2523B8F6F6000A7FDD /* ParalaxTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */; };
 		EC92FE2C23B9487D000A7FDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC92FE2B23B9487D000A7FDD /* MainViewController.swift */; };
 		EC92FE2E23B9488B000A7FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC92FE2D23B9488B000A7FDD /* Main.storyboard */; };
@@ -182,7 +184,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8459CED5B7A61BBC6D66DDE8 /* Pods-avocadoFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		19E1611AC7DD3E55503CE243 /* Pods-avocadoFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		64271CD75617E8C478955934 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
+		7CC4D410A4D7B3F302841FDE /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931DF49022C52BB700D43AB0 /* POIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIItem.swift; sourceTree = "<group>"; };
 		931DF49322C52D0200D43AB0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		931DF4F822C5417300D43AB0 /* GMUGridBasedClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGridBasedClusterAlgorithm.m; sourceTree = "<group>"; };
@@ -352,8 +356,6 @@
 		93FF9ED622F9FC4400C4D2F0 /* avocadoFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = avocadoFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FF9ED822F9FC4500C4D2F0 /* avocadoFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avocadoFinderTests.swift; sourceTree = "<group>"; };
 		93FF9EDA22F9FC4500C4D2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAB7CA586FB8B56C8C045903 /* Pods-avocadoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-avocadoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder.release.xcconfig"; sourceTree = "<group>"; };
-		D4B09B7B6A92C62BA7F72459 /* Pods_avocadoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_avocadoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC07952023CDB21200CD2689 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		EC07952223CDB22600CD2689 /* RecipesDataSourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDataSourceManager.swift; sourceTree = "<group>"; };
 		EC07952423CDB28C00CD2689 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
@@ -373,15 +375,17 @@
 		EC07955023CDF5DF00CD2689 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		EC07955323CDFC2300CD2689 /* AddNewPlaceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceDelegate.swift; sourceTree = "<group>"; };
 		EC07955523CE329100CD2689 /* AddNewPlaceSaveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPlaceSaveTableViewCell.swift; sourceTree = "<group>"; };
-		EC07955C23CE54FC00CD2689 /* VolutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolutesViewController.swift; sourceTree = "<group>"; };
-		EC07955E23CE552300CD2689 /* Volutes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Volutes.storyboard; sourceTree = "<group>"; };
-		EC07956023CE565900CD2689 /* VolutesDataSourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolutesDataSourceManager.swift; sourceTree = "<group>"; };
-		EC07956223CE602F00CD2689 /* VoluteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoluteTableViewCell.swift; sourceTree = "<group>"; };
-		EC07956523CE622000CD2689 /* VolutesDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolutesDataSourceDelegate.swift; sourceTree = "<group>"; };
+		EC07955C23CE54FC00CD2689 /* CurrenciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesViewController.swift; sourceTree = "<group>"; };
+		EC07955E23CE552300CD2689 /* Currencies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Currencies.storyboard; sourceTree = "<group>"; };
+		EC07956023CE565900CD2689 /* CurrenciesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesDataSource.swift; sourceTree = "<group>"; };
+		EC07956223CE602F00CD2689 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		EC07956523CE622000CD2689 /* CurrenciesDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesDataSourceDelegate.swift; sourceTree = "<group>"; };
 		EC07956723D4808400CD2689 /* TypeOfFruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfFruit.swift; sourceTree = "<group>"; };
 		EC07956A23D4C2BB00CD2689 /* MainDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDelegate.swift; sourceTree = "<group>"; };
 		EC07956C23D4EF7D00CD2689 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		EC186E1323BE563000B9DF8B /* AddShopMapLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddShopMapLayoutManager.swift; path = avocadoFinder/Group/AddShopMap/Protocol/AddShopMapLayoutManager.swift; sourceTree = SOURCE_ROOT; };
+		EC70752A23EF38C4004107BA /* currencies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = currencies.json; sourceTree = "<group>"; };
+		EC70752C23EF3D05004107BA /* CurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyManager.swift; sourceTree = "<group>"; };
 		EC92FE2423B8F6F6000A7FDD /* ParalaxTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParalaxTableView.swift; sourceTree = "<group>"; };
 		EC92FE2B23B9487D000A7FDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC92FE2D23B9488B000A7FDD /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -398,7 +402,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3139DDE5AB4AAA98327B5DF1 /* Pods_avocadoFinder.framework in Frameworks */,
+				54767041361DF0DAF8F21DEC /* Pods_avocadoFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +416,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6867C3531EF0E585B34F313B /* Frameworks */ = {
+		72491AA477C3C4E05708DD24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D4B09B7B6A92C62BA7F72459 /* Pods_avocadoFinder.framework */,
+				7CC4D410A4D7B3F302841FDE /* Pods_avocadoFinder.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -435,6 +439,7 @@
 				9397954B23CB1FB600A1DAF5 /* AppUpdater.swift */,
 				EC07955023CDF5DF00CD2689 /* KeychainManager.swift */,
 				EC07956C23D4EF7D00CD2689 /* UserDefaultsManager.swift */,
+				EC70752C23EF3D05004107BA /* CurrencyManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -828,8 +833,8 @@
 				937BB87F22416C9900215E58 /* avocadoFinder */,
 				93FF9ED722F9FC4500C4D2F0 /* avocadoFinderTests */,
 				937BB87E22416C9900215E58 /* Products */,
-				98089E0FB8855628F3BC40FF /* Pods */,
-				6867C3531EF0E585B34F313B /* Frameworks */,
+				E5787EBE1B9F46764D9775AD /* Pods */,
+				72491AA477C3C4E05708DD24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -928,7 +933,7 @@
 		93A445B6226AFBF900386766 /* Group */ = {
 			isa = PBXGroup;
 			children = (
-				EC07955723CE544C00CD2689 /* Volutes */,
+				EC07955723CE544C00CD2689 /* Currencies */,
 				EC07953A23CDBD1300CD2689 /* RecipeInfo */,
 				EC07951A23CDACE800CD2689 /* Recipes */,
 				EC92FE2723B94826000A7FDD /* Main */,
@@ -966,6 +971,7 @@
 		93A445BA226AFC8500386766 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EC70752923EF38A4004107BA /* Data */,
 				931DF49222C52CF300D43AB0 /* Manager */,
 				932A659622B4DA9E00065119 /* Method */,
 				932A659522B4DA7600065119 /* Server */,
@@ -1344,11 +1350,11 @@
 			path = avocadoFinderTests;
 			sourceTree = "<group>";
 		};
-		98089E0FB8855628F3BC40FF /* Pods */ = {
+		E5787EBE1B9F46764D9775AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8459CED5B7A61BBC6D66DDE8 /* Pods-avocadoFinder.debug.xcconfig */,
-				AAB7CA586FB8B56C8C045903 /* Pods-avocadoFinder.release.xcconfig */,
+				19E1611AC7DD3E55503CE243 /* Pods-avocadoFinder.debug.xcconfig */,
+				64271CD75617E8C478955934 /* Pods-avocadoFinder.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1516,7 +1522,7 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		EC07955723CE544C00CD2689 /* Volutes */ = {
+		EC07955723CE544C00CD2689 /* Currencies */ = {
 			isa = PBXGroup;
 			children = (
 				EC07956423CE620A00CD2689 /* Protocol */,
@@ -1525,13 +1531,13 @@
 				EC07955923CE54CF00CD2689 /* Storyboard */,
 				EC07955823CE54C200CD2689 /* ViewController */,
 			);
-			path = Volutes;
+			path = Currencies;
 			sourceTree = "<group>";
 		};
 		EC07955823CE54C200CD2689 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EC07955C23CE54FC00CD2689 /* VolutesViewController.swift */,
+				EC07955C23CE54FC00CD2689 /* CurrenciesViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1539,7 +1545,7 @@
 		EC07955923CE54CF00CD2689 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				EC07955E23CE552300CD2689 /* Volutes.storyboard */,
+				EC07955E23CE552300CD2689 /* Currencies.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -1547,7 +1553,7 @@
 		EC07955A23CE54DD00CD2689 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				EC07956023CE565900CD2689 /* VolutesDataSourceManager.swift */,
+				EC07956023CE565900CD2689 /* CurrenciesDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -1555,7 +1561,7 @@
 		EC07955B23CE54E200CD2689 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				EC07956223CE602F00CD2689 /* VoluteTableViewCell.swift */,
+				EC07956223CE602F00CD2689 /* CurrencyTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1563,7 +1569,7 @@
 		EC07956423CE620A00CD2689 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				EC07956523CE622000CD2689 /* VolutesDataSourceDelegate.swift */,
+				EC07956523CE622000CD2689 /* CurrenciesDataSourceDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1574,6 +1580,14 @@
 				EC07956A23D4C2BB00CD2689 /* MainDelegate.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EC70752923EF38A4004107BA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EC70752A23EF38C4004107BA /* currencies.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		EC92FE2723B94826000A7FDD /* Main */ = {
@@ -1651,12 +1665,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 937BB88F22416C9C00215E58 /* Build configuration list for PBXNativeTarget "avocadoFinder" */;
 			buildPhases = (
-				D5E6175934CD1C72AD265B2C /* [CP] Check Pods Manifest.lock */,
+				0B1196C47ED1FC71D7097F49 /* [CP] Check Pods Manifest.lock */,
 				937BB87922416C9900215E58 /* Sources */,
 				937BB87A22416C9900215E58 /* Frameworks */,
 				937BB87B22416C9900215E58 /* Resources */,
-				EE548E8CBEEBA15FD7C27666 /* [CP] Embed Pods Frameworks */,
-				588D3416E97102DCAB22E767 /* [CP] Copy Pods Resources */,
+				FE6D3D5CE2CEF56DDEA1C745 /* [CP] Embed Pods Frameworks */,
+				34DC8291663E7BE95655F759 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1734,7 +1748,7 @@
 				938CFCEC238A780700953DCF /* Circe-ExtraBold.eot in Resources */,
 				EC07952823CDB2B700CD2689 /* Recipes.storyboard in Resources */,
 				937BB88B22416C9C00215E58 /* LaunchScreen.storyboard in Resources */,
-				EC07955F23CE552300CD2689 /* Volutes.storyboard in Resources */,
+				EC07955F23CE552300CD2689 /* Currencies.storyboard in Resources */,
 				93A445EF226B019F00386766 /* StaticPage.storyboard in Resources */,
 				938CFCF2238A780700953DCF /* Circe-Bold.ttf in Resources */,
 				93A7094223A5004E00D314CB /* AvoPopup.storyboard in Resources */,
@@ -1766,6 +1780,7 @@
 				93A445F3226B01FB00386766 /* OneNewsInfo.storyboard in Resources */,
 				938CFCF6238A780700953DCF /* Circe-ExtraBold.woff in Resources */,
 				938CFCF0238A780700953DCF /* Circe-ExtraLight.eot in Resources */,
+				EC70752B23EF38C4004107BA /* currencies.json in Resources */,
 				938CFCFB238A780700953DCF /* Circe-ExtraLight.woff in Resources */,
 				938CFCF3238A780700953DCF /* stylesheet.css in Resources */,
 				938CFCEB238A780700953DCF /* Circe-ExtraLight.ttf in Resources */,
@@ -1782,7 +1797,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		588D3416E97102DCAB22E767 /* [CP] Copy Pods Resources */ = {
+		0B1196C47ED1FC71D7097F49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-avocadoFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34DC8291663E7BE95655F759 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1806,29 +1843,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5E6175934CD1C72AD265B2C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-avocadoFinder-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE548E8CBEEBA15FD7C27666 /* [CP] Embed Pods Frameworks */ = {
+		FE6D3D5CE2CEF56DDEA1C745 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1838,13 +1853,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-avocadoFinder/Pods-avocadoFinder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/HPGradientLoading/HPGradientLoading.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -1860,13 +1875,13 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGradientLoading.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -1895,7 +1910,7 @@
 				EC07952523CDB28C00CD2689 /* RecipeTableViewCell.swift in Sources */,
 				93FD666D22D9F2670094A5A5 /* SettingsCellViewModel.swift in Sources */,
 				93FD666122D9E4CF0094A5A5 /* SettingsDataSource.swift in Sources */,
-				EC07956323CE602F00CD2689 /* VoluteTableViewCell.swift in Sources */,
+				EC07956323CE602F00CD2689 /* CurrencyTableViewCell.swift in Sources */,
 				EC07953323CDB99400CD2689 /* RecipesServerManager.swift in Sources */,
 				931DF54922C5417400D43AB0 /* GMUGradient.m in Sources */,
 				EC07955423CDFC2300CD2689 /* AddNewPlaceDelegate.swift in Sources */,
@@ -1914,7 +1929,7 @@
 				EC07954D23CDF3C700CD2689 /* AddNewPlaceDescriptionTableViewCell.swift in Sources */,
 				93539FD023BE0733007D4F44 /* NewsAndBlogTableViewCell.swift in Sources */,
 				93330D2B224F53C6000A1BE3 /* AddNewPlaceViewController.swift in Sources */,
-				EC07956623CE622000CD2689 /* VolutesDataSourceDelegate.swift in Sources */,
+				EC07956623CE622000CD2689 /* CurrenciesDataSourceDelegate.swift in Sources */,
 				934767B323316D550078A5A4 /* PlaceType.swift in Sources */,
 				EC07955123CDF5DF00CD2689 /* KeychainManager.swift in Sources */,
 				EC07952123CDB21200CD2689 /* RecipesViewController.swift in Sources */,
@@ -1935,14 +1950,15 @@
 				937129EC227B736D0062AC78 /* AppColor.swift in Sources */,
 				93539FD223BE0733007D4F44 /* NewsAndBlogLayoutManager.swift in Sources */,
 				932A659822B4E45300065119 /* HandleResponceMethod.swift in Sources */,
+				EC70752D23EF3D05004107BA /* CurrencyManager.swift in Sources */,
 				939F051922D236AE00180648 /* PlaceInfoLayoutManager.swift in Sources */,
 				EC07952B23CDB83600CD2689 /* RecipeModel.swift in Sources */,
-				EC07955D23CE54FC00CD2689 /* VolutesViewController.swift in Sources */,
+				EC07955D23CE54FC00CD2689 /* CurrenciesViewController.swift in Sources */,
 				932A659A22B4E4C600065119 /* ServerAuthorizedHeaders.swift in Sources */,
 				931DF54522C5417400D43AB0 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				9361F2B02288433C00071339 /* PlaceInfoViewController.swift in Sources */,
 				93FD666322D9E61A0094A5A5 /* AuthorSettingsCell.swift in Sources */,
-				EC07956123CE565900CD2689 /* VolutesDataSourceManager.swift in Sources */,
+				EC07956123CE565900CD2689 /* CurrenciesDataSource.swift in Sources */,
 				93FD666822D9E82E0094A5A5 /* SettingsDataSourcedelegate.swift in Sources */,
 				931DF54622C5417400D43AB0 /* GMUStaticCluster.m in Sources */,
 				931DF54222C5417400D43AB0 /* GMUWrappingDictionaryKey.m in Sources */,
@@ -2159,7 +2175,7 @@
 		};
 		937BB89022416C9C00215E58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8459CED5B7A61BBC6D66DDE8 /* Pods-avocadoFinder.debug.xcconfig */;
+			baseConfigurationReference = 19E1611AC7DD3E55503CE243 /* Pods-avocadoFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = avocadoFinder/avocadoFinder.entitlements;
@@ -2172,7 +2188,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";
@@ -2183,7 +2199,7 @@
 		};
 		937BB89122416C9C00215E58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAB7CA586FB8B56C8C045903 /* Pods-avocadoFinder.release.xcconfig */;
+			baseConfigurationReference = 64271CD75617E8C478955934 /* Pods-avocadoFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = avocadoFinder/avocadoFinder.entitlements;
@@ -2196,7 +2212,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadzeya.avocadoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "avocadoFinder/AVOMAP-Bridging-Header.h";

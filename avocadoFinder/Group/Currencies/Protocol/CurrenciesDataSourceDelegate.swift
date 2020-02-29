@@ -1,5 +1,5 @@
 //
-//  VolutesDataSourceDelegate.swift
+//  CurrenciesDataSourceDelegate.swift
 //  avocadoFinder
 //
 //  Created by Nick Poe on 1/14/20.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol VolutesDataSourceDelegate: class {
-    func didTapOnCell(volute: String)
+protocol CurrenciesDataSourceDelegate: class {
+    func didTapOnCell()
 }

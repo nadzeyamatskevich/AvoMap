@@ -57,7 +57,7 @@ fileprivate extension NewsAndBlogLayoutManager {
     
     func configure() {
         let type = userDefaultsManager.get(data: .type)
-        let image = type == "\(TypeOfFruit.mango)" ?  #imageLiteral(resourceName: "mangoNavBar") : #imageLiteral(resourceName: "newsNavBarBg")
+        let image = type == "\(TypeOfFruit.mango)" ?  #imageLiteral(resourceName: "orangeNavBar") : #imageLiteral(resourceName: "newsNavBarBg")
         viewController.navBarBgImageView.image = image
     }
     

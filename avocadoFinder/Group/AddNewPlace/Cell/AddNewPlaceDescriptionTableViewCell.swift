@@ -12,6 +12,7 @@ class AddNewPlaceDescriptionTableViewCell: UITableViewCell {
     
     // - UI
     @IBOutlet var degreeOfRipenessImageViewCollection: [UIImageView]!
+    @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var degreeOfRipenessSegmentedControl: UISegmentedControl!
     @IBOutlet weak var productSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mainView: UIView!
@@ -38,6 +39,10 @@ class AddNewPlaceDescriptionTableViewCell: UITableViewCell {
     @IBAction func changeFruitTypeSegmentControlAction(_ sender: UISegmentedControl) {
         self.delegate?.changeFruitType(selectedSegment: sender.selectedSegmentIndex)
     }
+    
+    func setCurrency(_ currency: String) {
+        currencyLabel.text = currency
+    }
 
     func changeType(isAVO: Bool) {
         if #available(iOS 13.0, *) {
@@ -53,8 +58,9 @@ class AddNewPlaceDescriptionTableViewCell: UITableViewCell {
         UIView.transition(with: degreeOfRipenessImageViewCollection[0], duration: 0.5, options: .transitionCrossDissolve, animations: { self.degreeOfRipenessImageViewCollection[0].image = image }, completion: nil)
     }
     
-    func setType(type: TypeOfFruit) {
+    func set(type: TypeOfFruit, currency: String) {
         let isAVO = type == .avocado
+        currencyLabel.text = currency
         if #available(iOS 13.0, *) {
             productSegmentedControl.selectedSegmentTintColor = isAVO ? AppColor.avo : AppColor.orange
             degreeOfRipenessSegmentedControl.selectedSegmentTintColor = isAVO ? AppColor.avo : AppColor.orange

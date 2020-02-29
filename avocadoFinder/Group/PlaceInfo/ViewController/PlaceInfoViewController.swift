@@ -14,6 +14,7 @@ class PlaceInfoViewController: UIViewController {
     
     // - UI
     @IBOutlet weak var tableVIew: UITableView!
+    @IBOutlet weak var navBar: UIImageView!
     
     // - Manager
     fileprivate var layoutManager: PlaceInfoLayoutManager!
@@ -32,7 +33,6 @@ class PlaceInfoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        getServerData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -94,7 +94,7 @@ extension PlaceInfoViewController {
                 strongSelf.showAlert(title: "Ура!", message: "Комментарий добавлен :)", completion: nil)
                 self?.addAnalyticsEventAddComment()
                 strongSelf.getShopInfo(shopID: strongSelf.shop.id)
-                //UserDefaults.standard.set(comment.author, forKey: UserDefaultsEnum.authorNameKey.rawValue)
+                KeychainManager.shared.saveName(comment.author)
             }
         }
     }
@@ -109,6 +109,7 @@ extension PlaceInfoViewController {
             if error != nil {
                 strongSelf.showAlert(title: "Упс, ошибка!", message: "Попробуйте позже")
             } else if let response = response {
+                strongSelf.shop = response
                 strongSelf.dataSource.shop = response
                 strongSelf.update()
             }
@@ -126,6 +127,12 @@ extension PlaceInfoViewController {
         configureLayoutManager()
         configureDataSource()
         addAnalyticsEvent()
+
+        if shop.type == "\(PlaceType.food_establishment_mango)" || shop.type == "\(PlaceType.store_mango)" {
+            navBar.image = UIImage(named: "orangeNavBar")
+        } else {
+            navBar.image = UIImage(named: "navBarBg")
+        }
     }
     
     func configureLayoutManager() {
@@ -136,10 +143,6 @@ extension PlaceInfoViewController {
         dataSource = PlaceInfoDataSource(tableView: tableVIew)
         dataSource.addCommentDelegate = self
         dataSource.shop = shop
-    }
-    
-    func getServerData() {
-        getShopInfo(shopID: shop.id)
     }
     
     func addAnalyticsEvent() {

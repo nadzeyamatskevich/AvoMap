@@ -26,6 +26,7 @@ class SettingsCellConfigurator {
         //addInfoCell(value: AppDocuments.termsAndCondition.rawValue)
         addInfoCell(value: AppInfoCell.addPlace.rawValue)
         addInfoCell(value: AppInfoCell.proposeWork.rawValue)
+        addInfoCell(value: AppInfoCell.changeName.rawValue)
         
         return cells
     }

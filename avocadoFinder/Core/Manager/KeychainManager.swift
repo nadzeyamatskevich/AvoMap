@@ -45,12 +45,18 @@ struct KeychainManager {
         }
     }
     
-    func saveName(_ name: String) {
-        do {
-            try keychain.set(name, key: Constants.name)
-        } catch let error {
-            print(error.localizedDescription)
+    func saveName(_ name: String?) {
+        if let namee = name {
+            do {
+                try keychain.set(namee, key: Constants.name)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        } else {
+            //keychain.remove(Constants.name)
+            return
         }
+        
     }
     
 }

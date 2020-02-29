@@ -67,6 +67,7 @@ class MapViewController: UIViewController {
     }
     @IBAction func changeTypeControlAction(_ sender: UISegmentedControl) {
         let state: TypeOfFruit = sender.selectedSegmentIndex == 0 ? .avocado : .mango
+        addAnalyticsEventChangeFruit(fruit: state.rawValue)
         update(type: state)
     }
     
@@ -144,7 +145,7 @@ extension MapViewController {
     }
     
     func configureDataSource() {
-        dataSource = ListOfPlacesDataSource(tableView: tableView)
+        dataSource = ListOfPlacesDataSource(tableView: tableView, viewController: self)
         dataSource.delegate = self
     }
     
@@ -172,7 +173,12 @@ extension MapViewController {
     func addAnalyticsEvent() {
         Analytics.logEvent("open_map", parameters: [:])
     }
-  
+    
+    func addAnalyticsEventChangeFruit(fruit: String) {
+        Analytics.logEvent("change_fruit", parameters: [
+            "fruit": fruit as NSObject
+        ])
+    }
     
 }
 
@@ -180,6 +186,7 @@ extension MapViewController {
 // MARK: - Data source delegate
 
 extension MapViewController: MapDelegate {
+
     func didTapOnCell(shop: ShopModel) {
         let placeInfoViewController = UIStoryboard(storyboard: .placeInfo).instantiateInitialViewController() as! PlaceInfoViewController
         placeInfoViewController.shop = shop
@@ -189,6 +196,10 @@ extension MapViewController: MapDelegate {
     func updateTypeAfterReturn(type: TypeOfFruit) {
         typeControl.selectedSegmentIndex = type == .avocado ? 0 : 1
         update(type: type)
+    }
+    
+    func hidePlaceList() {
+        layoutManager.hideList()
     }
     
 }

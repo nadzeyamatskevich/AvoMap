@@ -106,7 +106,7 @@
                                                                     <color key="textColor" red="0.46274509800000002" green="0.46666666670000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avoFruit" translatesAutoresizingMaskIntoConstraints="NO" id="6k1-nS-pfu">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avoFruit" translatesAutoresizingMaskIntoConstraints="NO" id="6k1-nS-pfu">
                                                                     <rect key="frame" x="24" y="12" width="50" height="80"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="80" id="Kfp-vr-NJZ"/>
@@ -364,7 +364,7 @@
         <image name="avoFruit" width="43.5" height="64.5"/>
         <image name="global" width="32" height="32"/>
         <image name="gps" width="32" height="32"/>
-        <image name="mango" width="28.5" height="42"/>
+        <image name="mango" width="43" height="63.5"/>
         <image name="navBarBg" width="562.5" height="222.5"/>
     </resources>
 </document>

@@ -14,7 +14,7 @@ enum Storyboard: String {
     case main = "Main"
     
     // - Main
-    case volutes = "Volutes"
+    case currencies = "Currencies"
     
     // - Recipes
     case recipes = "Recipes"
