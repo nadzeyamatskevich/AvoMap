@@ -29,6 +29,8 @@ class SettingsCellConfigurator {
         addInfoCell(value: AppInfoCell.changeName.rawValue)
         
         return cells
+        
+        
     }
     
     func addAuthorCell(value: String) {

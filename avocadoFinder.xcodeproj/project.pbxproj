@@ -1081,8 +1081,6 @@
 		93A445CE226AFE5600386766 /* StaticPage */ = {
 			isa = PBXGroup;
 			children = (
-				93A445DA226AFEFA00386766 /* Enum */,
-				93A445D7226AFEDF00386766 /* Manager */,
 				93A445D6226AFED700386766 /* Storyboard */,
 				93A445D5226AFECD00386766 /* ViewController */,
 			);
@@ -1159,20 +1157,6 @@
 				93A445EE226B019F00386766 /* StaticPage.storyboard */,
 			);
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		93A445D7226AFEDF00386766 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		93A445DA226AFEFA00386766 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enum;
 			sourceTree = "<group>";
 		};
 		93A445DB226AFF0A00386766 /* ViewController */ = {
